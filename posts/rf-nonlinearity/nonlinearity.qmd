@@ -1,0 +1,107 @@
+---
+title: "Effects of Nonlinearity"
+author: "Samith Va"
+date: "2024-03-21"
+categories: [RF, Nonlinearity]
+image: "nonlinearity.jpg"
+---
+
+1. How to calculate power gain and voltage gain? Are they equivalent?
+2. What is absolute power gain ? What is its unit quantity?
+3. What are peak amplitude, peak-to-peak amplitude, rms value ?
+4. Is a switch a non-linear system ?
+6. What is a mixer in context of communication system ? 
+7. What is a transceiver ? Draw its structure diagram. 
+8. What is PA ? LNA ? What are their differences  ?
+9. Is mixer a LTI system ? And why ?
+10. What is the Fourier series of a rectangular waveform ? 
+11. What is 1dB compression point $P_\text{1dB}$? Derive its formula
+12. What is the coefficient fundamental term of a nonlinear system ? 
+13. What is the difference between intermodulation and cross modulation?
+14. What is third intercept point ?
+---
+Memoryless = static ~= dynamic 
+Tone = unmodulated signal (pure sine or cosine)
+
+> 0 dBm : $V_\text{PP} =$ 632mV (50 Ohm)
+
+### Gain
+#### Power gain 
+$$A_\text{P | dB} = 10\log(\frac{P_\text{out}}{P_\text{in}})$$
+
+#### Voltage gain
+$$A_\text{V | dB} = 20\log(\frac{V_\text{out}}{V_\text{in}})$$
+**Note** : $V_\text{out},V_\text{in}$ are measured in *rms* (root-mean-squared)
+
+Why does the coefficient change to 20 in voltage gain ? Hint : $P = \frac{V^2}{R}$
+Obviously $A_P$ and $A_V$ are equivalent only when resistance $R$ remain the constant in input and output ports.
+
+#### Absolute Power Gain
+In most cases, to simplify the expression of low power communication devices, power is usually expressed in dBm, a log unit of $\text{mW}$ (milliwatt).
+$$P_\text{dBm} = 10\log(\frac{P}{1\text{ mW}})$$
+
+### Voltage
+$V_\text{rms}$ : root-mean square voltage
+$V_P$ : peak voltage
+$V_{PP}$ : peak-to-peak voltage
+$$V_\text{rms} = \frac{1}{T}\sqrt{\int_0^T V^2(t) dt}$$
+$$V_\text{P} = \sqrt2 V_\text{rms} = \frac{V_{PP}}{2}$$
+
+### Harmonic distortion
+Harmonic distortion in RF (Radio Frequency) communication circuits refers to the presence of unwanted frequency components in the output signal that are integer multiples of the original frequency, known as harmonics. 
+
+When a signal passes through an RF circuit, non-linearities in the components can cause the generation of harmonics.
+
+The fundamental term of a nonlinear system is : 
+$$\alpha_1 + \frac{3}{4}\alpha_3 A^2$$
+
+### Gain compression 
+Gain compression occurs when the gain of an amplifier decreases as the input signal level increases. 1-dB compression point is the amount of voltage that can make the gain decrease by 1-dB 
+$$
+P_{\text{in},1\text{dB}} =A_{\text{in},1\text{dB}} = \sqrt{0.145\frac{\alpha_1}{\alpha_3}}
+$$
+1-dB compression point is generally 220 to 225 dBm (63.2 to 35.6 m$V_{pp}$ in 50 $\Omega$system). 
+### Desensitization 
+Desensitization in RF (Radio Frequency) systems refers to a phenomenon where the sensitivity of a receiver decreases due to interference or strong nearby signals. 
+
+In RF design, the term “**blocking signal**” or “**blocker**” refers to interferers that
+desensitize a circuit, even if they do not reduce the gain to zero. Some RF receivers must be able to withstand blockers that are **60 to 70 dB** greater than the desired signal.
+
+### Cross Modulation 
+Cross modulation become significant in AM (Amplitude modulation) when interference signal is amplitude modulated, it lead the original signal to be amplitude modulated. 
+
+### Intermodulation 
+Imagine you have two signals, Signal A and Signal B, passing through a nonlinear component like an amplifier or mixer in an RF system. When these signals interact in the nonlinear component, they create new frequencies that weren't originally there. These new frequencies are called intermodulation products.
+
+For instance, if Signal A is at 100 MHz and Signal B is at 150 MHz, the intermodulation products could appear at frequencies like 50 MHz (150 - 100) and 250 MHz (150 + 100).
+
+> - Intermodulation : The signal is **not** mixed with the interferer
+> - Cross modulation : The signal is **mixed** with the interferer
+
+### Third-Intercept Point
+
+When there are two interference going through a nonlinear system, it can produce a third component frequency which is in the domain of wanted signal frequency, this will corrupt the information-baring signal. To measure the intermodulation we can use relative IM (intermodulation) term, 
+$$\text{IM} = \frac{3}{4}\alpha_3 A_1A_2^2$$
+
+$$\text{Relative IM} = 20\log(\frac{3\alpha_3 }{4\alpha_1}A^2) \text{ dBc}$$
+
+$$A_\text{IIP3} = \sqrt{\frac{4}{3}|\frac{\alpha_1}{\alpha_3}|}$$
+
+### Noise Figure
+
+
+
+
+
+
+
+## Answer
+
+1. Refer to above equations.
+2. Refer to above equations.
+3. What are Peak amplitude, peak-to-peak amplitude, rms value ?
+4. unambiguous question, switch can be linear or non-linear depends on the input of interest.
+6. What is a mixer in context of communication system ? 
+7. Transceiver is the combination of Tx, and Rx. ![](transciever.png)
+8. What is PA ? LNA ? What are their differences  ?
+9. a mixer is frequency shift component. we can prove that it does not satisfy the linear property. 

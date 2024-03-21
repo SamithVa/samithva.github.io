@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Samith Va">
+<meta name="dcterms.date" content="2024-03-21">
 
-<title>Happy Learning - Home</title>
+<title>Happy Learning - Effects of Nonlinearity</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,24 +25,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -68,35 +68,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -128,17 +99,17 @@ window.Quarto = {
 };
 </script>
 
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Happy Learning</span>
     </a>
   </div>
@@ -149,7 +120,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
@@ -172,152 +143,141 @@ window.Quarto = {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title">Home</h1>
-                      </div>
+    <div class="quarto-title column-body">
+      <h1 class="title">Effects of Nonlinearity</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">RF</div>
+                <div class="quarto-category">Nonlinearity</div>
+              </div>
+                  </div>
   </div>
     
   
-  <div class="quarto-title-meta column-page-left">
+  <div class="quarto-title-meta">
 
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Samith Va </p>
+            </div>
+    </div>
       
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">March 21, 2024</p>
+      </div>
+    </div>
     
       
     </div>
     
   
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(3)</span></div><div class="category" data-category="Nonlinearity">Nonlinearity <span class="quarto-category-count">(1)</span></div><div class="category" data-category="RF">RF <span class="quarto-category-count">(1)</span></div><div class="category" data-category="deep learning">deep learning <span class="quarto-category-count">(1)</span></div><div class="category" data-category="fastai">fastai <span class="quarto-category-count">(1)</span></div><div class="category" data-category="news">news <span class="quarto-category-count">(1)</span></div><div class="category" data-category="pytorch">pytorch <span class="quarto-category-count">(1)</span></div></div></div>
+    
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
 
+<ol type="1">
+<li>How to calculate power gain and voltage gain? Are they equivalent?</li>
+<li>What is absolute power gain ? What is its unit quantity?</li>
+<li>What are peak amplitude, peak-to-peak amplitude, rms value ?</li>
+<li>Is a switch a non-linear system ?</li>
+<li>What is a mixer in context of communication system ?</li>
+<li>What is a transceiver ? Draw its structure diagram.</li>
+<li>What is PA ? LNA ? What are their differences&nbsp; ?</li>
+<li>Is mixer a LTI system ? And why ?</li>
+<li>What is the Fourier series of a rectangular waveform ?</li>
+<li>What is 1dB compression point <span class="math inline">\(P_\text{1dB}\)</span>? Derive its formula</li>
+<li>What is the coefficient fundamental term of a nonlinear system ?</li>
+<li>What is the difference between intermodulation and cross modulation?</li>
+<li>What is third intercept point ?</li>
+</ol>
+<hr>
+<p>Memoryless = static ~= dynamic Tone = unmodulated signal (pure sine or cosine)</p>
+<blockquote class="blockquote">
+<p>0 dBm : <span class="math inline">\(V_\text{PP} =\)</span> 632mV (50 Ohm)</p>
+</blockquote>
+<section id="gain" class="level3">
+<h3 class="anchored" data-anchor-id="gain">Gain</h3>
+<section id="power-gain" class="level4">
+<h4 class="anchored" data-anchor-id="power-gain">Power gain</h4>
+<p><span class="math display">\[A_\text{P | dB} = 10\log(\frac{P_\text{out}}{P_\text{in}})\]</span></p>
+</section>
+<section id="voltage-gain" class="level4">
+<h4 class="anchored" data-anchor-id="voltage-gain">Voltage gain</h4>
+<p><span class="math display">\[A_\text{V | dB} = 20\log(\frac{V_\text{out}}{V_\text{in}})\]</span> <strong>Note</strong> : <span class="math inline">\(V_\text{out},V_\text{in}\)</span> are measured in <em>rms</em> (root-mean-squared)</p>
+<p>Why does the coefficient change to 20 in voltage gain ? Hint : <span class="math inline">\(P = \frac{V^2}{R}\)</span> Obviously <span class="math inline">\(A_P\)</span> and <span class="math inline">\(A_V\)</span> are equivalent only when resistance <span class="math inline">\(R\)</span> remain the constant in input and output ports.</p>
+</section>
+<section id="absolute-power-gain" class="level4">
+<h4 class="anchored" data-anchor-id="absolute-power-gain">Absolute Power Gain</h4>
+<p>In most cases, to simplify the expression of low power communication devices, power is usually expressed in dBm, a log unit of <span class="math inline">\(\text{mW}\)</span> (milliwatt). <span class="math display">\[P_\text{dBm} = 10\log(\frac{P}{1\text{ mW}})\]</span></p>
+</section>
+</section>
+<section id="voltage" class="level3">
+<h3 class="anchored" data-anchor-id="voltage">Voltage</h3>
+<p><span class="math inline">\(V_\text{rms}\)</span> : root-mean square voltage <span class="math inline">\(V_P\)</span> : peak voltage <span class="math inline">\(V_{PP}\)</span> : peak-to-peak voltage <span class="math display">\[V_\text{rms} = \frac{1}{T}\sqrt{\int_0^T V^2(t) dt}\]</span> <span class="math display">\[V_\text{P} = \sqrt2 V_\text{rms} = \frac{V_{PP}}{2}\]</span></p>
+</section>
+<section id="harmonic-distortion" class="level3">
+<h3 class="anchored" data-anchor-id="harmonic-distortion">Harmonic distortion</h3>
+<p>Harmonic distortion in RF (Radio Frequency) communication circuits refers to the presence of unwanted frequency components in the output signal that are integer multiples of the original frequency, known as harmonics.</p>
+<p>When a signal passes through an RF circuit, non-linearities in the components can cause the generation of harmonics.</p>
+<p>The fundamental term of a nonlinear system is : <span class="math display">\[\alpha_1 + \frac{3}{4}\alpha_3 A^2\]</span></p>
+</section>
+<section id="gain-compression" class="level3">
+<h3 class="anchored" data-anchor-id="gain-compression">Gain compression</h3>
+<p>Gain compression occurs when the gain of an amplifier decreases as the input signal level increases. 1-dB compression point is the amount of voltage that can make the gain decrease by 1-dB <span class="math display">\[
+P_{\text{in},1\text{dB}} =A_{\text{in},1\text{dB}} = \sqrt{0.145\frac{\alpha_1}{\alpha_3}}
+\]</span> 1-dB compression point is generally 220 to 225 dBm (63.2 to 35.6 m<span class="math inline">\(V_{pp}\)</span> in 50 <span class="math inline">\(\Omega\)</span>system). ### Desensitization Desensitization in RF (Radio Frequency) systems refers to a phenomenon where the sensitivity of a receiver decreases due to interference or strong nearby signals.</p>
+<p>In RF design, the term “<strong>blocking signal</strong>” or “<strong>blocker</strong>” refers to interferers that desensitize a circuit, even if they do not reduce the gain to zero. Some RF receivers must be able to withstand blockers that are <strong>60 to 70 dB</strong> greater than the desired signal.</p>
+</section>
+<section id="cross-modulation" class="level3">
+<h3 class="anchored" data-anchor-id="cross-modulation">Cross Modulation</h3>
+<p>Cross modulation become significant in AM (Amplitude modulation) when interference signal is amplitude modulated, it lead the original signal to be amplitude modulated.</p>
+</section>
+<section id="intermodulation" class="level3">
+<h3 class="anchored" data-anchor-id="intermodulation">Intermodulation</h3>
+<p>Imagine you have two signals, Signal A and Signal B, passing through a nonlinear component like an amplifier or mixer in an RF system. When these signals interact in the nonlinear component, they create new frequencies that weren’t originally there. These new frequencies are called intermodulation products.</p>
+<p>For instance, if Signal A is at 100 MHz and Signal B is at 150 MHz, the intermodulation products could appear at frequencies like 50 MHz (150 - 100) and 250 MHz (150 + 100).</p>
+<blockquote class="blockquote">
+<ul>
+<li>Intermodulation : The signal is <strong>not</strong> mixed with the interferer</li>
+<li>Cross modulation : The signal is <strong>mixed</strong> with the interferer</li>
+</ul>
+</blockquote>
+</section>
+<section id="third-intercept-point" class="level3">
+<h3 class="anchored" data-anchor-id="third-intercept-point">Third-Intercept Point</h3>
+<p>When there are two interference going through a nonlinear system, it can produce a third component frequency which is in the domain of wanted signal frequency, this will corrupt the information-baring signal. To measure the intermodulation we can use relative IM (intermodulation) term, <span class="math display">\[\text{IM} = \frac{3}{4}\alpha_3 A_1A_2^2\]</span></p>
+<p><span class="math display">\[\text{Relative IM} = 20\log(\frac{3\alpha_3 }{4\alpha_1}A^2) \text{ dBc}\]</span></p>
+<p><span class="math display">\[A_\text{IIP3} = \sqrt{\frac{4}{3}|\frac{\alpha_1}{\alpha_3}|}\]</span></p>
+</section>
+<section id="noise-figure" class="level3">
+<h3 class="anchored" data-anchor-id="noise-figure">Noise Figure</h3>
+</section>
+<section id="answer" class="level2">
+<h2 class="anchored" data-anchor-id="answer">Answer</h2>
+<ol type="1">
+<li>Refer to above equations.</li>
+<li>Refer to above equations.</li>
+<li>What are Peak amplitude, peak-to-peak amplitude, rms value ?</li>
+<li>unambiguous question, switch can be linear or non-linear depends on the input of interest.</li>
+<li>What is a mixer in context of communication system ?</li>
+<li>Transceiver is the combination of Tx, and Rx. <img src="transciever.png" class="img-fluid"></li>
+<li>What is PA ? LNA ? What are their differences&nbsp; ?</li>
+<li>a mixer is frequency shift component. we can prove that it does not satisfy the linear property.</li>
+</ol>
 
 
+</section>
 
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="deep learning,pytorch,fastai" data-listing-date-sort="1710950400000" data-listing-file-modified-sort="1711006111552" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="746">
-<div class="thumbnail">
-<p><a href="./posts/deep-learning-journey/index.html" class="no-external"></a></p><a href="./posts/deep-learning-journey/index.html" class="no-external">
-<p><img src="./posts/deep-learning-journey/image.jpg" class="thumbnail-image"></p>
-</a><p><a href="./posts/deep-learning-journey/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/deep-learning-journey/index.html" class="no-external">Deep Learning Journey</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/deep-learning-journey/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('deep learning'); return false;">
-deep learning
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('pytorch'); return false;">
-pytorch
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('fastai'); return false;">
-fastai
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/deep-learning-journey/index.html" class="no-external">Keywords: architecture, overfit, fine-tunning, validation set, test set, weights, parameters, CNN</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/deep-learning-journey/index.html" class="no-external">
-<div class="listing-date">
-Mar 21, 2024
-</div>
-<div class="listing-author">
-Samith Va
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="RF,Nonlinearity" data-listing-date-sort="1710950400000" data-listing-file-modified-sort="1711007785332" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="698">
-<div class="thumbnail">
-<p><a href="./posts/rf-nonlinearity/nonlinearity.html" class="no-external"></a></p><a href="./posts/rf-nonlinearity/nonlinearity.html" class="no-external">
-<p><img src="./posts/rf-nonlinearity/nonlinearity.jpg" class="thumbnail-image"></p>
-</a><p><a href="./posts/rf-nonlinearity/nonlinearity.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/rf-nonlinearity/nonlinearity.html" class="no-external">Effects of Nonlinearity</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/rf-nonlinearity/nonlinearity.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('RF'); return false;">
-RF
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Nonlinearity'); return false;">
-Nonlinearity
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/rf-nonlinearity/nonlinearity.html" class="no-external">Memoryless = static ~= dynamic Tone = unmodulated signal (pure sine or cosine)</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/rf-nonlinearity/nonlinearity.html" class="no-external">
-<div class="listing-date">
-Mar 21, 2024
-</div>
-<div class="listing-author">
-Samith Va
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="news" data-listing-date-sort="1710691200000" data-listing-file-modified-sort="1711003562772" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="32">
-<div class="thumbnail">
-<p><a href="./posts/welcome/index.html" class="no-external"></a></p><a href="./posts/welcome/index.html" class="no-external">
-<p class="card-img-top"><img src="posts\welcome\thumbnail.jpg"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./posts/welcome/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/welcome/index.html" class="no-external">Welcome To My Blog</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/welcome/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('news'); return false;">
-news
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/welcome/index.html" class="no-external">This is the first post in a Quarto blog. Welcome!</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/welcome/index.html" class="no-external">
-<div class="listing-date">
-Mar 18, 2024
-</div>
-<div class="listing-author">
-Tristan O’Malley
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
