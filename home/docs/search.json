@@ -1,0 +1,30 @@
+[
+  {
+    "objectID": "posts/welcome/index.html",
+    "href": "posts/welcome/index.html",
+    "title": "Welcome To My Blog",
+    "section": "",
+    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Home",
+    "section": "",
+    "text": "Deep Learning Journey\n\n\n\n\n\n\ndeep learning\n\n\npytorch\n\n\nfastai\n\n\n\n\n\n\n\n\n\nMar 21, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nMar 18, 2024\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this blog"
+  },
+  {
+    "objectID": "posts/post-with-code/index.html",
+    "href": "posts/post-with-code/index.html",
+    "title": "Deep Learning Journey",
+    "section": "",
+    "text": "Keywords: architecture, overfit, fine-tunning, validation set, test set, weights, parameters, CNN\nPitts and McCulloch form the neurons network idea.\n\n… Trying to spend too much time on theory can be counterproductive. The key is to just code and try to solve problems: the theory can come later when you have context and motivation.\n\nFive areas that DL are good at: natural language processing, medical, security(computer vision), factory(industrial | anomaly detection) and recommendation system(commercial).\n\nThe first device that was based on the principle of the artificial neuron is : The Mark I Perceptron.\nRequirements for the parallel distributed processing:\n\na set of processing unit\na state of activation\nan output function for each unit\na pattern of connectivity between units\n\nTwo theoretical misunderstandings that held back the field of neuron networks is:\n\nadding one more layers (2 layer) then it will be possible to approximate any function.\nAdding more layers to make model better\n\nGPU is a kind of processor which can do the parallel computing, it is commonly used in training the model.\nBecause traditional computer does not come with a GPU, hence its computation speed is slow and inefficient.\nSamuel mean by “weight assignment” refer to setting the value of variable on how the function works/behave.\n“weight” is refer to “parameters” in deep learning.\nBecause some problems such as image recognition, we unconsciously know how our brain can recognize patterns in images.\nUniversal approximation theorem.\nData(input) and labels(model output references).\nUsing feedback loop can be problematic, more biased of dataset, the more biased of the model.\nNo, we can use any size, using image of size 264x264 is due to historical reason (traditional model can only trained using 264x264 size).\nClassification : is for predicting the categories of dataset while Regression predict numerical value.\nValidation set is an less exposed data set which is used to find the optimal hyperparameters of various architectures of model. Test set is used to predict the unseen data and evaluate the model overall performance.\nFastai will automatically set the validation set to 0.2 (20%).\nNo, we can’t. A counter case is training with time-series data which is too easy for model to to fill the gap, when we select random validation instances.\nOverfitting is a problem when the model perform very well on training data set but poorly in predicting unseen data. An example : when a model is trained to decide the image is cat or dog, model can only accurately make a classification when given an instance within train dataset. But fail when given cat or dog image outside the training set.\nMetric is a version of loss which used for human consumption, it can be error percentage or accuracy.\nUsing pre-trained model, can increase inefficiency, because pretrained model (already has more capability)can already recognize basic patterns of data.\nHead of a model is the last layer of the model. Note that we need to change the head of model (one or more layers to make it suitable for specifics task of the model) while using pre-trained model.\nThe first layer of CNN, it determines diagonal, horizontal, and vertical edges as well as various gradients. 2nd layer the model detects features within the image such as circle, triangle etc.\nImage models not only useful for photos, for instance, voice signal can also express in term of spectrum in images.\nArchitecture is the pre assume functions or structure of the model.\nSegmentation is task where photos are divided and recognized into small components labels. For example, self driving car might use video data and do the segmentation recognize the pedestrian and adjust direction or speed.\ny_range is used for setting a range in label for specific task.\nHyperparameters are the specification of the model that are manually set by human such as model architecture, learning rate, hidden layers number etc.\nBest way to avoid failures when using AI in an organization is to keep a test dataset separately(without intervening with training process)."
+  }
+]
