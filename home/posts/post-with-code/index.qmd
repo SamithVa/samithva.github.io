@@ -1,0 +1,50 @@
+---
+title: "Deep Learning Journey"
+author: "Samith Va"
+date: "2024-03-21"
+categories: [deep learning, pytorch, fastai]
+image: "image.jpg"
+---
+
+Keywords: architecture, overfit, fine-tunning, validation set, test set, weights, parameters, CNN
+
+
+Pitts and McCulloch form the neurons network idea. 
+
+> ... Trying to spend too much time on theory can be **counterproductive**. The key is to just code and try to solve problems: the theory can come later when you have context and motivation.  
+
+Five areas that DL are good at: natural language processing, medical, security(computer vision), factory(industrial | anomaly detection) and recommendation system(commercial).
+
+3. The first device that was based on the principle of the artificial neuron is : The Mark I Perceptron. 
+4. Requirements for the parallel distributed processing:
+	- a set of processing unit
+	- a state of activation
+	- an output function for each unit
+	- a pattern of connectivity between units
+5. Two theoretical misunderstandings that held back the field of neuron networks is: 
+	1. adding one more layers (2 layer) then it will be possible to approximate any function. 
+	2. Adding more layers to make model better
+6. GPU is a kind of processor which can do the parallel computing, it is commonly used in training the model. 
+10. Because traditional computer does not come with a GPU, hence its computation speed is slow and inefficient.
+11. Samuel mean by "weight assignment" refer to setting the value of variable on how the function works/behave.
+12. "weight" is refer to "parameters" in deep learning.
+14. Because some problems such as image recognition, we unconsciously know how our brain can recognize patterns in images. 
+15. Universal approximation theorem. 
+16. Data(input) and labels(model output references).
+17. Using feedback loop can be problematic, more biased of dataset, the more biased of the model. 
+18. No, we can use any size, using image of size 264x264 is due to historical reason (traditional model can only trained using 264x264 size).
+19. Classification : is for predicting the categories of dataset while Regression predict numerical value. 
+20. Validation set is an less exposed data set which is used to find the optimal hyperparameters of various architectures of model. Test set is used to predict the unseen data and evaluate the model overall performance.
+21. Fastai will automatically set the validation set to 0.2 (20%).
+22. No, we can't. A counter case is training with time-series data which is too easy for model to to fill the gap, when we select random validation instances.
+23. Overfitting is a problem when the model perform very well on training data set but poorly in predicting unseen data. An example : when a model is trained to decide the image is cat or dog, model can only accurately make a classification when given an instance within train dataset. But fail when given  cat or dog image outside the training set.
+24. **Metric** is a version of loss which used for human consumption, it can be error percentage or accuracy.
+25. Using pre-trained model, can increase inefficiency, because pretrained model (already has more capability)can already recognize basic patterns of data. 
+26. **Head** of a model is the last layer of the model. Note that we need to change the head of model (one or more layers to make it suitable for specifics task of the model) while using pre-trained model.
+27. The first layer of CNN, it determines diagonal, horizontal, and vertical edges as well as various gradients. 2nd layer the model detects features within the image such as circle, triangle etc.
+28. Image models not only useful for photos, for instance, voice signal can also express in term of spectrum in images.
+29. Architecture is the pre assume functions or structure of the model.
+30. Segmentation is task where photos are divided and recognized into small components labels. For example, self driving car might use video data and do the segmentation recognize the pedestrian and adjust direction or speed.
+31. `y_range` is used for setting a range in label for specific task.
+32. Hyperparameters are the specification of the model that are manually set by human such as model architecture, learning rate, hidden layers number etc.
+33. Best way to avoid failures when using AI in an organization is to keep a test dataset separately(without intervening with training process).
