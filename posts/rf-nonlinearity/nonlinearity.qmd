@@ -3,7 +3,7 @@ title: "Effects of Nonlinearity"
 author: "Samith Va"
 date: "2024-03-21"
 categories: [RF, Nonlinearity]
-image: "nonlinearity.jpg"
+image: "nonlinearity.png"
 ---
 
 1. How to calculate power gain and voltage gain? Are they equivalent?
