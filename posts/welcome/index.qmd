@@ -3,6 +3,7 @@ title: "Numpy"
 author: "Samith Va"
 date: "2024-03-22"
 categories: [numpy, python, vectorization]
+image: 'numpylogo.svg'
 format:
   html:
     code-fold: false
