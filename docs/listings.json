@@ -2,9 +2,9 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/welcome/index.html",
       "/posts/deep-learning-journey/index.html",
-      "/posts/rf-nonlinearity/nonlinearity.html",
-      "/posts/welcome/index.html"
+      "/posts/rf-nonlinearity/nonlinearity.html"
     ]
   }
 ]

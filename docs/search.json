@@ -2,9 +2,9 @@
   {
     "objectID": "posts/welcome/index.html",
     "href": "posts/welcome/index.html",
-    "title": "Welcome To My Blog",
+    "title": "Numpy",
     "section": "",
-    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
+    "text": "What is numpy?\n\nNumPy is the fundamental package for scientific computing in Python. The core of Numpy is the ndarray object, operations of this array are being performed in compiled code for performance.\n\nHow Numpy differ from standard Python sequences ? Why using numpy ?\n\nThere are several different between Numpy and standard Python sequences:\n\n\n\nNumPy arrays have a fixed size at creation, unlike Python lists (which can grow dynamically)\nElements within the same Numpy array must be the same data type.\nAdvanced mathematics operations can be done easily in Numpy (with less code and good performance)\nA growing plethora of scientific and mathematical libraries\n\n\nWhy is numpy fast ?\n\nVectorization describes the absence of any explicit looping, indexing, etc., in the code - these things are taking place, of course, just “behind the scenes” in optimized, pre-compiled C code. Vectorized code has many advantages, among which are:\n\n\n\nVectorized code is more concise and easier to read (shorter code without a lot of for loops)\nFewer lines of code generally means fewer bugs"
   },
   {
     "objectID": "posts/deep-learning-journey/index.html",
@@ -25,7 +25,7 @@
     "href": "index.html",
     "title": "Home",
     "section": "",
-    "text": "Deep Learning Journey\n\n\n\n\n\n\ndeep learning\n\n\npytorch\n\n\nfastai\n\n\n\n\n\n\n\n\n\nMar 21, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nEffects of Nonlinearity\n\n\n\n\n\n\nRF\n\n\nNonlinearity\n\n\n\n\n\n\n\n\n\nMar 21, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nMar 18, 2024\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo matching items"
+    "text": "Numpy\n\n\n\n\n\n\nnumpy\n\n\npython\n\n\nvectorization\n\n\n\n\n\n\n\n\n\nMar 22, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nDeep Learning Journey\n\n\n\n\n\n\ndeep learning\n\n\npytorch\n\n\nfastai\n\n\n\n\n\n\n\n\n\nMar 21, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nEffects of Nonlinearity\n\n\n\n\n\n\nRF\n\n\nNonlinearity\n\n\n\n\n\n\n\n\n\nMar 21, 2024\n\n\nSamith Va\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/rf-nonlinearity/nonlinearity.html",
@@ -40,5 +40,40 @@
     "title": "Effects of Nonlinearity",
     "section": "Answer",
     "text": "Answer\n\nRefer to above equations.\nRefer to above equations.\nWhat are Peak amplitude, peak-to-peak amplitude, rms value ?\nunambiguous question, switch can be linear or non-linear depends on the input of interest.\nWhat is a mixer in context of communication system ?\nTransceiver is the combination of Tx, and Rx. \nWhat is PA ? LNA ? What are their differences  ?\na mixer is frequency shift component. we can prove that it does not satisfy the linear property."
+  },
+  {
+    "objectID": "posts/welcome/index.html#reshape",
+    "href": "posts/welcome/index.html#reshape",
+    "title": "Numpy",
+    "section": "Reshape",
+    "text": "Reshape\nnp.reshape() reshape a numpy array to specific given shape (n, m). In neural network when dealing with images, we usually need to flatten the image into 1 row array by using .reshape(-1).\n\nimport numpy as np\n# Create a 2D array\ny = np.array([[1, 2, 3, 4],\n              [5, 6, 7, 8],\n              [9, 10, 11, 12]])\n# Reshape the array to 1D using -1\nflattened_y = y.reshape(-1)\nflattened_y\n\narray([ 1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12])"
+  },
+  {
+    "objectID": "posts/welcome/index.html#np.reshape",
+    "href": "posts/welcome/index.html#np.reshape",
+    "title": "Numpy",
+    "section": "np.reshape()",
+    "text": "np.reshape()\nnp.reshape() reshape a numpy array to specific given shape (n, m). In neural network when dealing with images, we usually need to flatten the image into 1 row array by using .reshape(-1).\n\nimport numpy as np\n# Create a 2D array\ny = np.array([[1, 2, 3, 4],\n              [5, 6, 7, 8],\n              [9, 10, 11, 12]])\n# Reshape the array to 1D using -1\nflattened_y = y.reshape(-1)\nflattened_y\n\narray([ 1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12])"
+  },
+  {
+    "objectID": "posts/welcome/index.html#np.where",
+    "href": "posts/welcome/index.html#np.where",
+    "title": "Numpy",
+    "section": "np.where()",
+    "text": "np.where()\nnp.where() perform conditional operations on arrays and is somewhat similar to the ternary conditional operator (condition ? value_if_true : value_if_false) found in many programming languages.\n\nimport numpy as np\na = np.arange(10)\nb = np.where(a&gt;5, a, a**2)\nb\n\narray([ 0,  1,  4,  9, 16, 25,  6,  7,  8,  9])\n\n\nFor more references visit Numpy Documentation"
+  },
+  {
+    "objectID": "posts/welcome/index.html#linspace",
+    "href": "posts/welcome/index.html#linspace",
+    "title": "Numpy",
+    "section": "Linspace",
+    "text": "Linspace\nnp.linspace(start, end, interval) creates an array with evenly spaced float numbers over a specified interval.\n\nimport numpy as np\na = np.linspace(10,100,10)\na\n\narray([ 10.,  20.,  30.,  40.,  50.,  60.,  70.,  80.,  90., 100.])"
+  },
+  {
+    "objectID": "posts/welcome/index.html#where",
+    "href": "posts/welcome/index.html#where",
+    "title": "Numpy",
+    "section": "Where",
+    "text": "Where\nnp.where() perform conditional operations on arrays and is somewhat similar to the ternary conditional operator (condition ? value_if_true : value_if_false) found in many programming languages.\n\nimport numpy as np\na = np.arange(10)\nb = np.where(a&gt;5, a, a**2)\nb\n\narray([ 0,  1,  4,  9, 16, 25,  6,  7,  8,  9])\n\n\nFor more references visit Numpy Documentation"
   }
 ]
