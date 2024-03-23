@@ -25,7 +25,7 @@
     "href": "index.html",
     "title": "Home",
     "section": "",
-    "text": "Numpy\n\n\n\n\n\n\nnumpy\n\n\npython\n\n\nvectorization\n\n\n\n\n\n\n\n\n\nMar 22, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nDeep Learning Journey\n\n\n\n\n\n\ndeep learning\n\n\npytorch\n\n\nfastai\n\n\n\n\n\n\n\n\n\nMar 21, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nEffects of Nonlinearity\n\n\n\n\n\n\nRF\n\n\nNonlinearity\n\n\n\n\n\n\n\n\n\nMar 21, 2024\n\n\nSamith Va\n\n\n\n\n\n\nNo matching items"
+    "text": "OpenCV\n\n\n\n\n\n\nopenCV\n\n\nDeep Learning\n\n\n\n\n\n\n\n\n\nMar 23, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nNumpy\n\n\n\n\n\n\nnumpy\n\n\npython\n\n\nvectorization\n\n\n\n\n\n\n\n\n\nMar 22, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nDeep Learning Journey\n\n\n\n\n\n\ndeep learning\n\n\npytorch\n\n\nfastai\n\n\n\n\n\n\n\n\n\nMar 21, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nEffects of Nonlinearity\n\n\n\n\n\n\nRF\n\n\nNonlinearity\n\n\n\n\n\n\n\n\n\nMar 21, 2024\n\n\nSamith Va\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/rf-nonlinearity/nonlinearity.html",
@@ -75,5 +75,26 @@
     "title": "Numpy",
     "section": "Where",
     "text": "Where\nnp.where() perform conditional operations on arrays and is somewhat similar to the ternary conditional operator (condition ? value_if_true : value_if_false) found in many programming languages.\n\nimport numpy as np\na = np.arange(10)\nb = np.where(a&gt;5, a, a**2)\nb\n\narray([ 0,  1,  4,  9, 16, 25,  6,  7,  8,  9])\n\n\nFor more references visit Numpy Documentation"
+  },
+  {
+    "objectID": "posts/open-cv/open-cv.html",
+    "href": "posts/open-cv/open-cv.html",
+    "title": "OpenCV",
+    "section": "",
+    "text": "What is OpenCV?\n\nOpenCV (Open Source Computer Vision Library) is an open-source computer vision and machine learning software library. It provides a wide range of functionalities for image and video processing.\nHere’s a crash course on using OpenCV in Python."
+  },
+  {
+    "objectID": "posts/open-cv/open-cv.html#installation",
+    "href": "posts/open-cv/open-cv.html#installation",
+    "title": "OpenCV",
+    "section": "Installation:",
+    "text": "Installation:\nInstall OpenCV for Python via pip: pip install opencv-python"
+  },
+  {
+    "objectID": "posts/open-cv/open-cv.html#basic-operations",
+    "href": "posts/open-cv/open-cv.html#basic-operations",
+    "title": "OpenCV",
+    "section": "Basic Operations",
+    "text": "Basic Operations\n\nReading and displaying image\n\nimport cv2\n# Read an image from file\nimage = cv2.imread('image.jpg')\n\n# Display the image in a window\ncv2.imshow('Image', image)\n\n# Wait for a key press and then close the window\ncv2.waitKey(0)\ncv2.destroyAllWindows()\n\n\n\nOutput\n\n\n\nWriting image\n\nimport cv2\n# Read an image\nimage = cv2.imread('image.jpg')\n\n# Write the image to a file\ncv2.imwrite('output_image.jpg', image)\n\nCoverting color spaces\n\nOpenCV provides functions to convert images between different color spaces, such as RGB, BGR, HSV, etc.\nimport cv2\n# Read an image\nimage = cv2.imread('image.jpg')\n\n# Convert BGR to grayscale\ngray_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)\n\n# Convert BGR to HSV\nhsv_image = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)\ncv2.imwrite('gray_image.jpg', gray_image)\ncv2.imwrite('hsv_image.jpg', hsv_image)\n\n\n\n\n\n\n\n\n\nGrey\n\n\n\n\n\n\n\nHSV\n\n\n\n\n\n\nResizing and Cropping Images\n\nResize images to a specific width and height or by a scaling factor. Cropping involves selecting a region of interest (ROI) from the image.\nimport cv2\n# Read an image\nimage = cv2.imread('image.jpg')\n\n# Resize the image to a specific width and height\nnew_width, new_height = 200, 200\nresized_image = cv2.resize(image, (new_width, new_height))\n\n# Resize the image by a scaling factor\nscale_percent = 50  # percent of original size\nwidth = int(image.shape[1] * scale_percent / 100)\nheight = int(image.shape[0] * scale_percent / 100)\nresized_image = cv2.resize(image, (width, height))\ncv2.imwrite('resized.jpg', resized_image)\n\n# Crop a region of interest (ROI) from the image\nx, y, w, h = 100, 100, 200, 200  # Example coordinates and dimensions\ncropped_image = image[y:y+h, x:x+w]\ncv2.imwrite('cropped.jpg', cropped_image)\n\n\n\n\n\n\n\n\n\nResized\n\n\n\n\n\n\n\nCropped\n\n\n\n\n\n\nReading and Displaying Videos\n\nimport cv2\n\n# Open a video file\ncap = cv2.VideoCapture('video.mp4')\n\nwhile cap.isOpened():\n    ret, frame = cap.read()\n    if not ret:\n        break\n    cv2.imshow('Video', frame)\n    if cv2.waitKey(25) & 0xFF == ord('q'):\n        break\n\ncap.release()\ncv2.destroyAllWindows()\nFore more reference, visit OpenCV Documentation"
   }
 ]
