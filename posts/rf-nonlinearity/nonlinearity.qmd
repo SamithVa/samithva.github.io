@@ -6,26 +6,29 @@ categories: [RF, Nonlinearity]
 image: "nonlinearity.png"
 ---
 
+
+In analog circuits, nonlinearity can be characterized by **harmonic distortion**, but in RF circuits, the characterization of nonlinear behavior involves distinct measures that are tailored to the specific requirements and challenges of RF systems. 
+
+These measures often focus on parameters such as intermodulation distortion (IMD), third-order intercept point (IP3), and the dynamic range of the system. 
+
+### Questions will be convered in this section 
+
 1. How to calculate power gain and voltage gain? Are they equivalent?
 2. What is absolute power gain ? What is its unit quantity?
-3. What are peak amplitude, peak-to-peak amplitude, rms value ?
-4. Is a switch a non-linear system ?
+3. What are peak amplitude, peak-to-peak amplitude, RMS amplitude ?
+4. Is switch a non-linear system ?
 6. What is a mixer in context of communication system ? 
-7. What is a transceiver ? Draw its structure diagram. 
-8. What is PA ? LNA ? What are their differences  ?
-9. Is mixer a LTI system ? And why ?
-10. What is the Fourier series of a rectangular waveform ? 
-11. What is 1dB compression point $P_\text{1dB}$? Derive its formula
-12. What is the coefficient fundamental term of a nonlinear system ? 
-13. What is the difference between intermodulation and cross modulation?
-14. What is third intercept point ?
+7. What is a Transceiver ? How to draw its structure diagram. 
+8. What is PA ? LNA ? What are their differences ?
+9. Is mixer a LTI system ? 
+10. What is 1dB compression point $P_\text{1dB}$? How to derive its formula
+11. What is the coefficient fundamental term of a nonlinear system ? 
+12. What is the difference between intermodulation and cross modulation?
+13. What is third intercept point ?
+
 ---
-Memoryless = static ~= dynamic 
-Tone = unmodulated signal (pure sine or cosine)
 
-> 0 dBm : $V_\text{PP} =$ 632mV (50 Ohm)
-
-### Gain
+### 1. Gain
 #### Power gain 
 $$A_\text{P | dB} = 10\log(\frac{P_\text{out}}{P_\text{in}})$$
 
