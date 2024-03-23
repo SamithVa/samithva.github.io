@@ -7,9 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Samith Va">
-<meta name="dcterms.date" content="2024-03-21">
+<meta name="dcterms.date" content="2024-03-22">
+<meta name="description" content="NumPy is the fundamental package for scientific computing in Python">
 
-<title>Happy Learning - Effects of Nonlinearity</title>
+<title>Happy Learning - Numpy</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,6 +22,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -71,35 +106,6 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="../../styles.css">
 </head>
@@ -147,10 +153,16 @@ window.Quarto = {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Effects of Nonlinearity</h1>
-                                <div class="quarto-categories">
-                <div class="quarto-category">RF</div>
-                <div class="quarto-category">Nonlinearity</div>
+      <h1 class="title">Numpy</h1>
+                  <div>
+        <div class="description">
+          NumPy is the fundamental package for scientific computing in Python
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">numpy</div>
+                <div class="quarto-category">python</div>
+                <div class="quarto-category">vectorization</div>
               </div>
                   </div>
   </div>
@@ -168,7 +180,7 @@ window.Quarto = {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">March 21, 2024</p>
+        <p class="date">March 22, 2024</p>
       </div>
     </div>
     
@@ -187,138 +199,82 @@ window.Quarto = {
 
 
 
-<p>In analog circuits, nonlinearity can be characterized by <strong>harmonic distortion</strong>, but in RF circuits, the characterization of nonlinear behavior involves distinct measures that are tailored to the specific requirements and challenges of RF systems.</p>
-<p>These measures often focus on parameters such as intermodulation distortion (IMD), third-order intercept point (IP3), and the dynamic range of the system.</p>
-<section id="questions-will-be-convered-in-this-section" class="level3">
-<h3 class="anchored" data-anchor-id="questions-will-be-convered-in-this-section">Questions will be convered in this section</h3>
-<ol type="1">
-<li>How to calculate power gain and voltage gain? Are they equivalent?</li>
-<li>What is absolute power gain ? What is its unit quantity?</li>
-<li>What are peak amplitude, peak-to-peak amplitude, RMS amplitude ?</li>
-<li>Is switch a non-linear system ?</li>
-<li>What is a mixer in context of communication system ?</li>
-<li>What is a Transceiver ? How to draw its structure diagram.</li>
-<li>What is PA ? LNA ? What are their differences&nbsp;?</li>
-<li>Is mixer a LTI system ?</li>
-<li>What is 1dB compression point <span class="math inline">\(P_\text{1dB}\)</span>? How to derive its formula</li>
-<li>What is the coefficient fundamental term of a nonlinear system ?</li>
-<li>What is the difference between intermodulation and cross modulation?</li>
-<li>What is third intercept point ?</li>
-</ol>
-<hr>
-</section>
-<section id="gain" class="level3">
-<h3 class="anchored" data-anchor-id="gain">1. Gain</h3>
-<section id="power-gain" class="level4">
-<h4 class="anchored" data-anchor-id="power-gain">Power gain</h4>
-<p><span class="math display">\[A_\text{P | dB} = 10\log(\frac{P_\text{out}}{P_\text{in}})\]</span></p>
-</section>
-<section id="voltage-gain" class="level4">
-<h4 class="anchored" data-anchor-id="voltage-gain">Voltage gain</h4>
-<p><span class="math display">\[A_\text{V | dB} = 20\log(\frac{V_\text{out}}{V_\text{in}})\]</span></p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><span class="math inline">\(V_\text{out},V_\text{in}\)</span> are measured in <em>rms</em> (root-mean-squared)</p>
-</div>
-</div>
-Why does the coefficient change to 20 in voltage gain ? Are <span class="math inline">\(A_P\)</span> and <span class="math inline">\(A_V\)</span> equal?
-<details>
-<summary>
-Answer
-</summary>
-<span class="math inline">\(P = \frac{V^2}{R}\)</span> Obviously <span class="math inline">\(A_P\)</span> and <span class="math inline">\(A_V\)</span> are equivalent only when resistance <span class="math inline">\(R\)</span> remain the constant in input and output ports.
-</details>
-</section>
-<section id="absolute-power-gain" class="level4">
-<h4 class="anchored" data-anchor-id="absolute-power-gain">Absolute Power Gain</h4>
-<p>In most cases, to simplify the expression of low power communication devices, power is usually expressed in dBm, a log unit of <span class="math inline">\(\text{mW}\)</span> (milliwatt). <span class="math display">\[P_\text{dBm} = 10\log(\frac{P}{1\text{ mW}})\]</span></p>
-</section>
-</section>
-<section id="voltage" class="level3">
-<h3 class="anchored" data-anchor-id="voltage">Voltage</h3>
-<p><span class="math inline">\(V_\text{rms}\)</span> : root-mean square voltage</p>
-<p><span class="math inline">\(V_P\)</span> : peak voltage</p>
-<p><span class="math inline">\(V_{PP}\)</span> : peak-to-peak voltage <span class="math display">\[V_\text{rms} = \frac{1}{T}\sqrt{\int_0^T V^2(t) dt}\]</span> <span class="math display">\[V_\text{P} = \sqrt2 V_\text{rms} = \frac{V_{PP}}{2}\]</span></p>
-</section>
-<section id="harmonic-distortion" class="level3">
-<h3 class="anchored" data-anchor-id="harmonic-distortion">Harmonic distortion</h3>
-<p>Harmonic distortion in RF (Radio Frequency) communication circuits refers to the presence of unwanted frequency components in the output signal that are integer multiples of the original frequency, known as <strong>harmonics</strong>.</p>
-<p>When a signal passes through an RF circuit, non-linearities in the components can cause the generation of harmonics. A memoryless systems whose input/output characteristic can be approximated by</p>
-<p><span class="math display">\[y(t) = \alpha_1 x(t) + \alpha_2 x^2 (t)+ \alpha_3 x^3(t)\]</span></p>
-<p>If input <span class="math inline">\(x(t) = A\cos(\omega t)\)</span>, The fundamental term of this nonlinear system can be defined as: <span class="math display">\[y(t) \approx A\cos(\omega t) (\alpha_1 + \frac{3}{4}\alpha_3 A^2) = x(t)(\alpha_1 + \frac{3}{4}\alpha_3 A^2) \]</span> Where <span class="math inline">\(A\)</span> is the peak value amplitude</p>
-<p>From above expression we can conclude that due to the linearity, the gain has changed from <span class="math inline">\(\alpha_1\)</span> to <span class="math inline">\(\alpha_1 + \frac{3}{4}\alpha_3 A^2\)</span></p>
-</section>
-<section id="gain-compression" class="level3">
-<h3 class="anchored" data-anchor-id="gain-compression">Gain compression</h3>
-<p>Gain compression occurs when the gain of an amplifier decreases as the input signal level increases (from above formula we can see that that’s when <span class="math inline">\(\alpha_1\)</span> and <span class="math inline">\(\alpha_3\)</span> have opposite sign).</p>
+<section id="introduction" class="level1">
+<h1>Introduction</h1>
 <dl>
-<dt>What is 1-dB compression point ?</dt>
+<dt>What is numpy?</dt>
 <dd>
-1-dB compression point is the amount of voltage that can make the gain decrease by 1-dB <span class="math display">\[
-P_{\text{in},1\text{dB}} =A_{\text{in},1\text{dB}} = \sqrt{0.145\frac{\alpha_1}{\alpha_3}}
-\]</span> <span class="math inline">\(P_\text{1dB}\)</span> is generally 220 to 225 dBm (63.2 to 35.6 m <span class="math inline">\(V_{pp}\)</span> in 50 <span class="math inline">\(\Omega\)</span> system).
+NumPy is the fundamental package for scientific computing in Python. The core of Numpy is the <code>ndarray</code> object, operations of this array are being performed in compiled code for performance.
+</dd>
+<dt>How Numpy differ from standard Python sequences ? Why using numpy ?</dt>
+<dd>
+There are several different between Numpy and standard Python sequences:
 </dd>
 </dl>
+<ul>
+<li>NumPy arrays have a fixed size at creation, unlike Python lists (which can grow dynamically)</li>
+<li>Elements within the same Numpy array must be the same data type.</li>
+<li>Advanced mathematics operations can be done easily in Numpy (with less code and good performance)</li>
+<li>A growing plethora of scientific and mathematical libraries</li>
+</ul>
+<dl>
+<dt>Why is numpy fast ?</dt>
+<dd>
+Vectorization describes the absence of any explicit looping, indexing, etc., in the code - these things are taking place, of course, just “behind the scenes” in optimized, pre-compiled C code. Vectorized code has many advantages, among which are:
+</dd>
+</dl>
+<ul>
+<li>Vectorized code is more concise and easier to read (shorter code without a lot of for loops)</li>
+<li>Fewer lines of code generally means fewer bugs</li>
+</ul>
 </section>
-<section id="desensitization" class="level3">
-<h3 class="anchored" data-anchor-id="desensitization">Desensitization</h3>
-<p>Desensitization in RF systems refers to a phenomenon where the sensitivity of a receiver decreases due to interference or strong nearby signals.</p>
-<p>In RF design, the term <strong>blocking signal</strong> or <strong>blocker</strong> refers to interferers that desensitize a circuit, even if they do not reduce the gain to zero (but it increase the gain to nearly zero). Some RF receivers must be able to withstand blockers that are <strong>60 to 70 dB</strong> greater than the desired signal.</p>
-</section>
-<section id="cross-modulation" class="level3">
-<h3 class="anchored" data-anchor-id="cross-modulation">Cross Modulation</h3>
-<p>Cross modulation become significant in AM (Amplitude modulation). When interference signal is amplitude modulated, it can lead the original signal to be amplitude modulated.</p>
-</section>
-<section id="intermodulation" class="level3">
-<h3 class="anchored" data-anchor-id="intermodulation">Intermodulation</h3>
-<p>Imagine you have two signals, Signal A and Signal B, passing through a nonlinear component like an amplifier or mixer in an RF system. When these signals interact in the nonlinear component, they create new frequencies that weren’t originally there. These new frequencies are called intermodulation products.</p>
-<p>For instance, if Signal A is at 100 MHz and Signal B is at 150 MHz, the intermodulation products could appear at frequencies like 50 MHz (150 - 100) and 250 MHz (150 + 100).</p>
-<div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
+<section id="commonly-used-numpy-functions" class="level1">
+<h1>Commonly used Numpy Functions</h1>
+<section id="linspace" class="level2">
+<h2 class="anchored" data-anchor-id="linspace">Linspace</h2>
+<p><code>np.linspace(start, end, interval)</code> creates an array with evenly spaced float numbers over a specified interval.</p>
+<div id="58cc1c55" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> np.linspace(<span class="dv">10</span>,<span class="dv">100</span>,<span class="dv">10</span>)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>a</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="1">
+<pre><code>array([ 10.,  20.,  30.,  40.,  50.,  60.,  70.,  80.,  90., 100.])</code></pre>
 </div>
-<div class="callout-title-container flex-fill">
-Important
 </div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Intermodulation : The signal is <strong>not</strong> mixed with the interferer</p>
-<p>Cross modulation : The signal is <strong>mixed</strong> with the interferer</p>
+</section>
+<section id="reshape" class="level2">
+<h2 class="anchored" data-anchor-id="reshape">Reshape</h2>
+<p><code>np.reshape()</code> reshape a numpy array to specific given shape <code>(n, m)</code>. In neural network when dealing with images, we usually need to flatten the image into 1 row array by using <code>.reshape(-1)</code>.</p>
+<div id="5dfc105b" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a 2D array</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> np.array([[<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>],</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>              [<span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>],</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>              [<span class="dv">9</span>, <span class="dv">10</span>, <span class="dv">11</span>, <span class="dv">12</span>]])</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Reshape the array to 1D using -1</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>flattened_y <span class="op">=</span> y.reshape(<span class="op">-</span><span class="dv">1</span>)</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>flattened_y</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="2">
+<pre><code>array([ 1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12])</code></pre>
 </div>
 </div>
 </section>
-<section id="third-intercept-point" class="level3">
-<h3 class="anchored" data-anchor-id="third-intercept-point">Third-Intercept Point</h3>
-<p>When there are two interference going through a nonlinear system, it can produce a third component frequency which is in the domain of wanted signal frequency, this will corrupt the information-baring signal. To measure the intermodulation we can use relative IM (intermodulation) term, <span class="math display">\[\text{IM} = \frac{3}{4}\alpha_3 A_1A_2^2\]</span></p>
-<p><span class="math display">\[\text{Relative IM} = 20\log(\frac{3\alpha_3 }{4\alpha_1}A^2) \text{ dBc}\]</span></p>
-<p><span class="math display">\[A_\text{IIP3} = \sqrt{\frac{4}{3}|\frac{\alpha_1}{\alpha_3}|}\]</span></p>
-</section>
-<section id="noise-figure" class="level3">
-<h3 class="anchored" data-anchor-id="noise-figure">Noise Figure</h3>
-</section>
-<section id="answer" class="level2">
-<h2 class="anchored" data-anchor-id="answer">Answer</h2>
-<ol type="1">
-<li>Refer to above equations.</li>
-<li>Refer to above equations.</li>
-<li>What are Peak amplitude, peak-to-peak amplitude, rms value ?</li>
-<li>unambiguous question, switch can be linear or non-linear depends on the input of interest.</li>
-<li>What is a mixer in context of communication system ?</li>
-<li>Transceiver is the combination of Tx, and Rx. <img src="transciever.png" class="img-fluid"></li>
-<li>What is PA ? LNA ? What are their differences&nbsp; ?</li>
-<li>a mixer is frequency shift component. we can prove that it does not satisfy the linear property.</li>
-</ol>
+<section id="where" class="level2">
+<h2 class="anchored" data-anchor-id="where">Where</h2>
+<p><code>np.where()</code> perform conditional operations on arrays and is somewhat similar to the ternary conditional operator <code>(condition ? value_if_true : value_if_false)</code> found in many programming languages.</p>
+<div id="3798699f" class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> np.arange(<span class="dv">10</span>)</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> np.where(a<span class="op">&gt;</span><span class="dv">5</span>, a, a<span class="op">**</span><span class="dv">2</span>)</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>b</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="3">
+<pre><code>array([ 0,  1,  4,  9, 16, 25,  6,  7,  8,  9])</code></pre>
+</div>
+</div>
+<p>For more references visit <a href="https://numpy.org/doc/">Numpy Documentation</a></p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

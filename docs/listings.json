@@ -3,7 +3,7 @@
     "listing": "/index.html",
     "items": [
       "/posts/open-cv/open-cv.html",
-      "/posts/welcome/index.html",
+      "/posts/numpy/index.html",
       "/posts/deep-learning-journey/index.html",
       "/posts/rf-nonlinearity/nonlinearity.html"
     ]

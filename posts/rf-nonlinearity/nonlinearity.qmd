@@ -6,7 +6,6 @@ categories: [RF, Nonlinearity]
 image: "nonlinearity.png"
 ---
 
-
 In analog circuits, nonlinearity can be characterized by **harmonic distortion**, but in RF circuits, the characterization of nonlinear behavior involves distinct measures that are tailored to the specific requirements and challenges of RF systems. 
 
 These measures often focus on parameters such as intermodulation distortion (IMD), third-order intercept point (IP3), and the dynamic range of the system. 
@@ -34,52 +33,79 @@ $$A_\text{P | dB} = 10\log(\frac{P_\text{out}}{P_\text{in}})$$
 
 #### Voltage gain
 $$A_\text{V | dB} = 20\log(\frac{V_\text{out}}{V_\text{in}})$$
-**Note** : $V_\text{out},V_\text{in}$ are measured in *rms* (root-mean-squared)
 
-Why does the coefficient change to 20 in voltage gain ? Hint : $P = \frac{V^2}{R}$
+:::{.callout-note}
+$V_\text{out},V_\text{in}$ are measured in *rms* (root-mean-squared)
+:::
+
+Why does the coefficient change to 20 in voltage gain ? Are $A_P$ and $A_V$ equal?
+<details>
+<summary>Answer</summary>
+$P = \frac{V^2}{R}$
 Obviously $A_P$ and $A_V$ are equivalent only when resistance $R$ remain the constant in input and output ports.
+</details> 
 
 #### Absolute Power Gain
 In most cases, to simplify the expression of low power communication devices, power is usually expressed in dBm, a log unit of $\text{mW}$ (milliwatt).
 $$P_\text{dBm} = 10\log(\frac{P}{1\text{ mW}})$$
 
 ### Voltage
+
 $V_\text{rms}$ : root-mean square voltage
+
 $V_P$ : peak voltage
+
 $V_{PP}$ : peak-to-peak voltage
 $$V_\text{rms} = \frac{1}{T}\sqrt{\int_0^T V^2(t) dt}$$
 $$V_\text{P} = \sqrt2 V_\text{rms} = \frac{V_{PP}}{2}$$
 
 ### Harmonic distortion
-Harmonic distortion in RF (Radio Frequency) communication circuits refers to the presence of unwanted frequency components in the output signal that are integer multiples of the original frequency, known as harmonics. 
+Harmonic distortion in RF (Radio Frequency) communication circuits refers to the presence of unwanted frequency components in the output signal that are integer multiples of the original frequency, known as **harmonics**. 
 
-When a signal passes through an RF circuit, non-linearities in the components can cause the generation of harmonics.
+When a signal passes through an RF circuit, non-linearities in the components can cause the generation of harmonics. A memoryless systems whose input/output characteristic can be approximated by
 
-The fundamental term of a nonlinear system is : 
-$$\alpha_1 + \frac{3}{4}\alpha_3 A^2$$
+$$y(t) = \alpha_1 x(t) + \alpha_2 x^2 (t)+ \alpha_3 x^3(t)$$
+
+If input $x(t) = A\cos(\omega t)$, The fundamental term of this nonlinear system can be defined as: 
+$$y(t) \approx A\cos(\omega t) (\alpha_1 + \frac{3}{4}\alpha_3 A^2) = x(t)(\alpha_1 + \frac{3}{4}\alpha_3 A^2) $$
+Where $A$ is the peak value amplitude
+
+From above expression we can conclude that due to the linearity, the gain has changed from 
+$\alpha_1$ to $\alpha_1 + \frac{3}{4}\alpha_3 A^2$
 
 ### Gain compression 
-Gain compression occurs when the gain of an amplifier decreases as the input signal level increases. 1-dB compression point is the amount of voltage that can make the gain decrease by 1-dB 
+
+Gain compression occurs when the gain of an amplifier decreases as the input signal level increases (from above formula we can see that that's when $\alpha_1$ and $\alpha_3$ have opposite sign). 
+
+What is 1-dB compression point ?
+: 1-dB compression point is the amount of voltage that can make the gain decrease by 1-dB 
 $$
 P_{\text{in},1\text{dB}} =A_{\text{in},1\text{dB}} = \sqrt{0.145\frac{\alpha_1}{\alpha_3}}
 $$
-1-dB compression point is generally 220 to 225 dBm (63.2 to 35.6 m$V_{pp}$ in 50 $\Omega$system). 
-### Desensitization 
-Desensitization in RF (Radio Frequency) systems refers to a phenomenon where the sensitivity of a receiver decreases due to interference or strong nearby signals. 
+$P_\text{1dB}$ is generally 220 to 225 dBm (63.2 to 35.6 m $V_{pp}$ in 50 $\Omega$ system). 
 
-In RF design, the term “**blocking signal**” or “**blocker**” refers to interferers that
-desensitize a circuit, even if they do not reduce the gain to zero. Some RF receivers must be able to withstand blockers that are **60 to 70 dB** greater than the desired signal.
+### Desensitization 
+
+Desensitization in RF systems refers to a phenomenon where the sensitivity of a receiver decreases due to interference or strong nearby signals. 
+
+In RF design, the term **blocking signal** or **blocker** refers to interferers that desensitize a circuit, even if they do not reduce the gain to zero (but it increase the gain to nearly zero). Some RF receivers must be able to withstand blockers that are **60 to 70 dB** greater than the desired signal.
 
 ### Cross Modulation 
-Cross modulation become significant in AM (Amplitude modulation) when interference signal is amplitude modulated, it lead the original signal to be amplitude modulated. 
+
+Cross modulation become significant in AM (Amplitude modulation). When interference signal is amplitude modulated, it can lead the original signal to be amplitude modulated. 
 
 ### Intermodulation 
+
 Imagine you have two signals, Signal A and Signal B, passing through a nonlinear component like an amplifier or mixer in an RF system. When these signals interact in the nonlinear component, they create new frequencies that weren't originally there. These new frequencies are called intermodulation products.
 
 For instance, if Signal A is at 100 MHz and Signal B is at 150 MHz, the intermodulation products could appear at frequencies like 50 MHz (150 - 100) and 250 MHz (150 + 100).
 
-> - Intermodulation : The signal is **not** mixed with the interferer
-> - Cross modulation : The signal is **mixed** with the interferer
+
+::: {.callout-important}
+Intermodulation : The signal is **not** mixed with the interferer
+
+Cross modulation : The signal is **mixed** with the interferer
+:::
 
 ### Third-Intercept Point
 
