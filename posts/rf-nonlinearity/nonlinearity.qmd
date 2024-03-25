@@ -2,6 +2,7 @@
 title: "Effects of Nonlinearity"
 author: "Samith Va"
 date: "2024-03-21"
+toc: true
 categories: [RF, Nonlinearity]
 image: "nonlinearity.png"
 ---
@@ -10,7 +11,7 @@ In analog circuits, nonlinearity can be characterized by **harmonic distortion**
 
 These measures often focus on parameters such as intermodulation distortion (IMD), third-order intercept point (IP3), and the dynamic range of the system. 
 
-### Questions will be convered in this section 
+#### Questions will be convered in this section 
 
 1. How to calculate power gain and voltage gain? Are they equivalent?
 2. What is absolute power gain ? What is its unit quantity?
@@ -27,7 +28,7 @@ These measures often focus on parameters such as intermodulation distortion (IMD
 
 ---
 
-### 1. Gain
+### Gain
 #### Power gain 
 $$A_\text{P | dB} = 10\log(\frac{P_\text{out}}{P_\text{in}})$$
 
@@ -59,6 +60,12 @@ $V_{PP}$ : peak-to-peak voltage
 $$V_\text{rms} = \frac{1}{T}\sqrt{\int_0^T V^2(t) dt}$$
 $$V_\text{P} = \sqrt2 V_\text{rms} = \frac{V_{PP}}{2}$$
 
+What is $V_{PP}$ correspond to 0 dBm?
+<details>
+<summary>Answer</summary>
+$V_{PP} = 632$ mV
+</details> 
+
 ### Harmonic distortion
 Harmonic distortion in RF (Radio Frequency) communication circuits refers to the presence of unwanted frequency components in the output signal that are integer multiples of the original frequency, known as **harmonics**. 
 
@@ -74,10 +81,12 @@ From above expression we can conclude that due to the linearity, the gain has ch
 $\alpha_1$ to $\alpha_1 + \frac{3}{4}\alpha_3 A^2$
 
 ### Gain compression 
+A small-signal gain of circuits is usually obtained when harmonic distortion is negligible. But from above expression when harmonic distortion is considered, the gain might be actually become smaller (compressive).
 
-Gain compression occurs when the gain of an amplifier decreases as the input signal level increases (from above formula we can see that that's when $\alpha_1$ and $\alpha_3$ have opposite sign). 
+What is Gain Compression?
+: Gain compression occurs when the gain of an amplifier decreases as the input signal level increases (from above formula we can see that that's when $\alpha_1$ and $\alpha_3$ have opposite sign). 
 
-What is 1-dB compression point ?
+How can we measure this compression quantity ?
 : 1-dB compression point is the amount of voltage that can make the gain decrease by 1-dB 
 $$
 P_{\text{in},1\text{dB}} =A_{\text{in},1\text{dB}} = \sqrt{0.145\frac{\alpha_1}{\alpha_3}}
@@ -115,6 +124,16 @@ $$\text{IM} = \frac{3}{4}\alpha_3 A_1A_2^2$$
 $$\text{Relative IM} = 20\log(\frac{3\alpha_3 }{4\alpha_1}A^2) \text{ dBc}$$
 
 $$A_\text{IIP3} = \sqrt{\frac{4}{3}|\frac{\alpha_1}{\alpha_3}|}$$
+
+::: {.callout-note}
+$A_{IIP3}$, $P_{IIP3}$ , $P_{IP3}$ are commonly used interchangeably.  
+:::
+
+What is the relation between $P_{1dB}$ and $P_{IIP3}$?
+<details>
+<summary>Answer</summary>
+$\frac{P_{IP3}}{P_{1dB}} = 9.6$ dB
+</details> 
 
 ### Noise Figure
 

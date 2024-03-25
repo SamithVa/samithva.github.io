@@ -104,7 +104,7 @@ window.Quarto = {
 <link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-fixed fullcontent">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
@@ -179,7 +179,24 @@ window.Quarto = {
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#gain" id="toc-gain" class="nav-link active" data-scroll-target="#gain">Gain</a></li>
+  <li><a href="#voltage" id="toc-voltage" class="nav-link" data-scroll-target="#voltage">Voltage</a></li>
+  <li><a href="#harmonic-distortion" id="toc-harmonic-distortion" class="nav-link" data-scroll-target="#harmonic-distortion">Harmonic distortion</a></li>
+  <li><a href="#gain-compression" id="toc-gain-compression" class="nav-link" data-scroll-target="#gain-compression">Gain compression</a></li>
+  <li><a href="#desensitization" id="toc-desensitization" class="nav-link" data-scroll-target="#desensitization">Desensitization</a></li>
+  <li><a href="#cross-modulation" id="toc-cross-modulation" class="nav-link" data-scroll-target="#cross-modulation">Cross Modulation</a></li>
+  <li><a href="#intermodulation" id="toc-intermodulation" class="nav-link" data-scroll-target="#intermodulation">Intermodulation</a></li>
+  <li><a href="#third-intercept-point" id="toc-third-intercept-point" class="nav-link" data-scroll-target="#third-intercept-point">Third-Intercept Point</a></li>
+  <li><a href="#noise-figure" id="toc-noise-figure" class="nav-link" data-scroll-target="#noise-figure">Noise Figure</a></li>
+  <li><a href="#answer" id="toc-answer" class="nav-link" data-scroll-target="#answer">Answer</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
 
@@ -189,8 +206,8 @@ window.Quarto = {
 
 <p>In analog circuits, nonlinearity can be characterized by <strong>harmonic distortion</strong>, but in RF circuits, the characterization of nonlinear behavior involves distinct measures that are tailored to the specific requirements and challenges of RF systems.</p>
 <p>These measures often focus on parameters such as intermodulation distortion (IMD), third-order intercept point (IP3), and the dynamic range of the system.</p>
-<section id="questions-will-be-convered-in-this-section" class="level3">
-<h3 class="anchored" data-anchor-id="questions-will-be-convered-in-this-section">Questions will be convered in this section</h3>
+<section id="questions-will-be-convered-in-this-section" class="level4">
+<h4 class="anchored" data-anchor-id="questions-will-be-convered-in-this-section">Questions will be convered in this section</h4>
 <ol type="1">
 <li>How to calculate power gain and voltage gain? Are they equivalent?</li>
 <li>What is absolute power gain ? What is its unit quantity?</li>
@@ -208,7 +225,7 @@ window.Quarto = {
 <hr>
 </section>
 <section id="gain" class="level3">
-<h3 class="anchored" data-anchor-id="gain">1. Gain</h3>
+<h3 class="anchored" data-anchor-id="gain">Gain</h3>
 <section id="power-gain" class="level4">
 <h4 class="anchored" data-anchor-id="power-gain">Power gain</h4>
 <p><span class="math display">\[A_\text{P | dB} = 10\log(\frac{P_\text{out}}{P_\text{in}})\]</span></p>
@@ -247,6 +264,13 @@ Answer
 <p><span class="math inline">\(V_\text{rms}\)</span> : root-mean square voltage</p>
 <p><span class="math inline">\(V_P\)</span> : peak voltage</p>
 <p><span class="math inline">\(V_{PP}\)</span> : peak-to-peak voltage <span class="math display">\[V_\text{rms} = \frac{1}{T}\sqrt{\int_0^T V^2(t) dt}\]</span> <span class="math display">\[V_\text{P} = \sqrt2 V_\text{rms} = \frac{V_{PP}}{2}\]</span></p>
+What is <span class="math inline">\(V_{PP}\)</span> correspond to 0 dBm?
+<details>
+<summary>
+Answer
+</summary>
+<span class="math inline">\(V_{PP} = 632\)</span> mV
+</details>
 </section>
 <section id="harmonic-distortion" class="level3">
 <h3 class="anchored" data-anchor-id="harmonic-distortion">Harmonic distortion</h3>
@@ -258,9 +282,13 @@ Answer
 </section>
 <section id="gain-compression" class="level3">
 <h3 class="anchored" data-anchor-id="gain-compression">Gain compression</h3>
-<p>Gain compression occurs when the gain of an amplifier decreases as the input signal level increases (from above formula we can see that that’s when <span class="math inline">\(\alpha_1\)</span> and <span class="math inline">\(\alpha_3\)</span> have opposite sign).</p>
+<p>A small-signal gain of circuits is usually obtained when harmonic distortion is negligible. But from above expression when harmonic distortion is considered, the gain might be actually become smaller (compressive).</p>
 <dl>
-<dt>What is 1-dB compression point ?</dt>
+<dt>What is Gain Compression?</dt>
+<dd>
+Gain compression occurs when the gain of an amplifier decreases as the input signal level increases (from above formula we can see that that’s when <span class="math inline">\(\alpha_1\)</span> and <span class="math inline">\(\alpha_3\)</span> have opposite sign).
+</dd>
+<dt>How can we measure this compression quantity ?</dt>
 <dd>
 1-dB compression point is the amount of voltage that can make the gain decrease by 1-dB <span class="math display">\[
 P_{\text{in},1\text{dB}} =A_{\text{in},1\text{dB}} = \sqrt{0.145\frac{\alpha_1}{\alpha_3}}
@@ -301,6 +329,26 @@ Important
 <p>When there are two interference going through a nonlinear system, it can produce a third component frequency which is in the domain of wanted signal frequency, this will corrupt the information-baring signal. To measure the intermodulation we can use relative IM (intermodulation) term, <span class="math display">\[\text{IM} = \frac{3}{4}\alpha_3 A_1A_2^2\]</span></p>
 <p><span class="math display">\[\text{Relative IM} = 20\log(\frac{3\alpha_3 }{4\alpha_1}A^2) \text{ dBc}\]</span></p>
 <p><span class="math display">\[A_\text{IIP3} = \sqrt{\frac{4}{3}|\frac{\alpha_1}{\alpha_3}|}\]</span></p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><span class="math inline">\(A_{IIP3}\)</span>, <span class="math inline">\(P_{IIP3}\)</span> , <span class="math inline">\(P_{IP3}\)</span> are commonly used interchangeably.</p>
+</div>
+</div>
+What is the relation between <span class="math inline">\(P_{1dB}\)</span> and <span class="math inline">\(P_{IIP3}\)</span>?
+<details>
+<summary>
+Answer
+</summary>
+<span class="math inline">\(\frac{P_{IP3}}{P_{1dB}} = 9.6\)</span> dB
+</details>
 </section>
 <section id="noise-figure" class="level3">
 <h3 class="anchored" data-anchor-id="noise-figure">Noise Figure</h3>
