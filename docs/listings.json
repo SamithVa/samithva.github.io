@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/german/german.html",
       "/posts/open-cv/open-cv.html",
       "/posts/numpy/index.html",
       "/posts/deep-learning-journey/index.html",

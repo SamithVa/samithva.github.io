@@ -67,6 +67,7 @@ $V_{PP} = 632$ mV
 </details> 
 
 ### Harmonic distortion
+
 Harmonic distortion in RF (Radio Frequency) communication circuits refers to the presence of unwanted frequency components in the output signal that are integer multiples of the original frequency, known as **harmonics**. 
 
 When a signal passes through an RF circuit, non-linearities in the components can cause the generation of harmonics. A memoryless systems whose input/output characteristic can be approximated by
@@ -101,24 +102,23 @@ In RF design, the term **blocking signal** or **blocker** refers to interferers 
 
 ### Cross Modulation 
 
-Cross modulation become significant in AM (Amplitude modulation). When interference signal is amplitude modulated, it can lead the original signal to be amplitude modulated. 
+Cross modulation become significant in **AM** (Amplitude modulation). When interference signal is amplitude modulated, it can lead the original signal to be amplitude modulated. 
 
 ### Intermodulation 
 
-Imagine you have two signals, Signal A and Signal B, passing through a nonlinear component like an amplifier or mixer in an RF system. When these signals interact in the nonlinear component, they create new frequencies that weren't originally there. These new frequencies are called intermodulation products.
+Imagine we have two signals, Signal A and Signal B, passing through a nonlinear component like an amplifier or mixer in an RF system. When these signals interact in the nonlinear component, they create new frequencies that weren't originally there. These new frequencies are called intermodulation products.
 
-For instance, if Signal A is at 100 MHz and Signal B is at 150 MHz, the intermodulation products could appear at frequencies like 50 MHz (150 - 100) and 250 MHz (150 + 100).
-
+For instance, if Signal A is at 100 MHz and Signal B is at 150 MHz, the intermodulation products could appear at frequencies like 50 MHz (150 - 100) and 250 MHz (150 + 100). Hence if our information bearing signal is working at frequency near to 50 MHz or 250 MHz, it will of course be corrupted.
 
 ::: {.callout-important}
-Intermodulation : The signal is **not** mixed with the interferer
+Intermodulation : The signal is **not** mixed with the interferer, but is mixed with a combination of two interferences' component.
 
 Cross modulation : The signal is **mixed** with the interferer
 :::
 
 ### Third-Intercept Point
 
-When there are two interference going through a nonlinear system, it can produce a third component frequency which is in the domain of wanted signal frequency, this will corrupt the information-baring signal. To measure the intermodulation we can use relative IM (intermodulation) term, 
+To measure the intermodulation we can use relative IM (intermodulation), IM and $A_\text{IP3}$
 $$\text{IM} = \frac{3}{4}\alpha_3 A_1A_2^2$$
 
 $$\text{Relative IM} = 20\log(\frac{3\alpha_3 }{4\alpha_1}A^2) \text{ dBc}$$
@@ -129,7 +129,7 @@ $$A_\text{IIP3} = \sqrt{\frac{4}{3}|\frac{\alpha_1}{\alpha_3}|}$$
 $A_{IIP3}$, $P_{IIP3}$ , $P_{IP3}$ are commonly used interchangeably.  
 :::
 
-What is the relation between $P_{1dB}$ and $P_{IIP3}$?
+What is the relation between $P_{1dB}$ and $P_{IP3}$?
 <details>
 <summary>Answer</summary>
 $\frac{P_{IP3}}{P_{1dB}} = 9.6$ dB
@@ -137,9 +137,23 @@ $\frac{P_{IP3}}{P_{1dB}} = 9.6$ dB
 
 ### Noise Figure
 
+In circuit and system design, we interested in the signal-to-noise ratio (SNR). To quantify how noisy the circuit is, we can define its noise factor as
+$$\text{NF} = \frac{SNR_\text{in}}{SNR_\text{out}}$$
 
+or Noise figure in dB as
+$$\text{NF}|_\text{dB} = 10\log(\frac{SNR_\text{in}}{SNR_\text{out}})$$
 
+What is the NF for noiseless stage ? 
+<details>
+<summary>Answer</summary>
+NF = 1 = 0 dB
+</details> 
 
+#### Friis's equation
+
+To define noise in a cascade of stages, we can use Friis's equation to determine total Noise Figure as following :
+
+$$NF_{\text{total}} = {NF}_1 + \frac{NF_2 - 1}{A_{P1}}$$
 
 
 

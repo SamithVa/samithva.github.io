@@ -7,52 +7,51 @@ categories: [German]
 ---
 ## Weather and Seasons
 
-Frühling: spring
-Sommer : summer
-Sonnig: sunny
-(der) Regen 
-Neblig: foggy
-	Es ist neblig / warm
-Warm
-	Ist es warm heute ?
-	Es ist nie warm im Winter.
-Neblig, foggy 
-	Es ist neblig heute und bewölkt.
-Bewölkt
-	Es ist bewölkt und neblig.
-Herbst: the Fall 
-Wetter : weather
-	Wie ist das Wetter heute ?
-Heute : today
-wandere(ich) wandert wanderst wandern(sie) 
-	Wandern sie oft Anna, Wanderst du oft Anna?
-	Die Eule wandert nie in Sommer. 
-Sonnencreme : sunscreen  
-	Wie viel kostet die Sonnencreme ?
-Es ist immer schön im Frühling
-die Wasserflasche 
-	Meine Wasserflasche ist groß.
+* Frühling: spring
+* Sommer : summer
+* Sonnig: sunny
+* (der) Regen 
+* Neblig: foggy
+	- Es ist neblig / warm
+* Warm
+	- Ist es warm heute ?
+	- Es ist nie warm im Winter.
+	- Es ist neblig heute und bewölkt.
+* Bewölkt
+	- Es ist bewölkt und neblig.
+* Herbst: the Fall 
+* Wetter : weather
+	- Wie ist das Wetter heute ?
+* Heute : today
+* wandere(ich) wandert wanderst wandern(sie) 
+	- Wandern sie oft Anna, Wanderst du oft Anna?
+	- Die Eule wandert nie in Sommer. 
+* Sonnencreme : sunscreen  
+	- Wie viel kostet die Sonnencreme ?
+* Es ist immer schön im Frühling
+* die Wasserflasche 
+	- Meine Wasserflasche ist groß.
 
 ## Relation 
 
-liebt
-	Liebt dein Bruder deinen Hund ?
-	Liebt du deinen Hund ?
-habe hast
-	Hast du einen Mann ? 
-	Hast du einen Freundin ?
-Freund
-	Hast du viele Freunde ?
-Freundin
-	Hast du einen Freundin?
-Onkel
-Oma 
-Opa 
+- liebt
+	- Liebt dein Bruder deinen Hund ?
+	- Liebt du deinen Hund ?
+- habe hast
+	- Hast du einen Mann ? 
+	- Hast du einen Freundin ?
+- Freund
+	- Hast du viele Freunde ?
+- Freundin
+	- Hast du einen Freundin?
+- Onkel
+- Oma 
+- Opa 
 
 ## Food
 
-(die) Banane 
-	Ich mag Bananen.
+(die) Banane  
+Ich mag Bananen.
 (die) Birne
 (die) Bohnen, bean 
 	Ich mag Bohnen.
