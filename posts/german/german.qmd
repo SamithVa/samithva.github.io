@@ -50,34 +50,35 @@ categories: [German]
 
 ## Food
 
-(die) Banane  
-Ich mag Bananen.
-(die) Birne
-(die) Bohnen, bean 
-	Ich mag Bohnen.
-(die) Butter
-(die) Aubergine 
-(das) Brot
-(die) Schokolade 
-	Ich mag Schokoladen. 
-(die) Feige
-(das) Fleisch, meat
-(die) Familie 
-(der) Reis
-	Ich esse gern Reis.
-(die) Rosinen 
-	Ich esse gern Rosinen. 
-(das) Radio
+- (die) Banane  
+	- Ich mag Bananen.
+- (die) Birne
+- (die) Bohnen, bean 
+	- Ich mag Bohnen.
+- (die) Butter
+- (die) Aubergine 
+- (das) Brot
+- (die) Schokolade 
+	- Ich mag Schokoladen. 
+- (die) Feige
+- (das) Fleisch, meat
+- (die) Familie 
+- (der) Reis
+	- Ich esse gern Reis.
+- (die) Rosinen 
+	- Ich esse gern Rosinen. 
+- (das) Radio
 
 
 
 
 
 
-waschen 
-kaufen
+- waschen 
+- kaufen
+
 ## Place
 
-(die) Schule
-(der) Schal 
-(der) Fisch
+- (die) Schule
+- (der) Schal 
+- (der) Fisch
