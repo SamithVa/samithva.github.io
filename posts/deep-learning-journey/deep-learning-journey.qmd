@@ -6,17 +6,21 @@ categories: [deep learning, pytorch, fastai]
 image: "image.jpg"
 ---
 
-Keywords: architecture, overfit, fine-tunning, validation set, test set, weights, parameters, CNN
+Keywords used in this context: architecture, overfit, fine-tunning, validation set, test set, weights, parameters, CNN
 
-# Introduction 
-Deep learning is common in these day technology. It has been applied in many field such as Computer Vision (CV),
-Natural language processing (NLP) as well as in Medicine. The first idea of neurons network came from Pitts and McCulloch. **Mark I Perceptron** The first artificial neuron network was built using the concept from Pitts and McCulloch, but the Perceptron was a single layer neuron network and it couldn't learn some simple functions (such as XOR). 
+# Introduction and History of Neuron Network
 
-Pitts and McCulloch form the neurons network idea. 
+Deep learning (DL) has become ubiquitous in modern technology. Common applications of DL include natural language processing (NLP), medicine, security (computer vision), industrial automation (anomaly detection), and commercial recommendation systems.
 
-> ... Trying to spend too much time on theory can be **counterproductive**. The key is to just code and try to solve problems: the theory can come later when you have context and motivation.  
+When discussing DL, it is crucial to emphasize its fundamental element: the Neural Network. The concept of neural networks was first developed by Pitts and McCulloch. *The Mark I Perceptron* was the first artificial neural network constructed based on their ideas. However, the Perceptron was limited to a single layer and struggled to learn some simple functions, such as XOR. To create more powerful neural networks, it is essential to add more layers, which is a common technique in building effective models in DL.
 
-Five areas that DL are good at: natural language processing, medical, security(computer vision), factory(industrial | anomaly detection) and recommendation system(commercial).
+
+
+::: {.callout-tip}
+Trying to spend too much time on theory can be **counterproductive**. The key is to just code and try to solve problems: the theory can come later when you have context and motivation.  
+:::
+
+
 
 3. The first device that was based on the principle of the artificial neuron is : The Mark I Perceptron. 
 4. Requirements for the parallel distributed processing:

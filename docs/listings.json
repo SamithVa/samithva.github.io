@@ -2,13 +2,14 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/conda/conda.html",
       "/posts/german-grammar/german.html",
       "/posts/html/html.html",
       "/posts/chinese/chinese.html",
       "/posts/german-vocabulary/german_vocab.html",
       "/posts/open-cv/open-cv.html",
       "/posts/numpy/index.html",
-      "/posts/deep-learning-journey/index.html",
+      "/posts/deep-learning-journey/deep-learning-journey.html",
       "/posts/rf-nonlinearity/nonlinearity.html"
     ]
   },
