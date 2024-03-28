@@ -9,5 +9,12 @@
       "/posts/deep-learning-journey/index.html",
       "/posts/rf-nonlinearity/nonlinearity.html"
     ]
+  },
+  {
+    "listing": "/projects.html",
+    "items": [
+      "/projects/css/css.html",
+      "/projects/html/html.html"
+    ]
   }
 ]

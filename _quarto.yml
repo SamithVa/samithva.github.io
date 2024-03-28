@@ -7,10 +7,15 @@ website:
   navbar:
     right:
       - about.qmd
+      - projects.qmd
       - icon: github
         href: https://github.com/SamithVa
       - icon: twitter
         href: https://twitter.com
+  page-footer: |
+    This page is made using [Quarto](https://quarto.org)
+
+
 format:
   html:
     theme:
