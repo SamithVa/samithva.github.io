@@ -1,16 +1,21 @@
 ---
-title: "German"
+title: "German Vocabulary"
 author: "Samith Va"
 date: "2024-03-25"
 toc: true
-categories: [German]
+categories: [German, Vocabulary]
 ---
+
+# Vocabulary
+
 ## Weather and Seasons
+
+![Weather](weather.png){width=60%}
 
 * Frühling: spring
 * Sommer : summer
 * Sonnig: sunny
-* (der) Regen 
+* (der) Regen: rainning
 * Neblig: foggy
 	- Es ist neblig / warm
 * Warm
