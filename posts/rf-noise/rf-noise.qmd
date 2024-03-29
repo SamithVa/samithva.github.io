@@ -1,0 +1,77 @@
+---
+title: "RF Noise"
+author: "Samith Va"
+toc: true
+date: 03-29-2024
+categories: [RF, noise, noise figure]
+---
+
+What will cover in this section : 
+
+Noise Figure, Friis Equation, Thermal Noise of Resistor, MOSFET Noise.
+
+## Noise Figure
+
+In circuit and system design, we interested in the signal-to-noise ratio (SNR). To quantify how noisy the circuit is, we can define its noise factor as
+
+$$\text{NF} = \frac{\text{SNR}_\text{in}}{\text{SNR}_\text{out}}$$
+
+or Noise figure in dB as
+
+$$\text{NF}|_\text{dB} = 10\log(\frac{\text{SNR}_\text{in}}{\text{SNR}_\text{out}})$$
+
+What is the NF for noiseless stage ? 
+<details>
+<summary>Answer</summary>
+NF = 1 = 0 dB
+</details> 
+
+## Friis's equation
+
+To determine overall noise figure in a cascade of stages, we can use Friis's equation  :
+
+$$NF_{\text{total}} = {NF}_1 + \frac{NF_2 - 1}{A^2_1} + ... + \frac{{NF}_n - 1}{A^2_1...A^2_n}$$
+
+From above expression we can conclude that the first stage's NF is the most important. Why ? 
+
+<details>
+<summary>Answer</summary>
+Conceptually, because the noise from first stage will be amplified multiple times.
+</details> 
+
+
+## Thermal noise equivalent
+
+Thermal noise the most significant noise encountered in electronic devices. We can model the thermal in two ways:
+
+![Thermal Noise Equilvalent Circuit](thermal_noise.png)
+
+1. Thevenin 
+$$\bar{V}^2_n = 4kTR_1$$
+2. Norton
+$$\bar{I}^2_n = 4kT/R_1$$
+
+Where 
+
+- $k = 1.38 \times 10^{-23} J/K$ is the Boltzmann constant.
+- $T$ is the temperature kelvin $(K)$
+
+## Thermal noise in MOSFET
+
+![Thermal noise in MOSFET](mosfet_thermal_noise.png)
+Thermal noise of MOS transistors which is operating in the **saturation region** is approximated by :
+
+1. A **current source** tied between the source and drain terminals.
+$$\bar{I_n}^2 = 4kT \gamma g_m$$
+
+2. A **voltage source** in series with gate
+$$\bar{V_n}^2 = 4kT \gamma / g_m$$ 
+
+Where 
+
+- $\gamma$ is the excess noise coefficient
+- $g_m$ is the transconductance.
+
+
+
+

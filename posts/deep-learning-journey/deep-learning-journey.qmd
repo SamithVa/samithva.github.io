@@ -15,13 +15,19 @@ Deep learning (DL) has become ubiquitous in modern technology. Common applicatio
 
 When discussing DL, it is crucial to emphasize its fundamental element: the Neural Network. The concept of neural networks was first developed by Pitts and McCulloch. *The Mark I Perceptron* was the first artificial neural network constructed based on their ideas. However, the Perceptron was limited to a single layer and struggled to learn some simple functions, such as XOR. To create more powerful neural networks, it is essential to add more layers, which is a common technique in building effective models in DL.
 
+
+::: {.callout-note collapse="true"}
+## 3 element that lead AI to become famous
+ABC : Algorithms, Big Data, Computing.
+:::
+
 ::: {.callout-note}
-
 `!pip install` staring with a ! is a bash code
-
 :::
 
 ::: {.callout-tip}
+## Code First, Theory Later
+
 Trying to spend too much time on theory can be **counterproductive**. The key is to just code and try to solve problems: the theory can come later when you have context and motivation.  
 :::
 

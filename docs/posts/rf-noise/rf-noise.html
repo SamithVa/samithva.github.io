@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Samith Va">
-<meta name="dcterms.date" content="2024-03-21">
+<meta name="dcterms.date" content="2024-03-29">
 
-<title>Happy Learning - Effects of Nonlinearity</title>
+<title>Happy Learning - RF Noise</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -155,10 +155,11 @@ window.Quarto = {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Effects of Nonlinearity</h1>
+      <h1 class="title">RF Noise</h1>
                                 <div class="quarto-categories">
                 <div class="quarto-category">RF</div>
-                <div class="quarto-category">Nonlinearity</div>
+                <div class="quarto-category">noise</div>
+                <div class="quarto-category">noise figure</div>
               </div>
                   </div>
   </div>
@@ -176,7 +177,7 @@ window.Quarto = {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">March 21, 2024</p>
+        <p class="date">March 29, 2024</p>
       </div>
     </div>
     
@@ -192,16 +193,10 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#gain" id="toc-gain" class="nav-link active" data-scroll-target="#gain">Gain</a></li>
-  <li><a href="#voltage" id="toc-voltage" class="nav-link" data-scroll-target="#voltage">Voltage</a></li>
-  <li><a href="#harmonic-distortion" id="toc-harmonic-distortion" class="nav-link" data-scroll-target="#harmonic-distortion">Harmonic distortion</a></li>
-  <li><a href="#gain-compression" id="toc-gain-compression" class="nav-link" data-scroll-target="#gain-compression">Gain compression</a></li>
-  <li><a href="#desensitization" id="toc-desensitization" class="nav-link" data-scroll-target="#desensitization">Desensitization</a></li>
-  <li><a href="#cross-modulation" id="toc-cross-modulation" class="nav-link" data-scroll-target="#cross-modulation">Cross Modulation</a></li>
-  <li><a href="#intermodulation" id="toc-intermodulation" class="nav-link" data-scroll-target="#intermodulation">Intermodulation</a></li>
-  <li><a href="#third-intercept-point" id="toc-third-intercept-point" class="nav-link" data-scroll-target="#third-intercept-point">Third-Intercept Point</a></li>
-  <li><a href="#thid-intercept-point-in-cascaded-stages" id="toc-thid-intercept-point-in-cascaded-stages" class="nav-link" data-scroll-target="#thid-intercept-point-in-cascaded-stages">Thid-Intercept Point in Cascaded Stages</a></li>
-  <li><a href="#answer" id="toc-answer" class="nav-link" data-scroll-target="#answer">Answer</a></li>
+  <li><a href="#noise-figure" id="toc-noise-figure" class="nav-link active" data-scroll-target="#noise-figure">Noise Figure</a></li>
+  <li><a href="#friiss-equation" id="toc-friiss-equation" class="nav-link" data-scroll-target="#friiss-equation">Friis’s equation</a></li>
+  <li><a href="#thermal-noise-equivalent" id="toc-thermal-noise-equivalent" class="nav-link" data-scroll-target="#thermal-noise-equivalent">Thermal noise equivalent</a></li>
+  <li><a href="#thermal-noise-in-mosfet" id="toc-thermal-noise-in-mosfet" class="nav-link" data-scroll-target="#thermal-noise-in-mosfet">Thermal noise in MOSFET</a></li>
   </ul>
 </nav>
     </div>
@@ -212,172 +207,65 @@ window.Quarto = {
 
 
 
-<p>In analog circuits, nonlinearity can be characterized by <strong>harmonic distortion</strong>, but in RF circuits, the characterization of nonlinear behavior involves distinct measures that are tailored to the specific requirements and challenges of RF systems.</p>
-<p>These measures often focus on parameters such as intermodulation distortion (IMD), third-order intercept point (IP3), and the dynamic range of the system.</p>
-<section id="questions-will-be-convered-in-this-section" class="level4">
-<h4 class="anchored" data-anchor-id="questions-will-be-convered-in-this-section">Questions will be convered in this section</h4>
+<p>What will cover in this section :</p>
+<p>Noise Figure, Friis Equation, Thermal Noise of Resistor, MOSFET Noise.</p>
+<section id="noise-figure" class="level2">
+<h2 class="anchored" data-anchor-id="noise-figure">Noise Figure</h2>
+<p>In circuit and system design, we interested in the signal-to-noise ratio (SNR). To quantify how noisy the circuit is, we can define its noise factor as</p>
+<p><span class="math display">\[\text{NF} = \frac{\text{SNR}_\text{in}}{\text{SNR}_\text{out}}\]</span></p>
+<p>or Noise figure in dB as</p>
+<p><span class="math display">\[\text{NF}|_\text{dB} = 10\log(\frac{\text{SNR}_\text{in}}{\text{SNR}_\text{out}})\]</span></p>
+What is the NF for noiseless stage ?
+<details>
+<summary>
+Answer
+</summary>
+NF = 1 = 0 dB
+</details>
+</section>
+<section id="friiss-equation" class="level2">
+<h2 class="anchored" data-anchor-id="friiss-equation">Friis’s equation</h2>
+<p>To determine overall noise figure in a cascade of stages, we can use Friis’s equation :</p>
+<p><span class="math display">\[NF_{\text{total}} = {NF}_1 + \frac{NF_2 - 1}{A^2_1} + ... + \frac{{NF}_n - 1}{A^2_1...A^2_n}\]</span></p>
+<p>From above expression we can conclude that the first stage’s NF is the most important. Why ?</p>
+<details>
+<summary>
+Answer
+</summary>
+Conceptually, because the noise from first stage will be amplified multiple times.
+</details>
+</section>
+<section id="thermal-noise-equivalent" class="level2">
+<h2 class="anchored" data-anchor-id="thermal-noise-equivalent">Thermal noise equivalent</h2>
+<p>Thermal noise the most significant noise encountered in electronic devices. We can model the thermal in two ways:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="thermal_noise.png" class="img-fluid figure-img"></p>
+<figcaption>Thermal Noise Equilvalent Circuit</figcaption>
+</figure>
+</div>
 <ol type="1">
-<li>How to calculate power gain and voltage gain? Are they equivalent?</li>
-<li>What is absolute power gain ? What is its unit quantity?</li>
-<li>What are peak amplitude, peak-to-peak amplitude, RMS amplitude ?</li>
-<li>Is switch a non-linear system ?</li>
-<li>What is a mixer in context of communication system ?</li>
-<li>What is a Transceiver ? How to draw its structure diagram.</li>
-<li>What is PA ? LNA ? What are their differences&nbsp;?</li>
-<li>Is mixer a LTI system ?</li>
-<li>What is 1dB compression point <span class="math inline">\(P_\text{1dB}\)</span>? How to derive its formula</li>
-<li>What is the coefficient fundamental term of a nonlinear system ?</li>
-<li>What is the difference between intermodulation and cross modulation?</li>
-<li>What is third intercept point ?</li>
+<li>Thevenin <span class="math display">\[\bar{V}^2_n = 4kTR_1\]</span></li>
+<li>Norton <span class="math display">\[\bar{I}^2_n = 4kT/R_1\]</span></li>
 </ol>
-<hr>
+<p>Where</p>
+<ul>
+<li><span class="math inline">\(k = 1.38 \times 10^{-23} J/K\)</span> is the Boltzmann constant.</li>
+<li><span class="math inline">\(T\)</span> is the temperature kelvin <span class="math inline">\((K)\)</span></li>
+</ul>
 </section>
-<section id="gain" class="level3">
-<h3 class="anchored" data-anchor-id="gain">Gain</h3>
-<section id="power-gain" class="level4">
-<h4 class="anchored" data-anchor-id="power-gain">Power gain</h4>
-<p><span class="math display">\[A_\text{P | dB} = 10\log(\frac{P_\text{out}}{P_\text{in}})\]</span></p>
-</section>
-<section id="voltage-gain" class="level4">
-<h4 class="anchored" data-anchor-id="voltage-gain">Voltage gain</h4>
-<p><span class="math display">\[A_\text{V | dB} = 20\log(\frac{V_\text{out}}{V_\text{in}})\]</span></p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><span class="math inline">\(V_\text{out},V_\text{in}\)</span> are measured in <em>rms</em> (root-mean-squared)</p>
-</div>
-</div>
-Why does the coefficient change to 20 in voltage gain ? Are <span class="math inline">\(A_P\)</span> and <span class="math inline">\(A_V\)</span> equal?
-<details>
-<summary>
-Answer
-</summary>
-<span class="math inline">\(P = \frac{V^2}{R}\)</span> Obviously <span class="math inline">\(A_P\)</span> and <span class="math inline">\(A_V\)</span> are equivalent only when resistance <span class="math inline">\(R\)</span> remain the constant in input and output ports.
-</details>
-</section>
-<section id="absolute-power-gain" class="level4">
-<h4 class="anchored" data-anchor-id="absolute-power-gain">Absolute Power Gain</h4>
-<p>In most cases, to simplify the expression of low power communication devices, power is usually expressed in dBm, a log unit of <span class="math inline">\(\text{mW}\)</span> (milliwatt). <span class="math display">\[P_\text{dBm} = 10\log(\frac{P}{1\text{ mW}})\]</span></p>
-</section>
-</section>
-<section id="voltage" class="level3">
-<h3 class="anchored" data-anchor-id="voltage">Voltage</h3>
-<p><span class="math inline">\(V_\text{rms}\)</span> : root-mean square voltage</p>
-<p><span class="math inline">\(V_P\)</span> : peak voltage</p>
-<p><span class="math inline">\(V_{PP}\)</span> : peak-to-peak voltage <span class="math display">\[V_\text{rms} = \frac{1}{T}\sqrt{\int_0^T V^2(t) dt}\]</span> <span class="math display">\[V_\text{P} = \sqrt2 V_\text{rms} = \frac{V_{PP}}{2}\]</span></p>
-What is <span class="math inline">\(V_{PP}\)</span> correspond to 0 dBm?
-<details>
-<summary>
-Answer
-</summary>
-<span class="math inline">\(V_{PP} = 632\)</span> mV
-</details>
-</section>
-<section id="harmonic-distortion" class="level3">
-<h3 class="anchored" data-anchor-id="harmonic-distortion">Harmonic distortion</h3>
-<p>Harmonic distortion in RF (Radio Frequency) communication circuits refers to the presence of unwanted frequency components in the output signal that are integer multiples of the original frequency, known as <strong>harmonics</strong>.</p>
-<p>When a signal passes through an RF circuit, non-linearities in the components can cause the generation of harmonics. A memoryless systems whose input/output characteristic can be approximated by</p>
-<p><span class="math display">\[y(t) = \alpha_1 x(t) + \alpha_2 x^2 (t)+ \alpha_3 x^3(t)\]</span></p>
-<p>If input <span class="math inline">\(x(t) = A\cos(\omega t)\)</span>, The fundamental term of this nonlinear system can be defined as: <span class="math display">\[y(t) \approx A\cos(\omega t) (\alpha_1 + \frac{3}{4}\alpha_3 A^2) = x(t)(\alpha_1 + \frac{3}{4}\alpha_3 A^2) \]</span> Where <span class="math inline">\(A\)</span> is the peak value amplitude</p>
-<p>From above expression we can conclude that due to the linearity, the gain has changed from <span class="math inline">\(\alpha_1\)</span> to <span class="math inline">\(\alpha_1 + \frac{3}{4}\alpha_3 A^2\)</span></p>
-</section>
-<section id="gain-compression" class="level3">
-<h3 class="anchored" data-anchor-id="gain-compression">Gain compression</h3>
-<p>A small-signal gain of circuits is usually obtained when harmonic distortion is negligible. But from above expression when harmonic distortion is considered, the gain might be actually become smaller (compressive).</p>
-<dl>
-<dt>What is Gain Compression?</dt>
-<dd>
-Gain compression occurs when the gain of an amplifier decreases as the input signal level increases (from above formula we can see that that’s when <span class="math inline">\(\alpha_1\)</span> and <span class="math inline">\(\alpha_3\)</span> have opposite sign).
-</dd>
-<dt>How can we measure this compression quantity ?</dt>
-<dd>
-1-dB compression point is the amount of voltage that can make the gain decrease by 1-dB <span class="math display">\[
-P_{\text{in},1\text{dB}} =A_{\text{in},1\text{dB}} = \sqrt{0.145\frac{\alpha_1}{\alpha_3}}
-\]</span> <span class="math inline">\(P_\text{1dB}\)</span> is generally 220 to 225 dBm (63.2 to 35.6 m <span class="math inline">\(V_{pp}\)</span> in 50 <span class="math inline">\(\Omega\)</span> system).
-</dd>
-</dl>
-</section>
-<section id="desensitization" class="level3">
-<h3 class="anchored" data-anchor-id="desensitization">Desensitization</h3>
-<p>Desensitization in RF systems refers to a phenomenon where the sensitivity of a receiver decreases due to interference or strong nearby signals.</p>
-<p>In RF design, the term <strong>blocking signal</strong> or <strong>blocker</strong> refers to interferers that desensitize a circuit, even if they do not reduce the gain to zero (but it increase the gain to nearly zero). Some RF receivers must be able to withstand blockers that are <strong>60 to 70 dB</strong> greater than the desired signal.</p>
-</section>
-<section id="cross-modulation" class="level3">
-<h3 class="anchored" data-anchor-id="cross-modulation">Cross Modulation</h3>
-<p>Cross modulation become significant in <strong>AM</strong> (Amplitude modulation). When interference signal is amplitude modulated, it can lead the original signal to be amplitude modulated.</p>
-</section>
-<section id="intermodulation" class="level3">
-<h3 class="anchored" data-anchor-id="intermodulation">Intermodulation</h3>
-<p>Imagine we have two signals, Signal A and Signal B, passing through a nonlinear component like an amplifier or mixer in an RF system. When these signals interact in the nonlinear component, they create new frequencies that weren’t originally there. These new frequencies are called intermodulation products.</p>
-<p>For instance, if Signal A is at 100 MHz and Signal B is at 150 MHz, the intermodulation products could appear at frequencies like 50 MHz (150 - 100) and 250 MHz (150 + 100). Hence if our information bearing signal is working at frequency near to 50 MHz or 250 MHz, it will of course be corrupted.</p>
-<div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Important
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Intermodulation : The signal is <strong>not</strong> mixed with the interferer, but is mixed with a combination of two interferences’ component.</p>
-<p>Cross modulation : The signal is <strong>mixed</strong> with the interferer</p>
-</div>
-</div>
-</section>
-<section id="third-intercept-point" class="level3">
-<h3 class="anchored" data-anchor-id="third-intercept-point">Third-Intercept Point</h3>
-<p>To measure the intermodulation we can use relative IM (intermodulation), IM and <span class="math inline">\(A_\text{IP3}\)</span> <span class="math display">\[\text{IM} = \frac{3}{4}\alpha_3 A_1A_2^2\]</span></p>
-<p><span class="math display">\[\text{Relative IM} = 20\log(\frac{3\alpha_3 }{4\alpha_1}A^2) \text{ dBc}\]</span></p>
-<p><span class="math display">\[A_\text{IIP3} = \sqrt{\frac{4}{3}|\frac{\alpha_1}{\alpha_3}|}\]</span></p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><span class="math inline">\(A_{IIP3}\)</span>, <span class="math inline">\(P_{IIP3}\)</span> , <span class="math inline">\(P_{IP3}\)</span> are commonly used interchangeably.</p>
-</div>
-</div>
-What is the relation between <span class="math inline">\(P_{1dB}\)</span> and <span class="math inline">\(P_{IP3}\)</span>?
-<details>
-<summary>
-Answer
-</summary>
-<span class="math inline">\(\frac{P_{IP3}}{P_{1dB}} = 9.6\)</span> dB
-</details>
-</section>
-<section id="thid-intercept-point-in-cascaded-stages" class="level3">
-<h3 class="anchored" data-anchor-id="thid-intercept-point-in-cascaded-stages">Thid-Intercept Point in Cascaded Stages</h3>
-<p>If the gain of each stage is larger than unity, the nonlinearity of the latter stages become more <strong>significant/critical</strong>.</p>
-<p><span class="math display">\[\frac{1}{A^2_{IP3}} \approx \frac{1}{A^2_{IP3, 1}} + \frac{\alpha_1^2}{A^2_{IP3, 2}} + \frac{\alpha_1^2 \beta_1^2}{A^2_{IP3,3}} + ...\]</span></p>
-</section>
-<section id="answer" class="level2">
-<h2 class="anchored" data-anchor-id="answer">Answer</h2>
+<section id="thermal-noise-in-mosfet" class="level2">
+<h2 class="anchored" data-anchor-id="thermal-noise-in-mosfet">Thermal noise in MOSFET</h2>
+<p><img src="mosfet_thermal_noise.png" class="img-fluid" alt="Thermal noise in MOSFET"> Thermal noise of MOS transistors which is operating in the <strong>saturation region</strong> is approximated by :</p>
 <ol type="1">
-<li>Refer to above equations.</li>
-<li>Refer to above equations.</li>
-<li>What are Peak amplitude, peak-to-peak amplitude, rms value ?</li>
-<li>unambiguous question, switch can be linear or non-linear depends on the input of interest.</li>
-<li>What is a mixer in context of communication system ?</li>
-<li>Transceiver is the combination of Tx, and Rx.</li>
+<li><p>A <strong>current source</strong> tied between the source and drain terminals. <span class="math display">\[\bar{I_n}^2 = 4kT \gamma g_m\]</span></p></li>
+<li><p>A <strong>voltage source</strong> in series with gate <span class="math display">\[\bar{V_n}^2 = 4kT \gamma / g_m\]</span></p></li>
 </ol>
-<p><img src="transciever.png" class="img-fluid" style="width:60.0%"></p>
-<ol start="8" type="1">
-<li>What is PA ? LNA ? What are their differences&nbsp; ?</li>
-<li>a mixer is frequency shift component. we can prove that it does not satisfy the linear property.</li>
-</ol>
+<p>Where</p>
+<ul>
+<li><span class="math inline">\(\gamma\)</span> is the excess noise coefficient</li>
+<li><span class="math inline">\(g_m\)</span> is the transconductance.</li>
+</ul>
 
 
 </section>

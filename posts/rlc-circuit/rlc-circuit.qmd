@@ -1,0 +1,49 @@
+---
+title: "RLC Circuit"
+author: "Samith Va"
+toc: true
+date: 03-29-2024
+categories: [RLC, q factor, resonant]
+---
+
+# RLC 
+
+## Resistance and Reactance
+
+Resistance is a property of a material or component in a circuit that opposes the flow of electric current. It's essentially the friction or obstruction that electrons encounter as they move through a conductor. Resistance **does dissipate power** in the form of heat.
+
+Reactance **does not dissipate power** in the form of heat. Instead, it represents the *energy storage* and release mechanism associated with capacitors and inductors in *AC circuits*. Reactance is also **frequency-dependent**, meaning it varies with the frequency of the AC signal.
+
+## Resonant
+
+At resonance, the circuit impedance is at its minimum impedance, leading to **Maximum Current Flow**: At resonance, the impedance of the circuit is at its minimum value. 
+
+Since impedance is the combination of resistance, inductive reactance, and capacitive reactance, when $X_C$​ and $X_L​$ cancel each other out, the overall impedance decreases. According to Ohm's Law $I = \frac{V}{Z}$,  a decrease in impedance at resonance leads to an increase in current flow.
+
+### Quality Factor
+
+![Q Factor](q-factor.png){width=80%}
+
+$$Q = \frac{1}{R}\sqrt{\frac{L}{{C}}}$$
+
+What is the physical meaning of Q factor ? 
+: It's the ratio of energy stored to energy dissipated per cycle.
+
+$$Q = \omega_0 . \frac{\text{energy stored}}{\text{average power dissipated}}$$
+
+### Bandwidth
+
+Bandwidth is defined as then the current or voltage drop by 3 dB when it's get away from resonant frequency. 
+
+$$\Delta\omega = \frac{\omega_0}{2Q}$$
+
+## Series and Parallel RLC Transformation
+
+## Impedance Matching 
+
+1. Why don't we just use parallel resistor in impedance matching instead of using LC components?
+
+## Loss of impedance matching circuit 
+
+no source RLC circuit : noise figure = loss 
+

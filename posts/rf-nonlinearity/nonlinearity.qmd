@@ -141,68 +141,6 @@ If the gain of each stage is larger than unity, the nonlinearity of the latter s
 
 $$\frac{1}{A^2_{IP3}} \approx \frac{1}{A^2_{IP3, 1}} + \frac{\alpha_1^2}{A^2_{IP3, 2}} + \frac{\alpha_1^2 \beta_1^2}{A^2_{IP3,3}} + ...$$
 
-### Thermal noise equivalent
-
-Thermal noise the most significant noise encountered in electronic devices. We can model the thermal in two ways:
-
-![Thermal Noise Equilvalent Circuit](thermal_noise.png)
-
-1. Thevenin 
-$$\bar{V}^2_n = 4kTR_1$$
-2. Norton
-$$\bar{I}^2_n = 4kT/R_1$$
-
-Where 
-
-- $k = 1.38 \times 10^{-23} J/K$ is the Boltzmann constant.
-- $T$ is the temperature kelvin $(K)$
-
-### Thermal noise in MOSFET
-
-![Thermal noise in MOSFET](mosfet_thermal_noise.png)
-Thermal noise of MOS transistors which is operating in the **saturation region** is approximated by :
-
-1. A **current source** tied between the source and drain terminals.
-$$\bar{I_n}^2 = 4kT \gamma g_m$$
-
-2. A **voltage source** in series with gate
-$$\bar{V_n}^2 = 4kT \gamma / g_m$$ 
-
-Where 
-
-- $\gamma$ is the excess noise coefficient
-- $g_m$ is the transconductance.
-
-
-#### Friis's equation
-
-To determine overall noise figure in a cascade of stages, we can use Friis's equation  :
-
-$$NF_{\text{total}} = {NF}_1 + \frac{NF_2 - 1}{A^2_1} + ... + \frac{{NF}_n - 1}{A^2_1...A^2_n}$$
-
-From above expression we can conclude that the first stage's NF is the most important. Why ? 
-<details>
-<summary>Answer</summary>
-Conceptually, because the noise from first stage will be amplified multiple times.
-</details> 
-
-
-### Noise Figure
-
-In circuit and system design, we interested in the signal-to-noise ratio (SNR). To quantify how noisy the circuit is, we can define its noise factor as
-
-$$\text{NF} = \frac{SNR_\text{in}}{SNR_\text{out}}$$
-
-or Noise figure in dB as
-
-$$\text{NF}|_\text{dB} = 10\log(\frac{SNR_\text{in}}{SNR_\text{out}})$$
-
-What is the NF for noiseless stage ? 
-<details>
-<summary>Answer</summary>
-NF = 1 = 0 dB
-</details> 
-
 ## Answer
 
 1. Refer to above equations.
@@ -210,6 +148,9 @@ NF = 1 = 0 dB
 3. What are Peak amplitude, peak-to-peak amplitude, rms value ?
 4. unambiguous question, switch can be linear or non-linear depends on the input of interest.
 6. What is a mixer in context of communication system ? 
-7. Transceiver is the combination of Tx, and Rx. ![](transciever.png)
+7. Transceiver is the combination of Tx, and Rx. 
+
+![](transciever.png){width=60%}
+
 8. What is PA ? LNA ? What are their differences  ?
 9. a mixer is frequency shift component. we can prove that it does not satisfy the linear property. 
