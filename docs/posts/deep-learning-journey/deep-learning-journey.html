@@ -164,7 +164,9 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#introduction-and-history-of-neuron-network" id="toc-introduction-and-history-of-neuron-network" class="nav-link active" data-scroll-target="#introduction-and-history-of-neuron-network">Introduction and History of Neuron Network</a></li>
+  <li><a href="#questions" id="toc-questions" class="nav-link active" data-scroll-target="#questions">Questions</a></li>
+  <li><a href="#introduction-and-history-of-neuron-network" id="toc-introduction-and-history-of-neuron-network" class="nav-link" data-scroll-target="#introduction-and-history-of-neuron-network">Introduction and History of Neuron Network</a></li>
+  <li><a href="#answer" id="toc-answer" class="nav-link" data-scroll-target="#answer">Answer</a></li>
   </ul>
 </nav>
     </div>
@@ -176,8 +178,53 @@ ul.task-list li input[type="checkbox"] {
 
 
 <p>Keywords used in this context: architecture, overfit, fine-tunning, validation set, test set, weights, parameters, CNN</p>
-<section id="introduction-and-history-of-neuron-network" class="level1">
-<h1>Introduction and History of Neuron Network</h1>
+<section id="questions" class="level2">
+<h2 class="anchored" data-anchor-id="questions">Questions</h2>
+<p>Questions related to this chapter content:</p>
+<ol type="1">
+<li><p>Do you need these for deep learning?</p>
+<ul>
+<li>Lots of math T / F</li>
+<li>Lots of data T / F</li>
+<li>Lots of expensive computers T / F</li>
+<li>A PhD T / F</li>
+</ul></li>
+<li><p>Name five areas where deep learning is now the best in the world.</p></li>
+<li><p>What was the name of the first device that was based on the principle of the artificial neuron?</p></li>
+<li><p>Based on the book of the same name, what are the requirements for parallel distributed processing (PDP)?</p></li>
+<li><p>What were the two theoretical misunderstandings that held back the field of neural networks?</p></li>
+<li><p>What is a GPU?</p></li>
+<li><p>Open a notebook and execute a cell containing:&nbsp;<code>1+1</code>. What happens?</p></li>
+<li><p>Follow through each cell of the stripped version of the notebook for this chapter. Before executing each cell, guess what will happen.</p></li>
+<li><p>Complete the Jupyter Notebook online appendix.</p></li>
+<li><p>Why is it hard to use a traditional computer program to recognize images in a photo?</p></li>
+<li><p>What did Samuel mean by “weight assignment”?</p></li>
+<li><p>What term do we normally use in deep learning for what Samuel called “weights”?</p></li>
+<li><p>Draw a picture that summarizes Samuel’s view of a machine learning model.</p></li>
+<li><p>Why is it hard to understand why a deep learning model makes a particular prediction?</p></li>
+<li><p>What is the name of the theorem that shows that a neural network can solve any mathematical problem to any level of accuracy?</p></li>
+<li><p>What do you need in order to train a model?</p></li>
+<li><p>How could a feedback loop impact the rollout of a predictive policing model?</p></li>
+<li><p>Do we always have to use 224×224-pixel images with the cat recognition model?</p></li>
+<li><p>What is the difference between classification and regression?</p></li>
+<li><p>What is a validation set? What is a test set? Why do we need them?</p></li>
+<li><p>What will fastai do if you don’t provide a validation set?</p></li>
+<li><p>Can we always use a random sample for a validation set? Why or why not?</p></li>
+<li><p>What is overfitting? Provide an example.</p></li>
+<li><p>What is a metric? How does it differ from “loss”?</p></li>
+<li><p>How can pretrained models help?</p></li>
+<li><p>What is the “head” of a model?</p></li>
+<li><p>What kinds of features do the early layers of a CNN find? How about the later layers?</p></li>
+<li><p>Are image models only useful for photos?</p></li>
+<li><p>What is an “architecture”?</p></li>
+<li><p>What is segmentation?</p></li>
+<li><p>What is&nbsp;<code>y_range</code>&nbsp;used for? When do we need it?</p></li>
+<li><p>What are “hyperparameters”?</p></li>
+<li><p>What’s the best way to avoid failures when using AI in an organization?</p></li>
+</ol>
+</section>
+<section id="introduction-and-history-of-neuron-network" class="level2">
+<h2 class="anchored" data-anchor-id="introduction-and-history-of-neuron-network">Introduction and History of Neuron Network</h2>
 <p>Deep learning (DL) has become ubiquitous in modern technology. Common applications of DL include natural language processing (NLP), medicine, security (computer vision), industrial automation (anomaly detection), and commercial recommendation systems.</p>
 <p>When discussing DL, it is crucial to emphasize its fundamental element: the Neural Network. The concept of neural networks was first developed by Pitts and McCulloch. <em>The Mark I Perceptron</em> was the first artificial neural network constructed based on their ideas. However, the Perceptron was limited to a single layer and struggled to learn some simple functions, such as XOR. To create more powerful neural networks, it is essential to add more layers, which is a common technique in building effective models in DL.</p>
 <div class="callout callout-style-default callout-note callout-titled">
@@ -222,7 +269,12 @@ Code First, Theory Later
 <p>Trying to spend too much time on theory can be <strong>counterproductive</strong>. The key is to just code and try to solve problems: the theory can come later when you have context and motivation.</p>
 </div>
 </div>
-<ol start="3" type="1">
+</section>
+<section id="answer" class="level2">
+<h2 class="anchored" data-anchor-id="answer">Answer</h2>
+<ol type="1">
+<li>FFFF.</li>
+<li>Five areas that DL are good at: natural language processing (NPL), Medical image, security(computer vision), factory(industrial | anomaly detection) and recommendation system(commercial).</li>
 <li>The first device that was based on the principle of the artificial neuron is : The Mark I Perceptron.</li>
 <li>Requirements for the parallel distributed processing:
 <ul>
@@ -230,36 +282,40 @@ Code First, Theory Later
 <li>a state of activation</li>
 <li>an output function for each unit</li>
 <li>a pattern of connectivity between units</li>
+<li>A propagation rule for propagating patterns of activities through the network of connectivities</li>
+<li>An activation rule for combining the inputs impinging on a unit with the current state of that unit to produce a new level of activation for the unit</li>
+<li>A learning rule whereby patterns of connectivity are modified by experience</li>
+<li>An environment within which the system must operate</li>
 </ul></li>
 <li>Two theoretical misunderstandings that held back the field of neuron networks is:
 <ol type="1">
-<li>adding one more layers (2 layer) then it will be possible to approximate any function.</li>
+<li>Adding one more layers (2 layer) then it will be possible to approximate any function.</li>
 <li>Adding more layers to make model better</li>
 </ol></li>
-<li>GPU is a kind of processor which can do the parallel computing, it is commonly used in training the model.</li>
+<li>GPU is a kind of processor which can do the <strong>parallel computing</strong>, it is commonly used in training the model.</li>
 <li>Because traditional computer does not come with a GPU, hence its computation speed is slow and inefficient.</li>
 <li>Samuel mean by “weight assignment” refer to setting the value of variable on how the function works/behave.</li>
 <li>“weight” is refer to “parameters” in deep learning.</li>
-<li>Because some problems such as image recognition, we unconsciously know how our brain can recognize patterns in images.</li>
+<li>Because some problems such as image recognition, we unconsciously know how our brain can recognize patterns in such images.</li>
 <li>Universal approximation theorem.</li>
 <li>Data(input) and labels(model output references).</li>
-<li>Using feedback loop can be problematic, more biased of dataset, the more biased of the model.</li>
+<li>Using feedback loop can be problematic, the more biased of dataset, the more biased of the model.</li>
 <li>No, we can use any size, using image of size 264x264 is due to historical reason (traditional model can only trained using 264x264 size).</li>
-<li>Classification : is for predicting the categories of dataset while Regression predict numerical value.</li>
+<li>Classification is for predicting the categories of dataset while Regression predict numerical value.</li>
 <li>Validation set is an less exposed data set which is used to find the optimal hyperparameters of various architectures of model. Test set is used to predict the unseen data and evaluate the model overall performance.</li>
-<li>Fastai will automatically set the validation set to 0.2 (20%).</li>
+<li>FastAI will automatically set the validation set to 0.2 (20%).</li>
 <li>No, we can’t. A counter case is training with time-series data which is too easy for model to to fill the gap, when we select random validation instances.</li>
-<li>Overfitting is a problem when the model perform very well on training data set but poorly in predicting unseen data. An example : when a model is trained to decide the image is cat or dog, model can only accurately make a classification when given an instance within train dataset. But fail when given cat or dog image outside the training set.</li>
-<li><strong>Metric</strong> is a version of loss which used for human consumption, it can be error percentage or accuracy.</li>
-<li>Using pre-trained model, can increase inefficiency, because pretrained model (already has more capability)can already recognize basic patterns of data.</li>
+<li>Overfitting is a problem when the model perform very well on training data set but perform poorly in predicting unseen data. An example : when a model is trained to decide the image is cat or dog, model can only accurately make a classification when given an instance within train dataset. But fail when given cat or dog image outside the training set (or the cat image that is not similar to the images within training set).</li>
+<li><strong>Metric</strong> is a version of loss which used for human (make it more understandable for human), it can be error percentage or accuracy.</li>
+<li>Using pre-trained model, can increase training efficiency, because pretrained model (already has more capability) can already recognize basic patterns of data.</li>
 <li><strong>Head</strong> of a model is the last layer of the model. Note that we need to change the head of model (one or more layers to make it suitable for specifics task of the model) while using pre-trained model.</li>
 <li>The first layer of CNN, it determines diagonal, horizontal, and vertical edges as well as various gradients. 2nd layer the model detects features within the image such as circle, triangle etc.</li>
-<li>Image models not only useful for photos, for instance, voice signal can also express in term of spectrum in images.</li>
+<li>Image models are not only useful for photos, but also useful in other type of input. For instance, voice signal can also express in term of spectrum as photos.</li>
 <li>Architecture is the pre assume functions or structure of the model.</li>
-<li>Segmentation is task where photos are divided and recognized into small components labels. For example, self driving car might use video data and do the segmentation recognize the pedestrian and adjust direction or speed.</li>
-<li><code>y_range</code> is used for setting a range in label for specific task.</li>
+<li>Segmentation is task where photos are divided and recognized into small components labels. For example, self driving car might use video data and do the segmentation recognize the pedestrian in order to adjust direction or speed.</li>
+<li><code>y_range</code> is used for setting a range in label for specific task (when we only interested in a specific range of values).</li>
 <li>Hyperparameters are the specification of the model that are manually set by human such as model architecture, learning rate, hidden layers number etc.</li>
-<li>Best way to avoid failures when using AI in an organization is to keep a test dataset separately(without intervening with training process).</li>
+<li>Best way to avoid failures when using AI in an organization is to keep a test dataset separately (without intervening with training process).</li>
 </ol>
 
 

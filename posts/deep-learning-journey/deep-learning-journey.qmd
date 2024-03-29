@@ -9,7 +9,82 @@ image: "image.jpg"
 
 Keywords used in this context: architecture, overfit, fine-tunning, validation set, test set, weights, parameters, CNN
 
-# Introduction and History of Neuron Network
+ 
+
+## Questions 
+
+Questions related to this chapter content:
+
+1. Do you need these for deep learning?
+    - Lots of math T / F
+    - Lots of data T / F
+    - Lots of expensive computers T / F
+    - A PhD T / F
+2. Name five areas where deep learning is now the best in the world.
+    
+3. What was the name of the first device that was based on the principle of the artificial neuron?
+    
+4. Based on the book of the same name, what are the requirements for parallel distributed processing (PDP)?
+    
+5. What were the two theoretical misunderstandings that held back the field of neural networks?
+    
+6. What is a GPU?
+    
+7. Open a notebook and execute a cell containing: `1+1`. What happens?
+    
+8. Follow through each cell of the stripped version of the notebook for this chapter. Before executing each cell, guess what will happen.
+    
+9. Complete the Jupyter Notebook online appendix.
+    
+10. Why is it hard to use a traditional computer program to recognize images in a photo?
+    
+11. What did Samuel mean by "weight assignment"?
+    
+12. What term do we normally use in deep learning for what Samuel called "weights"?
+    
+13. Draw a picture that summarizes Samuel's view of a machine learning model.
+    
+14. Why is it hard to understand why a deep learning model makes a particular prediction?
+    
+15. What is the name of the theorem that shows that a neural network can solve any mathematical problem to any level of accuracy?
+    
+16. What do you need in order to train a model?
+    
+17. How could a feedback loop impact the rollout of a predictive policing model?
+    
+18. Do we always have to use 224×224-pixel images with the cat recognition model?
+    
+19. What is the difference between classification and regression?
+    
+20. What is a validation set? What is a test set? Why do we need them?
+    
+21. What will fastai do if you don't provide a validation set?
+    
+22. Can we always use a random sample for a validation set? Why or why not?
+    
+23. What is overfitting? Provide an example.
+    
+24. What is a metric? How does it differ from "loss"?
+    
+25. How can pretrained models help?
+    
+26. What is the "head" of a model?
+    
+27. What kinds of features do the early layers of a CNN find? How about the later layers?
+    
+28. Are image models only useful for photos?
+    
+29. What is an "architecture"?
+    
+30. What is segmentation?
+    
+31. What is `y_range` used for? When do we need it?
+    
+32. What are "hyperparameters"?
+    
+33. What's the best way to avoid failures when using AI in an organization?
+
+## Introduction and History of Neuron Network
 
 Deep learning (DL) has become ubiquitous in modern technology. Common applications of DL include natural language processing (NLP), medicine, security (computer vision), industrial automation (anomaly detection), and commercial recommendation systems.
 
@@ -32,37 +107,44 @@ Trying to spend too much time on theory can be **counterproductive**. The key is
 :::
 
 
+## Answer
 
+1. FFFF.
+2. Five areas that DL are good at: natural language processing (NPL), Medical image, security(computer vision), factory(industrial | anomaly detection) and recommendation system(commercial).
 3. The first device that was based on the principle of the artificial neuron is : The Mark I Perceptron. 
 4. Requirements for the parallel distributed processing:
 	- a set of processing unit
 	- a state of activation
 	- an output function for each unit
 	- a pattern of connectivity between units
+	- A propagation rule for propagating patterns of activities through the network of connectivities
+	- An activation rule for combining the inputs impinging on a unit with the current state of that unit to produce a new level of activation for the unit
+	- A learning rule whereby patterns of connectivity are modified by experience
+	- An environment within which the system must operate
 5. Two theoretical misunderstandings that held back the field of neuron networks is: 
-	1. adding one more layers (2 layer) then it will be possible to approximate any function. 
+	1. Adding one more layers (2 layer) then it will be possible to approximate any function. 
 	2. Adding more layers to make model better
-6. GPU is a kind of processor which can do the parallel computing, it is commonly used in training the model. 
+6. GPU is a kind of processor which can do the **parallel computing**, it is commonly used in training the model. 
 10. Because traditional computer does not come with a GPU, hence its computation speed is slow and inefficient.
 11. Samuel mean by "weight assignment" refer to setting the value of variable on how the function works/behave.
 12. "weight" is refer to "parameters" in deep learning.
-14. Because some problems such as image recognition, we unconsciously know how our brain can recognize patterns in images. 
+14. Because some problems such as image recognition, we unconsciously know how our brain can recognize patterns in such images. 
 15. Universal approximation theorem. 
 16. Data(input) and labels(model output references).
-17. Using feedback loop can be problematic, more biased of dataset, the more biased of the model. 
+17. Using feedback loop can be problematic, the more biased of dataset, the more biased of the model. 
 18. No, we can use any size, using image of size 264x264 is due to historical reason (traditional model can only trained using 264x264 size).
-19. Classification : is for predicting the categories of dataset while Regression predict numerical value. 
+19. Classification is for predicting the categories of dataset while Regression predict numerical value. 
 20. Validation set is an less exposed data set which is used to find the optimal hyperparameters of various architectures of model. Test set is used to predict the unseen data and evaluate the model overall performance.
-21. Fastai will automatically set the validation set to 0.2 (20%).
+21. FastAI will automatically set the validation set to 0.2 (20%).
 22. No, we can't. A counter case is training with time-series data which is too easy for model to to fill the gap, when we select random validation instances.
-23. Overfitting is a problem when the model perform very well on training data set but poorly in predicting unseen data. An example : when a model is trained to decide the image is cat or dog, model can only accurately make a classification when given an instance within train dataset. But fail when given  cat or dog image outside the training set.
-24. **Metric** is a version of loss which used for human consumption, it can be error percentage or accuracy.
-25. Using pre-trained model, can increase inefficiency, because pretrained model (already has more capability)can already recognize basic patterns of data. 
+23. Overfitting is a problem when the model perform very well on training data set but perform poorly in predicting unseen data. An example : when a model is trained to decide the image is cat or dog, model can only accurately make a classification when given an instance within train dataset. But fail when given  cat or dog image outside the training set (or the cat image that is not similar to the images within training set).
+24. **Metric** is a version of loss which used for human (make it more understandable for human), it can be error percentage or accuracy.
+25. Using pre-trained model, can increase training efficiency, because pretrained model (already has more capability) can already recognize basic patterns of data. 
 26. **Head** of a model is the last layer of the model. Note that we need to change the head of model (one or more layers to make it suitable for specifics task of the model) while using pre-trained model.
 27. The first layer of CNN, it determines diagonal, horizontal, and vertical edges as well as various gradients. 2nd layer the model detects features within the image such as circle, triangle etc.
-28. Image models not only useful for photos, for instance, voice signal can also express in term of spectrum in images.
+28. Image models are not only useful for photos, but also useful in other type of input. For instance, voice signal can also express in term of spectrum as photos.
 29. Architecture is the pre assume functions or structure of the model.
-30. Segmentation is task where photos are divided and recognized into small components labels. For example, self driving car might use video data and do the segmentation recognize the pedestrian and adjust direction or speed.
-31. `y_range` is used for setting a range in label for specific task.
+30. Segmentation is task where photos are divided and recognized into small components labels. For example, self driving car might use video data and do the segmentation recognize the pedestrian in order to adjust direction or speed.
+31. `y_range` is used for setting a range in label for specific task (when we only interested in a specific range of values).
 32. Hyperparameters are the specification of the model that are manually set by human such as model architecture, learning rate, hidden layers number etc.
-33. Best way to avoid failures when using AI in an organization is to keep a test dataset separately(without intervening with training process).
+33. Best way to avoid failures when using AI in an organization is to keep a test dataset separately (without intervening with training process).
