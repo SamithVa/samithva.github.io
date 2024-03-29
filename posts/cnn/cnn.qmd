@@ -1,0 +1,55 @@
+---
+title: "Convolutional Neuron Network"
+author: "Samith Va"
+date: "2024-03-28"
+toc: true
+categories: [deep learning, CNN, ]
+---
+
+
+1. Structured and unstructured data ? Which one is machine good at ? 
+2. Why DL just get its popularity in recent years ? Hint : ABC
+3. What field **RNN** is generally used in ? **CNN** ?  (CV, voice recognition, advertising)
+1. What is the first version of neuron network ? Can 1 layer neuron network (1st version) solve XOR problem?
+2. What are commonly used structures of NN ? Full-connected, CNN, RNN
+3. Why Sigmoid function is not commonly used as an activation function in NN ? Zero gradient 
+
+# CNN 
+
+## Convolution layer
+
+Keywords: Spatial dimension, Depth, Filters Bank, feature maps, Pooling
+
+### Kernel 
+
+**Kernel** refers to a small matrix used for convolutional operations. Convolution is the fundamental operation in a CNN, where the kernel (also called a filter) is applied to input data, typically an image, to produce feature maps.
+''
+![Kernel](kernel.png){width=80%}
+
+### Stride
+
+"stride" refers to the number of pixels by which the convolutional kernel moves across the input data at each step during the convolution operation. In below example, illustrate a case when stride = 2.
+
+$$\text{output depth} = \frac{width - filter + 2 \times pad}{stride} + 1$$
+
+![Convolution of a 5x5 input (blue) with 3x3 kernel (grey) with a stride of 2 and padding of 1. The 3x3 output is in green. [Source](https://github.com/vdumoulin/conv_arithmetic)](kernel.gif)
+
+### Padding
+
+Padding is a technique used to control the spatial dimensions of the output feature maps after applying convolutional operations to the input data.
+
+Features of padding in CNN:
+
+1. keep the image data near to border edge
+1. maintain the size of input image dimension 
+1. change the output size of convolution layer
+
+### Pooling
+
+What is pooling ?
+: a technique to reduce the activation spatial dimensions/Pooling helps in reducing memory consumption in deeper layers. It is also an important step to convert the spatial information into features. The two most common pooling methods are : **Max pooling** and **Average pooling**
+
+
+
+
+[Reference](https://blog.csdn.net/csdn_xmj/article/details/114578241)

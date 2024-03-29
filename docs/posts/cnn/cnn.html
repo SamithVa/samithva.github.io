@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Samith Va">
+<meta name="dcterms.date" content="2024-03-28">
 
-<title>Happy Learning - Projects</title>
+<title>Happy Learning - Convolutional Neuron Network</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,26 +25,24 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -70,35 +70,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-title','listing-author','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-title","listing-author","listing-image","listing-description"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -130,7 +101,7 @@ window.Quarto = {
 };
 </script>
 
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
 <body class="nav-fixed">
@@ -140,7 +111,7 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Happy Learning</span>
     </a>
   </div>
@@ -151,16 +122,12 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./projects.html" aria-current="page"> 
+    <a class="nav-link" href="../../projects.html"> 
 <span class="menu-text">Projects</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./ielts.html"> 
-<span class="menu-text">IELTS Day 1</span></a>
   </li>  
   <li class="nav-item compact">
     <a class="nav-link" href="https://github.com/SamithVa"> <i class="bi bi-github" role="img">
@@ -183,64 +150,118 @@ window.Quarto = {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page">
-      <h1 class="title">Projects</h1>
-                      </div>
+    <div class="quarto-title column-body">
+      <h1 class="title">Convolutional Neuron Network</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">deep learning</div>
+                <div class="quarto-category">CNN</div>
+              </div>
+                  </div>
   </div>
     
   
-  <div class="quarto-title-meta column-page">
+  <div class="quarto-title-meta">
 
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Samith Va </p>
+            </div>
+    </div>
       
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">March 28, 2024</p>
+      </div>
+    </div>
     
       
     </div>
     
   
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#cnn" id="toc-cnn" class="nav-link active" data-scroll-target="#cnn">CNN</a>
+  <ul class="collapse">
+  <li><a href="#convolution-layer" id="toc-convolution-layer" class="nav-link" data-scroll-target="#convolution-layer">Convolution layer</a>
+  <ul class="collapse">
+  <li><a href="#kernel" id="toc-kernel" class="nav-link" data-scroll-target="#kernel">Kernel</a></li>
+  <li><a href="#stride" id="toc-stride" class="nav-link" data-scroll-target="#stride">Stride</a></li>
+  <li><a href="#padding" id="toc-padding" class="nav-link" data-scroll-target="#padding">Padding</a></li>
+  <li><a href="#pooling" id="toc-pooling" class="nav-link" data-scroll-target="#pooling">Pooling</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
-<main class="content quarto-banner-title-block column-page" id="quarto-document-content">
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
 
-
-
-
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-listing-file-modified-sort="1711594467016" data-listing-reading-time-sort="1" data-listing-word-count-sort="91">
-<div class="thumbnail">
-<p><a href="./projects/css/css.html" class="no-external"></a></p><a href="./projects/css/css.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./projects/css/css.html" class="no-external"></a></p>
+<ol type="1">
+<li>Structured and unstructured data ? Which one is machine good at ?</li>
+<li>Why DL just get its popularity in recent years ? Hint : ABC</li>
+<li>What field <strong>RNN</strong> is generally used in ? <strong>CNN</strong> ? (CV, voice recognition, advertising)</li>
+<li>What is the first version of neuron network ? Can 1 layer neuron network (1st version) solve XOR problem?</li>
+<li>What are commonly used structures of NN ? Full-connected, CNN, RNN</li>
+<li>Why Sigmoid function is not commonly used as an activation function in NN ? Zero gradient</li>
+</ol>
+<section id="cnn" class="level1">
+<h1>CNN</h1>
+<section id="convolution-layer" class="level2">
+<h2 class="anchored" data-anchor-id="convolution-layer">Convolution layer</h2>
+<p>Keywords: Spatial dimension, Depth, Filters Bank, feature maps, Pooling</p>
+<section id="kernel" class="level3">
+<h3 class="anchored" data-anchor-id="kernel">Kernel</h3>
+<p><strong>Kernel</strong> refers to a small matrix used for convolutional operations. Convolution is the fundamental operation in a CNN, where the kernel (also called a filter) is applied to input data, typically an image, to produce feature maps. ’’ <img src="kernel.png" class="img-fluid" style="width:80.0%" alt="Kernel"></p>
+</section>
+<section id="stride" class="level3">
+<h3 class="anchored" data-anchor-id="stride">Stride</h3>
+<p>“stride” refers to the number of pixels by which the convolutional kernel moves across the input data at each step during the convolution operation. In below example, illustrate a case when stride = 2.</p>
+<p><span class="math display">\[\text{output depth} = \frac{width - filter + 2 \times pad}{stride} + 1\]</span></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="kernel.gif" class="img-fluid figure-img"></p>
+<figcaption>Convolution of a 5x5 input (blue) with 3x3 kernel (grey) with a stride of 2 and padding of 1. The 3x3 output is in green. <a href="https://github.com/vdumoulin/conv_arithmetic">Source</a></figcaption>
+</figure>
 </div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./projects/css/css.html" class="no-external">To Do List using HTML and CSS</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./projects/css/css.html" class="no-external"></a>
-</div>
-<div class="listing-description">
-<a href="./projects/css/css.html" class="no-external">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown…</a>
-</div>
-</div>
-<div class="metadata">
-<p><a href="./projects/css/css.html" class="no-external"></a></p><a href="./projects/css/css.html" class="no-external">
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
+</section>
+<section id="padding" class="level3">
+<h3 class="anchored" data-anchor-id="padding">Padding</h3>
+<p>Padding is a technique used to control the spatial dimensions of the output feature maps after applying convolutional operations to the input data.</p>
+<p>Features of padding in CNN:</p>
+<ol type="1">
+<li>keep the image data near to border edge</li>
+<li>maintain the size of input image dimension</li>
+<li>change the output size of convolution layer</li>
+</ol>
+</section>
+<section id="pooling" class="level3">
+<h3 class="anchored" data-anchor-id="pooling">Pooling</h3>
+<dl>
+<dt>What is pooling ?</dt>
+<dd>
+a technique to reduce the activation spatial dimensions/Pooling helps in reducing memory consumption in deeper layers. It is also an important step to convert the spatial information into features. The two most common pooling methods are : <strong>Max pooling</strong> and <strong>Average pooling</strong>
+</dd>
+</dl>
+<p><a href="https://blog.csdn.net/csdn_xmj/article/details/114578241">Reference</a></p>
+
+
+</section>
+</section>
+</section>
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

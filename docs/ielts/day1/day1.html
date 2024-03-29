@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Samith Va">
+<meta name="dcterms.date" content="2024-03-29">
 
-<title>Happy Learning - Projects</title>
+<title>Happy Learning - Day 1</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,26 +25,24 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -70,77 +70,19 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-title','listing-author','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-title","listing-author","listing-image","listing-description"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
 <body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+  <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Happy Learning</span>
     </a>
   </div>
@@ -151,16 +93,16 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./projects.html" aria-current="page"> 
+    <a class="nav-link" href="../../projects.html"> 
 <span class="menu-text">Projects</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./ielts.html"> 
-<span class="menu-text">IELTS Day 1</span></a>
+    <a class="nav-link" href="../../ielts.html"> 
+<span class="menu-text">IELTS</span></a>
   </li>  
   <li class="nav-item compact">
     <a class="nav-link" href="https://github.com/SamithVa"> <i class="bi bi-github" role="img">
@@ -181,66 +123,194 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<header id="title-block-header" class="quarto-title-block default page-columns page-full">
-  <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page">
-      <h1 class="title">Projects</h1>
-                      </div>
-  </div>
-    
-  
-  <div class="quarto-title-meta column-page">
-
-      
-    
-      
-    </div>
-    
-  
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#vocabulary" id="toc-vocabulary" class="nav-link active" data-scroll-target="#vocabulary">Vocabulary</a></li>
+  <li><a href="#speaker-attitude" id="toc-speaker-attitude" class="nav-link" data-scroll-target="#speaker-attitude">Speaker attitude</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
-<main class="content quarto-banner-title-block column-page" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Day 1</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">ielts</div>
+    <div class="quarto-category">listening</div>
+  </div>
+  </div>
 
 
 
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Samith Va </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">March 29, 2024</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
 
 
+</header>
 
 
-
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-listing-file-modified-sort="1711594467016" data-listing-reading-time-sort="1" data-listing-word-count-sort="91">
-<div class="thumbnail">
-<p><a href="./projects/css/css.html" class="no-external"></a></p><a href="./projects/css/css.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./projects/css/css.html" class="no-external"></a></p>
+<section id="vocabulary" class="level1">
+<h1>Vocabulary</h1>
+<ol type="1">
+<li><p>proximity (n) : nearness in space, time or distance.</p>
+<ul>
+<li>Do not operate microphone close proximity to the television sets.</li>
+<li>The Traviston Frog can only live in proximity to water.</li>
+</ul></li>
+<li><p>booth (n) : a small temporary tent used for selling goods at park.</p>
+<ul>
+<li>On the left of park entrance, there is a ticket booth.</li>
+</ul></li>
+<li><p>beneath (prep) : extend directly underneath. <img src="beneath.png" class="img-fluid" style="width:50.0%"></p></li>
+<li><p>thernometer (n): an equipment use to measure the temperature.</p></li>
+<li><p>ribbon (n) : a colorful string used to tie around the present. <img src="ribbon.png" class="img-fluid" style="width:40.0%"></p></li>
+<li><p>fold up (v) : to make smaller or more compact.</p>
+<ul>
+<li>Neatly fold up each of the ends of the paper and stick them down. <img src="fold.png" class="img-fluid" style="width:40.0%"></li>
+</ul></li>
+<li><p>disheartened (adj) : disappointed about something and have less confidence or less hope about it.</p>
+<ul>
+<li>He was disheartened by their hostile reaction.</li>
+<li>She felt disheartened at her failure.</li>
+</ul></li>
+<li><p>obscure (adj) : not discovered or know about, uncertain.</p>
+<ul>
+<li>An obscure island in Pacific ocean.</li>
+<li>He has an obscure origin.</li>
+</ul></li>
+<li><p>semantic (adj) : connected with the meaning of words.</p>
+<ul>
+<li>Programmers should ensure that their code is semantically meaningful and well-documented.</li>
+</ul></li>
+<li><p>rigorous (adj) : strict, thorough.</p>
+<ul>
+<li>There is a rigorous security check at the office entrance.</li>
+<li>Conducting a rigorous scientific research need a careful planning team.</li>
+</ul></li>
+<li><p>sap (v) : to weaken something.</p>
+<ul>
+<li>The constant budget cuts were sapping the organization’s ability to innovate and compete in the market.</li>
+<li>Depression can sap the energy and self-esteem from an individual.</li>
+</ul></li>
+</ol>
+</section>
+<section id="speaker-attitude" class="level1">
+<h1>Speaker attitude</h1>
+<p>In IELTS listening test, knowing speaker attitude can become quite handy. Below are some synonym to illustrate different attitudes.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<svg width="672" height="480" viewbox="0.00 0.00 433.62 116.00" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" style="; max-width: none; max-height: none">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 112)">
+<title>G</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-112 429.62,-112 429.62,4 -4,4"></polygon>
+<!-- irritated -->
+<g id="node1" class="node">
+<title>irritated</title>
+<ellipse fill="none" stroke="black" cx="43.75" cy="-90" rx="41.7" ry="18"></ellipse>
+<text text-anchor="middle" x="43.75" y="-85.8" font-family="Times,serif" font-size="14.00">irritated</text>
+</g>
+<!-- annoyed -->
+<g id="node2" class="node">
+<title>annoyed</title>
+<ellipse fill="none" stroke="black" cx="43.75" cy="-18" rx="43.5" ry="18"></ellipse>
+<text text-anchor="middle" x="43.75" y="-13.8" font-family="Times,serif" font-size="14.00">annoyed</text>
+</g>
+<!-- irritated&#45;&#45;annoyed -->
+<g id="edge1" class="edge">
+<title>irritated--annoyed</title>
+<path fill="none" stroke="black" d="M43.75,-71.7C43.75,-60.85 43.75,-46.92 43.75,-36.1"></path>
+</g>
+<!-- reluctant -->
+<g id="node3" class="node">
+<title>reluctant</title>
+<ellipse fill="none" stroke="black" cx="150.75" cy="-90" rx="44.63" ry="18"></ellipse>
+<text text-anchor="middle" x="150.75" y="-85.8" font-family="Times,serif" font-size="14.00">reluctant</text>
+</g>
+<!-- hesistant -->
+<g id="node4" class="node">
+<title>hesistant</title>
+<ellipse fill="none" stroke="black" cx="150.75" cy="-18" rx="44.66" ry="18"></ellipse>
+<text text-anchor="middle" x="150.75" y="-13.8" font-family="Times,serif" font-size="14.00">hesistant</text>
+</g>
+<!-- reluctant&#45;&#45;hesistant -->
+<g id="edge2" class="edge">
+<title>reluctant--hesistant</title>
+<path fill="none" stroke="black" d="M150.75,-71.7C150.75,-60.85 150.75,-46.92 150.75,-36.1"></path>
+</g>
+<!-- doubtful -->
+<g id="node5" class="node">
+<title>doubtful</title>
+<ellipse fill="none" stroke="black" cx="257.75" cy="-90" rx="43.52" ry="18"></ellipse>
+<text text-anchor="middle" x="257.75" y="-85.8" font-family="Times,serif" font-size="14.00">doubtful</text>
+</g>
+<!-- dubious -->
+<g id="node6" class="node">
+<title>dubious</title>
+<ellipse fill="none" stroke="black" cx="257.75" cy="-18" rx="41.74" ry="18"></ellipse>
+<text text-anchor="middle" x="257.75" y="-13.8" font-family="Times,serif" font-size="14.00">dubious</text>
+</g>
+<!-- doubtful&#45;&#45;dubious -->
+<g id="edge3" class="edge">
+<title>doubtful--dubious</title>
+<path fill="none" stroke="black" d="M257.75,-71.7C257.75,-60.85 257.75,-46.92 257.75,-36.1"></path>
+</g>
+<!-- enthusiatic -->
+<g id="node7" class="node">
+<title>enthusiatic</title>
+<ellipse fill="none" stroke="black" cx="372.75" cy="-90" rx="52.74" ry="18"></ellipse>
+<text text-anchor="middle" x="372.75" y="-85.8" font-family="Times,serif" font-size="14.00">enthusiatic</text>
+</g>
+<!-- eager -->
+<g id="node8" class="node">
+<title>eager</title>
+<ellipse fill="none" stroke="black" cx="372.75" cy="-18" rx="31.88" ry="18"></ellipse>
+<text text-anchor="middle" x="372.75" y="-13.8" font-family="Times,serif" font-size="14.00">eager</text>
+</g>
+<!-- enthusiatic&#45;&#45;eager -->
+<g id="edge4" class="edge">
+<title>enthusiatic--eager</title>
+<path fill="none" stroke="black" d="M372.75,-71.7C372.75,-60.85 372.75,-46.92 372.75,-36.1"></path>
+</g>
+</g>
+</svg>
 </div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./projects/css/css.html" class="no-external">To Do List using HTML and CSS</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./projects/css/css.html" class="no-external"></a>
-</div>
-<div class="listing-description">
-<a href="./projects/css/css.html" class="no-external">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown…</a>
-</div>
-</div>
-<div class="metadata">
-<p><a href="./projects/css/css.html" class="no-external"></a></p><a href="./projects/css/css.html" class="no-external">
-</a>
+<p></p></figure><p></p>
 </div>
 </div>
 </div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
+
+
+</section>
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
