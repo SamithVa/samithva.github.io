@@ -3,7 +3,7 @@ title: "Anaconda or Pip"
 author: "Samith Va"
 date: "2024-03-28"
 toc: true
-categories: [anaconda, conda, pip,env]
+categories: [anaconda, pip]
 ---
 
 # Introduction to Conda

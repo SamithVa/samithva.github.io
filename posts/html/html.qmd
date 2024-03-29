@@ -3,7 +3,7 @@ title: "HTML5"
 author: "Samith Va"
 date: "2024-03-28"
 toc: true
-categories: [Web Development, Front End, HTML]
+categories: [web development]
 ---
 
 HTML5 is the latest version of the Hypertext Markup Language (HTML), which is the standard language used to create and design web pages and applications. It is a significant update to the HTML specification, introducing new features, elements, and APIs to enhance the functionality, semantics, and interoperability of web documents.

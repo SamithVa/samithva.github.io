@@ -3,7 +3,7 @@ title: "RLC Circuit"
 author: "Samith Va"
 toc: true
 date: 03-29-2024
-categories: [RLC, q factor, resonant]
+categories: [RF microelectronics]
 ---
 
 # RLC 

@@ -2,7 +2,7 @@
 title: "Regression and Classification"
 author: "Samith Va"
 date: 03-29-2024
-categories: [regression, classification]
+categories: [machine learning]
 toc : true
 ---
 

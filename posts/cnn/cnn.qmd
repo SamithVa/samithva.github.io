@@ -3,7 +3,7 @@ title: "Convolutional Neuron Network"
 author: "Samith Va"
 date: "2024-03-28"
 toc: true
-categories: [deep learning, CNN, ]
+categories: [deep learning]
 ---
 
 

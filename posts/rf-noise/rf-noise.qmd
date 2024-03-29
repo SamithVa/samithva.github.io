@@ -3,7 +3,7 @@ title: "RF Noise"
 author: "Samith Va"
 toc: true
 date: 03-29-2024
-categories: [RF, noise, noise figure]
+categories: [RF microelectronics]
 ---
 
 What will cover in this section : 

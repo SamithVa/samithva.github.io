@@ -3,7 +3,7 @@ title: "German Grammar"
 author: "Samith Va"
 date: "2024-03-28"
 toc: true
-categories: [German]
+categories: [german]
 ---
 
 # Grammar 
