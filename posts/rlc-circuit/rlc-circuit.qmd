@@ -6,6 +6,10 @@ date: 03-29-2024
 categories: [RF microelectronics]
 ---
 
+# Parallel and Series Conversion
+
+
+
 # RLC 
 
 ## Resistance and Reactance

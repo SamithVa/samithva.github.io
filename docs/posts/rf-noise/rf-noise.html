@@ -191,10 +191,11 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#noise-figure" id="toc-noise-figure" class="nav-link active" data-scroll-target="#noise-figure">Noise Figure</a></li>
-  <li><a href="#friiss-equation" id="toc-friiss-equation" class="nav-link" data-scroll-target="#friiss-equation">Friis’s equation</a></li>
-  <li><a href="#thermal-noise-equivalent" id="toc-thermal-noise-equivalent" class="nav-link" data-scroll-target="#thermal-noise-equivalent">Thermal noise equivalent</a></li>
+  <li><a href="#thermal-noise-equivalent" id="toc-thermal-noise-equivalent" class="nav-link active" data-scroll-target="#thermal-noise-equivalent">Thermal noise equivalent</a></li>
   <li><a href="#thermal-noise-in-mosfet" id="toc-thermal-noise-in-mosfet" class="nav-link" data-scroll-target="#thermal-noise-in-mosfet">Thermal noise in MOSFET</a></li>
+  <li><a href="#noise-figure" id="toc-noise-figure" class="nav-link" data-scroll-target="#noise-figure">Noise Figure</a></li>
+  <li><a href="#friiss-equation" id="toc-friiss-equation" class="nav-link" data-scroll-target="#friiss-equation">Friis’s equation</a></li>
+  <li><a href="#rl-and-rc-in-series-and-parallel" id="toc-rl-and-rc-in-series-and-parallel" class="nav-link" data-scroll-target="#rl-and-rc-in-series-and-parallel">RL and RC in Series and Parallel</a></li>
   </ul>
 </nav>
     </div>
@@ -207,34 +208,9 @@ window.Quarto = {
 
 <p>What will cover in this section :</p>
 <p>Noise Figure, Friis Equation, Thermal Noise of Resistor, MOSFET Noise.</p>
-<section id="noise-figure" class="level2">
-<h2 class="anchored" data-anchor-id="noise-figure">Noise Figure</h2>
-<p>In circuit and system design, we interested in the signal-to-noise ratio (SNR). To quantify how noisy the circuit is, we can define its noise factor as</p>
-<p><span class="math display">\[\text{NF} = \frac{\text{SNR}_\text{in}}{\text{SNR}_\text{out}}\]</span></p>
-<p>or Noise figure in dB as</p>
-<p><span class="math display">\[\text{NF}|_\text{dB} = 10\log(\frac{\text{SNR}_\text{in}}{\text{SNR}_\text{out}})\]</span></p>
-What is the NF for noiseless stage ?
-<details>
-<summary>
-Answer
-</summary>
-NF = 1 = 0 dB
-</details>
-</section>
-<section id="friiss-equation" class="level2">
-<h2 class="anchored" data-anchor-id="friiss-equation">Friis’s equation</h2>
-<p>To determine overall noise figure in a cascade of stages, we can use Friis’s equation :</p>
-<p><span class="math display">\[NF_{\text{total}} = {NF}_1 + \frac{NF_2 - 1}{A^2_1} + ... + \frac{{NF}_n - 1}{A^2_1...A^2_n}\]</span></p>
-<p>From above expression we can conclude that the first stage’s NF is the most important. Why ?</p>
-<details>
-<summary>
-Answer
-</summary>
-Conceptually, because the noise from first stage will be amplified multiple times.
-</details>
-</section>
 <section id="thermal-noise-equivalent" class="level2">
 <h2 class="anchored" data-anchor-id="thermal-noise-equivalent">Thermal noise equivalent</h2>
+<p>For ideal inductor and capacitor, is there noise ?</p>
 <p>Thermal noise the most significant noise encountered in electronic devices. We can model the thermal in two ways:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -264,6 +240,36 @@ Conceptually, because the noise from first stage will be amplified multiple time
 <li><span class="math inline">\(\gamma\)</span> is the excess noise coefficient</li>
 <li><span class="math inline">\(g_m\)</span> is the transconductance.</li>
 </ul>
+</section>
+<section id="noise-figure" class="level2">
+<h2 class="anchored" data-anchor-id="noise-figure">Noise Figure</h2>
+<p>In circuit and system design, we interested in the signal-to-noise ratio (SNR). To quantify how noisy the circuit is, we can define its noise factor as</p>
+<p><span class="math display">\[\text{NF} = \frac{\text{SNR}_\text{in}}{\text{SNR}_\text{out}}\]</span></p>
+<p>or Noise figure in dB as</p>
+<p><span class="math display">\[\text{NF}|_\text{dB} = 10\log(\frac{\text{SNR}_\text{in}}{\text{SNR}_\text{out}})\]</span></p>
+What is the NF for noiseless stage ?
+<details>
+<summary>
+Answer
+</summary>
+NF = 1 = 0 dB
+</details>
+</section>
+<section id="friiss-equation" class="level2">
+<h2 class="anchored" data-anchor-id="friiss-equation">Friis’s equation</h2>
+<p>To determine overall noise figure in a cascade of stages, we can use Friis’s equation :</p>
+<p><span class="math display">\[NF_{\text{total}} = {NF}_1 + \frac{NF_2 - 1}{A^2_1} + ... + \frac{{NF}_n - 1}{A^2_1...A^2_n}\]</span></p>
+<p>From above expression we can conclude that the first stage’s NF is the most important. Why ?</p>
+<details>
+<summary>
+Answer
+</summary>
+Conceptually, because the noise from first stage will be amplified multiple times.
+</details>
+</section>
+<section id="rl-and-rc-in-series-and-parallel" class="level2">
+<h2 class="anchored" data-anchor-id="rl-and-rc-in-series-and-parallel">RL and RC in Series and Parallel</h2>
+<p>RL circuit</p>
 
 
 </section>

@@ -10,37 +10,9 @@ What will cover in this section :
 
 Noise Figure, Friis Equation, Thermal Noise of Resistor, MOSFET Noise.
 
-## Noise Figure
-
-In circuit and system design, we interested in the signal-to-noise ratio (SNR). To quantify how noisy the circuit is, we can define its noise factor as
-
-$$\text{NF} = \frac{\text{SNR}_\text{in}}{\text{SNR}_\text{out}}$$
-
-or Noise figure in dB as
-
-$$\text{NF}|_\text{dB} = 10\log(\frac{\text{SNR}_\text{in}}{\text{SNR}_\text{out}})$$
-
-What is the NF for noiseless stage ? 
-<details>
-<summary>Answer</summary>
-NF = 1 = 0 dB
-</details> 
-
-## Friis's equation
-
-To determine overall noise figure in a cascade of stages, we can use Friis's equation  :
-
-$$NF_{\text{total}} = {NF}_1 + \frac{NF_2 - 1}{A^2_1} + ... + \frac{{NF}_n - 1}{A^2_1...A^2_n}$$
-
-From above expression we can conclude that the first stage's NF is the most important. Why ? 
-
-<details>
-<summary>Answer</summary>
-Conceptually, because the noise from first stage will be amplified multiple times.
-</details> 
-
-
 ## Thermal noise equivalent
+
+For ideal inductor and capacitor, is there noise ?
 
 Thermal noise the most significant noise encountered in electronic devices. We can model the thermal in two ways:
 
@@ -71,6 +43,39 @@ Where
 
 - $\gamma$ is the excess noise coefficient
 - $g_m$ is the transconductance.
+
+## Noise Figure
+
+In circuit and system design, we interested in the signal-to-noise ratio (SNR). To quantify how noisy the circuit is, we can define its noise factor as
+
+$$\text{NF} = \frac{\text{SNR}_\text{in}}{\text{SNR}_\text{out}}$$
+
+or Noise figure in dB as
+
+$$\text{NF}|_\text{dB} = 10\log(\frac{\text{SNR}_\text{in}}{\text{SNR}_\text{out}})$$
+
+What is the NF for noiseless stage ? 
+<details>
+<summary>Answer</summary>
+NF = 1 = 0 dB
+</details> 
+
+## Friis's equation
+
+To determine overall noise figure in a cascade of stages, we can use Friis's equation  :
+
+$$NF_{\text{total}} = {NF}_1 + \frac{NF_2 - 1}{A^2_1} + ... + \frac{{NF}_n - 1}{A^2_1...A^2_n}$$
+
+From above expression we can conclude that the first stage's NF is the most important. Why ? 
+
+<details>
+<summary>Answer</summary>
+Conceptually, because the noise from first stage will be amplified multiple times.
+</details> 
+
+## RL and RC in Series and Parallel
+
+RL circuit
 
 
 

@@ -200,6 +200,11 @@ window.Quarto = {
   <li><a href="#padding" id="toc-padding" class="nav-link" data-scroll-target="#padding">Padding</a></li>
   <li><a href="#pooling" id="toc-pooling" class="nav-link" data-scroll-target="#pooling">Pooling</a></li>
   </ul></li>
+  <li><a href="#activation-functions" id="toc-activation-functions" class="nav-link" data-scroll-target="#activation-functions">Activation functions</a>
+  <ul class="collapse">
+  <li><a href="#relu" id="toc-relu" class="nav-link" data-scroll-target="#relu">ReLU</a></li>
+  <li><a href="#leaky-relu" id="toc-leaky-relu" class="nav-link" data-scroll-target="#leaky-relu">Leaky ReLU</a></li>
+  </ul></li>
   </ul></li>
   </ul>
 </nav>
@@ -257,6 +262,55 @@ window.Quarto = {
 a technique to reduce the activation spatial dimensions/Pooling helps in reducing memory consumption in deeper layers. It is also an important step to convert the spatial information into features. The two most common pooling methods are : <strong>Max pooling</strong> and <strong>Average pooling</strong>
 </dd>
 </dl>
+</section>
+</section>
+<section id="activation-functions" class="level2">
+<h2 class="anchored" data-anchor-id="activation-functions">Activation functions</h2>
+<p>The activation fuction is a transformation function in NN that transform the weight and bias into a nonlinear format. With Activation function, model can learn and represent more complex patterns in data.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Does activation function must be a nonlinear function ? Why ?
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>In neural networks, activation functions are typically designed to be <strong>nonlinear</strong>. This is because if all activation functions were linear, the entire neural network would effectively become a linear model, incapable of capturing complex nonlinear relationships.</p>
+<p>If all activation functions were set to linear functions, even a very deep neural network would behave like a <strong>single-layer linear model</strong>. Such a model would fail to handle many real-world nonlinear relationships, limiting the expressiveness and applicability of neural networks.</p>
+</div>
+</div>
+</div>
+<section id="relu" class="level3">
+<h3 class="anchored" data-anchor-id="relu">ReLU</h3>
+<p>The Rectified Linear Unit (ReLU) activation function is one of the <strong>most widely used</strong> activation functions in deep learning. It’s defined as:</p>
+<p><span class="math display">\[f(x) = \max(0, x)\]</span></p>
+<p>In simple terms, ReLU returns if x is positive, and 0 otherwise. This makes it a piecewise linear function.</p>
+<p>ReLU has several advantages:</p>
+<ul>
+<li><p><strong>Simplicity</strong>: ReLU is computationally efficient and easy to implement. It only involves a simple thresholding operation, making it faster to compute compared to more complex activation functions like sigmoid or tanh.</p></li>
+<li><p><strong>Sparsity</strong>: ReLU introduces sparsity in the network because it turns off neurons that have negative inputs (setting their output to zero). This sparsity can help reduce overfitting by encouraging the network to focus on important features and ignore noise.</p></li>
+<li><p><strong>Addressing vanishing gradient problem</strong>: ReLU helps mitigate the vanishing gradient problem by providing a constant gradient (1) for positive inputs during backpropagation. This helps prevent the gradients from becoming too small, enabling more stable and efficient training of deep neural networks.</p></li>
+</ul>
+<p>Despite its advantages, ReLU also has some drawbacks:</p>
+<ul>
+<li><p><strong>Dead neurons</strong>: Neurons with negative inputs always output zero, leading to the problem of “dying ReLU neurons.” If a neuron’s weights are such that it always receives negative inputs, it will never activate, and its weights will not be updated during training.</p></li>
+<li><p><strong>Unbounded output</strong>: ReLU does not have an upper bound, which means neurons can potentially produce very large outputs. This can lead to issues like exploding gradients, especially during training.</p></li>
+</ul>
+</section>
+<section id="leaky-relu" class="level3">
+<h3 class="anchored" data-anchor-id="leaky-relu">Leaky ReLU</h3>
+<p>Leaky ReLU is a variant of the Rectified Linear Unit (ReLU) activation function, designed to address the <strong>“dying ReLU”</strong> problem. In standard ReLU, neurons with negative inputs always output zero, which can cause them to become <strong>“dead”</strong> and stop learning. Leaky ReLU introduces a small slope (or “leak”) for negative inputs, allowing some information to flow through the neuron even when its input is negative. Mathematically, Leaky ReLU is defined as:</p>
+<p><span class="math display">\[
+f(x) = \begin{cases}
+x &amp; \text{if } x &gt; 0 \\
+\alpha x &amp; \text{if } x \leq 0
+\end{cases}
+\]</span></p>
+<p>where <span class="math inline">\(\alpha\)</span> is a small constant (typically a small positive value: 0.01 or 0.001) that determines the slope of the function for negative inputs.</p>
 <p><a href="https://blog.csdn.net/csdn_xmj/article/details/114578241">Reference</a></p>
 
 
