@@ -4,6 +4,10 @@ author: "Samith Va"
 date: "2024-03-28"
 toc: true
 categories: [deep learning]
+format:
+    html: 
+        code-fold: true
+jupyter: python3
 ---
 
 
@@ -47,7 +51,31 @@ Features of padding in CNN:
 ### Pooling
 
 What is pooling ?
-: a technique to reduce the activation spatial dimensions/Pooling helps in reducing memory consumption in deeper layers. It is also an important step to convert the spatial information into features. The two most common pooling methods are : **Max pooling** and **Average pooling**
+: a technique to reduce the activation spatial dimensions/Pooling helps in reducing memory consumption in deeper layers. It is also an important step to convert the spatial information into features. The two most common pooling methods are : **Max pooling** and **Average pooling**.
+
+```{python}
+import numpy as np
+from keras.models import Sequential
+from keras.layers import MaxPooling2D
+ 
+# define input image
+image = np.array([[2, 2, 7, 3],
+                  [9, 4, 6, 1],
+                  [8, 5, 2, 4],
+                  [3, 1, 2, 6]])
+image = image.reshape(1, 4, 4, 1)
+ 
+# define model containing just a single max pooling layer
+model = Sequential(
+    [MaxPooling2D(pool_size = 2, strides = 2)])
+ 
+# generate pooled output
+output = model.predict(image)
+ 
+# print output image
+output = np.squeeze(output)
+print(output)
+```
 
 ## Activation functions
 
@@ -95,5 +123,17 @@ x & \text{if } x > 0 \\
 $$
 
 where $\alpha$ is a small constant (typically a small positive value: 0.01 or 0.001) that determines the slope of the function for negative inputs.
+
+## Output Layer
+
+### Softmax Function
+
+Softmax function is generally used in output layer. Its expression can be written as :
+
+$$\sigma = \frac{e^{a_k}}{\sum_{i=1}^{n}e^{a_i}}$$
+
+Example in softmax calculation : 
+
+![Softmax](softmax.png){width=60%}
 
 [Reference](https://blog.csdn.net/csdn_xmj/article/details/114578241)

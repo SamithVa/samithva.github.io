@@ -22,6 +22,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -205,6 +239,10 @@ window.Quarto = {
   <li><a href="#relu" id="toc-relu" class="nav-link" data-scroll-target="#relu">ReLU</a></li>
   <li><a href="#leaky-relu" id="toc-leaky-relu" class="nav-link" data-scroll-target="#leaky-relu">Leaky ReLU</a></li>
   </ul></li>
+  <li><a href="#output-layer" id="toc-output-layer" class="nav-link" data-scroll-target="#output-layer">Output Layer</a>
+  <ul class="collapse">
+  <li><a href="#softmax-function" id="toc-softmax-function" class="nav-link" data-scroll-target="#softmax-function">Softmax Function</a></li>
+  </ul></li>
   </ul></li>
   </ul>
 </nav>
@@ -259,9 +297,40 @@ window.Quarto = {
 <dl>
 <dt>What is pooling ?</dt>
 <dd>
-a technique to reduce the activation spatial dimensions/Pooling helps in reducing memory consumption in deeper layers. It is also an important step to convert the spatial information into features. The two most common pooling methods are : <strong>Max pooling</strong> and <strong>Average pooling</strong>
+a technique to reduce the activation spatial dimensions/Pooling helps in reducing memory consumption in deeper layers. It is also an important step to convert the spatial information into features. The two most common pooling methods are : <strong>Max pooling</strong> and <strong>Average pooling</strong>.
 </dd>
 </dl>
+<div id="8b9025fc" class="cell" data-execution_count="1">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> keras.models <span class="im">import</span> Sequential</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> keras.layers <span class="im">import</span> MaxPooling2D</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># define input image</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>image <span class="op">=</span> np.array([[<span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">7</span>, <span class="dv">3</span>],</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>                  [<span class="dv">9</span>, <span class="dv">4</span>, <span class="dv">6</span>, <span class="dv">1</span>],</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>                  [<span class="dv">8</span>, <span class="dv">5</span>, <span class="dv">2</span>, <span class="dv">4</span>],</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>                  [<span class="dv">3</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">6</span>]])</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>image <span class="op">=</span> image.reshape(<span class="dv">1</span>, <span class="dv">4</span>, <span class="dv">4</span>, <span class="dv">1</span>)</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co"># define model containing just a single max pooling layer</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> Sequential(</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    [MaxPooling2D(pool_size <span class="op">=</span> <span class="dv">2</span>, strides <span class="op">=</span> <span class="dv">2</span>)])</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="co"># generate pooled output</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>output <span class="op">=</span> model.predict(image)</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="co"># print output image</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>output <span class="op">=</span> np.squeeze(output)</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(output)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 44ms/step1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 44ms/step
+[[9. 7.]
+ [8. 6.]]</code></pre>
+</div>
+</div>
 </section>
 </section>
 <section id="activation-functions" class="level2">
@@ -311,6 +380,21 @@ x &amp; \text{if } x &gt; 0 \\
 \end{cases}
 \]</span></p>
 <p>where <span class="math inline">\(\alpha\)</span> is a small constant (typically a small positive value: 0.01 or 0.001) that determines the slope of the function for negative inputs.</p>
+</section>
+</section>
+<section id="output-layer" class="level2">
+<h2 class="anchored" data-anchor-id="output-layer">Output Layer</h2>
+<section id="softmax-function" class="level3">
+<h3 class="anchored" data-anchor-id="softmax-function">Softmax Function</h3>
+<p>Softmax function is generally used in output layer. Its expression can be written as :</p>
+<p><span class="math display">\[\sigma = \frac{e^{a_k}}{\sum_{i=1}^{n}e^{a_i}}\]</span></p>
+<p>Example in softmax calculation :</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="softmax.png" class="img-fluid figure-img" style="width:60.0%"></p>
+<figcaption>Softmax</figcaption>
+</figure>
+</div>
 <p><a href="https://blog.csdn.net/csdn_xmj/article/details/114578241">Reference</a></p>
 
 
