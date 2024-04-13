@@ -16,6 +16,8 @@ Key features of the game include:
 
 ## Demo of the Game
 
+![Demo](demo.png)
+
 [Link to game](https://samithva.github.io/guessingGame/) 
 
 ## Using `strict` mode in JS
