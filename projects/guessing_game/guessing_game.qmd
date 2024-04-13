@@ -3,6 +3,7 @@ title: "Guessing Game Using Javascript DOM"
 date: 2024-4-12
 author: 'Samith Va'
 toc: true
+image: demo.png
 categories: [Front End]
 
 ---

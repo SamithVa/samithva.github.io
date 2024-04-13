@@ -28,5 +28,23 @@
     "items": [
       "/ielts/day1/day1.html"
     ]
+  },
+  {
+    "listing": "/blog_posts.html",
+    "items": [
+      "/posts/regression/regression.html",
+      "/posts/rf-noise/rf-noise.html",
+      "/posts/rlc-circuit/rlc-circuit.html",
+      "/posts/cnn/cnn.html",
+      "/posts/conda/conda.html",
+      "/posts/german-grammar/german.html",
+      "/posts/html/html.html",
+      "/posts/chinese/chinese.html",
+      "/posts/german-vocabulary/german_vocab.html",
+      "/posts/open-cv/open-cv.html",
+      "/posts/numpy/index.html",
+      "/posts/deep-learning-journey/deep-learning-journey.html",
+      "/posts/rf-nonlinearity/nonlinearity.html"
+    ]
   }
 ]
