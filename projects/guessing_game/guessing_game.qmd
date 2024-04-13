@@ -1,0 +1,124 @@
+---
+title: "Guessing Game Using Javascript DOM"
+date: 2024-4-12
+author: 'Samith Va'
+toc: true
+categories: [Front End]
+
+---
+
+In this project, we'll dive into the fundamentals of web development by creating a straightforward guessing number game using HTML, CSS, and JavaScript. The game begins by generating a random number between 1 and 20. As the user inputs their guess, the game provides feedback on whether the guess is too low or too high compared to the randomly generated number. The game continues until the user successfully guesses the correct number.
+
+Key features of the game include:
+
+1. Tracking the highest score achieved.
+2. Resetting the score to 20 at the start of each new game.
+
+## Demo of the Game
+
+[Link to game](https://samithva.github.io/guessingGame/) 
+
+## Using `strict` mode in JS
+
+Using `strict` mode can greatly benefit us, especially as new learners of JavaScript. It helps catch errors by providing more stringent rules and enabling features like console logging for any errors that occur within our code.
+
+To use `strict` mode we simply put `use strict` at the beginning of JS file.
+
+```js
+'use strict'
+```
+
+## Random a Number in JS
+
+To random a number, we will use `Math.random()` which will generate a number between 0 and 1(not including 1). We then multiply it by 20,  `Math.random() * 20` to get a number from 0 - 20 (not including 20). Lastly we use `Math.floor()` to make the result an integer, and also we need to add 1, since the result only in 0-19.
+
+```js
+const getRandom = () => Math.floor(Math.random() * 20) + 1;
+let num = getRandom();
+```
+
+## Changing the message 
+
+To change the feedback message back to user, we can simply create a function, which will use `querySelector` to select a `message` class. Note that `querySelector` will only return an JS element, unlike the `querySelectorAll` which will return an array of JS elements. 
+
+```js
+// display a message
+function displayMessage(message) {
+  document.querySelector('.message').textContent = message;
+}
+```
+
+## Add an eventListener to a button
+
+We simply trigger a function call in JS when the button is clicked using `addEventListener`.
+
+```js
+document.querySelector('.check').addEventListener('click', () => {
+  
+});
+```
+
+Then we get the value of user's guess by selecting the HTML input element, note here that this element value is `string` is not a `number` type, hence we need to further convert it to a number using `Number()`.  
+
+```js
+/ check button event listener
+document.querySelector('.check').addEventListener('click', () => {
+  let guess = Number(document.querySelector('.guess').value);
+  score = Number(document.querySelector('.score').textContent);
+});
+```
+
+If the user simply click the 'check' button without any number (empty string is a *falsy value* here), then it will feedback a message. 
+
+```js
+if (!guess) {
+    displayMessage('⛔ No number!');
+  }
+```
+
+If the user's guess is correct, then we will send a congratulation message and change the body's background into green (#60b347). Furthermore, if the the curren score is higher then the highest score, it will update the highest score to current score.
+
+```js
+if (guess === num) {
+    displayMessage('🎉 Correct number!');
+    document.querySelector('.number').textContent = num;
+    document.body.style.backgroundColor = '#60b347';
+    if (score > highScore) {
+    highScore = score;
+    document.querySelector('.highscore').textContent = highScore;
+    }
+}
+```
+
+Else when the guess is incorrect it feed back the message back to user, by guiding the the number is too low or too high. And if the score is 0, then stop the game and display a "Gameover". 
+
+```js
+else {
+      if (score > 0) {
+        --score;
+        document.querySelector('.score').textContent = score;
+        if (guess < num) {
+          displayMessage('⬆️ Too low!');
+        } else {
+          displayMessage('⬇️ Too high!');
+        }
+      }
+      // when score === 0, gameover
+      else {
+        displayMessage('🙈 Gameover!');
+      }
+    }
+```
+
+Finally, we add an event listener to the play again button. The background will reset to Gray (#222), score to 20, and the message to default message 'Start guessing...'.
+
+```js
+// play again button event listener
+document.querySelector('.again').addEventListener('click', () => {
+  score = 20;
+  document.querySelector('.score').textContent = score;
+  document.querySelector('.number').textContent = '?';
+  displayMessage('Start guessing...');
+  document.body.style.backgroundColor = '#222';
+});
+```

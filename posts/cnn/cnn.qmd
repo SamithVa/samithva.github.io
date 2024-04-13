@@ -6,7 +6,7 @@ toc: true
 categories: [deep learning]
 format:
     html: 
-        code-fold: false
+        code-fold: true
 jupyter: python3
 ---
 

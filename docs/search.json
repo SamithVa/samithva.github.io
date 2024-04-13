@@ -179,7 +179,7 @@
     "href": "projects.html",
     "title": "Projects",
     "section": "",
-    "text": "To Do List using HTML and CSS\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Guessing Game Using Javascript DOM\n\n\n\n\n\n\nFront End\n\n\n\n\n\n\n\n\n\nApr 12, 2024\n\n\nSamith Va\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "projects/css/css.html",
@@ -445,7 +445,7 @@
     "href": "posts/cnn/cnn.html#convolution-layer",
     "title": "Convolutional Neuron Network",
     "section": "Convolution layer",
-    "text": "Convolution layer\nKeywords: Spatial dimension, Depth, Filters Bank, feature maps, Pooling\n\nKernel\nKernel refers to a small matrix used for convolutional operations. Convolution is the fundamental operation in a CNN, where the kernel (also called a filter) is applied to input data, typically an image, to produce feature maps. ’’ \n\n\nStride\n“stride” refers to the number of pixels by which the convolutional kernel moves across the input data at each step during the convolution operation. In below example, illustrate a case when stride = 2.\n\\[\\text{output depth} = \\frac{width - filter + 2 \\times pad}{stride} + 1\\]\n\n\n\nConvolution of a 5x5 input (blue) with 3x3 kernel (grey) with a stride of 2 and padding of 1. The 3x3 output is in green. Source\n\n\n\n\nPadding\nPadding is a technique used to control the spatial dimensions of the output feature maps after applying convolutional operations to the input data.\nFeatures of padding in CNN:\n\nkeep the image data near to border edge\nmaintain the size of input image dimension\nchange the output size of convolution layer\n\n\n\nPooling\n\nWhat is pooling ?\n\na technique to reduce the activation spatial dimensions/Pooling helps in reducing memory consumption in deeper layers. It is also an important step to convert the spatial information into features.\n\n\nThe two most common pooling methods are : Max pooling and Average pooling.\n\nimport torch\nimport torch.nn.functional as F\n\n# Define input image\nimage = torch.tensor([[2, 2, 7, 3],\n                      [9, 4, 6, 1],\n                      [8, 5, 2, 4],\n                      [3, 1, 2, 6]], dtype=torch.float32)\n\n# Add batch and channel dimensions\nimage = image.unsqueeze(0).unsqueeze(0)\n\n# Apply max pooling directly using functional API\noutput = F.max_pool2d(image, kernel_size=2, stride=2)\n\n# Print output image\noutput = output.squeeze().numpy()\nprint(output)\n\n[[9. 7.]\n [8. 6.]]"
+    "text": "Convolution layer\nKeywords: Spatial dimension, Depth, Filters Bank, feature maps, Pooling\n\nKernel\nKernel refers to a small matrix used for convolutional operations. Convolution is the fundamental operation in a CNN, where the kernel (also called a filter) is applied to input data, typically an image, to produce feature maps. ’’ \n\n\nStride\n“stride” refers to the number of pixels by which the convolutional kernel moves across the input data at each step during the convolution operation. In below example, illustrate a case when stride = 2.\n\\[\\text{output depth} = \\frac{width - filter + 2 \\times pad}{stride} + 1\\]\n\n\n\nConvolution of a 5x5 input (blue) with 3x3 kernel (grey) with a stride of 2 and padding of 1. The 3x3 output is in green. Source\n\n\n\n\nPadding\nPadding is a technique used to control the spatial dimensions of the output feature maps after applying convolutional operations to the input data.\nFeatures of padding in CNN:\n\nkeep the image data near to border edge\nmaintain the size of input image dimension\nchange the output size of convolution layer\n\n\n\nPooling\n\nWhat is pooling ?\n\na technique to reduce the activation spatial dimensions/Pooling helps in reducing memory consumption in deeper layers. It is also an important step to convert the spatial information into features.\n\n\nThe two most common pooling methods are : Max pooling and Average pooling.\n\n\nCode\nimport torch\nimport torch.nn.functional as F\n\n# Define input image\nimage = torch.tensor([[2, 2, 7, 3],\n                      [9, 4, 6, 1],\n                      [8, 5, 2, 4],\n                      [3, 1, 2, 6]], dtype=torch.float32)\n\n# Add batch and channel dimensions\nimage = image.unsqueeze(0).unsqueeze(0)\n\n# Apply max pooling directly using functional API\noutput = F.max_pool2d(image, kernel_size=2, stride=2)\n\n# Print output image\noutput = output.squeeze().numpy()\nprint(output)\n\n\n[[9. 7.]\n [8. 6.]]"
   },
   {
     "objectID": "ielts.html",
@@ -607,5 +607,47 @@
     "title": "Convolutional Neuron Network",
     "section": "Output Layer",
     "text": "Output Layer\n\nSoftmax Function\nSoftmax function is generally used in output layer, since it range is (0-1) which can be represented as probabilty values. Its expression can be written as :\n\\[\\sigma = \\frac{e^{a_k}}{\\sum_{i=1}^{n}e^{a_i}}\\]\nExample in softmax calculation :\n\n\n\nSoftmax\n\n\nReference"
+  },
+  {
+    "objectID": "projects/guessing_game/guessing_game.html",
+    "href": "projects/guessing_game/guessing_game.html",
+    "title": "Guessing Game Using Javascript DOM",
+    "section": "",
+    "text": "In this project, we’ll dive into the fundamentals of web development by creating a straightforward guessing number game using HTML, CSS, and JavaScript. The game begins by generating a random number between 1 and 20. As the user inputs their guess, the game provides feedback on whether the guess is too low or too high compared to the randomly generated number. The game continues until the user successfully guesses the correct number.\nKey features of the game include:"
+  },
+  {
+    "objectID": "projects/guessing_game/guessing_game.html#using-strict-mode-in-js",
+    "href": "projects/guessing_game/guessing_game.html#using-strict-mode-in-js",
+    "title": "Guessing Game Using Javascript DOM",
+    "section": "Using strict mode in JS",
+    "text": "Using strict mode in JS\nUsing strict mode can greatly benefit us, especially as new learners of JavaScript. It helps catch errors by providing more stringent rules and enabling features like console logging for any errors that occur within our code.\nTo use strict mode we simply put use strict at the beginning of JS file.\n'use strict'"
+  },
+  {
+    "objectID": "projects/guessing_game/guessing_game.html#random-a-number-in-js",
+    "href": "projects/guessing_game/guessing_game.html#random-a-number-in-js",
+    "title": "Guessing Game Using Javascript DOM",
+    "section": "Random a Number in JS",
+    "text": "Random a Number in JS\nTo random a number, we will use Math.random() which will generate a number between 0 and 1(not including 1). We then multiply it by 20, Math.random() * 20 to get a number from 0 - 20 (not including 20). Lastly we use Math.floor() to make the result an integer, and also we need to add 1, since the result only in 0-19.\nconst getRandom = () =&gt; Math.floor(Math.random() * 20) + 1;\nlet num = getRandom();"
+  },
+  {
+    "objectID": "projects/guessing_game/guessing_game.html#changing-the-message",
+    "href": "projects/guessing_game/guessing_game.html#changing-the-message",
+    "title": "Guessing Game Using Javascript DOM",
+    "section": "Changing the message",
+    "text": "Changing the message\nTo change the feedback message back to user, we can simply create a function, which will use querySelector to select a message class. Note that querySelector will only return an JS element, unlike the querySelectorAll which will return an array of JS elements.\n// display a message\nfunction displayMessage(message) {\n  document.querySelector('.message').textContent = message;\n}"
+  },
+  {
+    "objectID": "projects/guessing_game/guessing_game.html#add-an-eventlistener-to-a-button",
+    "href": "projects/guessing_game/guessing_game.html#add-an-eventlistener-to-a-button",
+    "title": "Guessing Game Using Javascript DOM",
+    "section": "Add an eventListener to a button",
+    "text": "Add an eventListener to a button\nWe simply trigger a function call in JS when the button is clicked using addEventListener.\ndocument.querySelector('.check').addEventListener('click', () =&gt; {\n  \n});\nThen we get the value of user’s guess by selecting the HTML input element, note here that this element value is string is not a number type, hence we need to further convert it to a number using Number().\n/ check button event listener\ndocument.querySelector('.check').addEventListener('click', () =&gt; {\n  let guess = Number(document.querySelector('.guess').value);\n  score = Number(document.querySelector('.score').textContent);\n});\nIf the user simply click the ‘check’ button without any number (empty string is a falsy value here), then it will feedback a message.\nif (!guess) {\n    displayMessage('⛔ No number!');\n  }\nIf the user’s guess is correct, then we will send a congratulation message and change the body’s background into green (#60b347). Furthermore, if the the curren score is higher then the highest score, it will update the highest score to current score.\nif (guess === num) {\n    displayMessage('🎉 Correct number!');\n    document.querySelector('.number').textContent = num;\n    document.body.style.backgroundColor = '#60b347';\n    if (score &gt; highScore) {\n    highScore = score;\n    document.querySelector('.highscore').textContent = highScore;\n    }\n}\nElse when the guess is incorrect it feed back the message back to user, by guiding the the number is too low or too high. And if the score is 0, then stop the game and display a “Gameover”.\nelse {\n      if (score &gt; 0) {\n        --score;\n        document.querySelector('.score').textContent = score;\n        if (guess &lt; num) {\n          displayMessage('⬆️ Too low!');\n        } else {\n          displayMessage('⬇️ Too high!');\n        }\n      }\n      // when score === 0, gameover\n      else {\n        displayMessage('🙈 Gameover!');\n      }\n    }\nFinally, we add an event listener to the play again button. The background will reset to Gray (#222), score to 20, and the message to default message ‘Start guessing…’.\n// play again button event listener\ndocument.querySelector('.again').addEventListener('click', () =&gt; {\n  score = 20;\n  document.querySelector('.score').textContent = score;\n  document.querySelector('.number').textContent = '?';\n  displayMessage('Start guessing...');\n  document.body.style.backgroundColor = '#222';\n});"
+  },
+  {
+    "objectID": "projects/guessing_game/guessing_game.html#demo-of-the-game",
+    "href": "projects/guessing_game/guessing_game.html#demo-of-the-game",
+    "title": "Guessing Game Using Javascript DOM",
+    "section": "Demo of the Game",
+    "text": "Demo of the Game\nLink to game"
   }
 ]

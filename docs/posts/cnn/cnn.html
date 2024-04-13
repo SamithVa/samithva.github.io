@@ -301,7 +301,9 @@ a technique to reduce the activation spatial dimensions/Pooling helps in reducin
 </dd>
 </dl>
 <p>The two most common pooling methods are : <strong>Max pooling</strong> and <strong>Average pooling</strong>.</p>
-<div id="9c946946" class="cell" data-execution_count="1">
+<div id="510f2be8" class="cell" data-execution_count="1">
+<details class="code-fold">
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> torch</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> torch.nn.functional <span class="im">as</span> F</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -320,6 +322,7 @@ a technique to reduce the activation spatial dimensions/Pooling helps in reducin
 <span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Print output image</span></span>
 <span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>output <span class="op">=</span> output.squeeze().numpy()</span>
 <span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(output)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output cell-output-stdout">
 <pre><code>[[9. 7.]
  [8. 6.]]</code></pre>
