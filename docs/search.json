@@ -494,7 +494,7 @@
     "href": "posts/rf-noise/rf-noise.html",
     "title": "RF Noise",
     "section": "",
-    "text": "What will cover in this section :\nNoise Figure, Friis Equation, Thermal Noise of Resistor, MOSFET Noise."
+    "text": "What will cover in this section : Noise Figure, Friis Equation, Thermal Noise of Resistor, MOSFET Noise."
   },
   {
     "objectID": "posts/rf-noise/rf-noise.html#noise-figure",
@@ -508,7 +508,7 @@
     "href": "posts/rf-noise/rf-noise.html#friiss-equation",
     "title": "RF Noise",
     "section": "Friis’s equation",
-    "text": "Friis’s equation\nTo determine overall noise figure in a cascade of stages, we can use Friis’s equation :\n\\[NF_{\\text{total}} = {NF}_1 + \\frac{NF_2 - 1}{A^2_1} + ... + \\frac{{NF}_n - 1}{A^2_1...A^2_n}\\]\nFrom above expression we can conclude that the first stage’s NF is the most important. Why ?\n\n\nAnswer\n\nConceptually, because the noise from first stage will be amplified multiple times."
+    "text": "Friis’s equation\n\n\n\nLNA Noise Model (RF Microelectronics, Behzad Razavi)\n\n\nWe can have \\[\\alpha = \\frac{Z_\\text{in}}{Z_\\text{in} + R_S}\\] \\[\\text{SNR}_\\text{in} = \\frac{V^2_\\text{in}\\alpha^2}{\\bar{V}^2_\\text{n,RS}\\alpha^2} = \\frac{V^2_\\text{in}}{\\bar{V}^2_\\text{n,RS}}\\]\n\\[\\text{SNR}_\\text{out} = \\frac{V^2_\\text{in}\\alpha^2 {A^2}_v}{\\bar{V}^2_\\text{n,RS}\\alpha^2 {A^2}_v + \\bar{V}^2_n}\\]\n\\[ NF = \\frac{\\text{SNR}_\\text{in}}{\\text{SNR}_\\text{out}} = 1 + \\frac{\\bar{V}_n ^ 2}{\\bar{V}^2_\\text{n,RS} \\alpha^2 A_v ^2}\\]"
   },
   {
     "objectID": "posts/rf-noise/rf-noise.html#thermal-noise-equivalent",
@@ -655,6 +655,34 @@
     "href": "blog_posts.html",
     "title": "Blog Posts",
     "section": "",
-    "text": "Regression and Classification\n\n\n\n\n\n\nmachine learning\n\n\n\n\n\n\n\n\n\nMar 29, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nRF Noise\n\n\n\n\n\n\nRF microelectronics\n\n\n\n\n\n\n\n\n\nMar 29, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nRLC Circuit\n\n\n\n\n\n\nRF microelectronics\n\n\n\n\n\n\n\n\n\nMar 29, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nConvolutional Neuron Network\n\n\n\n\n\n\ndeep learning\n\n\n\n\n\n\n\n\n\nMar 28, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nAnaconda or Pip\n\n\n\n\n\n\nanaconda\n\n\npip\n\n\n\n\n\n\n\n\n\nMar 28, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nGerman Grammar\n\n\n\n\n\n\ngerman\n\n\n\n\n\n\n\n\n\nMar 28, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nHTML5\n\n\n\n\n\n\nweb development\n\n\n\n\n\n\n\n\n\nMar 28, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nChinese\n\n\n\n\n\n\nchinese\n\n\n\n\n\n\n\n\n\nMar 27, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nGerman Vocabulary\n\n\n\n\n\n\ngerman\n\n\n\n\n\n\n\n\n\nMar 25, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nOpenCV\n\n\n\n\n\n\ndeep learning\n\n\n\n\n\n\n\n\n\nMar 23, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nNumpy\n\n\n\n\n\n\nnumpy\n\n\n\nNumPy is the fundamental package for scientific computing in Python\n\n\n\n\n\nMar 22, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nDeep Learning Journey\n\n\n\n\n\n\ndeep learning\n\n\n\n\n\n\n\n\n\nMar 21, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nEffects of Nonlinearity\n\n\n\n\n\n\nRF microelectronics\n\n\n\n\n\n\n\n\n\nMar 21, 2024\n\n\nSamith Va\n\n\n\n\n\n\nNo matching items"
+    "text": "Regression and Classification\n\n\n\n\n\n\nmachine learning\n\n\n\n\n\n\n\n\n\nMar 29, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nRF Noise\n\n\n\n\n\n\nRF Microelectronic\n\n\n\n\n\n\n\n\n\nMar 29, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nRLC Circuit\n\n\n\n\n\n\nRF microelectronics\n\n\n\n\n\n\n\n\n\nMar 29, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nConvolutional Neuron Network\n\n\n\n\n\n\ndeep learning\n\n\n\n\n\n\n\n\n\nMar 28, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nAnaconda or Pip\n\n\n\n\n\n\nanaconda\n\n\npip\n\n\n\n\n\n\n\n\n\nMar 28, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nGerman Grammar\n\n\n\n\n\n\ngerman\n\n\n\n\n\n\n\n\n\nMar 28, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nHTML5\n\n\n\n\n\n\nweb development\n\n\n\n\n\n\n\n\n\nMar 28, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nChinese\n\n\n\n\n\n\nchinese\n\n\n\n\n\n\n\n\n\nMar 27, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nGerman Vocabulary\n\n\n\n\n\n\ngerman\n\n\n\n\n\n\n\n\n\nMar 25, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nOpenCV\n\n\n\n\n\n\ndeep learning\n\n\n\n\n\n\n\n\n\nMar 23, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nNumpy\n\n\n\n\n\n\nnumpy\n\n\n\nNumPy is the fundamental package for scientific computing in Python\n\n\n\n\n\nMar 22, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nDeep Learning Journey\n\n\n\n\n\n\ndeep learning\n\n\n\n\n\n\n\n\n\nMar 21, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nEffects of Nonlinearity\n\n\n\n\n\n\nRF microelectronics\n\n\n\n\n\n\n\n\n\nMar 21, 2024\n\n\nSamith Va\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/rf-noise/rf-noise.html#thermal-noise-in-resistor",
+    "href": "posts/rf-noise/rf-noise.html#thermal-noise-in-resistor",
+    "title": "RF Noise",
+    "section": "Thermal Noise in Resistor",
+    "text": "Thermal Noise in Resistor\nFor ideal inductor and capacitor, is there noise ?\nThermal noise the most significant noise encountered in electronic devices. We can model the thermal in two ways:\n\n\n\nThermal Noise Equilvalent Circuit\n\n\n\nThevenin \\[\\bar{V}^2_n = 4kTR_1\\]\nNorton \\[\\bar{I}^2_n = 4kT/R_1\\]\n\nWhere\n\n\\(k = 1.38 \\times 10^{-23} J/K\\) is the Boltzmann constant.\n\\(T\\) is the temperature kelvin \\((K)\\)"
+  },
+  {
+    "objectID": "posts/rf-noise/rf-noise.html#friis-equation-for-cascaded-stages",
+    "href": "posts/rf-noise/rf-noise.html#friis-equation-for-cascaded-stages",
+    "title": "RF Noise",
+    "section": "Friis Equation for Cascaded Stages",
+    "text": "Friis Equation for Cascaded Stages\nTo determine overall noise figure in a cascade of stages, we can use Friis’s equation :\n\\[NF_{\\text{total}} = {NF}_1 + \\frac{NF_2 - 1}{A^2_1} + ... + \\frac{{NF}_n - 1}{A^2_1...A^2_n}\\]\nFrom above expression we can conclude that the first stage’s NF is the most important. Why ?\n\n\nAnswer\n\nConceptually, because the noise from first stage will be amplified multiple times."
+  },
+  {
+    "objectID": "posts/rf-noise/rf-noise.html#noise-figure-of-a-lna",
+    "href": "posts/rf-noise/rf-noise.html#noise-figure-of-a-lna",
+    "title": "RF Noise",
+    "section": "Noise Figure of a LNA",
+    "text": "Noise Figure of a LNA\n\n\n\nLNA Noise Model (RF Microelectronics, Behzad Razavi)\n\n\nWe can have \\[\\alpha = \\frac{Z_\\text{in}}{Z_\\text{in} + R_S}\\] \\[\\text{SNR}_\\text{in} = \\frac{V^2_\\text{in}\\alpha^2}{\\bar{V}^2_\\text{n,RS}\\alpha^2} = \\frac{V^2_\\text{in}}{\\bar{V}^2_\\text{n,RS}}\\]\n\\[\\text{SNR}_\\text{out} = \\frac{V^2_\\text{in}\\alpha^2 {A^2}_v}{\\bar{V}^2_\\text{n,RS}\\alpha^2 {A^2}_v + \\bar{V}^2_n}\\]\n\\[ NF = \\frac{\\text{SNR}_\\text{in}}{\\text{SNR}_\\text{out}} = 1 + \\frac{\\bar{V}_n ^ 2}{\\bar{V}^2_\\text{n,RS} \\alpha^2 A_v ^2}\\]"
+  },
+  {
+    "objectID": "posts/rf-noise/rf-noise.html#noise-figure-in-lna",
+    "href": "posts/rf-noise/rf-noise.html#noise-figure-in-lna",
+    "title": "RF Noise",
+    "section": "Noise Figure in LNA",
+    "text": "Noise Figure in LNA\n\n\n\nLNA Noise Model (RF Microelectronics, Behzad Razavi, P49)\n\n\nWe can have \\[\\alpha = \\frac{Z_\\text{in}}{Z_\\text{in} + R_S}\\] \\[\\text{SNR}_\\text{in} = \\frac{V^2_\\text{in}\\alpha^2}{\\bar{V}^2_\\text{n,RS}\\alpha^2} = \\frac{V^2_\\text{in}}{\\bar{V}^2_\\text{n,RS}}\\]\n\\[\\text{SNR}_\\text{out} = \\frac{V^2_\\text{in}\\alpha^2 {A^2}_v}{\\bar{V}^2_\\text{n,RS}\\alpha^2 {A^2}_v + \\bar{V}^2_n}\\]\n\\[ NF = \\frac{\\text{SNR}_\\text{in}}{\\text{SNR}_\\text{out}} = 1 + \\frac{\\bar{V}_n ^ 2}{\\bar{V}^2_\\text{n,RS} \\alpha^2 A_v ^2}\\]"
   }
 ]

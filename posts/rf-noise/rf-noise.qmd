@@ -3,14 +3,12 @@ title: "RF Noise"
 author: "Samith Va"
 toc: true
 date: 03-29-2024
-categories: [RF microelectronics]
+categories: [RF Microelectronic]
 ---
 
-What will cover in this section : 
+What will cover in this section : Noise Figure, Friis Equation, Thermal Noise of Resistor, MOSFET Noise.
 
-Noise Figure, Friis Equation, Thermal Noise of Resistor, MOSFET Noise.
-
-## Thermal noise equivalent
+## Thermal Noise in Resistor
 
 For ideal inductor and capacitor, is there noise ?
 
@@ -60,7 +58,19 @@ What is the NF for noiseless stage ?
 NF = 1 = 0 dB
 </details> 
 
-## Friis's equation
+## Noise Figure in LNA
+
+![LNA Noise Model (RF Microelectronics, Behzad Razavi, P49)](noise-model.png)
+
+We can have 
+$$\alpha = \frac{Z_\text{in}}{Z_\text{in} + R_S}$$
+$$\text{SNR}_\text{in} = \frac{V^2_\text{in}\alpha^2}{\bar{V}^2_\text{n,RS}\alpha^2} = \frac{V^2_\text{in}}{\bar{V}^2_\text{n,RS}}$$
+
+$$\text{SNR}_\text{out} = \frac{V^2_\text{in}\alpha^2 {A^2}_v}{\bar{V}^2_\text{n,RS}\alpha^2 {A^2}_v + \bar{V}^2_n}$$
+
+$$ NF = \frac{\text{SNR}_\text{in}}{\text{SNR}_\text{out}} = 1 + \frac{\bar{V}_n ^ 2}{\bar{V}^2_\text{n,RS} \alpha^2 A_v ^2}$$
+
+## Friis Equation for Cascaded Stages
 
 To determine overall noise figure in a cascade of stages, we can use Friis's equation  :
 

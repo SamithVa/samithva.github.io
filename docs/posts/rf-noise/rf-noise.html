@@ -157,7 +157,7 @@ window.Quarto = {
     <div class="quarto-title column-body">
       <h1 class="title">RF Noise</h1>
                                 <div class="quarto-categories">
-                <div class="quarto-category">RF microelectronics</div>
+                <div class="quarto-category">RF Microelectronic</div>
               </div>
                   </div>
   </div>
@@ -191,10 +191,11 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#thermal-noise-equivalent" id="toc-thermal-noise-equivalent" class="nav-link active" data-scroll-target="#thermal-noise-equivalent">Thermal noise equivalent</a></li>
+  <li><a href="#thermal-noise-in-resistor" id="toc-thermal-noise-in-resistor" class="nav-link active" data-scroll-target="#thermal-noise-in-resistor">Thermal Noise in Resistor</a></li>
   <li><a href="#thermal-noise-in-mosfet" id="toc-thermal-noise-in-mosfet" class="nav-link" data-scroll-target="#thermal-noise-in-mosfet">Thermal noise in MOSFET</a></li>
   <li><a href="#noise-figure" id="toc-noise-figure" class="nav-link" data-scroll-target="#noise-figure">Noise Figure</a></li>
-  <li><a href="#friiss-equation" id="toc-friiss-equation" class="nav-link" data-scroll-target="#friiss-equation">Friis’s equation</a></li>
+  <li><a href="#noise-figure-in-lna" id="toc-noise-figure-in-lna" class="nav-link" data-scroll-target="#noise-figure-in-lna">Noise Figure in LNA</a></li>
+  <li><a href="#friis-equation-for-cascaded-stages" id="toc-friis-equation-for-cascaded-stages" class="nav-link" data-scroll-target="#friis-equation-for-cascaded-stages">Friis Equation for Cascaded Stages</a></li>
   <li><a href="#rl-and-rc-in-series-and-parallel" id="toc-rl-and-rc-in-series-and-parallel" class="nav-link" data-scroll-target="#rl-and-rc-in-series-and-parallel">RL and RC in Series and Parallel</a></li>
   </ul>
 </nav>
@@ -206,10 +207,9 @@ window.Quarto = {
 
 
 
-<p>What will cover in this section :</p>
-<p>Noise Figure, Friis Equation, Thermal Noise of Resistor, MOSFET Noise.</p>
-<section id="thermal-noise-equivalent" class="level2">
-<h2 class="anchored" data-anchor-id="thermal-noise-equivalent">Thermal noise equivalent</h2>
+<p>What will cover in this section : Noise Figure, Friis Equation, Thermal Noise of Resistor, MOSFET Noise.</p>
+<section id="thermal-noise-in-resistor" class="level2">
+<h2 class="anchored" data-anchor-id="thermal-noise-in-resistor">Thermal Noise in Resistor</h2>
 <p>For ideal inductor and capacitor, is there noise ?</p>
 <p>Thermal noise the most significant noise encountered in electronic devices. We can model the thermal in two ways:</p>
 <div class="quarto-figure quarto-figure-center">
@@ -255,8 +255,20 @@ Answer
 NF = 1 = 0 dB
 </details>
 </section>
-<section id="friiss-equation" class="level2">
-<h2 class="anchored" data-anchor-id="friiss-equation">Friis’s equation</h2>
+<section id="noise-figure-in-lna" class="level2">
+<h2 class="anchored" data-anchor-id="noise-figure-in-lna">Noise Figure in LNA</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="noise-model.png" class="img-fluid figure-img"></p>
+<figcaption>LNA Noise Model (RF Microelectronics, Behzad Razavi, P49)</figcaption>
+</figure>
+</div>
+<p>We can have <span class="math display">\[\alpha = \frac{Z_\text{in}}{Z_\text{in} + R_S}\]</span> <span class="math display">\[\text{SNR}_\text{in} = \frac{V^2_\text{in}\alpha^2}{\bar{V}^2_\text{n,RS}\alpha^2} = \frac{V^2_\text{in}}{\bar{V}^2_\text{n,RS}}\]</span></p>
+<p><span class="math display">\[\text{SNR}_\text{out} = \frac{V^2_\text{in}\alpha^2 {A^2}_v}{\bar{V}^2_\text{n,RS}\alpha^2 {A^2}_v + \bar{V}^2_n}\]</span></p>
+<p><span class="math display">\[ NF = \frac{\text{SNR}_\text{in}}{\text{SNR}_\text{out}} = 1 + \frac{\bar{V}_n ^ 2}{\bar{V}^2_\text{n,RS} \alpha^2 A_v ^2}\]</span></p>
+</section>
+<section id="friis-equation-for-cascaded-stages" class="level2">
+<h2 class="anchored" data-anchor-id="friis-equation-for-cascaded-stages">Friis Equation for Cascaded Stages</h2>
 <p>To determine overall noise figure in a cascade of stages, we can use Friis’s equation :</p>
 <p><span class="math display">\[NF_{\text{total}} = {NF}_1 + \frac{NF_2 - 1}{A^2_1} + ... + \frac{{NF}_n - 1}{A^2_1...A^2_n}\]</span></p>
 <p>From above expression we can conclude that the first stage’s NF is the most important. Why ?</p>
