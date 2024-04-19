@@ -179,7 +179,7 @@
     "href": "projects.html",
     "title": "Projects",
     "section": "",
-    "text": "Guessing Game Using Javascript DOM\n\n\n\n\n\n\nFront End\n\n\n\n\n\n\n\n\n\nApr 12, 2024\n\n\nSamith Va\n\n\n\n\n\n\nNo matching items"
+    "text": "Pig Game using Javascript\n\n\n\n\n\n\nFront End\n\n\n\n\n\n\n\n\n\nApr 19, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nGuessing Game Using Javascript DOM\n\n\n\n\n\n\nFront End\n\n\n\n\n\n\n\n\n\nApr 12, 2024\n\n\nSamith Va\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "projects/css/css.html",
@@ -648,7 +648,7 @@
     "href": "projects/guessing_game/guessing_game.html#demo-of-the-game",
     "title": "Guessing Game Using Javascript DOM",
     "section": "Demo of the Game",
-    "text": "Demo of the Game\n\n\n\nDemo\n\n\nLink to game"
+    "text": "Demo of the Game\n\n\n\nDemo\n\n\nLink to Guessing Game on GitHub Page"
   },
   {
     "objectID": "blog_posts.html",
@@ -684,5 +684,47 @@
     "title": "RF Noise",
     "section": "Noise Figure in LNA",
     "text": "Noise Figure in LNA\n\n\n\nLNA Noise Model (RF Microelectronics, Behzad Razavi, P49)\n\n\nWe can have \\[\\alpha = \\frac{Z_\\text{in}}{Z_\\text{in} + R_S}\\] \\[\\text{SNR}_\\text{in} = \\frac{V^2_\\text{in}\\alpha^2}{\\bar{V}^2_\\text{n,RS}\\alpha^2} = \\frac{V^2_\\text{in}}{\\bar{V}^2_\\text{n,RS}}\\]\n\\[\\text{SNR}_\\text{out} = \\frac{V^2_\\text{in}\\alpha^2 {A^2}_v}{\\bar{V}^2_\\text{n,RS}\\alpha^2 {A^2}_v + \\bar{V}^2_n}\\]\n\\[ NF = \\frac{\\text{SNR}_\\text{in}}{\\text{SNR}_\\text{out}} = 1 + \\frac{\\bar{V}_n ^ 2}{\\bar{V}^2_\\text{n,RS} \\alpha^2 A_v ^2}\\]"
+  },
+  {
+    "objectID": "projects/pig_game/pig_game.html",
+    "href": "projects/pig_game/pig_game.html",
+    "title": "Pig Game using Javascript",
+    "section": "",
+    "text": "“Pig” is a simple and fun dice game that involves a bit of strategy and luck, and it’s great for two players. The objective of the game is to be the first player to reach 100 points or other value set by the player.\n\n\n\nDemo of the Pig Game\n\n\nLink to Pig Game on GitHub Page"
+  },
+  {
+    "objectID": "projects/pig_game/pig_game.html#what-is-pig-game",
+    "href": "projects/pig_game/pig_game.html#what-is-pig-game",
+    "title": "Pig Game using Javascript",
+    "section": "",
+    "text": "“Pig” is a simple and fun dice game that involves a bit of strategy and luck, and it’s great for two players. The objective of the game is to be the first player to reach 100 points or other value set by the player.\n\n\n\nDemo of the Pig Game\n\n\nLink to Pig Game on GitHub Page"
+  },
+  {
+    "objectID": "projects/pig_game/pig_game.html#rules-of-pig-game",
+    "href": "projects/pig_game/pig_game.html#rules-of-pig-game",
+    "title": "Pig Game using Javascript",
+    "section": "Rules of Pig Game",
+    "text": "Rules of Pig Game\nTurns: Players take turns to roll the die as many times as they choose on each turn.\nScoring: Each roll is added to a turn total, but if the player rolls a 1, their turn ends and their turn total is lost.\nHolding: At any point during their turn, a player may choose to “hold”. When a player holds, the turn total (the sum of the dice rolls during that turn) is added to their overall score.\nWinning: The game continues until one of the players reaches or exceeds 100 points."
+  },
+  {
+    "objectID": "projects/pig_game/pig_game.html#strategy-and-tips",
+    "href": "projects/pig_game/pig_game.html#strategy-and-tips",
+    "title": "Pig Game using Javascript",
+    "section": "Strategy and Tips:",
+    "text": "Strategy and Tips:\nRisk vs Reward: Decide when to hold and when to continue rolling. The more rolls you make, the higher the risk of rolling a 1 and losing all the points accumulated in that turn.\nObserving Opponents: Adjust your strategy based on the scores of your opponents. If you are far ahead, you might play it safer, whereas if you are behind, you might take more risks. Variations:\nTwo-Dice Pig: Use two dice. If a player rolls a single 1, they lose all points for the turn. If they roll two 1s (snake eyes), they lose all their points accumulated so far.\nBig Pig: A variant using two dice where rolling doubles increases the points for that turn significantly, but rolling double ones (snake eyes) can wipe out the player’s entire score.\nPig With Lives: Players have a limited number of lives, losing one each time they roll a 1. When they lose all lives, they’re out of the game.\nPig is a game that balances chance and tactics, making it enjoyable for players of all ages. It’s an excellent way to practice mental addition and decision-making under risk!"
+  },
+  {
+    "objectID": "projects/pig_game/pig_game.html#flowchart",
+    "href": "projects/pig_game/pig_game.html#flowchart",
+    "title": "Pig Game using Javascript",
+    "section": "Flowchart",
+    "text": "Flowchart\n\n\n\nFlowchart of Pig Game"
+  },
+  {
+    "objectID": "projects/pig_game/pig_game.html#building-processes",
+    "href": "projects/pig_game/pig_game.html#building-processes",
+    "title": "Pig Game using Javascript",
+    "section": "Building Processes",
+    "text": "Building Processes\n\n1. Select DOM Elements\n\nUsing strict at the beginning, so that JS stopped running when there is an error.\nWe select button elements using querySelector.\nScores store both player score, which score[0] stores Player 1’s score and score[1] stores Player 2’s score.\nInitialize all the variables\n\n\"use strict\";\n\nconst player0 = document.querySelector(\".player--0\");\nconst player1 = document.querySelector(\".player--1\");\n\nconst scoreEl0 = document.getElementById(\"score--0\");\nconst scoreEl1 = document.getElementById(\"score--1\");\nconst currentScoreEl0 = document.getElementById(\"current--0\");\nconst currentScoreEl1 = document.getElementById(\"current--1\");\n\nconst btnNew = document.querySelector(\".btn--new\");\nconst btnRoll = document.querySelector(\".btn--roll\");\nconst btnHold = document.querySelector(\".btn--hold\");\n\nlet winScore = Number(document.getElementById(\"win-score\").value);\nlet currentScore = 0;\nlet currentPlayer = 0;\nlet Gameover = false;\n\nconst diceEl = document.querySelector(\".dice\");\n\nlet scores = [0, 0];\n\n\n2. New Game\nWhen ‘NEW GAME’ button is clicked, we trigger the newGame() function.\nbtnNew.addEventListener(\"click\", () =&gt; {\n  Gameover = false;\n  newGame();\n});\nIn newGame() function, We check if the currentPlayer contain player--winner class, if it does class we then remove the class to begin the game.\n// newGame\nconst newGame = function () {\n  currentScore = 0;\n  scores = [0, 0];\n  const currentPlayerEle = document.querySelector(`.player--${currentPlayer}`);\n  if (currentPlayerEle.classList.contains(\"player--winner\")) {\n    currentPlayerEle.classList.remove(\"player--winner\");\n  }\n  removeAllActive();\n  currentPlayer = Math.floor(Math.random() + 0.5);\n  document\n    .querySelector(`.player--${currentPlayer}`)\n    .classList.add(\"player--active\");\n  // hide dice\n  diceEl.classList.add(\"hidden\");\n  // reset scores to 0\n  scoreEl0.textContent = 0;\n  scoreEl1.textContent = 0;\n  currentScoreEl0.textContent = 0;\n  currentScoreEl1.textContent = 0;\n};\nTo start the game equally, we random a number 0-1, if it is 0, start with Player 1, otherwise Player 2 start the game.\ncurrentPlayer = Math.floor(Math.random() + 0.5);\nBut we first call function removeAllActive to remove active player class from all both players.\nconst removeAllActive = function () {\n  if (player0.classList.contains(\"player--active\")) {\n    player0.classList.remove(\"player--active\");\n  }\n  if (player1.classList.contains(\"player--active\")) {\n    player1.classList.remove(\"player--active\");\n  }\n};\n\n\n3. Rolling Button\nWe then an eventListener to the Rolling button. When the rolling button is clicked :\n\nDice is unhidden\nRandom number between 1 to 6\nIf random number is 1, switch the player by trigger switchPlayer() function.\n\nconst switchPlayer = function () {\n  currentScore = 0;\n  document.getElementById(`current--${currentPlayer}`).textContent =\n    currentScore;\n  currentPlayer = currentPlayer === 1 ? 0 : 1;\n  player0.classList.toggle(\"player--active\");\n  player1.classList.toggle(\"player--active\");\n};\n\nIf random number is not 1, add the score to current score.\n\n// rolling button\nbtnRoll.addEventListener(\"click\", () =&gt; {\n  // show dice\n  if (!Gameover) {\n    diceEl.classList.remove(\"hidden\");\n\n    const randDice = Math.floor(Math.random() * 6) + 1;\n    diceEl.src = `dice-${randDice}.png`;\n    // Add score to current score\n    if (randDice !== 1) {\n      currentScore += randDice;\n      document.getElementById(`current--${currentPlayer}`).textContent =\n        currentScore;\n    }\n    // Switch the player\n    else {\n      switchPlayer();\n    }\n  }\n});\n\n\n4. Hold Button\nWhen hold button is click, it will :\n\nIf the game has not ended add the current score to player overall score.\nSwitch to other player\nIf one of the player win the game, add a player--winner class to that player.\n\n// hold button\nbtnHold.addEventListener(\"click\", () =&gt; {\n  winScore = Number(document.getElementById(\"win-score\").value);\n  if (!Gameover) {\n    scores[currentPlayer] += currentScore;\n    document.getElementById(`score--${currentPlayer}`).textContent =\n      scores[currentPlayer];\n    if (scores[currentPlayer] &gt;= winScore) {\n      document\n        .querySelector(`.player--${currentPlayer}`)\n        .classList.add(\"player--winner\");\n      document\n        .querySelector(`.player--${currentPlayer}`)\n        .classList.remove(\"player--active\");\n      diceEl.classList.add(\"hidden\");\n      Gameover = true;\n    } else {\n      switchPlayer();\n    }\n  }\n});"
   }
 ]

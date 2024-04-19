@@ -20,6 +20,7 @@
   {
     "listing": "/projects.html",
     "items": [
+      "/projects/pig_game/pig_game.html",
       "/projects/guessing_game/guessing_game.html"
     ]
   },

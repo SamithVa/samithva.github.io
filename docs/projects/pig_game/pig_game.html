@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Samith Va">
-<meta name="dcterms.date" content="2024-04-12">
+<meta name="dcterms.date" content="2024-04-19">
 
-<title>Happy Learning - Guessing Game Using Javascript DOM</title>
+<title>Happy Learning - Pig Game using Javascript</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -165,11 +165,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#demo-of-the-game" id="toc-demo-of-the-game" class="nav-link active" data-scroll-target="#demo-of-the-game">Demo of the Game</a></li>
-  <li><a href="#using-strict-mode-in-js" id="toc-using-strict-mode-in-js" class="nav-link" data-scroll-target="#using-strict-mode-in-js">Using <code>strict</code> mode in JS</a></li>
-  <li><a href="#random-a-number-in-js" id="toc-random-a-number-in-js" class="nav-link" data-scroll-target="#random-a-number-in-js">Random a Number in JS</a></li>
-  <li><a href="#changing-the-message" id="toc-changing-the-message" class="nav-link" data-scroll-target="#changing-the-message">Changing the message</a></li>
-  <li><a href="#add-an-eventlistener-to-a-button" id="toc-add-an-eventlistener-to-a-button" class="nav-link" data-scroll-target="#add-an-eventlistener-to-a-button">Add an eventListener to a button</a></li>
+  <li><a href="#what-is-pig-game" id="toc-what-is-pig-game" class="nav-link active" data-scroll-target="#what-is-pig-game">What is Pig Game ?</a></li>
+  <li><a href="#rules-of-pig-game" id="toc-rules-of-pig-game" class="nav-link" data-scroll-target="#rules-of-pig-game">Rules of Pig Game</a></li>
+  <li><a href="#flowchart" id="toc-flowchart" class="nav-link" data-scroll-target="#flowchart">Flowchart</a></li>
+  <li><a href="#building-processes" id="toc-building-processes" class="nav-link" data-scroll-target="#building-processes">Building Processes</a>
+  <ul class="collapse">
+  <li><a href="#select-dom-elements" id="toc-select-dom-elements" class="nav-link" data-scroll-target="#select-dom-elements">1. Select DOM Elements</a></li>
+  <li><a href="#new-game" id="toc-new-game" class="nav-link" data-scroll-target="#new-game">2. New Game</a></li>
+  <li><a href="#rolling-button" id="toc-rolling-button" class="nav-link" data-scroll-target="#rolling-button">3. Rolling Button</a></li>
+  <li><a href="#hold-button" id="toc-hold-button" class="nav-link" data-scroll-target="#hold-button">4. Hold Button</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -178,7 +183,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Guessing Game Using Javascript DOM</h1>
+<h1 class="title">Pig Game using Javascript</h1>
   <div class="quarto-categories">
     <div class="quarto-category">Front End</div>
   </div>
@@ -198,7 +203,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">April 12, 2024</p>
+      <p class="date">April 19, 2024</p>
     </div>
   </div>
   
@@ -210,95 +215,179 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>In this project, we’ll dive into the fundamentals of web development by creating a straightforward guessing number game using HTML, CSS, and JavaScript. The game begins by generating a random number between 1 and 20. As the user inputs their guess, the game provides feedback on whether the guess is too low or too high compared to the randomly generated number. The game continues until the user successfully guesses the correct number.</p>
-<p>Key features of the game include:</p>
-<ol type="1">
-<li>Tracking the highest score achieved.</li>
-<li>Resetting the score to 20 at the start of each new game.</li>
-</ol>
-<section id="demo-of-the-game" class="level2">
-<h2 class="anchored" data-anchor-id="demo-of-the-game">Demo of the Game</h2>
+<section id="what-is-pig-game" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-pig-game">What is Pig Game ?</h2>
+<p>“Pig” is a simple and fun dice game that involves a bit of strategy and luck, and it’s great for two players. The objective of the game is to be the first player to reach 100 points or other value set by the player.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="demo.png" class="img-fluid figure-img"></p>
-<figcaption>Demo</figcaption>
+<figcaption>Demo of the Pig Game</figcaption>
 </figure>
 </div>
-<p><a href="https://samithva.github.io/guessingGame/">Link to Guessing Game on GitHub Page</a></p>
+<p><a href="https://samithva.github.io/PigGame/">Link to Pig Game on GitHub Page</a></p>
 </section>
-<section id="using-strict-mode-in-js" class="level2">
-<h2 class="anchored" data-anchor-id="using-strict-mode-in-js">Using <code>strict</code> mode in JS</h2>
-<p>Using <code>strict</code> mode can greatly benefit us, especially as new learners of JavaScript. It helps catch errors by providing more stringent rules and enabling features like console logging for any errors that occur within our code.</p>
-<p>To use <code>strict</code> mode we simply put <code>use strict</code> at the beginning of JS file.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="st">'use strict'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="rules-of-pig-game" class="level2">
+<h2 class="anchored" data-anchor-id="rules-of-pig-game">Rules of Pig Game</h2>
+<p>Turns: Players take turns to roll the die as many times as they choose on each turn.</p>
+<p>Scoring: Each roll is added to a turn total, but if the player rolls a 1, their turn ends and their turn total is lost.</p>
+<p>Holding: At any point during their turn, a player may choose to “hold”. When a player holds, the turn total (the sum of the dice rolls during that turn) is added to their overall score.</p>
+<p>Winning: The game continues until one of the players reaches or exceeds 100 points.</p>
 </section>
-<section id="random-a-number-in-js" class="level2">
-<h2 class="anchored" data-anchor-id="random-a-number-in-js">Random a Number in JS</h2>
-<p>To random a number, we will use <code>Math.random()</code> which will generate a number between 0 and 1(not including 1). We then multiply it by 20, <code>Math.random() * 20</code> to get a number from 0 - 20 (not including 20). Lastly we use <code>Math.floor()</code> to make the result an integer, and also we need to add 1, since the result only in 0-19.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> getRandom <span class="op">=</span> () <span class="kw">=&gt;</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">floor</span>(<span class="bu">Math</span><span class="op">.</span><span class="fu">random</span>() <span class="op">*</span> <span class="dv">20</span>) <span class="op">+</span> <span class="dv">1</span><span class="op">;</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> num <span class="op">=</span> <span class="fu">getRandom</span>()<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="flowchart" class="level2">
+<h2 class="anchored" data-anchor-id="flowchart">Flowchart</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="pig-game-flowchart.png" class="img-fluid figure-img"></p>
+<figcaption>Flowchart of Pig Game</figcaption>
+</figure>
+</div>
 </section>
-<section id="changing-the-message" class="level2">
-<h2 class="anchored" data-anchor-id="changing-the-message">Changing the message</h2>
-<p>To change the feedback message back to user, we can simply create a function, which will use <code>querySelector</code> to select a <code>message</code> class. Note that <code>querySelector</code> will only return an JS element, unlike the <code>querySelectorAll</code> which will return an array of JS elements.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">// display a message</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">displayMessage</span>(message) {</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="bu">document</span><span class="op">.</span><span class="fu">querySelector</span>(<span class="st">'.message'</span>)<span class="op">.</span><span class="at">textContent</span> <span class="op">=</span> message<span class="op">;</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="building-processes" class="level2">
+<h2 class="anchored" data-anchor-id="building-processes">Building Processes</h2>
+<section id="select-dom-elements" class="level3">
+<h3 class="anchored" data-anchor-id="select-dom-elements">1. Select DOM Elements</h3>
+<ul>
+<li>Using <code>strict</code> at the beginning, so that JS stopped running when there is an error.</li>
+<li>We select button elements using <code>querySelector</code>.</li>
+<li>Scores store both player score, which score[0] stores Player 1’s score and score[1] stores Player 2’s score.</li>
+<li>Initialize all the variables</li>
+</ul>
+<div class="sourceCode" id="cb1"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="st">"use strict"</span><span class="op">;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> player0 <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">querySelector</span>(<span class="st">".player--0"</span>)<span class="op">;</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> player1 <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">querySelector</span>(<span class="st">".player--1"</span>)<span class="op">;</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> scoreEl0 <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="st">"score--0"</span>)<span class="op">;</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> scoreEl1 <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="st">"score--1"</span>)<span class="op">;</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> currentScoreEl0 <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="st">"current--0"</span>)<span class="op">;</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> currentScoreEl1 <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="st">"current--1"</span>)<span class="op">;</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> btnNew <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">querySelector</span>(<span class="st">".btn--new"</span>)<span class="op">;</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> btnRoll <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">querySelector</span>(<span class="st">".btn--roll"</span>)<span class="op">;</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> btnHold <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">querySelector</span>(<span class="st">".btn--hold"</span>)<span class="op">;</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> winScore <span class="op">=</span> <span class="bu">Number</span>(<span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="st">"win-score"</span>)<span class="op">.</span><span class="at">value</span>)<span class="op">;</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> currentScore <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> currentPlayer <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> Gameover <span class="op">=</span> <span class="kw">false</span><span class="op">;</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> diceEl <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">querySelector</span>(<span class="st">".dice"</span>)<span class="op">;</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> scores <span class="op">=</span> [<span class="dv">0</span><span class="op">,</span> <span class="dv">0</span>]<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="add-an-eventlistener-to-a-button" class="level2">
-<h2 class="anchored" data-anchor-id="add-an-eventlistener-to-a-button">Add an eventListener to a button</h2>
-<p>We simply trigger a function call in JS when the button is clicked using <code>addEventListener</code>.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">document</span><span class="op">.</span><span class="fu">querySelector</span>(<span class="st">'.check'</span>)<span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">'click'</span><span class="op">,</span> () <span class="kw">=&gt;</span> {</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Then we get the value of user’s guess by selecting the HTML input element, note here that this element value is <code>string</code> is not a <code>number</code> type, hence we need to further convert it to a number using <code>Number()</code>.</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ss">/ check button event listener</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="ss">document.querySelector</span><span class="sc">(</span><span class="ss">'.check'</span><span class="sc">)</span><span class="ss">.addEventListener</span><span class="sc">(</span><span class="ss">'click', </span><span class="sc">()</span><span class="ss"> =&gt; {</span></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="ss">  let guess = Number</span><span class="sc">(</span><span class="ss">document.querySelector</span><span class="sc">(</span><span class="ss">'.guess'</span><span class="sc">)</span><span class="ss">.value</span><span class="sc">)</span><span class="ss">;</span></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="ss">  score = Number</span><span class="sc">(</span><span class="ss">document.querySelector</span><span class="sc">(</span><span class="ss">'.score'</span><span class="sc">)</span><span class="ss">.textContent</span><span class="sc">)</span><span class="ss">;</span></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="ss">}</span><span class="sc">)</span><span class="ss">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>If the user simply click the ‘check’ button without any number (empty string is a <em>falsy value</em> here), then it will feedback a message.</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="op">!</span>guess) {</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">displayMessage</span>(<span class="st">'⛔ No number!'</span>)<span class="op">;</span></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  }</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>If the user’s guess is correct, then we will send a congratulation message and change the body’s background into green (#60b347). Furthermore, if the the curren score is higher then the highest score, it will update the highest score to current score.</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (guess <span class="op">===</span> num) {</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">displayMessage</span>(<span class="st">'🎉 Correct number!'</span>)<span class="op">;</span></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">document</span><span class="op">.</span><span class="fu">querySelector</span>(<span class="st">'.number'</span>)<span class="op">.</span><span class="at">textContent</span> <span class="op">=</span> num<span class="op">;</span></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">document</span><span class="op">.</span><span class="at">body</span><span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">backgroundColor</span> <span class="op">=</span> <span class="st">'#60b347'</span><span class="op">;</span></span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (score <span class="op">&gt;</span> highScore) {</span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>    highScore <span class="op">=</span> score<span class="op">;</span></span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>    <span class="bu">document</span><span class="op">.</span><span class="fu">querySelector</span>(<span class="st">'.highscore'</span>)<span class="op">.</span><span class="at">textContent</span> <span class="op">=</span> highScore<span class="op">;</span></span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Else when the guess is incorrect it feed back the message back to user, by guiding the the number is too low or too high. And if the score is 0, then stop the game and display a “Gameover”.</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span> {</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span> (score <span class="op">&gt;</span> <span class="dv">0</span>) {</span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>        <span class="op">--</span>score<span class="op">;</span></span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>        <span class="bu">document</span><span class="op">.</span><span class="fu">querySelector</span>(<span class="st">'.score'</span>)<span class="op">.</span><span class="at">textContent</span> <span class="op">=</span> score<span class="op">;</span></span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> (guess <span class="op">&lt;</span> num) {</span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>          <span class="fu">displayMessage</span>(<span class="st">'⬆️ Too low!'</span>)<span class="op">;</span></span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>        } <span class="cf">else</span> {</span>
-<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>          <span class="fu">displayMessage</span>(<span class="st">'⬇️ Too high!'</span>)<span class="op">;</span></span>
-<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>        }</span>
-<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>      }</span>
-<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>      <span class="co">// when score === 0, gameover</span></span>
-<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>      <span class="cf">else</span> {</span>
-<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>        <span class="fu">displayMessage</span>(<span class="st">'🙈 Gameover!'</span>)<span class="op">;</span></span>
-<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>      }</span>
-<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>    }</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Finally, we add an event listener to the play again button. The background will reset to Gray (#222), score to 20, and the message to default message ‘Start guessing…’.</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co">// play again button event listener</span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="bu">document</span><span class="op">.</span><span class="fu">querySelector</span>(<span class="st">'.again'</span>)<span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">'click'</span><span class="op">,</span> () <span class="kw">=&gt;</span> {</span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  score <span class="op">=</span> <span class="dv">20</span><span class="op">;</span></span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>  <span class="bu">document</span><span class="op">.</span><span class="fu">querySelector</span>(<span class="st">'.score'</span>)<span class="op">.</span><span class="at">textContent</span> <span class="op">=</span> score<span class="op">;</span></span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>  <span class="bu">document</span><span class="op">.</span><span class="fu">querySelector</span>(<span class="st">'.number'</span>)<span class="op">.</span><span class="at">textContent</span> <span class="op">=</span> <span class="st">'?'</span><span class="op">;</span></span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">displayMessage</span>(<span class="st">'Start guessing...'</span>)<span class="op">;</span></span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>  <span class="bu">document</span><span class="op">.</span><span class="at">body</span><span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">backgroundColor</span> <span class="op">=</span> <span class="st">'#222'</span><span class="op">;</span></span>
-<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="new-game" class="level3">
+<h3 class="anchored" data-anchor-id="new-game">2. New Game</h3>
+<p>When ‘NEW GAME’ button is clicked, we trigger the <code>newGame()</code> function.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>btnNew<span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">"click"</span><span class="op">,</span> () <span class="kw">=&gt;</span> {</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  Gameover <span class="op">=</span> <span class="kw">false</span><span class="op">;</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">newGame</span>()<span class="op">;</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>In <code>newGame()</code> function, We check if the currentPlayer contain <code>player--winner</code> class, if it does class we then remove the class to begin the game.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">// newGame</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> newGame <span class="op">=</span> <span class="kw">function</span> () {</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  currentScore <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  scores <span class="op">=</span> [<span class="dv">0</span><span class="op">,</span> <span class="dv">0</span>]<span class="op">;</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> currentPlayerEle <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">querySelector</span>(<span class="vs">`.player--</span><span class="sc">${</span>currentPlayer<span class="sc">}</span><span class="vs">`</span>)<span class="op">;</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (currentPlayerEle<span class="op">.</span><span class="at">classList</span><span class="op">.</span><span class="fu">contains</span>(<span class="st">"player--winner"</span>)) {</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    currentPlayerEle<span class="op">.</span><span class="at">classList</span><span class="op">.</span><span class="fu">remove</span>(<span class="st">"player--winner"</span>)<span class="op">;</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">removeAllActive</span>()<span class="op">;</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>  currentPlayer <span class="op">=</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">floor</span>(<span class="bu">Math</span><span class="op">.</span><span class="fu">random</span>() <span class="op">+</span> <span class="fl">0.5</span>)<span class="op">;</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>  <span class="bu">document</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">querySelector</span>(<span class="vs">`.player--</span><span class="sc">${</span>currentPlayer<span class="sc">}</span><span class="vs">`</span>)</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="at">classList</span><span class="op">.</span><span class="fu">add</span>(<span class="st">"player--active"</span>)<span class="op">;</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>  <span class="co">// hide dice</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>  diceEl<span class="op">.</span><span class="at">classList</span><span class="op">.</span><span class="fu">add</span>(<span class="st">"hidden"</span>)<span class="op">;</span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>  <span class="co">// reset scores to 0</span></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>  scoreEl0<span class="op">.</span><span class="at">textContent</span> <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>  scoreEl1<span class="op">.</span><span class="at">textContent</span> <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>  currentScoreEl0<span class="op">.</span><span class="at">textContent</span> <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>  currentScoreEl1<span class="op">.</span><span class="at">textContent</span> <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>}<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>To start the game equally, we random a number 0-1, if it is 0, start with Player 1, otherwise Player 2 start the game.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>currentPlayer <span class="op">=</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">floor</span>(<span class="bu">Math</span><span class="op">.</span><span class="fu">random</span>() <span class="op">+</span> <span class="fl">0.5</span>)<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>But we first call function <code>removeAllActive</code> to remove active player class from all both players.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> removeAllActive <span class="op">=</span> <span class="kw">function</span> () {</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (player0<span class="op">.</span><span class="at">classList</span><span class="op">.</span><span class="fu">contains</span>(<span class="st">"player--active"</span>)) {</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    player0<span class="op">.</span><span class="at">classList</span><span class="op">.</span><span class="fu">remove</span>(<span class="st">"player--active"</span>)<span class="op">;</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (player1<span class="op">.</span><span class="at">classList</span><span class="op">.</span><span class="fu">contains</span>(<span class="st">"player--active"</span>)) {</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    player1<span class="op">.</span><span class="at">classList</span><span class="op">.</span><span class="fu">remove</span>(<span class="st">"player--active"</span>)<span class="op">;</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>}<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="rolling-button" class="level3">
+<h3 class="anchored" data-anchor-id="rolling-button">3. Rolling Button</h3>
+<p>We then an eventListener to the Rolling button. When the rolling button is clicked :</p>
+<ul>
+<li>Dice is unhidden</li>
+<li>Random number between 1 to 6</li>
+<li>If random number is 1, switch the player by trigger <code>switchPlayer()</code> function.</li>
+</ul>
+<div class="sourceCode" id="cb6"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> switchPlayer <span class="op">=</span> <span class="kw">function</span> () {</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  currentScore <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="vs">`current--</span><span class="sc">${</span>currentPlayer<span class="sc">}</span><span class="vs">`</span>)<span class="op">.</span><span class="at">textContent</span> <span class="op">=</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    currentScore<span class="op">;</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  currentPlayer <span class="op">=</span> currentPlayer <span class="op">===</span> <span class="dv">1</span> <span class="op">?</span> <span class="dv">0</span> <span class="op">:</span> <span class="dv">1</span><span class="op">;</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>  player0<span class="op">.</span><span class="at">classList</span><span class="op">.</span><span class="fu">toggle</span>(<span class="st">"player--active"</span>)<span class="op">;</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>  player1<span class="op">.</span><span class="at">classList</span><span class="op">.</span><span class="fu">toggle</span>(<span class="st">"player--active"</span>)<span class="op">;</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>}<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li>If random number is not 1, add the score to current score.</li>
+</ul>
+<div class="sourceCode" id="cb7"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co">// rolling button</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>btnRoll<span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">"click"</span><span class="op">,</span> () <span class="kw">=&gt;</span> {</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="co">// show dice</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="op">!</span>Gameover) {</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>    diceEl<span class="op">.</span><span class="at">classList</span><span class="op">.</span><span class="fu">remove</span>(<span class="st">"hidden"</span>)<span class="op">;</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> randDice <span class="op">=</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">floor</span>(<span class="bu">Math</span><span class="op">.</span><span class="fu">random</span>() <span class="op">*</span> <span class="dv">6</span>) <span class="op">+</span> <span class="dv">1</span><span class="op">;</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>    diceEl<span class="op">.</span><span class="at">src</span> <span class="op">=</span> <span class="vs">`dice-</span><span class="sc">${</span>randDice<span class="sc">}</span><span class="vs">.png`</span><span class="op">;</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Add score to current score</span></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (randDice <span class="op">!==</span> <span class="dv">1</span>) {</span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>      currentScore <span class="op">+=</span> randDice<span class="op">;</span></span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>      <span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="vs">`current--</span><span class="sc">${</span>currentPlayer<span class="sc">}</span><span class="vs">`</span>)<span class="op">.</span><span class="at">textContent</span> <span class="op">=</span></span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>        currentScore<span class="op">;</span></span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Switch the player</span></span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span> {</span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>      <span class="fu">switchPlayer</span>()<span class="op">;</span></span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="hold-button" class="level3">
+<h3 class="anchored" data-anchor-id="hold-button">4. Hold Button</h3>
+<p>When hold button is click, it will :</p>
+<ul>
+<li>If the game has not ended add the current score to player overall score.</li>
+<li>Switch to other player</li>
+<li>If one of the player win the game, add a <code>player--winner</code> class to that player.</li>
+</ul>
+<div class="sourceCode" id="cb8"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co">// hold button</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>btnHold<span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">"click"</span><span class="op">,</span> () <span class="kw">=&gt;</span> {</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  winScore <span class="op">=</span> <span class="bu">Number</span>(<span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="st">"win-score"</span>)<span class="op">.</span><span class="at">value</span>)<span class="op">;</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="op">!</span>Gameover) {</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>    scores[currentPlayer] <span class="op">+=</span> currentScore<span class="op">;</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="vs">`score--</span><span class="sc">${</span>currentPlayer<span class="sc">}</span><span class="vs">`</span>)<span class="op">.</span><span class="at">textContent</span> <span class="op">=</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>      scores[currentPlayer]<span class="op">;</span></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (scores[currentPlayer] <span class="op">&gt;=</span> winScore) {</span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>      <span class="bu">document</span></span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>        <span class="op">.</span><span class="fu">querySelector</span>(<span class="vs">`.player--</span><span class="sc">${</span>currentPlayer<span class="sc">}</span><span class="vs">`</span>)</span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>        <span class="op">.</span><span class="at">classList</span><span class="op">.</span><span class="fu">add</span>(<span class="st">"player--winner"</span>)<span class="op">;</span></span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>      <span class="bu">document</span></span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>        <span class="op">.</span><span class="fu">querySelector</span>(<span class="vs">`.player--</span><span class="sc">${</span>currentPlayer<span class="sc">}</span><span class="vs">`</span>)</span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>        <span class="op">.</span><span class="at">classList</span><span class="op">.</span><span class="fu">remove</span>(<span class="st">"player--active"</span>)<span class="op">;</span></span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>      diceEl<span class="op">.</span><span class="at">classList</span><span class="op">.</span><span class="fu">add</span>(<span class="st">"hidden"</span>)<span class="op">;</span></span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>      Gameover <span class="op">=</span> <span class="kw">true</span><span class="op">;</span></span>
+<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a>    } <span class="cf">else</span> {</span>
+<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a>      <span class="fu">switchPlayer</span>()<span class="op">;</span></span>
+<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

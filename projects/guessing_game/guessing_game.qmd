@@ -19,7 +19,7 @@ Key features of the game include:
 
 ![Demo](demo.png)
 
-[Link to game](https://samithva.github.io/guessingGame/) 
+[Link to Guessing Game on GitHub Page](https://samithva.github.io/guessingGame/) 
 
 ## Using `strict` mode in JS
 
