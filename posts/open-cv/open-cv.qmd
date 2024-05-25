@@ -6,10 +6,11 @@ categories: [deep learning]
 format:
   html:
     code-fold: false
+    toc: true
 jupyter: python3
 ---
 
-OpenCV (Open Source Computer Vision Library) is an open-source computer vision and machine learning software library. It provides a wide range of functionalities for image and video processing. 
+OpenCV is an open-source computer vision and machine learning software library. It provides a wide range of functionalities for image and video processing. 
 
 Here's a crash course on using OpenCV in Python.
 
@@ -19,7 +20,12 @@ Install OpenCV for Python via pip: `pip install opencv-python`
 ## Basic Operations
 ### 1. Reading and displaying image
 
+We can read an image by using `imread` in cv2 library. Then show image element using `imshow`.
+
 ```python
+#| label: cv-output
+#| fig-cap: Show an image using imshow() 
+
 import cv2
 # Read an image from file
 image = cv2.imread('image.jpg')
@@ -107,8 +113,8 @@ The function flip flips the array in one of three different ways (row and column
 
 The function has 2 required arguments:
 
-- src: input image
-- flipCode: a flag to specify how to flip the array; 0 means flipping around the x-axis and positive value (for example, 1) means flipping around y-axis. Negative value (for example, -1) means flipping around both axes.
+- `src`: input image
+- `flipCode`: a flag to specify how to flip the array; 0 means flipping around the x-axis and positive value (for example, 1) means flipping around y-axis. Negative value (for example, -1) means flipping around both axes.
 
 ```{python}
 import cv2
@@ -124,17 +130,17 @@ img_rgb_flipped_both = cv2.flip(img_rgb, -1)
 # Show the images
 plt.figure(figsize=(18, 5))
 plt.subplot(141) # 141 : 1 row, 4 columns, current index of subplot
-plt.imshow(img_rgb_flipped_horz)
-plt.title("Horizontal Flip")
-plt.subplot(142)
-plt.imshow(img_rgb_flipped_vert)
-plt.title("Vertical Flip")
-plt.subplot(143)
-plt.imshow(img_rgb_flipped_both)
-plt.title("Both Flipped")
-plt.subplot(144)
 plt.imshow(img_rgb)
 plt.title("Original")
+plt.subplot(142) 
+plt.imshow(img_rgb_flipped_horz)
+plt.title("Horizontal Flip")
+plt.subplot(143)
+plt.imshow(img_rgb_flipped_vert)
+plt.title("Vertical Flip")
+plt.subplot(144)
+plt.imshow(img_rgb_flipped_both)
+plt.title("Both Flipped")
 plt.show()
 ```
 
