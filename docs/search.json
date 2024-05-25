@@ -1,31 +1,52 @@
 [
   {
-    "objectID": "posts/welcome/index.html",
-    "href": "posts/welcome/index.html",
-    "title": "Numpy",
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": "Projects",
     "section": "",
-    "text": "What is numpy?\n\nNumPy is the fundamental package for scientific computing in Python. The core of Numpy is the ndarray object, operations of this array are being performed in compiled code for performance.\n\nHow Numpy differ from standard Python sequences ? Why using numpy ?\n\nThere are several different between Numpy and standard Python sequences:\n\n\n\nNumPy arrays have a fixed size at creation, unlike Python lists (which can grow dynamically)\nElements within the same Numpy array must be the same data type.\nAdvanced mathematics operations can be done easily in Numpy (with less code and good performance)\nA growing plethora of scientific and mathematical libraries\n\n\nWhy is numpy fast ?\n\nVectorization describes the absence of any explicit looping, indexing, etc., in the code - these things are taking place, of course, just “behind the scenes” in optimized, pre-compiled C code. Vectorized code has many advantages, among which are:\n\n\n\nVectorized code is more concise and easier to read (shorter code without a lot of for loops)\nFewer lines of code generally means fewer bugs"
+    "text": "Pig Game using Javascript\n\n\n\n\n\n\nFront End\n\n\n\n\n\n\n\n\n\nApr 19, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nGuessing Game Using Javascript DOM\n\n\n\n\n\n\nFront End\n\n\n\n\n\n\n\n\n\nApr 12, 2024\n\n\nSamith Va\n\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "posts/deep-learning-journey/index.html",
-    "href": "posts/deep-learning-journey/index.html",
-    "title": "Deep Learning Journey",
+    "objectID": "projects/guessing_game/guessing_game.html",
+    "href": "projects/guessing_game/guessing_game.html",
+    "title": "Guessing Game Using Javascript DOM",
     "section": "",
-    "text": "Keywords: architecture, overfit, fine-tunning, validation set, test set, weights, parameters, CNN\n\nIntroduction\nDeep learning is common in these day technology. It has been applied in many field such as Computer Vision (CV), Natural language processing (NLP) as well as in Medicine. The first idea of neurons network came from Pitts and McCulloch. Mark I Perceptron The first artificial neuron network was built using the concept from Pitts and McCulloch, but the Perceptron was a single layer neuron network and it couldn’t learn some simple functions (such as XOR).\nPitts and McCulloch form the neurons network idea.\n\n… Trying to spend too much time on theory can be counterproductive. The key is to just code and try to solve problems: the theory can come later when you have context and motivation.\n\nFive areas that DL are good at: natural language processing, medical, security(computer vision), factory(industrial | anomaly detection) and recommendation system(commercial).\n\nThe first device that was based on the principle of the artificial neuron is : The Mark I Perceptron.\nRequirements for the parallel distributed processing:\n\na set of processing unit\na state of activation\nan output function for each unit\na pattern of connectivity between units\n\nTwo theoretical misunderstandings that held back the field of neuron networks is:\n\nadding one more layers (2 layer) then it will be possible to approximate any function.\nAdding more layers to make model better\n\nGPU is a kind of processor which can do the parallel computing, it is commonly used in training the model.\nBecause traditional computer does not come with a GPU, hence its computation speed is slow and inefficient.\nSamuel mean by “weight assignment” refer to setting the value of variable on how the function works/behave.\n“weight” is refer to “parameters” in deep learning.\nBecause some problems such as image recognition, we unconsciously know how our brain can recognize patterns in images.\nUniversal approximation theorem.\nData(input) and labels(model output references).\nUsing feedback loop can be problematic, more biased of dataset, the more biased of the model.\nNo, we can use any size, using image of size 264x264 is due to historical reason (traditional model can only trained using 264x264 size).\nClassification : is for predicting the categories of dataset while Regression predict numerical value.\nValidation set is an less exposed data set which is used to find the optimal hyperparameters of various architectures of model. Test set is used to predict the unseen data and evaluate the model overall performance.\nFastai will automatically set the validation set to 0.2 (20%).\nNo, we can’t. A counter case is training with time-series data which is too easy for model to to fill the gap, when we select random validation instances.\nOverfitting is a problem when the model perform very well on training data set but poorly in predicting unseen data. An example : when a model is trained to decide the image is cat or dog, model can only accurately make a classification when given an instance within train dataset. But fail when given cat or dog image outside the training set.\nMetric is a version of loss which used for human consumption, it can be error percentage or accuracy.\nUsing pre-trained model, can increase inefficiency, because pretrained model (already has more capability)can already recognize basic patterns of data.\nHead of a model is the last layer of the model. Note that we need to change the head of model (one or more layers to make it suitable for specifics task of the model) while using pre-trained model.\nThe first layer of CNN, it determines diagonal, horizontal, and vertical edges as well as various gradients. 2nd layer the model detects features within the image such as circle, triangle etc.\nImage models not only useful for photos, for instance, voice signal can also express in term of spectrum in images.\nArchitecture is the pre assume functions or structure of the model.\nSegmentation is task where photos are divided and recognized into small components labels. For example, self driving car might use video data and do the segmentation recognize the pedestrian and adjust direction or speed.\ny_range is used for setting a range in label for specific task.\nHyperparameters are the specification of the model that are manually set by human such as model architecture, learning rate, hidden layers number etc.\nBest way to avoid failures when using AI in an organization is to keep a test dataset separately(without intervening with training process)."
+    "text": "In this project, we’ll dive into the fundamentals of web development by creating a straightforward guessing number game using HTML, CSS, and JavaScript. The game begins by generating a random number between 1 and 20. As the user inputs their guess, the game provides feedback on whether the guess is too low or too high compared to the randomly generated number. The game continues until the user successfully guesses the correct number.\nKey features of the game include:"
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "Hello there! I’m Samith, and I’m thrilled to have you here on my blog. As a passionate student of Information Engineering in Shanghai Jiao Tong University (China), I’ve embarked on a journey filled with discovery, learning, and growth.  Through this platform, I aim to share the knowledge and insights I’ve gained, with the hope of assisting others who are navigating similar paths in the world of technology."
+    "objectID": "projects/guessing_game/guessing_game.html#demo-of-the-game",
+    "href": "projects/guessing_game/guessing_game.html#demo-of-the-game",
+    "title": "Guessing Game Using Javascript DOM",
+    "section": "Demo of the Game",
+    "text": "Demo of the Game\n\n\n\nDemo\n\n\nLink to Guessing Game on GitHub Page"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Blog Posts",
-    "section": "",
-    "text": "Regression and Classification\n\n\n\n\n\n\nmachine learning\n\n\n\n\n\n\n\n\n\nMar 29, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nRF Noise\n\n\n\n\n\n\nRF microelectronics\n\n\n\n\n\n\n\n\n\nMar 29, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nRLC Circuit\n\n\n\n\n\n\nRF microelectronics\n\n\n\n\n\n\n\n\n\nMar 29, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nConvolutional Neuron Network\n\n\n\n\n\n\ndeep learning\n\n\n\n\n\n\n\n\n\nMar 28, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nAnaconda or Pip\n\n\n\n\n\n\nanaconda\n\n\npip\n\n\n\n\n\n\n\n\n\nMar 28, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nGerman Grammar\n\n\n\n\n\n\ngerman\n\n\n\n\n\n\n\n\n\nMar 28, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nHTML5\n\n\n\n\n\n\nweb development\n\n\n\n\n\n\n\n\n\nMar 28, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nChinese\n\n\n\n\n\n\nchinese\n\n\n\n\n\n\n\n\n\nMar 27, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nGerman Vocabulary\n\n\n\n\n\n\ngerman\n\n\n\n\n\n\n\n\n\nMar 25, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nOpenCV\n\n\n\n\n\n\ndeep learning\n\n\n\n\n\n\n\n\n\nMar 23, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nNumpy\n\n\n\n\n\n\nnumpy\n\n\n\nNumPy is the fundamental package for scientific computing in Python\n\n\n\n\n\nMar 22, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nDeep Learning Journey\n\n\n\n\n\n\ndeep learning\n\n\n\n\n\n\n\n\n\nMar 21, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nEffects of Nonlinearity\n\n\n\n\n\n\nRF microelectronics\n\n\n\n\n\n\n\n\n\nMar 21, 2024\n\n\nSamith Va\n\n\n\n\n\n\nNo matching items"
+    "objectID": "projects/guessing_game/guessing_game.html#using-strict-mode-in-js",
+    "href": "projects/guessing_game/guessing_game.html#using-strict-mode-in-js",
+    "title": "Guessing Game Using Javascript DOM",
+    "section": "Using strict mode in JS",
+    "text": "Using strict mode in JS\nUsing strict mode can greatly benefit us, especially as new learners of JavaScript. It helps catch errors by providing more stringent rules and enabling features like console logging for any errors that occur within our code.\nTo use strict mode we simply put use strict at the beginning of JS file.\n'use strict'"
+  },
+  {
+    "objectID": "projects/guessing_game/guessing_game.html#random-a-number-in-js",
+    "href": "projects/guessing_game/guessing_game.html#random-a-number-in-js",
+    "title": "Guessing Game Using Javascript DOM",
+    "section": "Random a Number in JS",
+    "text": "Random a Number in JS\nTo random a number, we will use Math.random() which will generate a number between 0 and 1(not including 1). We then multiply it by 20, Math.random() * 20 to get a number from 0 - 20 (not including 20). Lastly we use Math.floor() to make the result an integer, and also we need to add 1, since the result only in 0-19.\nconst getRandom = () =&gt; Math.floor(Math.random() * 20) + 1;\nlet num = getRandom();"
+  },
+  {
+    "objectID": "projects/guessing_game/guessing_game.html#changing-the-message",
+    "href": "projects/guessing_game/guessing_game.html#changing-the-message",
+    "title": "Guessing Game Using Javascript DOM",
+    "section": "Changing the message",
+    "text": "Changing the message\nTo change the feedback message back to user, we can simply create a function, which will use querySelector to select a message class. Note that querySelector will only return an JS element, unlike the querySelectorAll which will return an array of JS elements.\n// display a message\nfunction displayMessage(message) {\n  document.querySelector('.message').textContent = message;\n}"
+  },
+  {
+    "objectID": "projects/guessing_game/guessing_game.html#add-an-eventlistener-to-a-button",
+    "href": "projects/guessing_game/guessing_game.html#add-an-eventlistener-to-a-button",
+    "title": "Guessing Game Using Javascript DOM",
+    "section": "Add an eventListener to a button",
+    "text": "Add an eventListener to a button\nWe simply trigger a function call in JS when the button is clicked using addEventListener.\ndocument.querySelector('.check').addEventListener('click', () =&gt; {\n  \n});\nThen we get the value of user’s guess by selecting the HTML input element, note here that this element value is string is not a number type, hence we need to further convert it to a number using Number().\n/ check button event listener\ndocument.querySelector('.check').addEventListener('click', () =&gt; {\n  let guess = Number(document.querySelector('.guess').value);\n  score = Number(document.querySelector('.score').textContent);\n});\nIf the user simply click the ‘check’ button without any number (empty string is a falsy value here), then it will feedback a message.\nif (!guess) {\n    displayMessage('⛔ No number!');\n  }\nIf the user’s guess is correct, then we will send a congratulation message and change the body’s background into green (#60b347). Furthermore, if the the curren score is higher then the highest score, it will update the highest score to current score.\nif (guess === num) {\n    displayMessage('🎉 Correct number!');\n    document.querySelector('.number').textContent = num;\n    document.body.style.backgroundColor = '#60b347';\n    if (score &gt; highScore) {\n    highScore = score;\n    document.querySelector('.highscore').textContent = highScore;\n    }\n}\nElse when the guess is incorrect it feed back the message back to user, by guiding the the number is too low or too high. And if the score is 0, then stop the game and display a “Gameover”.\nelse {\n      if (score &gt; 0) {\n        --score;\n        document.querySelector('.score').textContent = score;\n        if (guess &lt; num) {\n          displayMessage('⬆️ Too low!');\n        } else {\n          displayMessage('⬇️ Too high!');\n        }\n      }\n      // when score === 0, gameover\n      else {\n        displayMessage('🙈 Gameover!');\n      }\n    }\nFinally, we add an event listener to the play again button. The background will reset to Gray (#222), score to 20, and the message to default message ‘Start guessing…’.\n// play again button event listener\ndocument.querySelector('.again').addEventListener('click', () =&gt; {\n  score = 20;\n  document.querySelector('.score').textContent = score;\n  document.querySelector('.number').textContent = '?';\n  displayMessage('Start guessing...');\n  document.body.style.backgroundColor = '#222';\n});"
   },
   {
     "objectID": "posts/rf-nonlinearity/nonlinearity.html",
@@ -42,67 +63,25 @@
     "text": "Answer\n\nRefer to above equations.\nRefer to above equations.\nWhat are Peak amplitude, peak-to-peak amplitude, rms value ?\nunambiguous question, switch can be linear or non-linear depends on the input of interest.\nWhat is a mixer in context of communication system ?\nTransceiver is the combination of Tx, and Rx.\n\n\n\nWhat is PA ? LNA ? What are their differences  ?\na mixer is frequency shift component. we can prove that it does not satisfy the linear property."
   },
   {
-    "objectID": "posts/welcome/index.html#reshape",
-    "href": "posts/welcome/index.html#reshape",
-    "title": "Numpy",
-    "section": "Reshape",
-    "text": "Reshape\nnp.reshape() reshape a numpy array to specific given shape (n, m). In neural network when dealing with images, we usually need to flatten the image into 1 row array by using .reshape(-1).\n\nimport numpy as np\n# Create a 2D array\ny = np.array([[1, 2, 3, 4],\n              [5, 6, 7, 8],\n              [9, 10, 11, 12]])\n# Reshape the array to 1D using -1\nflattened_y = y.reshape(-1)\nflattened_y\n\narray([ 1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12])"
-  },
-  {
-    "objectID": "posts/welcome/index.html#np.reshape",
-    "href": "posts/welcome/index.html#np.reshape",
-    "title": "Numpy",
-    "section": "np.reshape()",
-    "text": "np.reshape()\nnp.reshape() reshape a numpy array to specific given shape (n, m). In neural network when dealing with images, we usually need to flatten the image into 1 row array by using .reshape(-1).\n\nimport numpy as np\n# Create a 2D array\ny = np.array([[1, 2, 3, 4],\n              [5, 6, 7, 8],\n              [9, 10, 11, 12]])\n# Reshape the array to 1D using -1\nflattened_y = y.reshape(-1)\nflattened_y\n\narray([ 1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12])"
-  },
-  {
-    "objectID": "posts/welcome/index.html#np.where",
-    "href": "posts/welcome/index.html#np.where",
-    "title": "Numpy",
-    "section": "np.where()",
-    "text": "np.where()\nnp.where() perform conditional operations on arrays and is somewhat similar to the ternary conditional operator (condition ? value_if_true : value_if_false) found in many programming languages.\n\nimport numpy as np\na = np.arange(10)\nb = np.where(a&gt;5, a, a**2)\nb\n\narray([ 0,  1,  4,  9, 16, 25,  6,  7,  8,  9])\n\n\nFor more references visit Numpy Documentation"
-  },
-  {
-    "objectID": "posts/welcome/index.html#linspace",
-    "href": "posts/welcome/index.html#linspace",
-    "title": "Numpy",
-    "section": "Linspace",
-    "text": "Linspace\nnp.linspace(start, end, interval) creates an array with evenly spaced float numbers over a specified interval.\n\nimport numpy as np\na = np.linspace(10,100,10)\na\n\narray([ 10.,  20.,  30.,  40.,  50.,  60.,  70.,  80.,  90., 100.])"
-  },
-  {
-    "objectID": "posts/welcome/index.html#where",
-    "href": "posts/welcome/index.html#where",
-    "title": "Numpy",
-    "section": "Where",
-    "text": "Where\nnp.where() perform conditional operations on arrays and is somewhat similar to the ternary conditional operator (condition ? value_if_true : value_if_false) found in many programming languages.\n\nimport numpy as np\na = np.arange(10)\nb = np.where(a&gt;5, a, a**2)\nb\n\narray([ 0,  1,  4,  9, 16, 25,  6,  7,  8,  9])\n\n\nFor more references visit Numpy Documentation"
-  },
-  {
-    "objectID": "posts/open-cv/open-cv.html",
-    "href": "posts/open-cv/open-cv.html",
-    "title": "OpenCV",
+    "objectID": "posts/regression/regression.html",
+    "href": "posts/regression/regression.html",
+    "title": "Regression and Classification",
     "section": "",
-    "text": "OpenCV (Open Source Computer Vision Library) is an open-source computer vision and machine learning software library. It provides a wide range of functionalities for image and video processing.\nHere’s a crash course on using OpenCV in Python."
+    "text": "Linear regression is a statistical method used to model the relationship between a dependent variable and one or more independent variables. It assumes that there is a linear relationship between the independent variables (predictors) and the dependent variable (outcome).\n\n\nWith linear regression model, we generally use Square-Error as the loss function.\n\\[L(f) = \\frac{1}{2}\\sum_{i=1}^{n}(f(x^{(i)}) - y^{(i)})^2\\]\nWhere the superscipt \\(i\\) denotes \\(i^{\\text{th}}\\) data in the dataset\n\n\n\nLearning rate (lr) is the rate that weight is updated in order to reduce the loss. If lr is too large, the model might not able to find optima weight with smallest loss. On the other hand if lr is too small, the model weight will be updated very slow, which lead in needing more iterations to find the optima weight.\n\nHow to choose the optimal lr ?\n\nWe can change lr with number of iterations. Suppose that we are at \\(t\\) iteration and learning rate \\(\\alpha\\) :\n\n\n\\[ \\alpha_t = \\frac{\\alpha}{\\sqrt{t + 1}}\\]\n\nWhat is the best learning rate ?"
   },
   {
-    "objectID": "posts/open-cv/open-cv.html#installation",
-    "href": "posts/open-cv/open-cv.html#installation",
-    "title": "OpenCV",
-    "section": "Installation:",
-    "text": "Installation:\nInstall OpenCV for Python via pip: pip install opencv-python"
-  },
-  {
-    "objectID": "posts/open-cv/open-cv.html#basic-operations",
-    "href": "posts/open-cv/open-cv.html#basic-operations",
-    "title": "OpenCV",
-    "section": "Basic Operations",
-    "text": "Basic Operations\n\n1. Reading and displaying image\nimport cv2\n# Read an image from file\nimage = cv2.imread('image.jpg')\n\n# Display the image in a window\ncv2.imshow('Image', image)\n\n# Wait for a key press and then close the window\ncv2.waitKey(0)\ncv2.destroyAllWindows()\n\n\n\nOutput\n\n\n\n\n2. Writing image\nimport cv2\n# Read an image in BGR\nimage = cv2.imread('image.jpg')\n\n# Write the image to a file\ncv2.imwrite('output_image.jpg', image)\n\n\n3. Coverting color spaces\nOpenCV provides functions to convert images between different color spaces, such as RGB, BGR, HSV, etc.\nimport cv2\n# Read an image\nimage = cv2.imread('image.jpg')\n\n# Convert BGR to grayscale\ngray_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)\n\n# Convert BGR to HSV\nhsv_image = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)\ncv2.imwrite('gray_image.jpg', gray_image)\ncv2.imwrite('hsv_image.jpg', hsv_image)\n\n\n\n\n\n\n\n\n\nGrey\n\n\n\n\n\n\n\nHSV\n\n\n\n\n\n\n\n4. Resizing and Cropping Images\nResize images to a specific width and height or by a scaling factor. Cropping involves selecting a region of interest (ROI) from the image.\nimport cv2\n# Read an image\nimage = cv2.imread('image.jpg')\n\n# Resize the image to a specific width and height\nnew_width, new_height = 200, 200\nresized_image = cv2.resize(image, (new_width, new_height))\n\n# Resize the image by a scaling factor\nscale_percent = 50  # percent of original size\nwidth = int(image.shape[1] * scale_percent / 100)\nheight = int(image.shape[0] * scale_percent / 100)\nresized_image = cv2.resize(image, (width, height))\ncv2.imwrite('resized.jpg', resized_image)\n\n# Crop a region of interest (ROI) from the image\nx, y, w, h = 100, 100, 200, 200  # Example coordinates and dimensions\ncropped_image = image[y:y+h, x:x+w]\ncv2.imwrite('cropped.jpg', cropped_image)\n\n\n\n\n\n\n\n\n\nResized\n\n\n\n\n\n\n\nCropped\n\n\n\n\n\n\n\n5. Flipping Images\nThe function flip flips the array in one of three different ways (row and column indices are 0-based): dst = cv.flip( src, flipCode ) dst: output array of the same size and type as src.\nThe function has 2 required arguments:\n\nsrc: input image\nflipCode: a flag to specify how to flip the array; 0 means flipping around the x-axis and positive value (for example, 1) means flipping around y-axis. Negative value (for example, -1) means flipping around both axes.\n\n\nimport cv2\nimport matplotlib.pyplot as plt\n\nimg_bgr = cv2.imread('image.jpg')\nimg_rgb = img_bgr[:, :, ::-1]\n\nimg_rgb_flipped_horz = cv2.flip(img_rgb, 1)\nimg_rgb_flipped_vert = cv2.flip(img_rgb, 0)\nimg_rgb_flipped_both = cv2.flip(img_rgb, -1)\n\n# Show the images\nplt.figure(figsize=(18, 5))\nplt.subplot(141) # 141 : 1 row, 4 columns, current index of subplot\nplt.imshow(img_rgb_flipped_horz)\nplt.title(\"Horizontal Flip\")\nplt.subplot(142)\nplt.imshow(img_rgb_flipped_vert)\nplt.title(\"Vertical Flip\")\nplt.subplot(143)\nplt.imshow(img_rgb_flipped_both)\nplt.title(\"Both Flipped\")\nplt.subplot(144)\nplt.imshow(img_rgb)\nplt.title(\"Original\")\nplt.show()\n\n\n\n\n\n\n\n\n\n\n6. Reading and Displaying Videos\nimport cv2\n\n# Open a video file\ncap = cv2.VideoCapture('video.mp4')\n\nwhile cap.isOpened():\n    ret, frame = cap.read()\n    if not ret:\n        break\n    cv2.imshow('Video', frame)\n    if cv2.waitKey(25) & 0xFF == ord('q'):\n        break\n\ncap.release()\ncv2.destroyAllWindows()\nFore more reference, visit OpenCV Documentation"
-  },
-  {
-    "objectID": "home.html",
-    "href": "home.html",
-    "title": "About",
+    "objectID": "posts/regression/regression.html#loss-function",
+    "href": "posts/regression/regression.html#loss-function",
+    "title": "Regression and Classification",
     "section": "",
-    "text": "Hello there! I’m Samith, and I’m thrilled to have you here on my blog. As a passionate student of Information Engineering, I’ve embarked on a journey filled with discovery, learning, and growth.  Through this platform, I aim to share the knowledge and insights I’ve gained, with the hope of assisting others who are navigating similar paths in the world of technology."
+    "text": "With linear regression model, we generally use Square-Error as the loss function.\n\\[L(f) = \\frac{1}{2}\\sum_{i=1}^{n}(f(x^{(i)}) - y^{(i)})^2\\]\nWhere the superscipt \\(i\\) denotes \\(i^{\\text{th}}\\) data in the dataset"
+  },
+  {
+    "objectID": "posts/regression/regression.html#learning-rate",
+    "href": "posts/regression/regression.html#learning-rate",
+    "title": "Regression and Classification",
+    "section": "",
+    "text": "Learning rate (lr) is the rate that weight is updated in order to reduce the loss. If lr is too large, the model might not able to find optima weight with smallest loss. On the other hand if lr is too small, the model weight will be updated very slow, which lead in needing more iterations to find the optima weight.\n\nHow to choose the optimal lr ?\n\nWe can change lr with number of iterations. Suppose that we are at \\(t\\) iteration and learning rate \\(\\alpha\\) :\n\n\n\\[ \\alpha_t = \\frac{\\alpha}{\\sqrt{t + 1}}\\]\n\nWhat is the best learning rate ?"
   },
   {
     "objectID": "posts/numpy/index.html",
@@ -131,188 +110,6 @@
     "title": "Numpy",
     "section": "Where",
     "text": "Where\nnp.where() perform conditional operations on arrays and is somewhat similar to the ternary conditional operator (condition ? value_if_true : value_if_false) found in many programming languages.\n\nimport numpy as np\na = np.arange(10)\nb = np.where(a&gt;5, a, a**2)\nb\n\narray([ 0,  1,  4,  9, 16, 25,  6,  7,  8,  9])\n\n\nFor more references visit Numpy Documentation"
-  },
-  {
-    "objectID": "posts/german/german.html",
-    "href": "posts/german/german.html",
-    "title": "German",
-    "section": "",
-    "text": "The nominative case is one of the grammatical cases in German, used primarily for the subject of a sentence, which is the person or thing performing the action of the verb. It’s also used for predicate nouns or pronouns that refer back to the subject.\nHere are some examples of how the nominative case is used:\n\nSubject of a Sentence: The noun or pronoun that performs the action of the verb.\n\n“Der Hund bellt.” (The dog barks.)\n“Sie liest ein Buch.” (She reads a book.)\n\nPredicate Nouns or Pronouns: Nouns or pronouns that rename or describe the subject in a sentence.\n\n“Mein Bruder ist Arzt.” (My brother is a doctor.)\n“Der Himmel ist blau.” (The sky is blue.)\n\nApposition: When two nouns or noun phrases are used together to describe the same person or thing.\n\n“Meine Mutter, eine Lehrerin, kommt bald.” (My mother, a teacher, is coming soon.)\n“Der Mann, mein Nachbar, ist sehr freundlich.” (The man, my neighbor, is very friendly.)\n\n\n\n\n\nThe accusative case is one of the four grammatical cases in German. It indicates the direct object of a sentence, often answering the question “what?” or “whom?” The accusative case is used for the noun or pronoun that directly receives the action of the verb.\nHere are some examples of how the accusative case is used:\n\nDirect Objects: In sentences where the action of the verb is directly applied to something or someone.\n\n“Ich sehe den Mann.” (I see the man.)\n“Sie liest ein Buch.” (She reads a book.)\n\nMotion Toward: When indicating motion towards a specific location.\n\n“Er geht in den Park.” (He goes into the park.)\n“Sie fahren in die Stadt.” (They drive into the city.)\n\nDuration or Time Span: When specifying a duration of time.\n\n“Ich habe den ganzen Tag gearbeitet.” (I worked the whole day.)\n“Wir haben den Film gestern gesehen.” (We watched the movie yesterday.)\n\n\n\n\n\nThe dative case is one of the four grammatical cases in German (the others being nominative, accusative, and genitive). It indicates the indirect object of a sentence, often answering the question “to whom?” or “for whom?” The dative case is used for the recipient of an action or the object that is indirectly affected by the verb.\nHere are some examples of how the dative case is used:\n\nIndirect Objects: In sentences where something is given or done to someone or something else.\n\n“Ich gebe dem Mann das Buch.” (I give the book to the man.)\n\nCertain Prepositions: Some prepositions in German always take the dative case.\n\n“Ich gehe mit meinem Freund.” (I am going with my friend.)\n“Er spricht mit dem Lehrer.” (He is speaking with the teacher.)\n\nDative Objects with Verbs: Some verbs are used with dative objects, indicating who or what is indirectly affected by the action.\n\n“Ich helfe meiner Schwester.” (I am helping my sister.)\n“Sie glaubt dem Arzt.” (She believes the doctor.)\n\n\n\n\n\nThe genitive case is another grammatical case in German, indicating possession or the relationship between nouns. It often answers the question “whose?” or “of whom/what?” The genitive case is used to show ownership, association, or origin.\nHere are some examples of how the genitive case is used:\n\nPossession: Showing ownership or possession.\n\n“Das Auto meines Vaters.” (My father’s car.)\n“Die Farbe des Himmels.” (The color of the sky.)\n\nRelationships: Indicating relationships between nouns.\n\n“Die Stimme der Sängerin.” (The voice of the singer.)\n“Das Land der Träume.” (The land of dreams.)\n\nCertain Prepositions: Some prepositions in German always take the genitive case.\n\n“Wegen des Wetters.” (Because of the weather.)\n“Trotz des Regens.” (Despite the rain.)\n\n\n\n\n\n\nIn German, “ein,” “eine,” and “einen” are all forms of the indefinite article “a” or “an” in English. They are used to indicate the gender (masculine, feminine, or neuter) and case (nominative, accusative, or dative) of the noun they precede.\n\n“Ein” is used for masculine and neuter nouns in the nominative case.\n“Eine” is used for feminine nouns in the nominative case.\n“Einen” is used for masculine nouns in the accusative case.\n\n\nMasculine:\n\nNominative case: “ein” (a)\nAccusative case: “einen” (a)\n\nFeminine:\n\nNominative case: “eine” (a)\nAccusative case: “eine” (a)\n\nNeuter:\n\nNominative case: “ein” (a)\nAccusative case: “ein” (a)\n\n\nCheat sheet:\n\n\n\nIndefinite Article Cheat Sheet"
-  },
-  {
-    "objectID": "posts/german/german.html#weather-and-seasons",
-    "href": "posts/german/german.html#weather-and-seasons",
-    "title": "German",
-    "section": "Weather and Seasons",
-    "text": "Weather and Seasons\n\nFrühling: spring\nSommer : summer\nSonnig: sunny\n(der) Regen\nNeblig: foggy\n\nEs ist neblig / warm\n\nWarm\n\nIst es warm heute ?\nEs ist nie warm im Winter.\nEs ist neblig heute und bewölkt.\n\nBewölkt\n\nEs ist bewölkt und neblig.\n\nHerbst: the Fall\nWetter : weather\n\nWie ist das Wetter heute ?\n\nHeute : today\nwandere(ich) wandert wanderst wandern(sie)\n\nWandern sie oft Anna, Wanderst du oft Anna?\nDie Eule wandert nie in Sommer.\n\nSonnencreme : sunscreen\n\nWie viel kostet die Sonnencreme ?\n\nEs ist immer schön im Frühling\ndie Wasserflasche\n\nMeine Wasserflasche ist groß."
-  },
-  {
-    "objectID": "posts/german/german.html#relation",
-    "href": "posts/german/german.html#relation",
-    "title": "German",
-    "section": "Relation",
-    "text": "Relation\n\nliebt\n\nLiebt dein Bruder deinen Hund ?\nLiebt du deinen Hund ?\n\nhabe hast\n\nHast du einen Mann ?\nHast du einen Freundin ?\n\nFreund\n\nHast du viele Freunde ?\n\nFreundin\n\nHast du einen Freundin?\n\nOnkel\nOma\nOpa"
-  },
-  {
-    "objectID": "posts/german/german.html#food",
-    "href": "posts/german/german.html#food",
-    "title": "German",
-    "section": "Food",
-    "text": "Food\n\n(die) Banane\n\nIch mag Bananen.\n\n(die) Birne\n(die) Bohnen, bean\n\nIch mag Bohnen.\n\n(die) Butter\n(die) Aubergine\n(das) Brot\n(die) Schokolade\n\nIch mag Schokoladen.\n\n(die) Feige\n(das) Fleisch, meat\n(die) Familie\n(der) Reis\n\nIch esse gern Reis.\n\n(die) Rosinen\n\nIch esse gern Rosinen.\n\n(das) Radio\nwaschen\nkaufen"
-  },
-  {
-    "objectID": "posts/chinese/chinese.html",
-    "href": "posts/chinese/chinese.html",
-    "title": "Chinese",
-    "section": "",
-    "text": "2023-03-01\n谣言"
-  },
-  {
-    "objectID": "posts/german/german.html#place",
-    "href": "posts/german/german.html#place",
-    "title": "German",
-    "section": "Place",
-    "text": "Place\n\n(die) Schule\n(der) Schal\n(der) Fisch"
-  },
-  {
-    "objectID": "projects.html",
-    "href": "projects.html",
-    "title": "Projects",
-    "section": "",
-    "text": "Pig Game using Javascript\n\n\n\n\n\n\nFront End\n\n\n\n\n\n\n\n\n\nApr 19, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nGuessing Game Using Javascript DOM\n\n\n\n\n\n\nFront End\n\n\n\n\n\n\n\n\n\nApr 12, 2024\n\n\nSamith Va\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "projects/css/css.html",
-    "href": "projects/css/css.html",
-    "title": "To Do List using HTML and CSS",
-    "section": "",
-    "text": "CSS\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
-  },
-  {
-    "objectID": "projects/html/html.html",
-    "href": "projects/html/html.html",
-    "title": "HTML5",
-    "section": "",
-    "text": "Contents will be included in this page:"
-  },
-  {
-    "objectID": "projects/html/html.html#modern-html-containers",
-    "href": "projects/html/html.html#modern-html-containers",
-    "title": "HTML5",
-    "section": "Modern HTML Containers",
-    "text": "Modern HTML Containers\n\nSection\nThe &lt;section&gt; element is used to define sections within a document or webpage. It’s often used to group related content together and can provide a semantic meaning to the sections of a webpage.\n&lt;section&gt;\n    &lt;!-- Section content goes here --&gt;\n&lt;/section&gt;\n\n\nDiv\nThe &lt;div&gt; element is a generic container that can be used to group elements together or create divisions within a webpage. It’s very flexible and commonly used in CSS for styling purposes.\n&lt;div&gt; \n    &lt;!-- Content goes here --&gt; \n&lt;/div&gt;\n\n\nFieldset\n&lt;fieldset&gt; is a container element used to group related form elements together. It’s typically used along with the &lt;legend&gt; element, which provides a caption or title for the &lt;fieldset&gt;.\n&lt;form&gt;\n  &lt;fieldset&gt;\n    &lt;legend&gt;Personal Information&lt;/legend&gt;\n    &lt;label for=\"fname\"&gt;First Name:&lt;/label&gt;\n    &lt;input type=\"text\" id=\"fname\" name=\"fname\"&gt;&lt;br&gt;&lt;br&gt;\n    &lt;label for=\"lname\"&gt;Last Name:&lt;/label&gt;\n    &lt;input type=\"text\" id=\"lname\" name=\"lname\"&gt;&lt;br&gt;&lt;br&gt;\n  &lt;/fieldset&gt;\n  \n  &lt;fieldset&gt;\n    &lt;legend&gt;Contact Information&lt;/legend&gt;\n    &lt;label for=\"email\"&gt;Email:&lt;/label&gt;\n    &lt;input type=\"email\" id=\"email\" name=\"email\"&gt;&lt;br&gt;&lt;br&gt;\n    &lt;label for=\"phone\"&gt;Phone:&lt;/label&gt;\n    &lt;input type=\"tel\" id=\"phone\" name=\"phone\"&gt;&lt;br&gt;&lt;br&gt;\n  &lt;/fieldset&gt;\n  \n  &lt;input type=\"submit\" value=\"Submit\"&gt;\n&lt;/form&gt;\n\n\nArticle\n&lt;article&gt;: The &lt;article&gt; element represents a self-contained piece of content that could be distributed and reused independently. It’s commonly used for blog posts, news articles, forum posts, etc.\n&lt;article&gt; \n&lt;!-- Article content goes here --&gt; \n&lt;/article&gt;\n\n\nModern HTML5 elements\n&lt;header&gt;, &lt;footer&gt;, &lt;nav&gt;, &lt;main&gt;: These elements are part of HTML5 and are used to define specific structural parts of a webpage.\n\n&lt;header&gt;: Typically used to contain introductory content or navigation links at the top of a webpage.\n&lt;footer&gt;: Contains footer information such as copyright, contact details, etc., usually placed at the bottom of a webpage.\n&lt;nav&gt;: Used to define navigation links.\n&lt;main&gt;: Represents the main content area of a webpage.\n\n&lt;header&gt; \n    &lt;!-- Header content goes here --&gt; \n&lt;/header&gt; \n&lt;footer&gt; \n    &lt;!-- Footer content goes here --&gt; \n&lt;/footer&gt; \n&lt;nav&gt; \n    &lt;!-- Navigation links go here --&gt; \n&lt;/nav&gt; \n&lt;main&gt; \n    &lt;!-- Main content goes here --&gt; \n&lt;/main&gt;\nModern HTML layout design flowchart\n\n\n\nModern HTML Stucture Design Flowchat (From html5 Doctor)"
-  },
-  {
-    "objectID": "projects/html/html.html#security-risks-and-preventions",
-    "href": "projects/html/html.html#security-risks-and-preventions",
-    "title": "HTML5",
-    "section": "Security Risks and Preventions",
-    "text": "Security Risks and Preventions\n\nReverse Tabnabbing\nReverse tabnabbing is a security vulnerability that occurs when a website opens a link in a new tab or window (target=\"_blank\") and the newly opened page can manipulate the original page through the window.opener property.\nHere’s how it works:\n\nInitial Action: A user clicks on a link on a website that opens in a new tab or window using target=\"_blank\".\nNew Page Opens: The new page opens in a separate browsing context, typically in a new tab.\nManipulation: If the new page contains malicious code, it can access the window.opener property, which refers to the page that opened it. With this access, the malicious page can redirect the original page (the one that opened the link) to a phishing site, alter its content, or perform other malicious actions.\n\nReverse tabnabbing can be exploited by attackers to deceive users into thinking they are interacting with a legitimate website while actually being redirected to a malicious one.\nTo mitigate this security risk, web developers can use the following methods:\n\nRel=“noopener noreferrer”: Adding rel=\"noopener noreferrer\" to anchor (&lt;a&gt;) elements that open links in a new tab or window prevents the newly opened page from accessing window.opener and ensures that the HTTP referer header is not sent, enhancing both security and privacy.\nExplicit Rel=“noopener”: Alternatively, if noreferrer is not desired, using rel=\"noopener\" alone can prevent access to window.opener. However, noreferrer adds an extra layer of protection by also preventing the referer header from being sent.\n\n&lt;a href='https:www.google.com' target='_blank' rel='noopener norefered'&gt; Google.com &lt;/a&gt;"
-  },
-  {
-    "objectID": "posts/html/html.html",
-    "href": "posts/html/html.html",
-    "title": "HTML5",
-    "section": "",
-    "text": "HTML5 is the latest version of the Hypertext Markup Language (HTML), which is the standard language used to create and design web pages and applications. It is a significant update to the HTML specification, introducing new features, elements, and APIs to enhance the functionality, semantics, and interoperability of web documents.\nContents will be included in this page:"
-  },
-  {
-    "objectID": "posts/html/html.html#modern-html-containers",
-    "href": "posts/html/html.html#modern-html-containers",
-    "title": "HTML5",
-    "section": "Modern HTML Containers",
-    "text": "Modern HTML Containers\n\nSection\nThe &lt;section&gt; element is used to define sections within a document or webpage. It’s often used to group related content together and can provide a semantic meaning to the sections of a webpage.\n&lt;section&gt;\n    &lt;!-- Section content goes here --&gt;\n&lt;/section&gt;\n\n\nDiv\nThe &lt;div&gt; element is a generic container that can be used to group elements together or create divisions within a webpage. It’s very flexible and commonly used in CSS for styling purposes.\n&lt;div&gt; \n    &lt;!-- Content goes here --&gt; \n&lt;/div&gt;\n\n\nFieldset\n&lt;fieldset&gt; is a container element used to group related form elements together. It’s typically used along with the &lt;legend&gt; element, which provides a caption or title for the &lt;fieldset&gt;.\n&lt;form&gt;\n  &lt;fieldset&gt;\n    &lt;legend&gt;Personal Information&lt;/legend&gt;\n    &lt;label for=\"fname\"&gt;First Name:&lt;/label&gt;\n    &lt;input type=\"text\" id=\"fname\" name=\"fname\"&gt;&lt;br&gt;&lt;br&gt;\n    &lt;label for=\"lname\"&gt;Last Name:&lt;/label&gt;\n    &lt;input type=\"text\" id=\"lname\" name=\"lname\"&gt;&lt;br&gt;&lt;br&gt;\n  &lt;/fieldset&gt;\n  \n  &lt;fieldset&gt;\n    &lt;legend&gt;Contact Information&lt;/legend&gt;\n    &lt;label for=\"email\"&gt;Email:&lt;/label&gt;\n    &lt;input type=\"email\" id=\"email\" name=\"email\"&gt;&lt;br&gt;&lt;br&gt;\n    &lt;label for=\"phone\"&gt;Phone:&lt;/label&gt;\n    &lt;input type=\"tel\" id=\"phone\" name=\"phone\"&gt;&lt;br&gt;&lt;br&gt;\n  &lt;/fieldset&gt;\n  \n  &lt;input type=\"submit\" value=\"Submit\"&gt;\n&lt;/form&gt;\n\n\nArticle\n&lt;article&gt;: The &lt;article&gt; element represents a self-contained piece of content that could be distributed and reused independently. It’s commonly used for blog posts, news articles, forum posts, etc.\n&lt;article&gt; \n&lt;!-- Article content goes here --&gt; \n&lt;/article&gt;\n\n\nModern HTML5 elements\n&lt;header&gt;, &lt;footer&gt;, &lt;nav&gt;, &lt;main&gt;: These elements are part of HTML5 and are used to define specific structural parts of a webpage.\n\n&lt;header&gt;: Typically used to contain introductory content or navigation links at the top of a webpage.\n&lt;footer&gt;: Contains footer information such as copyright, contact details, etc., usually placed at the bottom of a webpage.\n&lt;nav&gt;: Used to define navigation links.\n&lt;main&gt;: Represents the main content area of a webpage.\n\n&lt;header&gt; \n    &lt;!-- Header content goes here --&gt; \n&lt;/header&gt; \n&lt;footer&gt; \n    &lt;!-- Footer content goes here --&gt; \n&lt;/footer&gt; \n&lt;nav&gt; \n    &lt;!-- Navigation links go here --&gt; \n&lt;/nav&gt; \n&lt;main&gt; \n    &lt;!-- Main content goes here --&gt; \n&lt;/main&gt;\nModern HTML layout design flowchart\n\n\n\nModern HTML Stucture Design Flowchat (From html5 Doctor)"
-  },
-  {
-    "objectID": "posts/html/html.html#security-risks-and-preventions",
-    "href": "posts/html/html.html#security-risks-and-preventions",
-    "title": "HTML5",
-    "section": "Security Risks and Preventions",
-    "text": "Security Risks and Preventions\n\nReverse Tabnabbing\nReverse tabnabbing is a security vulnerability that occurs when a website opens a link in a new tab or window (target=\"_blank\") and the newly opened page can manipulate the original page through the window.opener property.\nHere’s how it works:\n\nInitial Action: A user clicks on a link on a website that opens in a new tab or window using target=\"_blank\".\nNew Page Opens: The new page opens in a separate browsing context, typically in a new tab.\nManipulation: If the new page contains malicious code, it can access the window.opener property, which refers to the page that opened it. With this access, the malicious page can redirect the original page (the one that opened the link) to a phishing site, alter its content, or perform other malicious actions.\n\nReverse tabnabbing can be exploited by attackers to deceive users into thinking they are interacting with a legitimate website while actually being redirected to a malicious one.\nTo mitigate this security risk, web developers can use the following methods:\n\nRel=“noopener noreferrer”: Adding rel=\"noopener noreferrer\" to anchor (&lt;a&gt;) elements that open links in a new tab or window prevents the newly opened page from accessing window.opener and ensures that the HTTP referer header is not sent, enhancing both security and privacy.\nExplicit Rel=“noopener”: Alternatively, if noreferrer is not desired, using rel=\"noopener\" alone can prevent access to window.opener. However, noreferrer adds an extra layer of protection by also preventing the referer header from being sent.\n\n&lt;a href='https:www.google.com' target='_blank' rel='noopener norefered'&gt; Google.com &lt;/a&gt;"
-  },
-  {
-    "objectID": "posts/html/html.html#form",
-    "href": "posts/html/html.html#form",
-    "title": "HTML5",
-    "section": "Form",
-    "text": "Form\n\nMethod Attribute\n\nThe method attribute specifies the HTTP method that the browser uses to submit the form data to the server.\nIt can take two values: GET or POST.\n\nGET: The form data is appended to the URL in the form of query parameters. This method is suitable for submitting small amounts of data.\nPOST: The form data is sent in the request body. This method is suitable for submitting large amounts of data and sensitive information.\n\n\n&lt;form method=\"POST\" action=\"submit.php\"&gt; \n    &lt;!-- Form fields go here --&gt; \n    &lt;input type=\"submit\" value=\"Submit\"&gt; \n&lt;/form&gt;\n\n\nAction Attribute\n\nThe action attribute specifies the URL where the form data is submitted.\nIt can be a relative or absolute URL. If it’s a relative URL, it is resolved relative to the current page.\nThe server-side script specified in the action attribute typically processes the form data and sends a response back to the client.\n\n&lt;form method=\"POST\" action=\"/submit\"&gt;\n    &lt;label for=\"username\"&gt;Username:&lt;/label&gt;\n    &lt;input type=\"text\" id=\"username\" name=\"username\"&gt;\n    &lt;input type=\"submit\" value=\"Submit\"&gt;\n&lt;/form&gt;\n\n\nFor Attribute\n\nThe for attribute is used in &lt;label&gt; elements to specify which form element the label is associated with.\nIt is particularly useful for improving accessibility and usability as it allows users to click on the label text to focus or select the associated form element.\nThe value of the for attribute should match the id attribute of the form element it is associated with.\n\n&lt;label for=\"username\"&gt;Username:&lt;/label&gt;\n&lt;input type=\"text\" id=\"username\" name=\"username\"&gt;"
-  },
-  {
-    "objectID": "posts/german/german.html#grammatical-cases",
-    "href": "posts/german/german.html#grammatical-cases",
-    "title": "German",
-    "section": "",
-    "text": "The nominative case is one of the grammatical cases in German, used primarily for the subject of a sentence, which is the person or thing performing the action of the verb. It’s also used for predicate nouns or pronouns that refer back to the subject.\nHere are some examples of how the nominative case is used:\n\nSubject of a Sentence: The noun or pronoun that performs the action of the verb.\n\n“Der Hund bellt.” (The dog barks.)\n“Sie liest ein Buch.” (She reads a book.)\n\nPredicate Nouns or Pronouns: Nouns or pronouns that rename or describe the subject in a sentence.\n\n“Mein Bruder ist Arzt.” (My brother is a doctor.)\n“Der Himmel ist blau.” (The sky is blue.)\n\nApposition: When two nouns or noun phrases are used together to describe the same person or thing.\n\n“Meine Mutter, eine Lehrerin, kommt bald.” (My mother, a teacher, is coming soon.)\n“Der Mann, mein Nachbar, ist sehr freundlich.” (The man, my neighbor, is very friendly.)\n\n\n\n\n\nThe accusative case is one of the four grammatical cases in German. It indicates the direct object of a sentence, often answering the question “what?” or “whom?” The accusative case is used for the noun or pronoun that directly receives the action of the verb.\nHere are some examples of how the accusative case is used:\n\nDirect Objects: In sentences where the action of the verb is directly applied to something or someone.\n\n“Ich sehe den Mann.” (I see the man.)\n“Sie liest ein Buch.” (She reads a book.)\n\nMotion Toward: When indicating motion towards a specific location.\n\n“Er geht in den Park.” (He goes into the park.)\n“Sie fahren in die Stadt.” (They drive into the city.)\n\nDuration or Time Span: When specifying a duration of time.\n\n“Ich habe den ganzen Tag gearbeitet.” (I worked the whole day.)\n“Wir haben den Film gestern gesehen.” (We watched the movie yesterday.)\n\n\n\n\n\nThe dative case is one of the four grammatical cases in German (the others being nominative, accusative, and genitive). It indicates the indirect object of a sentence, often answering the question “to whom?” or “for whom?” The dative case is used for the recipient of an action or the object that is indirectly affected by the verb.\nHere are some examples of how the dative case is used:\n\nIndirect Objects: In sentences where something is given or done to someone or something else.\n\n“Ich gebe dem Mann das Buch.” (I give the book to the man.)\n\nCertain Prepositions: Some prepositions in German always take the dative case.\n\n“Ich gehe mit meinem Freund.” (I am going with my friend.)\n“Er spricht mit dem Lehrer.” (He is speaking with the teacher.)\n\nDative Objects with Verbs: Some verbs are used with dative objects, indicating who or what is indirectly affected by the action.\n\n“Ich helfe meiner Schwester.” (I am helping my sister.)\n“Sie glaubt dem Arzt.” (She believes the doctor.)\n\n\n\n\n\nThe genitive case is another grammatical case in German, indicating possession or the relationship between nouns. It often answers the question “whose?” or “of whom/what?” The genitive case is used to show ownership, association, or origin.\nHere are some examples of how the genitive case is used:\n\nPossession: Showing ownership or possession.\n\n“Das Auto meines Vaters.” (My father’s car.)\n“Die Farbe des Himmels.” (The color of the sky.)\n\nRelationships: Indicating relationships between nouns.\n\n“Die Stimme der Sängerin.” (The voice of the singer.)\n“Das Land der Träume.” (The land of dreams.)\n\nCertain Prepositions: Some prepositions in German always take the genitive case.\n\n“Wegen des Wetters.” (Because of the weather.)\n“Trotz des Regens.” (Despite the rain.)"
-  },
-  {
-    "objectID": "posts/german/german.html#ein-eine-einen",
-    "href": "posts/german/german.html#ein-eine-einen",
-    "title": "German",
-    "section": "",
-    "text": "In German, “ein,” “eine,” and “einen” are all forms of the indefinite article “a” or “an” in English. They are used to indicate the gender (masculine, feminine, or neuter) and case (nominative, accusative, or dative) of the noun they precede.\n\n“Ein” is used for masculine and neuter nouns in the nominative case.\n“Eine” is used for feminine nouns in the nominative case.\n“Einen” is used for masculine nouns in the accusative case.\n\n\nMasculine:\n\nNominative case: “ein” (a)\nAccusative case: “einen” (a)\n\nFeminine:\n\nNominative case: “eine” (a)\nAccusative case: “eine” (a)\n\nNeuter:\n\nNominative case: “ein” (a)\nAccusative case: “ein” (a)\n\n\nCheat sheet:\n\n\n\nIndefinite Article Cheat Sheet"
-  },
-  {
-    "objectID": "posts/german/german.html#indefinite-articles",
-    "href": "posts/german/german.html#indefinite-articles",
-    "title": "German",
-    "section": "",
-    "text": "In German, “ein,” “eine,” and “einen” are all forms of the indefinite article “a” or “an” in English. They are used to indicate the gender (masculine, feminine, or neuter) and case (nominative, accusative, or dative) of the noun they precede.\n\n“Ein” is used for masculine and neuter nouns in the nominative case.\n“Eine” is used for feminine nouns in the nominative case.\n“Einen” is used for masculine nouns in the accusative case.\n\n\nMasculine:\n\nNominative case: “ein” (a)\nAccusative case: “einen” (a)\n\nFeminine:\n\nNominative case: “eine” (a)\nAccusative case: “eine” (a)\n\nNeuter:\n\nNominative case: “ein” (a)\nAccusative case: “ein” (a)\n\n\nCheat sheet:\n\n\n\nIndefinite Article Cheat Sheet"
-  },
-  {
-    "objectID": "posts/german-grammar/german.html",
-    "href": "posts/german-grammar/german.html",
-    "title": "German Grammar",
-    "section": "",
-    "text": "The nominative case is one of the grammatical cases in German, used primarily for the subject of a sentence, which is the person or thing performing the action of the verb. It’s also used for predicate nouns or pronouns that refer back to the subject.\nHere are some examples of how the nominative case is used:\n\nSubject of a Sentence: The noun or pronoun that performs the action of the verb.\n\n“Der Hund bellt.” (The dog barks.)\n“Sie liest ein Buch.” (She reads a book.)\n\nPredicate Nouns or Pronouns: Nouns or pronouns that rename or describe the subject in a sentence.\n\n“Mein Bruder ist Arzt.” (My brother is a doctor.)\n“Der Himmel ist blau.” (The sky is blue.)\n\nApposition: When two nouns or noun phrases are used together to describe the same person or thing.\n\n“Meine Mutter, eine Lehrerin, kommt bald.” (My mother, a teacher, is coming soon.)\n“Der Mann, mein Nachbar, ist sehr freundlich.” (The man, my neighbor, is very friendly.)\n\n\n\n\n\nThe accusative case is one of the four grammatical cases in German. It indicates the direct object of a sentence, often answering the question “what?” or “whom?” The accusative case is used for the noun or pronoun that directly receives the action of the verb.\nHere are some examples of how the accusative case is used:\n\nDirect Objects: In sentences where the action of the verb is directly applied to something or someone.\n\n“Ich sehe den Mann.” (I see the man.)\n“Sie liest ein Buch.” (She reads a book.)\n\nMotion Toward: When indicating motion towards a specific location.\n\n“Er geht in den Park.” (He goes into the park.)\n“Sie fahren in die Stadt.” (They drive into the city.)\n\nDuration or Time Span: When specifying a duration of time.\n\n“Ich habe den ganzen Tag gearbeitet.” (I worked the whole day.)\n“Wir haben den Film gestern gesehen.” (We watched the movie yesterday.)\n\n\n\n\n\nThe dative case is one of the four grammatical cases in German (the others being nominative, accusative, and genitive). It indicates the indirect object of a sentence, often answering the question “to whom?” or “for whom?” The dative case is used for the recipient of an action or the object that is indirectly affected by the verb.\nHere are some examples of how the dative case is used:\n\nIndirect Objects: In sentences where something is given or done to someone or something else.\n\n“Ich gebe dem Mann das Buch.” (I give the book to the man.)\n\nCertain Prepositions: Some prepositions in German always take the dative case.\n\n“Ich gehe mit meinem Freund.” (I am going with my friend.)\n“Er spricht mit dem Lehrer.” (He is speaking with the teacher.)\n\nDative Objects with Verbs: Some verbs are used with dative objects, indicating who or what is indirectly affected by the action.\n\n“Ich helfe meiner Schwester.” (I am helping my sister.)\n“Sie glaubt dem Arzt.” (She believes the doctor.)\n\n\n\n\n\nThe genitive case is another grammatical case in German, indicating possession or the relationship between nouns. It often answers the question “whose?” or “of whom/what?” The genitive case is used to show ownership, association, or origin.\nHere are some examples of how the genitive case is used:\n\nPossession: Showing ownership or possession.\n\n“Das Auto meines Vaters.” (My father’s car.)\n“Die Farbe des Himmels.” (The color of the sky.)\n\nRelationships: Indicating relationships between nouns.\n\n“Die Stimme der Sängerin.” (The voice of the singer.)\n“Das Land der Träume.” (The land of dreams.)\n\nCertain Prepositions: Some prepositions in German always take the genitive case.\n\n“Wegen des Wetters.” (Because of the weather.)\n“Trotz des Regens.” (Despite the rain.)\n\n\n\n\n\n\nIn German, “ein,” “eine,” and “einen” are all forms of the indefinite article “a” or “an” in English. They are used to indicate the gender (masculine, feminine, or neuter) and case (nominative, accusative, or dative) of the noun they precede.\n\n“Ein” is used for masculine and neuter nouns in the nominative case.\n“Eine” is used for feminine nouns in the nominative case.\n“Einen” is used for masculine nouns in the accusative case.\n\n\nMasculine:\n\nNominative case: “ein” (a)\nAccusative case: “einen” (a)\n\nFeminine:\n\nNominative case: “eine” (a)\nAccusative case: “eine” (a)\n\nNeuter:\n\nNominative case: “ein” (a)\nAccusative case: “ein” (a)\n\n\nCheat sheet:\n\n\n\nIndefinite Article Cheat Sheet"
-  },
-  {
-    "objectID": "posts/german-grammar/german.html#grammatical-cases",
-    "href": "posts/german-grammar/german.html#grammatical-cases",
-    "title": "German Grammar",
-    "section": "",
-    "text": "The nominative case is one of the grammatical cases in German, used primarily for the subject of a sentence, which is the person or thing performing the action of the verb. It’s also used for predicate nouns or pronouns that refer back to the subject.\nHere are some examples of how the nominative case is used:\n\nSubject of a Sentence: The noun or pronoun that performs the action of the verb.\n\n“Der Hund bellt.” (The dog barks.)\n“Sie liest ein Buch.” (She reads a book.)\n\nPredicate Nouns or Pronouns: Nouns or pronouns that rename or describe the subject in a sentence.\n\n“Mein Bruder ist Arzt.” (My brother is a doctor.)\n“Der Himmel ist blau.” (The sky is blue.)\n\nApposition: When two nouns or noun phrases are used together to describe the same person or thing.\n\n“Meine Mutter, eine Lehrerin, kommt bald.” (My mother, a teacher, is coming soon.)\n“Der Mann, mein Nachbar, ist sehr freundlich.” (The man, my neighbor, is very friendly.)\n\n\n\n\n\nThe accusative case is one of the four grammatical cases in German. It indicates the direct object of a sentence, often answering the question “what?” or “whom?” The accusative case is used for the noun or pronoun that directly receives the action of the verb.\nHere are some examples of how the accusative case is used:\n\nDirect Objects: In sentences where the action of the verb is directly applied to something or someone.\n\n“Ich sehe den Mann.” (I see the man.)\n“Sie liest ein Buch.” (She reads a book.)\n\nMotion Toward: When indicating motion towards a specific location.\n\n“Er geht in den Park.” (He goes into the park.)\n“Sie fahren in die Stadt.” (They drive into the city.)\n\nDuration or Time Span: When specifying a duration of time.\n\n“Ich habe den ganzen Tag gearbeitet.” (I worked the whole day.)\n“Wir haben den Film gestern gesehen.” (We watched the movie yesterday.)\n\n\n\n\n\nThe dative case is one of the four grammatical cases in German (the others being nominative, accusative, and genitive). It indicates the indirect object of a sentence, often answering the question “to whom?” or “for whom?” The dative case is used for the recipient of an action or the object that is indirectly affected by the verb.\nHere are some examples of how the dative case is used:\n\nIndirect Objects: In sentences where something is given or done to someone or something else.\n\n“Ich gebe dem Mann das Buch.” (I give the book to the man.)\n\nCertain Prepositions: Some prepositions in German always take the dative case.\n\n“Ich gehe mit meinem Freund.” (I am going with my friend.)\n“Er spricht mit dem Lehrer.” (He is speaking with the teacher.)\n\nDative Objects with Verbs: Some verbs are used with dative objects, indicating who or what is indirectly affected by the action.\n\n“Ich helfe meiner Schwester.” (I am helping my sister.)\n“Sie glaubt dem Arzt.” (She believes the doctor.)\n\n\n\n\n\nThe genitive case is another grammatical case in German, indicating possession or the relationship between nouns. It often answers the question “whose?” or “of whom/what?” The genitive case is used to show ownership, association, or origin.\nHere are some examples of how the genitive case is used:\n\nPossession: Showing ownership or possession.\n\n“Das Auto meines Vaters.” (My father’s car.)\n“Die Farbe des Himmels.” (The color of the sky.)\n\nRelationships: Indicating relationships between nouns.\n\n“Die Stimme der Sängerin.” (The voice of the singer.)\n“Das Land der Träume.” (The land of dreams.)\n\nCertain Prepositions: Some prepositions in German always take the genitive case.\n\n“Wegen des Wetters.” (Because of the weather.)\n“Trotz des Regens.” (Despite the rain.)"
-  },
-  {
-    "objectID": "posts/german-grammar/german.html#indefinite-articles",
-    "href": "posts/german-grammar/german.html#indefinite-articles",
-    "title": "German Grammar",
-    "section": "",
-    "text": "In German, “ein,” “eine,” and “einen” are all forms of the indefinite article “a” or “an” in English. They are used to indicate the gender (masculine, feminine, or neuter) and case (nominative, accusative, or dative) of the noun they precede.\n\n“Ein” is used for masculine and neuter nouns in the nominative case.\n“Eine” is used for feminine nouns in the nominative case.\n“Einen” is used for masculine nouns in the accusative case.\n\n\nMasculine:\n\nNominative case: “ein” (a)\nAccusative case: “einen” (a)\n\nFeminine:\n\nNominative case: “eine” (a)\nAccusative case: “eine” (a)\n\nNeuter:\n\nNominative case: “ein” (a)\nAccusative case: “ein” (a)\n\n\nCheat sheet:\n\n\n\nIndefinite Article Cheat Sheet"
-  },
-  {
-    "objectID": "posts/german-grammar/german.html#weather-and-seasons",
-    "href": "posts/german-grammar/german.html#weather-and-seasons",
-    "title": "German Grammar",
-    "section": "Weather and Seasons",
-    "text": "Weather and Seasons\n\nFrühling: spring\nSommer : summer\nSonnig: sunny\n(der) Regen\nNeblig: foggy\n\nEs ist neblig / warm\n\nWarm\n\nIst es warm heute ?\nEs ist nie warm im Winter.\nEs ist neblig heute und bewölkt.\n\nBewölkt\n\nEs ist bewölkt und neblig.\n\nHerbst: the Fall\nWetter : weather\n\nWie ist das Wetter heute ?\n\nHeute : today\nwandere(ich) wandert wanderst wandern(sie)\n\nWandern sie oft Anna, Wanderst du oft Anna?\nDie Eule wandert nie in Sommer.\n\nSonnencreme : sunscreen\n\nWie viel kostet die Sonnencreme ?\n\nEs ist immer schön im Frühling\ndie Wasserflasche\n\nMeine Wasserflasche ist groß."
-  },
-  {
-    "objectID": "posts/german-grammar/german.html#relation",
-    "href": "posts/german-grammar/german.html#relation",
-    "title": "German Grammar",
-    "section": "Relation",
-    "text": "Relation\n\nliebt\n\nLiebt dein Bruder deinen Hund ?\nLiebt du deinen Hund ?\n\nhabe hast\n\nHast du einen Mann ?\nHast du einen Freundin ?\n\nFreund\n\nHast du viele Freunde ?\n\nFreundin\n\nHast du einen Freundin?\n\nOnkel\nOma\nOpa"
-  },
-  {
-    "objectID": "posts/german-grammar/german.html#food",
-    "href": "posts/german-grammar/german.html#food",
-    "title": "German Grammar",
-    "section": "Food",
-    "text": "Food\n\n(die) Banane\n\nIch mag Bananen.\n\n(die) Birne\n(die) Bohnen, bean\n\nIch mag Bohnen.\n\n(die) Butter\n(die) Aubergine\n(das) Brot\n(die) Schokolade\n\nIch mag Schokoladen.\n\n(die) Feige\n(das) Fleisch, meat\n(die) Familie\n(der) Reis\n\nIch esse gern Reis.\n\n(die) Rosinen\n\nIch esse gern Rosinen.\n\n(das) Radio\nwaschen\nkaufen"
-  },
-  {
-    "objectID": "posts/german-grammar/german.html#place",
-    "href": "posts/german-grammar/german.html#place",
-    "title": "German Grammar",
-    "section": "Place",
-    "text": "Place\n\n(die) Schule\n(der) Schal\n(der) Fisch"
-  },
-  {
-    "objectID": "posts/german-grammar/german.html#four-grammatical-cases",
-    "href": "posts/german-grammar/german.html#four-grammatical-cases",
-    "title": "German Grammar",
-    "section": "",
-    "text": "The nominative case is one of the grammatical cases in German, used primarily for the subject of a sentence, which is the person or thing performing the action of the verb. It’s also used for predicate nouns or pronouns that refer back to the subject.\nHere are some examples of how the nominative case is used:\n\nSubject of a Sentence: The noun or pronoun that performs the action of the verb.\n\n“Der Hund bellt.” (The dog barks.)\n“Sie liest ein Buch.” (She reads a book.)\n\nPredicate Nouns or Pronouns: Nouns or pronouns that rename or describe the subject in a sentence.\n\n“Mein Bruder ist Arzt.” (My brother is a doctor.)\n“Der Himmel ist blau.” (The sky is blue.)\n\nApposition: When two nouns or noun phrases are used together to describe the same person or thing.\n\n“Meine Mutter, eine Lehrerin, kommt bald.” (My mother, a teacher, is coming soon.)\n“Der Mann, mein Nachbar, ist sehr freundlich.” (The man, my neighbor, is very friendly.)\n\n\n\n\n\nThe accusative case is one of the four grammatical cases in German. It indicates the direct object of a sentence, often answering the question “what?” or “whom?” The accusative case is used for the noun or pronoun that directly receives the action of the verb.\nHere are some examples of how the accusative case is used:\n\nDirect Objects: In sentences where the action of the verb is directly applied to something or someone.\n\n“Ich sehe den Mann.” (I see the man.)\n“Sie liest ein Buch.” (She reads a book.)\n\nMotion Toward: When indicating motion towards a specific location.\n\n“Er geht in den Park.” (He goes into the park.)\n“Sie fahren in die Stadt.” (They drive into the city.)\n\nDuration or Time Span: When specifying a duration of time.\n\n“Ich habe den ganzen Tag gearbeitet.” (I worked the whole day.)\n“Wir haben den Film gestern gesehen.” (We watched the movie yesterday.)\n\n\n\n\n\nThe dative case is one of the four grammatical cases in German (the others being nominative, accusative, and genitive). It indicates the indirect object of a sentence, often answering the question “to whom?” or “for whom?” The dative case is used for the recipient of an action or the object that is indirectly affected by the verb.\nHere are some examples of how the dative case is used:\n\nIndirect Objects: In sentences where something is given or done to someone or something else.\n\n“Ich gebe dem Mann das Buch.” (I give the book to the man.)\n\nCertain Prepositions: Some prepositions in German always take the dative case.\n\n“Ich gehe mit meinem Freund.” (I am going with my friend.)\n“Er spricht mit dem Lehrer.” (He is speaking with the teacher.)\n\nDative Objects with Verbs: Some verbs are used with dative objects, indicating who or what is indirectly affected by the action.\n\n“Ich helfe meiner Schwester.” (I am helping my sister.)\n“Sie glaubt dem Arzt.” (She believes the doctor.)\n\n\n\n\n\nThe genitive case is another grammatical case in German, indicating possession or the relationship between nouns. It often answers the question “whose?” or “of whom/what?” The genitive case is used to show ownership, association, or origin.\nHere are some examples of how the genitive case is used:\n\nPossession: Showing ownership or possession.\n\n“Das Auto meines Vaters.” (My father’s car.)\n“Die Farbe des Himmels.” (The color of the sky.)\n\nRelationships: Indicating relationships between nouns.\n\n“Die Stimme der Sängerin.” (The voice of the singer.)\n“Das Land der Träume.” (The land of dreams.)\n\nCertain Prepositions: Some prepositions in German always take the genitive case.\n\n“Wegen des Wetters.” (Because of the weather.)\n“Trotz des Regens.” (Despite the rain.)"
   },
   {
     "objectID": "posts/german-vocabulary/german_vocab.html",
@@ -357,6 +154,76 @@
     "text": "Keywords used in this context: architecture, overfit, fine-tunning, validation set, test set, weights, parameters, CNN"
   },
   {
+    "objectID": "posts/deep-learning-journey/deep-learning-journey.html#questions",
+    "href": "posts/deep-learning-journey/deep-learning-journey.html#questions",
+    "title": "Deep Learning Journey",
+    "section": "Questions",
+    "text": "Questions\nQuestions related to this chapter content:\n\nDo you need these for deep learning?\n\nLots of math T / F\nLots of data T / F\nLots of expensive computers T / F\nA PhD T / F\n\nName five areas where deep learning is now the best in the world.\nWhat was the name of the first device that was based on the principle of the artificial neuron?\nBased on the book of the same name, what are the requirements for parallel distributed processing (PDP)?\nWhat were the two theoretical misunderstandings that held back the field of neural networks?\nWhat is a GPU?\nOpen a notebook and execute a cell containing: 1+1. What happens?\nFollow through each cell of the stripped version of the notebook for this chapter. Before executing each cell, guess what will happen.\nComplete the Jupyter Notebook online appendix.\nWhy is it hard to use a traditional computer program to recognize images in a photo?\nWhat did Samuel mean by “weight assignment”?\nWhat term do we normally use in deep learning for what Samuel called “weights”?\nDraw a picture that summarizes Samuel’s view of a machine learning model.\nWhy is it hard to understand why a deep learning model makes a particular prediction?\nWhat is the name of the theorem that shows that a neural network can solve any mathematical problem to any level of accuracy?\nWhat do you need in order to train a model?\nHow could a feedback loop impact the rollout of a predictive policing model?\nDo we always have to use 224×224-pixel images with the cat recognition model?\nWhat is the difference between classification and regression?\nWhat is a validation set? What is a test set? Why do we need them?\nWhat will fastai do if you don’t provide a validation set?\nCan we always use a random sample for a validation set? Why or why not?\nWhat is overfitting? Provide an example.\nWhat is a metric? How does it differ from “loss”?\nHow can pretrained models help?\nWhat is the “head” of a model?\nWhat kinds of features do the early layers of a CNN find? How about the later layers?\nAre image models only useful for photos?\nWhat is an “architecture”?\nWhat is segmentation?\nWhat is y_range used for? When do we need it?\nWhat are “hyperparameters”?\nWhat’s the best way to avoid failures when using AI in an organization?"
+  },
+  {
+    "objectID": "posts/deep-learning-journey/deep-learning-journey.html#introduction-and-history-of-neuron-network",
+    "href": "posts/deep-learning-journey/deep-learning-journey.html#introduction-and-history-of-neuron-network",
+    "title": "Deep Learning Journey",
+    "section": "Introduction and History of Neuron Network",
+    "text": "Introduction and History of Neuron Network\nDeep learning (DL) has become ubiquitous in modern technology. Common applications of DL include natural language processing (NLP), medicine, security (computer vision), industrial automation (anomaly detection), and commercial recommendation systems.\nWhen discussing DL, it is crucial to emphasize its fundamental element: the Neural Network. The concept of neural networks was first developed by Pitts and McCulloch. The Mark I Perceptron was the first artificial neural network constructed based on their ideas. However, the Perceptron was limited to a single layer and struggled to learn some simple functions, such as XOR. To create more powerful neural networks, it is essential to add more layers, which is a common technique in building effective models in DL.\n\n\n\n\n\n\n3 element that lead AI to become famous\n\n\n\n\n\nABC : Algorithms, Big Data, Computing.\n\n\n\n\n\n\n\n\n\nNote\n\n\n\n!pip install staring with a ! is a bash code\n\n\n\n\n\n\n\n\nCode First, Theory Later\n\n\n\nTrying to spend too much time on theory can be counterproductive. The key is to just code and try to solve problems: the theory can come later when you have context and motivation."
+  },
+  {
+    "objectID": "posts/deep-learning-journey/deep-learning-journey.html#answer",
+    "href": "posts/deep-learning-journey/deep-learning-journey.html#answer",
+    "title": "Deep Learning Journey",
+    "section": "Answer",
+    "text": "Answer\n\nFFFF.\nFive areas that DL are good at: natural language processing (NPL), Medical image, security(computer vision), factory(industrial | anomaly detection) and recommendation system(commercial).\nThe first device that was based on the principle of the artificial neuron is : The Mark I Perceptron.\nRequirements for the parallel distributed processing:\n\na set of processing unit\na state of activation\nan output function for each unit\na pattern of connectivity between units\nA propagation rule for propagating patterns of activities through the network of connectivities\nAn activation rule for combining the inputs impinging on a unit with the current state of that unit to produce a new level of activation for the unit\nA learning rule whereby patterns of connectivity are modified by experience\nAn environment within which the system must operate\n\nTwo theoretical misunderstandings that held back the field of neuron networks is:\n\nAdding one more layers (2 layer) then it will be possible to approximate any function.\nAdding more layers to make model better\n\nGPU is a kind of processor which can do the parallel computing, it is commonly used in training the model.\nBecause traditional computer does not come with a GPU, hence its computation speed is slow and inefficient.\nSamuel mean by “weight assignment” refer to setting the value of variable on how the function works/behave.\n“weight” is refer to “parameters” in deep learning.\nBecause some problems such as image recognition, we unconsciously know how our brain can recognize patterns in such images.\nUniversal approximation theorem.\nData(input) and labels(model output references).\nUsing feedback loop can be problematic, the more biased of dataset, the more biased of the model.\nNo, we can use any size, using image of size 264x264 is due to historical reason (traditional model can only trained using 264x264 size).\nClassification is for predicting the categories of dataset while Regression predict numerical value.\nValidation set is an less exposed data set which is used to find the optimal hyperparameters of various architectures of model. Test set is used to predict the unseen data and evaluate the model overall performance.\nFastAI will automatically set the validation set to 0.2 (20%).\nNo, we can’t. A counter case is training with time-series data which is too easy for model to to fill the gap, when we select random validation instances.\nOverfitting is a problem when the model perform very well on training data set but perform poorly in predicting unseen data. An example : when a model is trained to decide the image is cat or dog, model can only accurately make a classification when given an instance within train dataset. But fail when given cat or dog image outside the training set (or the cat image that is not similar to the images within training set).\nMetric is a version of loss which used for human (make it more understandable for human), it can be error percentage or accuracy.\nUsing pre-trained model, can increase training efficiency, because pretrained model (already has more capability) can already recognize basic patterns of data.\nHead of a model is the last layer of the model. Note that we need to change the head of model (one or more layers to make it suitable for specifics task of the model) while using pre-trained model.\nThe first layer of CNN, it determines diagonal, horizontal, and vertical edges as well as various gradients. 2nd layer the model detects features within the image such as circle, triangle etc.\nImage models are not only useful for photos, but also useful in other type of input. For instance, voice signal can also express in term of spectrum as photos.\nArchitecture is the pre assume functions or structure of the model.\nSegmentation is task where photos are divided and recognized into small components labels. For example, self driving car might use video data and do the segmentation recognize the pedestrian in order to adjust direction or speed.\ny_range is used for setting a range in label for specific task (when we only interested in a specific range of values).\nHyperparameters are the specification of the model that are manually set by human such as model architecture, learning rate, hidden layers number etc.\nBest way to avoid failures when using AI in an organization is to keep a test dataset separately (without intervening with training process)."
+  },
+  {
+    "objectID": "posts/cnn/cnn.html",
+    "href": "posts/cnn/cnn.html",
+    "title": "Convolutional Neuron Network",
+    "section": "",
+    "text": "Structured and unstructured data ? Which one is machine good at ?\nWhy DL just get its popularity in recent years ? Hint : ABC\nWhat field RNN is generally used in ? CNN ? (CV, voice recognition, advertising)\nWhat is the first version of neuron network ? Can 1 layer neuron network (1st version) solve XOR problem?\nWhat are commonly used structures of NN ? Full-connected, CNN, RNN\nWhy Sigmoid function is not commonly used as an activation function in NN ? Zero gradient"
+  },
+  {
+    "objectID": "posts/cnn/cnn.html#convolution-layer",
+    "href": "posts/cnn/cnn.html#convolution-layer",
+    "title": "Convolutional Neuron Network",
+    "section": "Convolution layer",
+    "text": "Convolution layer\nKeywords: Spatial dimension, Depth, Filters Bank, feature maps, Pooling\n\nKernel\nKernel refers to a small matrix used for convolutional operations. Convolution is the fundamental operation in a CNN, where the kernel (also called a filter) is applied to input data, typically an image, to produce feature maps. ’’ \n\n\nStride\n“stride” refers to the number of pixels by which the convolutional kernel moves across the input data at each step during the convolution operation. In below example, illustrate a case when stride = 2.\n\\[\\text{output depth} = \\frac{width - filter + 2 \\times pad}{stride} + 1\\]\n\n\n\nConvolution of a 5x5 input (blue) with 3x3 kernel (grey) with a stride of 2 and padding of 1. The 3x3 output is in green. Source\n\n\n\n\nPadding\nPadding is a technique used to control the spatial dimensions of the output feature maps after applying convolutional operations to the input data.\nFeatures of padding in CNN:\n\nkeep the image data near to border edge\nmaintain the size of input image dimension\nchange the output size of convolution layer\n\n\n\nPooling\n\nWhat is pooling ?\n\na technique to reduce the activation spatial dimensions/Pooling helps in reducing memory consumption in deeper layers. It is also an important step to convert the spatial information into features.\n\n\nThe two most common pooling methods are : Max pooling and Average pooling.\n\n\nCode\nimport torch\nimport torch.nn.functional as F\n\n# Define input image\nimage = torch.tensor([[2, 2, 7, 3],\n                      [9, 4, 6, 1],\n                      [8, 5, 2, 4],\n                      [3, 1, 2, 6]], dtype=torch.float32)\n\n# Add batch and channel dimensions\nimage = image.unsqueeze(0).unsqueeze(0)\n\n# Apply max pooling directly using functional API\noutput = F.max_pool2d(image, kernel_size=2, stride=2)\n\n# Print output image\noutput = output.squeeze().numpy()\nprint(output)\n\n\n[[9. 7.]\n [8. 6.]]"
+  },
+  {
+    "objectID": "posts/cnn/cnn.html#activation-functions",
+    "href": "posts/cnn/cnn.html#activation-functions",
+    "title": "Convolutional Neuron Network",
+    "section": "Activation functions",
+    "text": "Activation functions\nThe activation fuction is a transformation function in NN that transform the weight and bias into a nonlinear format. With Activation function, model can learn and represent more complex patterns in data.\n\n\n\n\n\n\nDoes activation function must be a nonlinear function ? Why ?\n\n\n\n\n\nIn neural networks, activation functions are typically designed to be nonlinear. This is because if all activation functions were linear, the entire neural network would effectively become a linear model, incapable of capturing complex nonlinear relationships.\nIf all activation functions were set to linear functions, even a very deep neural network would behave like a single-layer linear model. Such a model would fail to handle many real-world nonlinear relationships, limiting the expressiveness and applicability of neural networks.\n\n\n\n\nReLU\nThe Rectified Linear Unit (ReLU) activation function is one of the most widely used activation functions in deep learning. It’s defined as:\n\\[f(x) = \\max(0, x)\\]\nIn simple terms, ReLU returns if x is positive, and 0 otherwise. This makes it a piecewise linear function.\nReLU has several advantages:\n\nSimplicity: ReLU is computationally efficient and easy to implement. It only involves a simple thresholding operation, making it faster to compute compared to more complex activation functions like sigmoid or tanh.\nSparsity: ReLU introduces sparsity in the network because it turns off neurons that have negative inputs (setting their output to zero). This sparsity can help reduce overfitting by encouraging the network to focus on important features and ignore noise.\nAddressing vanishing gradient problem: ReLU helps mitigate the vanishing gradient problem by providing a constant gradient (1) for positive inputs during backpropagation. This helps prevent the gradients from becoming too small, enabling more stable and efficient training of deep neural networks.\n\nDespite its advantages, ReLU also has some drawbacks:\n\nDead neurons: Neurons with negative inputs always output zero, leading to the problem of “dying ReLU neurons.” If a neuron’s weights are such that it always receives negative inputs, it will never activate, and its weights will not be updated during training.\nUnbounded output: ReLU does not have an upper bound, which means neurons can potentially produce very large outputs. This can lead to issues like exploding gradients, especially during training.\n\n\n\nLeaky ReLU\nLeaky ReLU is a variant of the Rectified Linear Unit (ReLU) activation function, designed to address the “dying ReLU” problem. In standard ReLU, neurons with negative inputs always output zero, which can cause them to become “dead” and stop learning. Leaky ReLU introduces a small slope (or “leak”) for negative inputs, allowing some information to flow through the neuron even when its input is negative. Mathematically, Leaky ReLU is defined as:\n\\[\nf(x) = \\begin{cases}\nx & \\text{if } x &gt; 0 \\\\\n\\alpha x & \\text{if } x \\leq 0\n\\end{cases}\n\\]\nwhere \\(\\alpha\\) is a small constant (typically a small positive value: 0.01 or 0.001) that determines the slope of the function for negative inputs."
+  },
+  {
+    "objectID": "posts/cnn/cnn.html#output-layer",
+    "href": "posts/cnn/cnn.html#output-layer",
+    "title": "Convolutional Neuron Network",
+    "section": "Output Layer",
+    "text": "Output Layer\n\nSoftmax Function\nSoftmax function is generally used in output layer, since it range is (0-1) which can be represented as probabilty values. Its expression can be written as :\n\\[\\sigma = \\frac{e^{a_k}}{\\sum_{i=1}^{n}e^{a_i}}\\]\nExample in softmax calculation :\n\n\n\nSoftmax\n\n\nReference"
+  },
+  {
+    "objectID": "blog_posts.html",
+    "href": "blog_posts.html",
+    "title": "Blog Posts",
+    "section": "",
+    "text": "Regression and Classification\n\n\n\n\n\n\nmachine learning\n\n\n\n\n\n\n\n\n\nMar 29, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nRF Noise\n\n\n\n\n\n\nRF Microelectronic\n\n\n\n\n\n\n\n\n\nMar 29, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nRLC Circuit\n\n\n\n\n\n\nRF microelectronics\n\n\n\n\n\n\n\n\n\nMar 29, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nConvolutional Neuron Network\n\n\n\n\n\n\ndeep learning\n\n\n\n\n\n\n\n\n\nMar 28, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nAnaconda or Pip\n\n\n\n\n\n\nanaconda\n\n\npip\n\n\n\n\n\n\n\n\n\nMar 28, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nGerman Grammar\n\n\n\n\n\n\ngerman\n\n\n\n\n\n\n\n\n\nMar 28, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nHTML5\n\n\n\n\n\n\nweb development\n\n\n\n\n\n\n\n\n\nMar 28, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nChinese\n\n\n\n\n\n\nchinese\n\n\n\n\n\n\n\n\n\nMar 27, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nGerman Vocabulary\n\n\n\n\n\n\ngerman\n\n\n\n\n\n\n\n\n\nMar 25, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nOpenCV\n\n\n\n\n\n\ndeep learning\n\n\n\n\n\n\n\n\n\nMar 23, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nNumpy\n\n\n\n\n\n\nnumpy\n\n\n\nNumPy is the fundamental package for scientific computing in Python\n\n\n\n\n\nMar 22, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nDeep Learning Journey\n\n\n\n\n\n\ndeep learning\n\n\n\n\n\n\n\n\n\nMar 21, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nEffects of Nonlinearity\n\n\n\n\n\n\nRF microelectronics\n\n\n\n\n\n\n\n\n\nMar 21, 2024\n\n\nSamith Va\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "Hello there! I’m Samith, and I’m thrilled to have you here on my blog. As a passionate student of Information Engineering in Shanghai Jiao Tong University (China), I’ve embarked on a journey filled with discovery, learning, and growth.  Through this platform, I aim to share the knowledge and insights I’ve gained, with the hope of assisting others who are navigating similar paths in the world of technology."
+  },
+  {
+    "objectID": "posts/chinese/chinese.html",
+    "href": "posts/chinese/chinese.html",
+    "title": "Chinese",
+    "section": "",
+    "text": "2023-03-01\n谣言"
+  },
+  {
     "objectID": "posts/conda/conda.html",
     "href": "posts/conda/conda.html",
     "title": "Anaconda or Pip",
@@ -364,18 +231,18 @@
     "text": "Conda is a versatile package and environment management system for Python and other programming languages. It simplifies the process of installing, updating, and managing packages by providing a command-line interface.\n\n\n\nPackage Management: Conda facilitates the installation, removal, and updating of packages from its repository and other sources like PyPI and CRAN.\nEnvironment Management: It allows users to create isolated environments with specific versions of Python and packages, ensuring dependency management and avoiding conflicts between projects.\nCross-Platform Support: Conda works on Windows, macOS, and Linux, making it accessible to developers across different operating systems.\nIntegration with Anaconda Distribution: While often associated with Anaconda, Conda can be used independently and is bundled with Anaconda for enhanced functionality.\nMulti-Language Support: Conda can manage packages from various languages, not just Python, making it useful for projects with diverse requirements.\nVersioning and Dependency Resolution: Conda handles package versions and automatically resolves dependencies, ensuring smooth installation and compatibility.\n\n\n\n\n\npip is the default package manager for Python, focusing solely on Python packages from PyPI.\nconda is a more versatile package manager that handles packages from various languages and manages non-Python dependencies effectively."
   },
   {
-    "objectID": "posts/conda/conda.html#what-is-the-difference-between-conda-and-pip",
-    "href": "posts/conda/conda.html#what-is-the-difference-between-conda-and-pip",
-    "title": "Anaconda or Pip",
-    "section": "",
-    "text": "pip is the default package manager for Python, focusing solely on Python packages from PyPI.\nconda is a more versatile package manager that handles packages from various languages and manages non-Python dependencies effectively."
-  },
-  {
     "objectID": "posts/conda/conda.html#key-features-in-conda",
     "href": "posts/conda/conda.html#key-features-in-conda",
     "title": "Anaconda or Pip",
     "section": "",
     "text": "Package Management: Conda facilitates the installation, removal, and updating of packages from its repository and other sources like PyPI and CRAN.\nEnvironment Management: It allows users to create isolated environments with specific versions of Python and packages, ensuring dependency management and avoiding conflicts between projects.\nCross-Platform Support: Conda works on Windows, macOS, and Linux, making it accessible to developers across different operating systems.\nIntegration with Anaconda Distribution: While often associated with Anaconda, Conda can be used independently and is bundled with Anaconda for enhanced functionality.\nMulti-Language Support: Conda can manage packages from various languages, not just Python, making it useful for projects with diverse requirements.\nVersioning and Dependency Resolution: Conda handles package versions and automatically resolves dependencies, ensuring smooth installation and compatibility."
+  },
+  {
+    "objectID": "posts/conda/conda.html#what-is-the-difference-between-conda-and-pip",
+    "href": "posts/conda/conda.html#what-is-the-difference-between-conda-and-pip",
+    "title": "Anaconda or Pip",
+    "section": "",
+    "text": "pip is the default package manager for Python, focusing solely on Python packages from PyPI.\nconda is a more versatile package manager that handles packages from various languages and manages non-Python dependencies effectively."
   },
   {
     "objectID": "posts/conda/conda.html#create-virtual-environment",
@@ -406,25 +273,11 @@
     "text": "Install packages in virtual environment\nAfter activated into a specific conda environment, we can then install package within that environment.\nconda install numpy pandas matplotlib"
   },
   {
-    "objectID": "posts/conda/conda.html#list-all-existed-environment",
-    "href": "posts/conda/conda.html#list-all-existed-environment",
-    "title": "Anaconda or Conda",
-    "section": "List all existed environment",
-    "text": "List all existed environment\nconda env list"
-  },
-  {
     "objectID": "posts/conda/conda.html#install-package-from-a-specific-channel",
     "href": "posts/conda/conda.html#install-package-from-a-specific-channel",
     "title": "Anaconda or Pip",
     "section": "Install package from a specific channel",
     "text": "Install package from a specific channel\nSometimes packages may not be available in the default channels, or we may want to install a specific version of a package from a different source. In such cases, we can specify a channel from which to install the package.\nconda install -c fastai fastai\n\n# or shortcut with \":\"\nconda install fastai:fastai\nAbove example illustrates on installing fastai package from fastai channel."
-  },
-  {
-    "objectID": "posts/conda/conda.html#remove-a-virtual-environment",
-    "href": "posts/conda/conda.html#remove-a-virtual-environment",
-    "title": "Anaconda or Pip",
-    "section": "Remove a virtual environment",
-    "text": "Remove a virtual environment\nconda env remove &lt;env_name&gt;"
   },
   {
     "objectID": "posts/conda/conda.html#list-all-existed-environments",
@@ -434,60 +287,81 @@
     "text": "List all existed environments\nconda env list"
   },
   {
-    "objectID": "posts/cnn/cnn.html",
-    "href": "posts/cnn/cnn.html",
-    "title": "Convolutional Neuron Network",
+    "objectID": "posts/conda/conda.html#remove-a-virtual-environment",
+    "href": "posts/conda/conda.html#remove-a-virtual-environment",
+    "title": "Anaconda or Pip",
+    "section": "Remove a virtual environment",
+    "text": "Remove a virtual environment\nconda env remove &lt;env_name&gt;"
+  },
+  {
+    "objectID": "posts/german-grammar/german.html",
+    "href": "posts/german-grammar/german.html",
+    "title": "German Grammar",
     "section": "",
-    "text": "Structured and unstructured data ? Which one is machine good at ?\nWhy DL just get its popularity in recent years ? Hint : ABC\nWhat field RNN is generally used in ? CNN ? (CV, voice recognition, advertising)\nWhat is the first version of neuron network ? Can 1 layer neuron network (1st version) solve XOR problem?\nWhat are commonly used structures of NN ? Full-connected, CNN, RNN\nWhy Sigmoid function is not commonly used as an activation function in NN ? Zero gradient"
+    "text": "The nominative case is one of the grammatical cases in German, used primarily for the subject of a sentence, which is the person or thing performing the action of the verb. It’s also used for predicate nouns or pronouns that refer back to the subject.\nHere are some examples of how the nominative case is used:\n\nSubject of a Sentence: The noun or pronoun that performs the action of the verb.\n\n“Der Hund bellt.” (The dog barks.)\n“Sie liest ein Buch.” (She reads a book.)\n\nPredicate Nouns or Pronouns: Nouns or pronouns that rename or describe the subject in a sentence.\n\n“Mein Bruder ist Arzt.” (My brother is a doctor.)\n“Der Himmel ist blau.” (The sky is blue.)\n\nApposition: When two nouns or noun phrases are used together to describe the same person or thing.\n\n“Meine Mutter, eine Lehrerin, kommt bald.” (My mother, a teacher, is coming soon.)\n“Der Mann, mein Nachbar, ist sehr freundlich.” (The man, my neighbor, is very friendly.)\n\n\n\n\n\nThe accusative case is one of the four grammatical cases in German. It indicates the direct object of a sentence, often answering the question “what?” or “whom?” The accusative case is used for the noun or pronoun that directly receives the action of the verb.\nHere are some examples of how the accusative case is used:\n\nDirect Objects: In sentences where the action of the verb is directly applied to something or someone.\n\n“Ich sehe den Mann.” (I see the man.)\n“Sie liest ein Buch.” (She reads a book.)\n\nMotion Toward: When indicating motion towards a specific location.\n\n“Er geht in den Park.” (He goes into the park.)\n“Sie fahren in die Stadt.” (They drive into the city.)\n\nDuration or Time Span: When specifying a duration of time.\n\n“Ich habe den ganzen Tag gearbeitet.” (I worked the whole day.)\n“Wir haben den Film gestern gesehen.” (We watched the movie yesterday.)\n\n\n\n\n\nThe dative case is one of the four grammatical cases in German (the others being nominative, accusative, and genitive). It indicates the indirect object of a sentence, often answering the question “to whom?” or “for whom?” The dative case is used for the recipient of an action or the object that is indirectly affected by the verb.\nHere are some examples of how the dative case is used:\n\nIndirect Objects: In sentences where something is given or done to someone or something else.\n\n“Ich gebe dem Mann das Buch.” (I give the book to the man.)\n\nCertain Prepositions: Some prepositions in German always take the dative case.\n\n“Ich gehe mit meinem Freund.” (I am going with my friend.)\n“Er spricht mit dem Lehrer.” (He is speaking with the teacher.)\n\nDative Objects with Verbs: Some verbs are used with dative objects, indicating who or what is indirectly affected by the action.\n\n“Ich helfe meiner Schwester.” (I am helping my sister.)\n“Sie glaubt dem Arzt.” (She believes the doctor.)\n\n\n\n\n\nThe genitive case is another grammatical case in German, indicating possession or the relationship between nouns. It often answers the question “whose?” or “of whom/what?” The genitive case is used to show ownership, association, or origin.\nHere are some examples of how the genitive case is used:\n\nPossession: Showing ownership or possession.\n\n“Das Auto meines Vaters.” (My father’s car.)\n“Die Farbe des Himmels.” (The color of the sky.)\n\nRelationships: Indicating relationships between nouns.\n\n“Die Stimme der Sängerin.” (The voice of the singer.)\n“Das Land der Träume.” (The land of dreams.)\n\nCertain Prepositions: Some prepositions in German always take the genitive case.\n\n“Wegen des Wetters.” (Because of the weather.)\n“Trotz des Regens.” (Despite the rain.)\n\n\n\n\n\n\nIn German, “ein,” “eine,” and “einen” are all forms of the indefinite article “a” or “an” in English. They are used to indicate the gender (masculine, feminine, or neuter) and case (nominative, accusative, or dative) of the noun they precede.\n\n“Ein” is used for masculine and neuter nouns in the nominative case.\n“Eine” is used for feminine nouns in the nominative case.\n“Einen” is used for masculine nouns in the accusative case.\n\n\nMasculine:\n\nNominative case: “ein” (a)\nAccusative case: “einen” (a)\n\nFeminine:\n\nNominative case: “eine” (a)\nAccusative case: “eine” (a)\n\nNeuter:\n\nNominative case: “ein” (a)\nAccusative case: “ein” (a)\n\n\nCheat sheet:\n\n\n\nIndefinite Article Cheat Sheet"
   },
   {
-    "objectID": "posts/cnn/cnn.html#convolution-layer",
-    "href": "posts/cnn/cnn.html#convolution-layer",
-    "title": "Convolutional Neuron Network",
-    "section": "Convolution layer",
-    "text": "Convolution layer\nKeywords: Spatial dimension, Depth, Filters Bank, feature maps, Pooling\n\nKernel\nKernel refers to a small matrix used for convolutional operations. Convolution is the fundamental operation in a CNN, where the kernel (also called a filter) is applied to input data, typically an image, to produce feature maps. ’’ \n\n\nStride\n“stride” refers to the number of pixels by which the convolutional kernel moves across the input data at each step during the convolution operation. In below example, illustrate a case when stride = 2.\n\\[\\text{output depth} = \\frac{width - filter + 2 \\times pad}{stride} + 1\\]\n\n\n\nConvolution of a 5x5 input (blue) with 3x3 kernel (grey) with a stride of 2 and padding of 1. The 3x3 output is in green. Source\n\n\n\n\nPadding\nPadding is a technique used to control the spatial dimensions of the output feature maps after applying convolutional operations to the input data.\nFeatures of padding in CNN:\n\nkeep the image data near to border edge\nmaintain the size of input image dimension\nchange the output size of convolution layer\n\n\n\nPooling\n\nWhat is pooling ?\n\na technique to reduce the activation spatial dimensions/Pooling helps in reducing memory consumption in deeper layers. It is also an important step to convert the spatial information into features.\n\n\nThe two most common pooling methods are : Max pooling and Average pooling.\n\n\nCode\nimport torch\nimport torch.nn.functional as F\n\n# Define input image\nimage = torch.tensor([[2, 2, 7, 3],\n                      [9, 4, 6, 1],\n                      [8, 5, 2, 4],\n                      [3, 1, 2, 6]], dtype=torch.float32)\n\n# Add batch and channel dimensions\nimage = image.unsqueeze(0).unsqueeze(0)\n\n# Apply max pooling directly using functional API\noutput = F.max_pool2d(image, kernel_size=2, stride=2)\n\n# Print output image\noutput = output.squeeze().numpy()\nprint(output)\n\n\n[[9. 7.]\n [8. 6.]]"
-  },
-  {
-    "objectID": "ielts.html",
-    "href": "ielts.html",
-    "title": "IELTS",
+    "objectID": "posts/german-grammar/german.html#four-grammatical-cases",
+    "href": "posts/german-grammar/german.html#four-grammatical-cases",
+    "title": "German Grammar",
     "section": "",
-    "text": "Day 1\n\n\n\n\n\n\n\n\n\n\n\nMar 29, 2024\n\n\nSamith Va\n\n\n\n\n\n\nNo matching items"
+    "text": "The nominative case is one of the grammatical cases in German, used primarily for the subject of a sentence, which is the person or thing performing the action of the verb. It’s also used for predicate nouns or pronouns that refer back to the subject.\nHere are some examples of how the nominative case is used:\n\nSubject of a Sentence: The noun or pronoun that performs the action of the verb.\n\n“Der Hund bellt.” (The dog barks.)\n“Sie liest ein Buch.” (She reads a book.)\n\nPredicate Nouns or Pronouns: Nouns or pronouns that rename or describe the subject in a sentence.\n\n“Mein Bruder ist Arzt.” (My brother is a doctor.)\n“Der Himmel ist blau.” (The sky is blue.)\n\nApposition: When two nouns or noun phrases are used together to describe the same person or thing.\n\n“Meine Mutter, eine Lehrerin, kommt bald.” (My mother, a teacher, is coming soon.)\n“Der Mann, mein Nachbar, ist sehr freundlich.” (The man, my neighbor, is very friendly.)\n\n\n\n\n\nThe accusative case is one of the four grammatical cases in German. It indicates the direct object of a sentence, often answering the question “what?” or “whom?” The accusative case is used for the noun or pronoun that directly receives the action of the verb.\nHere are some examples of how the accusative case is used:\n\nDirect Objects: In sentences where the action of the verb is directly applied to something or someone.\n\n“Ich sehe den Mann.” (I see the man.)\n“Sie liest ein Buch.” (She reads a book.)\n\nMotion Toward: When indicating motion towards a specific location.\n\n“Er geht in den Park.” (He goes into the park.)\n“Sie fahren in die Stadt.” (They drive into the city.)\n\nDuration or Time Span: When specifying a duration of time.\n\n“Ich habe den ganzen Tag gearbeitet.” (I worked the whole day.)\n“Wir haben den Film gestern gesehen.” (We watched the movie yesterday.)\n\n\n\n\n\nThe dative case is one of the four grammatical cases in German (the others being nominative, accusative, and genitive). It indicates the indirect object of a sentence, often answering the question “to whom?” or “for whom?” The dative case is used for the recipient of an action or the object that is indirectly affected by the verb.\nHere are some examples of how the dative case is used:\n\nIndirect Objects: In sentences where something is given or done to someone or something else.\n\n“Ich gebe dem Mann das Buch.” (I give the book to the man.)\n\nCertain Prepositions: Some prepositions in German always take the dative case.\n\n“Ich gehe mit meinem Freund.” (I am going with my friend.)\n“Er spricht mit dem Lehrer.” (He is speaking with the teacher.)\n\nDative Objects with Verbs: Some verbs are used with dative objects, indicating who or what is indirectly affected by the action.\n\n“Ich helfe meiner Schwester.” (I am helping my sister.)\n“Sie glaubt dem Arzt.” (She believes the doctor.)\n\n\n\n\n\nThe genitive case is another grammatical case in German, indicating possession or the relationship between nouns. It often answers the question “whose?” or “of whom/what?” The genitive case is used to show ownership, association, or origin.\nHere are some examples of how the genitive case is used:\n\nPossession: Showing ownership or possession.\n\n“Das Auto meines Vaters.” (My father’s car.)\n“Die Farbe des Himmels.” (The color of the sky.)\n\nRelationships: Indicating relationships between nouns.\n\n“Die Stimme der Sängerin.” (The voice of the singer.)\n“Das Land der Träume.” (The land of dreams.)\n\nCertain Prepositions: Some prepositions in German always take the genitive case.\n\n“Wegen des Wetters.” (Because of the weather.)\n“Trotz des Regens.” (Despite the rain.)"
   },
   {
-    "objectID": "ielts/day1/day1.html",
-    "href": "ielts/day1/day1.html",
-    "title": "Day 1",
+    "objectID": "posts/german-grammar/german.html#indefinite-articles",
+    "href": "posts/german-grammar/german.html#indefinite-articles",
+    "title": "German Grammar",
     "section": "",
-    "text": "Vocabulary\n\nproximity (n) : nearness in space, time or distance.\n\nDo not operate microphone close proximity to the television sets.\nThe Traviston Frog can only live in proximity to water.\n\nbooth (n) : a small temporary tent used for selling goods at park.\n\nOn the left of park entrance, there is a ticket booth.\n\nbeneath (prep) : extend directly underneath. \nthernometer (n): an equipment use to measure the temperature.\nribbon (n) : a colorful string used to tie around the present. \nfold up (v) : to make smaller or more compact.\n\nNeatly fold up each of the ends of the paper and stick them down. \n\ndisheartened (adj) : disappointed about something and have less confidence or less hope about it.\n\nHe was disheartened by their hostile reaction.\nShe felt disheartened at her failure.\n\nobscure (adj) : not discovered or know about, uncertain.\n\nAn obscure island in Pacific ocean.\nHe has an obscure origin.\n\nsemantic (adj) : connected with the meaning of words.\n\nProgrammers should ensure that their code is semantically meaningful and well-documented.\n\nrigorous (adj) : strict, thorough.\n\nThere is a rigorous security check at the office entrance.\nConducting a rigorous scientific research need a careful planning team.\n\nsap (v) : to weaken something.\n\nThe constant budget cuts were sapping the organization’s ability to innovate and compete in the market.\nDepression can sap the energy and self-esteem from an individual.\n\n\n\n\nSpeaker attitude\nIn IELTS listening test, knowing speaker attitude can become quite handy. Below are some synonym to illustrate different attitudes.\n\n\n\n\n\n\n\nG\n\n\n\nirritated\n\nirritated\n\n\n\nannoyed\n\nannoyed\n\n\n\nirritated--annoyed\n\n\n\n\nreluctant\n\nreluctant\n\n\n\nhesistant\n\nhesistant\n\n\n\nreluctant--hesistant\n\n\n\n\ndoubtful\n\ndoubtful\n\n\n\ndubious\n\ndubious\n\n\n\ndoubtful--dubious\n\n\n\n\nenthusiatic\n\nenthusiatic\n\n\n\neager\n\neager\n\n\n\nenthusiatic--eager"
+    "text": "In German, “ein,” “eine,” and “einen” are all forms of the indefinite article “a” or “an” in English. They are used to indicate the gender (masculine, feminine, or neuter) and case (nominative, accusative, or dative) of the noun they precede.\n\n“Ein” is used for masculine and neuter nouns in the nominative case.\n“Eine” is used for feminine nouns in the nominative case.\n“Einen” is used for masculine nouns in the accusative case.\n\n\nMasculine:\n\nNominative case: “ein” (a)\nAccusative case: “einen” (a)\n\nFeminine:\n\nNominative case: “eine” (a)\nAccusative case: “eine” (a)\n\nNeuter:\n\nNominative case: “ein” (a)\nAccusative case: “ein” (a)\n\n\nCheat sheet:\n\n\n\nIndefinite Article Cheat Sheet"
   },
   {
-    "objectID": "posts/deep-learning-journey/deep-learning-journey.html#what-are-three-elements-of-the-artificial-intelligence-explosion-suddenly-become-famous",
-    "href": "posts/deep-learning-journey/deep-learning-journey.html#what-are-three-elements-of-the-artificial-intelligence-explosion-suddenly-become-famous",
-    "title": "Deep Learning Journey",
-    "section": "What are three elements of the artificial intelligence explosion (suddenly become famous) ?",
-    "text": "What are three elements of the artificial intelligence explosion (suddenly become famous) ?\nABC\n:::\n\n\n\n\n\n\nNote\n\n\n\n!pip install staring with a ! is a bash code\n\n\n\n\n\n\n\n\nTip\n\n\n\nTrying to spend too much time on theory can be counterproductive. The key is to just code and try to solve problems: the theory can come later when you have context and motivation.\n\n\n\nThe first device that was based on the principle of the artificial neuron is : The Mark I Perceptron.\nRequirements for the parallel distributed processing:\n\na set of processing unit\na state of activation\nan output function for each unit\na pattern of connectivity between units\n\nTwo theoretical misunderstandings that held back the field of neuron networks is:\n\nadding one more layers (2 layer) then it will be possible to approximate any function.\nAdding more layers to make model better\n\nGPU is a kind of processor which can do the parallel computing, it is commonly used in training the model.\nBecause traditional computer does not come with a GPU, hence its computation speed is slow and inefficient.\nSamuel mean by “weight assignment” refer to setting the value of variable on how the function works/behave.\n“weight” is refer to “parameters” in deep learning.\nBecause some problems such as image recognition, we unconsciously know how our brain can recognize patterns in images.\nUniversal approximation theorem.\nData(input) and labels(model output references).\nUsing feedback loop can be problematic, more biased of dataset, the more biased of the model.\nNo, we can use any size, using image of size 264x264 is due to historical reason (traditional model can only trained using 264x264 size).\nClassification : is for predicting the categories of dataset while Regression predict numerical value.\nValidation set is an less exposed data set which is used to find the optimal hyperparameters of various architectures of model. Test set is used to predict the unseen data and evaluate the model overall performance.\nFastai will automatically set the validation set to 0.2 (20%).\nNo, we can’t. A counter case is training with time-series data which is too easy for model to to fill the gap, when we select random validation instances.\nOverfitting is a problem when the model perform very well on training data set but poorly in predicting unseen data. An example : when a model is trained to decide the image is cat or dog, model can only accurately make a classification when given an instance within train dataset. But fail when given cat or dog image outside the training set.\nMetric is a version of loss which used for human consumption, it can be error percentage or accuracy.\nUsing pre-trained model, can increase inefficiency, because pretrained model (already has more capability)can already recognize basic patterns of data.\nHead of a model is the last layer of the model. Note that we need to change the head of model (one or more layers to make it suitable for specifics task of the model) while using pre-trained model.\nThe first layer of CNN, it determines diagonal, horizontal, and vertical edges as well as various gradients. 2nd layer the model detects features within the image such as circle, triangle etc.\nImage models not only useful for photos, for instance, voice signal can also express in term of spectrum in images.\nArchitecture is the pre assume functions or structure of the model.\nSegmentation is task where photos are divided and recognized into small components labels. For example, self driving car might use video data and do the segmentation recognize the pedestrian and adjust direction or speed.\ny_range is used for setting a range in label for specific task.\nHyperparameters are the specification of the model that are manually set by human such as model architecture, learning rate, hidden layers number etc.\nBest way to avoid failures when using AI in an organization is to keep a test dataset separately(without intervening with training process)."
-  },
-  {
-    "objectID": "posts/regression/regression.html",
-    "href": "posts/regression/regression.html",
-    "title": "Regression and Classification",
+    "objectID": "posts/html/html.html",
+    "href": "posts/html/html.html",
+    "title": "HTML5",
     "section": "",
-    "text": "Linear regression is a statistical method used to model the relationship between a dependent variable and one or more independent variables. It assumes that there is a linear relationship between the independent variables (predictors) and the dependent variable (outcome).\n\n\nWith linear regression model, we generally use Square-Error as the loss function.\n\\[L(f) = \\frac{1}{2}\\sum_{i=1}^{n}(f(x^{(i)}) - y^{(i)})^2\\]\nWhere the superscipt \\(i\\) denotes \\(i^{\\text{th}}\\) data in the dataset\n\n\n\nLearning rate (lr) is the rate that weight is updated in order to reduce the loss. If lr is too large, the model might not able to find optima weight with smallest loss. On the other hand if lr is too small, the model weight will be updated very slow, which lead in needing more iterations to find the optima weight.\n\nHow to choose the optimal lr ?\n\nWe can change lr with number of iterations. Suppose that we are at \\(t\\) iteration and learning rate \\(\\alpha\\) :\n\n\n\\[ \\alpha_t = \\frac{\\alpha}{\\sqrt{t + 1}}\\]\n\nWhat is the best learning rate ?"
+    "text": "HTML5 is the latest version of the Hypertext Markup Language (HTML), which is the standard language used to create and design web pages and applications. It is a significant update to the HTML specification, introducing new features, elements, and APIs to enhance the functionality, semantics, and interoperability of web documents.\nContents will be included in this page:"
   },
   {
-    "objectID": "posts/regression/regression.html#learning-rate",
-    "href": "posts/regression/regression.html#learning-rate",
-    "title": "Regression and Classification",
-    "section": "",
-    "text": "Learning rate (lr) is the rate that weight is updated in order to reduce the loss. If lr is too large, the model might not able to find optima weight with smallest loss. On the other hand if lr is too small, the model weight will be updated very slow, which lead in needing more iterations to find the optima weight.\n\nHow to choose the optimal lr ?\n\nWe can change lr with number of iterations. Suppose that we are at \\(t\\) iteration and learning rate \\(\\alpha\\) :\n\n\n\\[ \\alpha_t = \\frac{\\alpha}{\\sqrt{t + 1}}\\]\n\nWhat is the best learning rate ?"
+    "objectID": "posts/html/html.html#form",
+    "href": "posts/html/html.html#form",
+    "title": "HTML5",
+    "section": "Form",
+    "text": "Form\n\nMethod Attribute\n\nThe method attribute specifies the HTTP method that the browser uses to submit the form data to the server.\nIt can take two values: GET or POST.\n\nGET: The form data is appended to the URL in the form of query parameters. This method is suitable for submitting small amounts of data.\nPOST: The form data is sent in the request body. This method is suitable for submitting large amounts of data and sensitive information.\n\n\n&lt;form method=\"POST\" action=\"submit.php\"&gt; \n    &lt;!-- Form fields go here --&gt; \n    &lt;input type=\"submit\" value=\"Submit\"&gt; \n&lt;/form&gt;\n\n\nAction Attribute\n\nThe action attribute specifies the URL where the form data is submitted.\nIt can be a relative or absolute URL. If it’s a relative URL, it is resolved relative to the current page.\nThe server-side script specified in the action attribute typically processes the form data and sends a response back to the client.\n\n&lt;form method=\"POST\" action=\"/submit\"&gt;\n    &lt;label for=\"username\"&gt;Username:&lt;/label&gt;\n    &lt;input type=\"text\" id=\"username\" name=\"username\"&gt;\n    &lt;input type=\"submit\" value=\"Submit\"&gt;\n&lt;/form&gt;\n\n\nFor Attribute\n\nThe for attribute is used in &lt;label&gt; elements to specify which form element the label is associated with.\nIt is particularly useful for improving accessibility and usability as it allows users to click on the label text to focus or select the associated form element.\nThe value of the for attribute should match the id attribute of the form element it is associated with.\n\n&lt;label for=\"username\"&gt;Username:&lt;/label&gt;\n&lt;input type=\"text\" id=\"username\" name=\"username\"&gt;"
   },
   {
-    "objectID": "posts/regression/regression.html#loss-function",
-    "href": "posts/regression/regression.html#loss-function",
-    "title": "Regression and Classification",
+    "objectID": "posts/html/html.html#modern-html-containers",
+    "href": "posts/html/html.html#modern-html-containers",
+    "title": "HTML5",
+    "section": "Modern HTML Containers",
+    "text": "Modern HTML Containers\n\nSection\nThe &lt;section&gt; element is used to define sections within a document or webpage. It’s often used to group related content together and can provide a semantic meaning to the sections of a webpage.\n&lt;section&gt;\n    &lt;!-- Section content goes here --&gt;\n&lt;/section&gt;\n\n\nDiv\nThe &lt;div&gt; element is a generic container that can be used to group elements together or create divisions within a webpage. It’s very flexible and commonly used in CSS for styling purposes.\n&lt;div&gt; \n    &lt;!-- Content goes here --&gt; \n&lt;/div&gt;\n\n\nFieldset\n&lt;fieldset&gt; is a container element used to group related form elements together. It’s typically used along with the &lt;legend&gt; element, which provides a caption or title for the &lt;fieldset&gt;.\n&lt;form&gt;\n  &lt;fieldset&gt;\n    &lt;legend&gt;Personal Information&lt;/legend&gt;\n    &lt;label for=\"fname\"&gt;First Name:&lt;/label&gt;\n    &lt;input type=\"text\" id=\"fname\" name=\"fname\"&gt;&lt;br&gt;&lt;br&gt;\n    &lt;label for=\"lname\"&gt;Last Name:&lt;/label&gt;\n    &lt;input type=\"text\" id=\"lname\" name=\"lname\"&gt;&lt;br&gt;&lt;br&gt;\n  &lt;/fieldset&gt;\n  \n  &lt;fieldset&gt;\n    &lt;legend&gt;Contact Information&lt;/legend&gt;\n    &lt;label for=\"email\"&gt;Email:&lt;/label&gt;\n    &lt;input type=\"email\" id=\"email\" name=\"email\"&gt;&lt;br&gt;&lt;br&gt;\n    &lt;label for=\"phone\"&gt;Phone:&lt;/label&gt;\n    &lt;input type=\"tel\" id=\"phone\" name=\"phone\"&gt;&lt;br&gt;&lt;br&gt;\n  &lt;/fieldset&gt;\n  \n  &lt;input type=\"submit\" value=\"Submit\"&gt;\n&lt;/form&gt;\n\n\nArticle\n&lt;article&gt;: The &lt;article&gt; element represents a self-contained piece of content that could be distributed and reused independently. It’s commonly used for blog posts, news articles, forum posts, etc.\n&lt;article&gt; \n&lt;!-- Article content goes here --&gt; \n&lt;/article&gt;\n\n\nModern HTML5 elements\n&lt;header&gt;, &lt;footer&gt;, &lt;nav&gt;, &lt;main&gt;: These elements are part of HTML5 and are used to define specific structural parts of a webpage.\n\n&lt;header&gt;: Typically used to contain introductory content or navigation links at the top of a webpage.\n&lt;footer&gt;: Contains footer information such as copyright, contact details, etc., usually placed at the bottom of a webpage.\n&lt;nav&gt;: Used to define navigation links.\n&lt;main&gt;: Represents the main content area of a webpage.\n\n&lt;header&gt; \n    &lt;!-- Header content goes here --&gt; \n&lt;/header&gt; \n&lt;footer&gt; \n    &lt;!-- Footer content goes here --&gt; \n&lt;/footer&gt; \n&lt;nav&gt; \n    &lt;!-- Navigation links go here --&gt; \n&lt;/nav&gt; \n&lt;main&gt; \n    &lt;!-- Main content goes here --&gt; \n&lt;/main&gt;\nModern HTML layout design flowchart\n\n\n\nModern HTML Stucture Design Flowchat (From html5 Doctor)"
+  },
+  {
+    "objectID": "posts/html/html.html#security-risks-and-preventions",
+    "href": "posts/html/html.html#security-risks-and-preventions",
+    "title": "HTML5",
+    "section": "Security Risks and Preventions",
+    "text": "Security Risks and Preventions\n\nReverse Tabnabbing\nReverse tabnabbing is a security vulnerability that occurs when a website opens a link in a new tab or window (target=\"_blank\") and the newly opened page can manipulate the original page through the window.opener property.\nHere’s how it works:\n\nInitial Action: A user clicks on a link on a website that opens in a new tab or window using target=\"_blank\".\nNew Page Opens: The new page opens in a separate browsing context, typically in a new tab.\nManipulation: If the new page contains malicious code, it can access the window.opener property, which refers to the page that opened it. With this access, the malicious page can redirect the original page (the one that opened the link) to a phishing site, alter its content, or perform other malicious actions.\n\nReverse tabnabbing can be exploited by attackers to deceive users into thinking they are interacting with a legitimate website while actually being redirected to a malicious one.\nTo mitigate this security risk, web developers can use the following methods:\n\nRel=“noopener noreferrer”: Adding rel=\"noopener noreferrer\" to anchor (&lt;a&gt;) elements that open links in a new tab or window prevents the newly opened page from accessing window.opener and ensures that the HTTP referer header is not sent, enhancing both security and privacy.\nExplicit Rel=“noopener”: Alternatively, if noreferrer is not desired, using rel=\"noopener\" alone can prevent access to window.opener. However, noreferrer adds an extra layer of protection by also preventing the referer header from being sent.\n\n&lt;a href='https:www.google.com' target='_blank' rel='noopener norefered'&gt; Google.com &lt;/a&gt;"
+  },
+  {
+    "objectID": "posts/open-cv/open-cv.html",
+    "href": "posts/open-cv/open-cv.html",
+    "title": "OpenCV",
     "section": "",
-    "text": "With linear regression model, we generally use Square-Error as the loss function.\n\\[L(f) = \\frac{1}{2}\\sum_{i=1}^{n}(f(x^{(i)}) - y^{(i)})^2\\]\nWhere the superscipt \\(i\\) denotes \\(i^{\\text{th}}\\) data in the dataset"
+    "text": "OpenCV (Open Source Computer Vision Library) is an open-source computer vision and machine learning software library. It provides a wide range of functionalities for image and video processing.\nHere’s a crash course on using OpenCV in Python."
+  },
+  {
+    "objectID": "posts/open-cv/open-cv.html#installation",
+    "href": "posts/open-cv/open-cv.html#installation",
+    "title": "OpenCV",
+    "section": "Installation:",
+    "text": "Installation:\nInstall OpenCV for Python via pip: pip install opencv-python"
+  },
+  {
+    "objectID": "posts/open-cv/open-cv.html#basic-operations",
+    "href": "posts/open-cv/open-cv.html#basic-operations",
+    "title": "OpenCV",
+    "section": "Basic Operations",
+    "text": "Basic Operations\n\n1. Reading and displaying image\nimport cv2\n# Read an image from file\nimage = cv2.imread('image.jpg')\n\n# Display the image in a window\ncv2.imshow('Image', image)\n\n# Wait for a key press and then close the window\ncv2.waitKey(0)\ncv2.destroyAllWindows()\n\n\n\nOutput\n\n\n\n\n2. Writing image\nimport cv2\n# Read an image in BGR\nimage = cv2.imread('image.jpg')\n\n# Write the image to a file\ncv2.imwrite('output_image.jpg', image)\n\n\n3. Coverting color spaces\nOpenCV provides functions to convert images between different color spaces, such as RGB, BGR, HSV, etc.\nimport cv2\n# Read an image\nimage = cv2.imread('image.jpg')\n\n# Convert BGR to grayscale\ngray_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)\n\n# Convert BGR to HSV\nhsv_image = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)\ncv2.imwrite('gray_image.jpg', gray_image)\ncv2.imwrite('hsv_image.jpg', hsv_image)\n\n\n\n\n\n\n\n\n\nGrey\n\n\n\n\n\n\n\nHSV\n\n\n\n\n\n\n\n4. Resizing and Cropping Images\nResize images to a specific width and height or by a scaling factor. Cropping involves selecting a region of interest (ROI) from the image.\nimport cv2\n# Read an image\nimage = cv2.imread('image.jpg')\n\n# Resize the image to a specific width and height\nnew_width, new_height = 200, 200\nresized_image = cv2.resize(image, (new_width, new_height))\n\n# Resize the image by a scaling factor\nscale_percent = 50  # percent of original size\nwidth = int(image.shape[1] * scale_percent / 100)\nheight = int(image.shape[0] * scale_percent / 100)\nresized_image = cv2.resize(image, (width, height))\ncv2.imwrite('resized.jpg', resized_image)\n\n# Crop a region of interest (ROI) from the image\nx, y, w, h = 100, 100, 200, 200  # Example coordinates and dimensions\ncropped_image = image[y:y+h, x:x+w]\ncv2.imwrite('cropped.jpg', cropped_image)\n\n\n\n\n\n\n\n\n\nResized\n\n\n\n\n\n\n\nCropped\n\n\n\n\n\n\n\n5. Flipping Images\nThe function flip flips the array in one of three different ways (row and column indices are 0-based): dst = cv.flip( src, flipCode ) dst: output array of the same size and type as src.\nThe function has 2 required arguments:\n\nsrc: input image\nflipCode: a flag to specify how to flip the array; 0 means flipping around the x-axis and positive value (for example, 1) means flipping around y-axis. Negative value (for example, -1) means flipping around both axes.\n\n\nimport cv2\nimport matplotlib.pyplot as plt\n\nimg_bgr = cv2.imread('image.jpg')\nimg_rgb = img_bgr[:, :, ::-1]\n\nimg_rgb_flipped_horz = cv2.flip(img_rgb, 1)\nimg_rgb_flipped_vert = cv2.flip(img_rgb, 0)\nimg_rgb_flipped_both = cv2.flip(img_rgb, -1)\n\n# Show the images\nplt.figure(figsize=(18, 5))\nplt.subplot(141) # 141 : 1 row, 4 columns, current index of subplot\nplt.imshow(img_rgb_flipped_horz)\nplt.title(\"Horizontal Flip\")\nplt.subplot(142)\nplt.imshow(img_rgb_flipped_vert)\nplt.title(\"Vertical Flip\")\nplt.subplot(143)\nplt.imshow(img_rgb_flipped_both)\nplt.title(\"Both Flipped\")\nplt.subplot(144)\nplt.imshow(img_rgb)\nplt.title(\"Original\")\nplt.show()\n\n\n\n\n\n\n\n\n\n\n6. Reading and Displaying Videos\nimport cv2\n\n# Open a video file\ncap = cv2.VideoCapture('video.mp4')\n\nwhile cap.isOpened():\n    ret, frame = cap.read()\n    if not ret:\n        break\n    cv2.imshow('Video', frame)\n    if cv2.waitKey(25) & 0xFF == ord('q'):\n        break\n\ncap.release()\ncv2.destroyAllWindows()\nFore more reference, visit OpenCV Documentation"
   },
   {
     "objectID": "posts/rf-noise/rf-noise.html",
@@ -497,25 +371,11 @@
     "text": "What will cover in this section : Noise Figure, Friis Equation, Thermal Noise of Resistor, MOSFET Noise."
   },
   {
-    "objectID": "posts/rf-noise/rf-noise.html#noise-figure",
-    "href": "posts/rf-noise/rf-noise.html#noise-figure",
+    "objectID": "posts/rf-noise/rf-noise.html#thermal-noise-in-resistor",
+    "href": "posts/rf-noise/rf-noise.html#thermal-noise-in-resistor",
     "title": "RF Noise",
-    "section": "Noise Figure",
-    "text": "Noise Figure\nIn circuit and system design, we interested in the signal-to-noise ratio (SNR). To quantify how noisy the circuit is, we can define its noise factor as\n\\[\\text{NF} = \\frac{\\text{SNR}_\\text{in}}{\\text{SNR}_\\text{out}}\\]\nor Noise figure in dB as\n\\[\\text{NF}|_\\text{dB} = 10\\log(\\frac{\\text{SNR}_\\text{in}}{\\text{SNR}_\\text{out}})\\]\nWhat is the NF for noiseless stage ?\n\n\nAnswer\n\nNF = 1 = 0 dB"
-  },
-  {
-    "objectID": "posts/rf-noise/rf-noise.html#friiss-equation",
-    "href": "posts/rf-noise/rf-noise.html#friiss-equation",
-    "title": "RF Noise",
-    "section": "Friis’s equation",
-    "text": "Friis’s equation\n\n\n\nLNA Noise Model (RF Microelectronics, Behzad Razavi)\n\n\nWe can have \\[\\alpha = \\frac{Z_\\text{in}}{Z_\\text{in} + R_S}\\] \\[\\text{SNR}_\\text{in} = \\frac{V^2_\\text{in}\\alpha^2}{\\bar{V}^2_\\text{n,RS}\\alpha^2} = \\frac{V^2_\\text{in}}{\\bar{V}^2_\\text{n,RS}}\\]\n\\[\\text{SNR}_\\text{out} = \\frac{V^2_\\text{in}\\alpha^2 {A^2}_v}{\\bar{V}^2_\\text{n,RS}\\alpha^2 {A^2}_v + \\bar{V}^2_n}\\]\n\\[ NF = \\frac{\\text{SNR}_\\text{in}}{\\text{SNR}_\\text{out}} = 1 + \\frac{\\bar{V}_n ^ 2}{\\bar{V}^2_\\text{n,RS} \\alpha^2 A_v ^2}\\]"
-  },
-  {
-    "objectID": "posts/rf-noise/rf-noise.html#thermal-noise-equivalent",
-    "href": "posts/rf-noise/rf-noise.html#thermal-noise-equivalent",
-    "title": "RF Noise",
-    "section": "Thermal noise equivalent",
-    "text": "Thermal noise equivalent\nFor ideal inductor and capacitor, is there noise ?\nThermal noise the most significant noise encountered in electronic devices. We can model the thermal in two ways:\n\n\n\nThermal Noise Equilvalent Circuit\n\n\n\nThevenin \\[\\bar{V}^2_n = 4kTR_1\\]\nNorton \\[\\bar{I}^2_n = 4kT/R_1\\]\n\nWhere\n\n\\(k = 1.38 \\times 10^{-23} J/K\\) is the Boltzmann constant.\n\\(T\\) is the temperature kelvin \\((K)\\)"
+    "section": "Thermal Noise in Resistor",
+    "text": "Thermal Noise in Resistor\nFor ideal inductor and capacitor, is there noise ?\nThermal noise the most significant noise encountered in electronic devices. We can model the thermal in two ways:\n\n\n\nThermal Noise Equilvalent Circuit\n\n\n\nThevenin \\[\\bar{V}^2_n = 4kTR_1\\]\nNorton \\[\\bar{I}^2_n = 4kT/R_1\\]\n\nWhere\n\n\\(k = 1.38 \\times 10^{-23} J/K\\) is the Boltzmann constant.\n\\(T\\) is the temperature kelvin \\((K)\\)"
   },
   {
     "objectID": "posts/rf-noise/rf-noise.html#thermal-noise-in-mosfet",
@@ -525,11 +385,32 @@
     "text": "Thermal noise in MOSFET\n Thermal noise of MOS transistors which is operating in the saturation region is approximated by :\n\nA current source tied between the source and drain terminals. \\[\\bar{I_n}^2 = 4kT \\gamma g_m\\]\nA voltage source in series with gate \\[\\bar{V_n}^2 = 4kT \\gamma / g_m\\]\n\nWhere\n\n\\(\\gamma\\) is the excess noise coefficient\n\\(g_m\\) is the transconductance."
   },
   {
-    "objectID": "posts/rlc-circuit/rlc-circuit.html",
-    "href": "posts/rlc-circuit/rlc-circuit.html",
-    "title": "RLC Circuit",
-    "section": "",
-    "text": "Resistance is a property of a material or component in a circuit that opposes the flow of electric current. It’s essentially the friction or obstruction that electrons encounter as they move through a conductor. Resistance does dissipate power in the form of heat.\nReactance does not dissipate power in the form of heat. Instead, it represents the energy storage and release mechanism associated with capacitors and inductors in AC circuits. Reactance is also frequency-dependent, meaning it varies with the frequency of the AC signal.\n\n\n\nAt resonance, the circuit impedance is at its minimum impedance, leading to Maximum Current Flow: At resonance, the impedance of the circuit is at its minimum value.\nSince impedance is the combination of resistance, inductive reactance, and capacitive reactance, when \\(X_C\\)​ and \\(X_L​\\) cancel each other out, the overall impedance decreases. According to Ohm’s Law \\(I = \\frac{V}{Z}\\), a decrease in impedance at resonance leads to an increase in current flow.\n\n\n\n\n\nQ Factor\n\n\n\\[Q = \\frac{1}{R}\\sqrt{\\frac{L}{{C}}}\\]\n\nWhat is the physical meaning of Q factor ?\n\nIt’s the ratio of energy stored to energy dissipated per cycle.\n\n\n\\[Q = \\omega_0 . \\frac{\\text{energy stored}}{\\text{average power dissipated}}\\]\n\n\n\nBandwidth is defined as then the current or voltage drop by 3 dB when it’s get away from resonant frequency.\n\\[\\Delta\\omega = \\frac{\\omega_0}{2Q}\\]\n\n\n\n\n\n\n\n\nWhy don’t we just use parallel resistor in impedance matching instead of using LC components?\n\n\n\n\nno source RLC circuit : noise figure = loss"
+    "objectID": "posts/rf-noise/rf-noise.html#noise-figure",
+    "href": "posts/rf-noise/rf-noise.html#noise-figure",
+    "title": "RF Noise",
+    "section": "Noise Figure",
+    "text": "Noise Figure\nIn circuit and system design, we interested in the signal-to-noise ratio (SNR). To quantify how noisy the circuit is, we can define its noise factor as\n\\[\\text{NF} = \\frac{\\text{SNR}_\\text{in}}{\\text{SNR}_\\text{out}}\\]\nor Noise figure in dB as\n\\[\\text{NF}|_\\text{dB} = 10\\log(\\frac{\\text{SNR}_\\text{in}}{\\text{SNR}_\\text{out}})\\]\nWhat is the NF for noiseless stage ?\n\n\nAnswer\n\nNF = 1 = 0 dB"
+  },
+  {
+    "objectID": "posts/rf-noise/rf-noise.html#noise-figure-in-lna",
+    "href": "posts/rf-noise/rf-noise.html#noise-figure-in-lna",
+    "title": "RF Noise",
+    "section": "Noise Figure in LNA",
+    "text": "Noise Figure in LNA\n\n\n\nLNA Noise Model (RF Microelectronics, Behzad Razavi, P49)\n\n\nWe can have \\[\\alpha = \\frac{Z_\\text{in}}{Z_\\text{in} + R_S}\\] \\[\\text{SNR}_\\text{in} = \\frac{V^2_\\text{in}\\alpha^2}{\\bar{V}^2_\\text{n,RS}\\alpha^2} = \\frac{V^2_\\text{in}}{\\bar{V}^2_\\text{n,RS}}\\]\n\\[\\text{SNR}_\\text{out} = \\frac{V^2_\\text{in}\\alpha^2 {A^2}_v}{\\bar{V}^2_\\text{n,RS}\\alpha^2 {A^2}_v + \\bar{V}^2_n}\\]\n\\[ NF = \\frac{\\text{SNR}_\\text{in}}{\\text{SNR}_\\text{out}} = 1 + \\frac{\\bar{V}_n ^ 2}{\\bar{V}^2_\\text{n,RS} \\alpha^2 A_v ^2}\\]"
+  },
+  {
+    "objectID": "posts/rf-noise/rf-noise.html#friis-equation-for-cascaded-stages",
+    "href": "posts/rf-noise/rf-noise.html#friis-equation-for-cascaded-stages",
+    "title": "RF Noise",
+    "section": "Friis Equation for Cascaded Stages",
+    "text": "Friis Equation for Cascaded Stages\nTo determine overall noise figure in a cascade of stages, we can use Friis’s equation :\n\\[NF_{\\text{total}} = {NF}_1 + \\frac{NF_2 - 1}{A^2_1} + ... + \\frac{{NF}_n - 1}{A^2_1...A^2_n}\\]\nFrom above expression we can conclude that the first stage’s NF is the most important. Why ?\n\n\nAnswer\n\nConceptually, because the noise from first stage will be amplified multiple times."
+  },
+  {
+    "objectID": "posts/rf-noise/rf-noise.html#rl-and-rc-in-series-and-parallel",
+    "href": "posts/rf-noise/rf-noise.html#rl-and-rc-in-series-and-parallel",
+    "title": "RF Noise",
+    "section": "RL and RC in Series and Parallel",
+    "text": "RL and RC in Series and Parallel\nRL circuit"
   },
   {
     "objectID": "posts/rlc-circuit/rlc-circuit.html#resistance-and-reactance",
@@ -546,6 +427,13 @@
     "text": "Resonant\nAt resonance, the circuit impedance is at its minimum impedance, leading to Maximum Current Flow: At resonance, the impedance of the circuit is at its minimum value.\nSince impedance is the combination of resistance, inductive reactance, and capacitive reactance, when \\(X_C\\)​ and \\(X_L​\\) cancel each other out, the overall impedance decreases. According to Ohm’s Law \\(I = \\frac{V}{Z}\\), a decrease in impedance at resonance leads to an increase in current flow.\n\nQuality Factor\n\n\n\nQ Factor\n\n\n\\[Q = \\frac{1}{R}\\sqrt{\\frac{L}{{C}}}\\]\n\nWhat is the physical meaning of Q factor ?\n\nIt’s the ratio of energy stored to energy dissipated per cycle.\n\n\n\\[Q = \\omega_0 . \\frac{\\text{energy stored}}{\\text{average power dissipated}}\\]\n\n\nBandwidth\nBandwidth is defined as then the current or voltage drop by 3 dB when it’s get away from resonant frequency.\n\\[\\Delta\\omega = \\frac{\\omega_0}{2Q}\\]"
   },
   {
+    "objectID": "posts/rlc-circuit/rlc-circuit.html#series-and-parallel-rlc-transformation",
+    "href": "posts/rlc-circuit/rlc-circuit.html#series-and-parallel-rlc-transformation",
+    "title": "RLC Circuit",
+    "section": "Series and Parallel RLC Transformation",
+    "text": "Series and Parallel RLC Transformation"
+  },
+  {
     "objectID": "posts/rlc-circuit/rlc-circuit.html#impedance-matching",
     "href": "posts/rlc-circuit/rlc-circuit.html#impedance-matching",
     "title": "RLC Circuit",
@@ -558,132 +446,6 @@
     "title": "RLC Circuit",
     "section": "Loss of impedance matching circuit",
     "text": "Loss of impedance matching circuit\nno source RLC circuit : noise figure = loss"
-  },
-  {
-    "objectID": "posts/deep-learning-journey/deep-learning-journey.html#questions",
-    "href": "posts/deep-learning-journey/deep-learning-journey.html#questions",
-    "title": "Deep Learning Journey",
-    "section": "Questions",
-    "text": "Questions\nQuestions related to this chapter content:\n\nDo you need these for deep learning?\n\nLots of math T / F\nLots of data T / F\nLots of expensive computers T / F\nA PhD T / F\n\nName five areas where deep learning is now the best in the world.\nWhat was the name of the first device that was based on the principle of the artificial neuron?\nBased on the book of the same name, what are the requirements for parallel distributed processing (PDP)?\nWhat were the two theoretical misunderstandings that held back the field of neural networks?\nWhat is a GPU?\nOpen a notebook and execute a cell containing: 1+1. What happens?\nFollow through each cell of the stripped version of the notebook for this chapter. Before executing each cell, guess what will happen.\nComplete the Jupyter Notebook online appendix.\nWhy is it hard to use a traditional computer program to recognize images in a photo?\nWhat did Samuel mean by “weight assignment”?\nWhat term do we normally use in deep learning for what Samuel called “weights”?\nDraw a picture that summarizes Samuel’s view of a machine learning model.\nWhy is it hard to understand why a deep learning model makes a particular prediction?\nWhat is the name of the theorem that shows that a neural network can solve any mathematical problem to any level of accuracy?\nWhat do you need in order to train a model?\nHow could a feedback loop impact the rollout of a predictive policing model?\nDo we always have to use 224×224-pixel images with the cat recognition model?\nWhat is the difference between classification and regression?\nWhat is a validation set? What is a test set? Why do we need them?\nWhat will fastai do if you don’t provide a validation set?\nCan we always use a random sample for a validation set? Why or why not?\nWhat is overfitting? Provide an example.\nWhat is a metric? How does it differ from “loss”?\nHow can pretrained models help?\nWhat is the “head” of a model?\nWhat kinds of features do the early layers of a CNN find? How about the later layers?\nAre image models only useful for photos?\nWhat is an “architecture”?\nWhat is segmentation?\nWhat is y_range used for? When do we need it?\nWhat are “hyperparameters”?\nWhat’s the best way to avoid failures when using AI in an organization?"
-  },
-  {
-    "objectID": "posts/deep-learning-journey/deep-learning-journey.html#answer",
-    "href": "posts/deep-learning-journey/deep-learning-journey.html#answer",
-    "title": "Deep Learning Journey",
-    "section": "Answer",
-    "text": "Answer\n\nFFFF.\nFive areas that DL are good at: natural language processing (NPL), Medical image, security(computer vision), factory(industrial | anomaly detection) and recommendation system(commercial).\nThe first device that was based on the principle of the artificial neuron is : The Mark I Perceptron.\nRequirements for the parallel distributed processing:\n\na set of processing unit\na state of activation\nan output function for each unit\na pattern of connectivity between units\nA propagation rule for propagating patterns of activities through the network of connectivities\nAn activation rule for combining the inputs impinging on a unit with the current state of that unit to produce a new level of activation for the unit\nA learning rule whereby patterns of connectivity are modified by experience\nAn environment within which the system must operate\n\nTwo theoretical misunderstandings that held back the field of neuron networks is:\n\nAdding one more layers (2 layer) then it will be possible to approximate any function.\nAdding more layers to make model better\n\nGPU is a kind of processor which can do the parallel computing, it is commonly used in training the model.\nBecause traditional computer does not come with a GPU, hence its computation speed is slow and inefficient.\nSamuel mean by “weight assignment” refer to setting the value of variable on how the function works/behave.\n“weight” is refer to “parameters” in deep learning.\nBecause some problems such as image recognition, we unconsciously know how our brain can recognize patterns in such images.\nUniversal approximation theorem.\nData(input) and labels(model output references).\nUsing feedback loop can be problematic, the more biased of dataset, the more biased of the model.\nNo, we can use any size, using image of size 264x264 is due to historical reason (traditional model can only trained using 264x264 size).\nClassification is for predicting the categories of dataset while Regression predict numerical value.\nValidation set is an less exposed data set which is used to find the optimal hyperparameters of various architectures of model. Test set is used to predict the unseen data and evaluate the model overall performance.\nFastAI will automatically set the validation set to 0.2 (20%).\nNo, we can’t. A counter case is training with time-series data which is too easy for model to to fill the gap, when we select random validation instances.\nOverfitting is a problem when the model perform very well on training data set but perform poorly in predicting unseen data. An example : when a model is trained to decide the image is cat or dog, model can only accurately make a classification when given an instance within train dataset. But fail when given cat or dog image outside the training set (or the cat image that is not similar to the images within training set).\nMetric is a version of loss which used for human (make it more understandable for human), it can be error percentage or accuracy.\nUsing pre-trained model, can increase training efficiency, because pretrained model (already has more capability) can already recognize basic patterns of data.\nHead of a model is the last layer of the model. Note that we need to change the head of model (one or more layers to make it suitable for specifics task of the model) while using pre-trained model.\nThe first layer of CNN, it determines diagonal, horizontal, and vertical edges as well as various gradients. 2nd layer the model detects features within the image such as circle, triangle etc.\nImage models are not only useful for photos, but also useful in other type of input. For instance, voice signal can also express in term of spectrum as photos.\nArchitecture is the pre assume functions or structure of the model.\nSegmentation is task where photos are divided and recognized into small components labels. For example, self driving car might use video data and do the segmentation recognize the pedestrian in order to adjust direction or speed.\ny_range is used for setting a range in label for specific task (when we only interested in a specific range of values).\nHyperparameters are the specification of the model that are manually set by human such as model architecture, learning rate, hidden layers number etc.\nBest way to avoid failures when using AI in an organization is to keep a test dataset separately (without intervening with training process)."
-  },
-  {
-    "objectID": "posts/deep-learning-journey/deep-learning-journey.html#introduction-and-history-of-neuron-network",
-    "href": "posts/deep-learning-journey/deep-learning-journey.html#introduction-and-history-of-neuron-network",
-    "title": "Deep Learning Journey",
-    "section": "Introduction and History of Neuron Network",
-    "text": "Introduction and History of Neuron Network\nDeep learning (DL) has become ubiquitous in modern technology. Common applications of DL include natural language processing (NLP), medicine, security (computer vision), industrial automation (anomaly detection), and commercial recommendation systems.\nWhen discussing DL, it is crucial to emphasize its fundamental element: the Neural Network. The concept of neural networks was first developed by Pitts and McCulloch. The Mark I Perceptron was the first artificial neural network constructed based on their ideas. However, the Perceptron was limited to a single layer and struggled to learn some simple functions, such as XOR. To create more powerful neural networks, it is essential to add more layers, which is a common technique in building effective models in DL.\n\n\n\n\n\n\n3 element that lead AI to become famous\n\n\n\n\n\nABC : Algorithms, Big Data, Computing.\n\n\n\n\n\n\n\n\n\nNote\n\n\n\n!pip install staring with a ! is a bash code\n\n\n\n\n\n\n\n\nCode First, Theory Later\n\n\n\nTrying to spend too much time on theory can be counterproductive. The key is to just code and try to solve problems: the theory can come later when you have context and motivation."
-  },
-  {
-    "objectID": "posts/rlc-circuit/rlc-circuit.html#series-and-parallel-rlc-transformation",
-    "href": "posts/rlc-circuit/rlc-circuit.html#series-and-parallel-rlc-transformation",
-    "title": "RLC Circuit",
-    "section": "Series and Parallel RLC Transformation",
-    "text": "Series and Parallel RLC Transformation"
-  },
-  {
-    "objectID": "posts/rf-noise/rf-noise.html#rl-and-rc-in-series-and-parallel",
-    "href": "posts/rf-noise/rf-noise.html#rl-and-rc-in-series-and-parallel",
-    "title": "RF Noise",
-    "section": "RL and RC in Series and Parallel",
-    "text": "RL and RC in Series and Parallel\nRL circuit"
-  },
-  {
-    "objectID": "posts/cnn/cnn.html#activation-functions",
-    "href": "posts/cnn/cnn.html#activation-functions",
-    "title": "Convolutional Neuron Network",
-    "section": "Activation functions",
-    "text": "Activation functions\nThe activation fuction is a transformation function in NN that transform the weight and bias into a nonlinear format. With Activation function, model can learn and represent more complex patterns in data.\n\n\n\n\n\n\nDoes activation function must be a nonlinear function ? Why ?\n\n\n\n\n\nIn neural networks, activation functions are typically designed to be nonlinear. This is because if all activation functions were linear, the entire neural network would effectively become a linear model, incapable of capturing complex nonlinear relationships.\nIf all activation functions were set to linear functions, even a very deep neural network would behave like a single-layer linear model. Such a model would fail to handle many real-world nonlinear relationships, limiting the expressiveness and applicability of neural networks.\n\n\n\n\nReLU\nThe Rectified Linear Unit (ReLU) activation function is one of the most widely used activation functions in deep learning. It’s defined as:\n\\[f(x) = \\max(0, x)\\]\nIn simple terms, ReLU returns if x is positive, and 0 otherwise. This makes it a piecewise linear function.\nReLU has several advantages:\n\nSimplicity: ReLU is computationally efficient and easy to implement. It only involves a simple thresholding operation, making it faster to compute compared to more complex activation functions like sigmoid or tanh.\nSparsity: ReLU introduces sparsity in the network because it turns off neurons that have negative inputs (setting their output to zero). This sparsity can help reduce overfitting by encouraging the network to focus on important features and ignore noise.\nAddressing vanishing gradient problem: ReLU helps mitigate the vanishing gradient problem by providing a constant gradient (1) for positive inputs during backpropagation. This helps prevent the gradients from becoming too small, enabling more stable and efficient training of deep neural networks.\n\nDespite its advantages, ReLU also has some drawbacks:\n\nDead neurons: Neurons with negative inputs always output zero, leading to the problem of “dying ReLU neurons.” If a neuron’s weights are such that it always receives negative inputs, it will never activate, and its weights will not be updated during training.\nUnbounded output: ReLU does not have an upper bound, which means neurons can potentially produce very large outputs. This can lead to issues like exploding gradients, especially during training.\n\n\n\nLeaky ReLU\nLeaky ReLU is a variant of the Rectified Linear Unit (ReLU) activation function, designed to address the “dying ReLU” problem. In standard ReLU, neurons with negative inputs always output zero, which can cause them to become “dead” and stop learning. Leaky ReLU introduces a small slope (or “leak”) for negative inputs, allowing some information to flow through the neuron even when its input is negative. Mathematically, Leaky ReLU is defined as:\n\\[\nf(x) = \\begin{cases}\nx & \\text{if } x &gt; 0 \\\\\n\\alpha x & \\text{if } x \\leq 0\n\\end{cases}\n\\]\nwhere \\(\\alpha\\) is a small constant (typically a small positive value: 0.01 or 0.001) that determines the slope of the function for negative inputs."
-  },
-  {
-    "objectID": "posts/cnn/cnn.html#output-layer",
-    "href": "posts/cnn/cnn.html#output-layer",
-    "title": "Convolutional Neuron Network",
-    "section": "Output Layer",
-    "text": "Output Layer\n\nSoftmax Function\nSoftmax function is generally used in output layer, since it range is (0-1) which can be represented as probabilty values. Its expression can be written as :\n\\[\\sigma = \\frac{e^{a_k}}{\\sum_{i=1}^{n}e^{a_i}}\\]\nExample in softmax calculation :\n\n\n\nSoftmax\n\n\nReference"
-  },
-  {
-    "objectID": "projects/guessing_game/guessing_game.html",
-    "href": "projects/guessing_game/guessing_game.html",
-    "title": "Guessing Game Using Javascript DOM",
-    "section": "",
-    "text": "In this project, we’ll dive into the fundamentals of web development by creating a straightforward guessing number game using HTML, CSS, and JavaScript. The game begins by generating a random number between 1 and 20. As the user inputs their guess, the game provides feedback on whether the guess is too low or too high compared to the randomly generated number. The game continues until the user successfully guesses the correct number.\nKey features of the game include:"
-  },
-  {
-    "objectID": "projects/guessing_game/guessing_game.html#using-strict-mode-in-js",
-    "href": "projects/guessing_game/guessing_game.html#using-strict-mode-in-js",
-    "title": "Guessing Game Using Javascript DOM",
-    "section": "Using strict mode in JS",
-    "text": "Using strict mode in JS\nUsing strict mode can greatly benefit us, especially as new learners of JavaScript. It helps catch errors by providing more stringent rules and enabling features like console logging for any errors that occur within our code.\nTo use strict mode we simply put use strict at the beginning of JS file.\n'use strict'"
-  },
-  {
-    "objectID": "projects/guessing_game/guessing_game.html#random-a-number-in-js",
-    "href": "projects/guessing_game/guessing_game.html#random-a-number-in-js",
-    "title": "Guessing Game Using Javascript DOM",
-    "section": "Random a Number in JS",
-    "text": "Random a Number in JS\nTo random a number, we will use Math.random() which will generate a number between 0 and 1(not including 1). We then multiply it by 20, Math.random() * 20 to get a number from 0 - 20 (not including 20). Lastly we use Math.floor() to make the result an integer, and also we need to add 1, since the result only in 0-19.\nconst getRandom = () =&gt; Math.floor(Math.random() * 20) + 1;\nlet num = getRandom();"
-  },
-  {
-    "objectID": "projects/guessing_game/guessing_game.html#changing-the-message",
-    "href": "projects/guessing_game/guessing_game.html#changing-the-message",
-    "title": "Guessing Game Using Javascript DOM",
-    "section": "Changing the message",
-    "text": "Changing the message\nTo change the feedback message back to user, we can simply create a function, which will use querySelector to select a message class. Note that querySelector will only return an JS element, unlike the querySelectorAll which will return an array of JS elements.\n// display a message\nfunction displayMessage(message) {\n  document.querySelector('.message').textContent = message;\n}"
-  },
-  {
-    "objectID": "projects/guessing_game/guessing_game.html#add-an-eventlistener-to-a-button",
-    "href": "projects/guessing_game/guessing_game.html#add-an-eventlistener-to-a-button",
-    "title": "Guessing Game Using Javascript DOM",
-    "section": "Add an eventListener to a button",
-    "text": "Add an eventListener to a button\nWe simply trigger a function call in JS when the button is clicked using addEventListener.\ndocument.querySelector('.check').addEventListener('click', () =&gt; {\n  \n});\nThen we get the value of user’s guess by selecting the HTML input element, note here that this element value is string is not a number type, hence we need to further convert it to a number using Number().\n/ check button event listener\ndocument.querySelector('.check').addEventListener('click', () =&gt; {\n  let guess = Number(document.querySelector('.guess').value);\n  score = Number(document.querySelector('.score').textContent);\n});\nIf the user simply click the ‘check’ button without any number (empty string is a falsy value here), then it will feedback a message.\nif (!guess) {\n    displayMessage('⛔ No number!');\n  }\nIf the user’s guess is correct, then we will send a congratulation message and change the body’s background into green (#60b347). Furthermore, if the the curren score is higher then the highest score, it will update the highest score to current score.\nif (guess === num) {\n    displayMessage('🎉 Correct number!');\n    document.querySelector('.number').textContent = num;\n    document.body.style.backgroundColor = '#60b347';\n    if (score &gt; highScore) {\n    highScore = score;\n    document.querySelector('.highscore').textContent = highScore;\n    }\n}\nElse when the guess is incorrect it feed back the message back to user, by guiding the the number is too low or too high. And if the score is 0, then stop the game and display a “Gameover”.\nelse {\n      if (score &gt; 0) {\n        --score;\n        document.querySelector('.score').textContent = score;\n        if (guess &lt; num) {\n          displayMessage('⬆️ Too low!');\n        } else {\n          displayMessage('⬇️ Too high!');\n        }\n      }\n      // when score === 0, gameover\n      else {\n        displayMessage('🙈 Gameover!');\n      }\n    }\nFinally, we add an event listener to the play again button. The background will reset to Gray (#222), score to 20, and the message to default message ‘Start guessing…’.\n// play again button event listener\ndocument.querySelector('.again').addEventListener('click', () =&gt; {\n  score = 20;\n  document.querySelector('.score').textContent = score;\n  document.querySelector('.number').textContent = '?';\n  displayMessage('Start guessing...');\n  document.body.style.backgroundColor = '#222';\n});"
-  },
-  {
-    "objectID": "projects/guessing_game/guessing_game.html#demo-of-the-game",
-    "href": "projects/guessing_game/guessing_game.html#demo-of-the-game",
-    "title": "Guessing Game Using Javascript DOM",
-    "section": "Demo of the Game",
-    "text": "Demo of the Game\n\n\n\nDemo\n\n\nLink to Guessing Game on GitHub Page"
-  },
-  {
-    "objectID": "blog_posts.html",
-    "href": "blog_posts.html",
-    "title": "Blog Posts",
-    "section": "",
-    "text": "Regression and Classification\n\n\n\n\n\n\nmachine learning\n\n\n\n\n\n\n\n\n\nMar 29, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nRF Noise\n\n\n\n\n\n\nRF Microelectronic\n\n\n\n\n\n\n\n\n\nMar 29, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nRLC Circuit\n\n\n\n\n\n\nRF microelectronics\n\n\n\n\n\n\n\n\n\nMar 29, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nConvolutional Neuron Network\n\n\n\n\n\n\ndeep learning\n\n\n\n\n\n\n\n\n\nMar 28, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nAnaconda or Pip\n\n\n\n\n\n\nanaconda\n\n\npip\n\n\n\n\n\n\n\n\n\nMar 28, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nGerman Grammar\n\n\n\n\n\n\ngerman\n\n\n\n\n\n\n\n\n\nMar 28, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nHTML5\n\n\n\n\n\n\nweb development\n\n\n\n\n\n\n\n\n\nMar 28, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nChinese\n\n\n\n\n\n\nchinese\n\n\n\n\n\n\n\n\n\nMar 27, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nGerman Vocabulary\n\n\n\n\n\n\ngerman\n\n\n\n\n\n\n\n\n\nMar 25, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nOpenCV\n\n\n\n\n\n\ndeep learning\n\n\n\n\n\n\n\n\n\nMar 23, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nNumpy\n\n\n\n\n\n\nnumpy\n\n\n\nNumPy is the fundamental package for scientific computing in Python\n\n\n\n\n\nMar 22, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nDeep Learning Journey\n\n\n\n\n\n\ndeep learning\n\n\n\n\n\n\n\n\n\nMar 21, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nEffects of Nonlinearity\n\n\n\n\n\n\nRF microelectronics\n\n\n\n\n\n\n\n\n\nMar 21, 2024\n\n\nSamith Va\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "posts/rf-noise/rf-noise.html#thermal-noise-in-resistor",
-    "href": "posts/rf-noise/rf-noise.html#thermal-noise-in-resistor",
-    "title": "RF Noise",
-    "section": "Thermal Noise in Resistor",
-    "text": "Thermal Noise in Resistor\nFor ideal inductor and capacitor, is there noise ?\nThermal noise the most significant noise encountered in electronic devices. We can model the thermal in two ways:\n\n\n\nThermal Noise Equilvalent Circuit\n\n\n\nThevenin \\[\\bar{V}^2_n = 4kTR_1\\]\nNorton \\[\\bar{I}^2_n = 4kT/R_1\\]\n\nWhere\n\n\\(k = 1.38 \\times 10^{-23} J/K\\) is the Boltzmann constant.\n\\(T\\) is the temperature kelvin \\((K)\\)"
-  },
-  {
-    "objectID": "posts/rf-noise/rf-noise.html#friis-equation-for-cascaded-stages",
-    "href": "posts/rf-noise/rf-noise.html#friis-equation-for-cascaded-stages",
-    "title": "RF Noise",
-    "section": "Friis Equation for Cascaded Stages",
-    "text": "Friis Equation for Cascaded Stages\nTo determine overall noise figure in a cascade of stages, we can use Friis’s equation :\n\\[NF_{\\text{total}} = {NF}_1 + \\frac{NF_2 - 1}{A^2_1} + ... + \\frac{{NF}_n - 1}{A^2_1...A^2_n}\\]\nFrom above expression we can conclude that the first stage’s NF is the most important. Why ?\n\n\nAnswer\n\nConceptually, because the noise from first stage will be amplified multiple times."
-  },
-  {
-    "objectID": "posts/rf-noise/rf-noise.html#noise-figure-of-a-lna",
-    "href": "posts/rf-noise/rf-noise.html#noise-figure-of-a-lna",
-    "title": "RF Noise",
-    "section": "Noise Figure of a LNA",
-    "text": "Noise Figure of a LNA\n\n\n\nLNA Noise Model (RF Microelectronics, Behzad Razavi)\n\n\nWe can have \\[\\alpha = \\frac{Z_\\text{in}}{Z_\\text{in} + R_S}\\] \\[\\text{SNR}_\\text{in} = \\frac{V^2_\\text{in}\\alpha^2}{\\bar{V}^2_\\text{n,RS}\\alpha^2} = \\frac{V^2_\\text{in}}{\\bar{V}^2_\\text{n,RS}}\\]\n\\[\\text{SNR}_\\text{out} = \\frac{V^2_\\text{in}\\alpha^2 {A^2}_v}{\\bar{V}^2_\\text{n,RS}\\alpha^2 {A^2}_v + \\bar{V}^2_n}\\]\n\\[ NF = \\frac{\\text{SNR}_\\text{in}}{\\text{SNR}_\\text{out}} = 1 + \\frac{\\bar{V}_n ^ 2}{\\bar{V}^2_\\text{n,RS} \\alpha^2 A_v ^2}\\]"
-  },
-  {
-    "objectID": "posts/rf-noise/rf-noise.html#noise-figure-in-lna",
-    "href": "posts/rf-noise/rf-noise.html#noise-figure-in-lna",
-    "title": "RF Noise",
-    "section": "Noise Figure in LNA",
-    "text": "Noise Figure in LNA\n\n\n\nLNA Noise Model (RF Microelectronics, Behzad Razavi, P49)\n\n\nWe can have \\[\\alpha = \\frac{Z_\\text{in}}{Z_\\text{in} + R_S}\\] \\[\\text{SNR}_\\text{in} = \\frac{V^2_\\text{in}\\alpha^2}{\\bar{V}^2_\\text{n,RS}\\alpha^2} = \\frac{V^2_\\text{in}}{\\bar{V}^2_\\text{n,RS}}\\]\n\\[\\text{SNR}_\\text{out} = \\frac{V^2_\\text{in}\\alpha^2 {A^2}_v}{\\bar{V}^2_\\text{n,RS}\\alpha^2 {A^2}_v + \\bar{V}^2_n}\\]\n\\[ NF = \\frac{\\text{SNR}_\\text{in}}{\\text{SNR}_\\text{out}} = 1 + \\frac{\\bar{V}_n ^ 2}{\\bar{V}^2_\\text{n,RS} \\alpha^2 A_v ^2}\\]"
   },
   {
     "objectID": "projects/pig_game/pig_game.html",
@@ -705,13 +467,6 @@
     "title": "Pig Game using Javascript",
     "section": "Rules of Pig Game",
     "text": "Rules of Pig Game\nTurns: Players take turns to roll the die as many times as they choose on each turn.\nScoring: Each roll is added to a turn total, but if the player rolls a 1, their turn ends and their turn total is lost.\nHolding: At any point during their turn, a player may choose to “hold”. When a player holds, the turn total (the sum of the dice rolls during that turn) is added to their overall score.\nWinning: The game continues until one of the players reaches or exceeds 100 points."
-  },
-  {
-    "objectID": "projects/pig_game/pig_game.html#strategy-and-tips",
-    "href": "projects/pig_game/pig_game.html#strategy-and-tips",
-    "title": "Pig Game using Javascript",
-    "section": "Strategy and Tips:",
-    "text": "Strategy and Tips:\nRisk vs Reward: Decide when to hold and when to continue rolling. The more rolls you make, the higher the risk of rolling a 1 and losing all the points accumulated in that turn.\nObserving Opponents: Adjust your strategy based on the scores of your opponents. If you are far ahead, you might play it safer, whereas if you are behind, you might take more risks. Variations:\nTwo-Dice Pig: Use two dice. If a player rolls a single 1, they lose all points for the turn. If they roll two 1s (snake eyes), they lose all their points accumulated so far.\nBig Pig: A variant using two dice where rolling doubles increases the points for that turn significantly, but rolling double ones (snake eyes) can wipe out the player’s entire score.\nPig With Lives: Players have a limited number of lives, losing one each time they roll a 1. When they lose all lives, they’re out of the game.\nPig is a game that balances chance and tactics, making it enjoyable for players of all ages. It’s an excellent way to practice mental addition and decision-making under risk!"
   },
   {
     "objectID": "projects/pig_game/pig_game.html#flowchart",
