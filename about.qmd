@@ -17,6 +17,6 @@ about:
 
 ---
 <div style="text-align:left">
-Hello there! I'm Samith, and I'm thrilled to have you here on my blog. As a passionate student of Information Engineering, I've embarked on a journey filled with discovery, learning, and growth. <br>
+Hello there! I'm Samith, and I'm thrilled to have you here on my blog. As a passionate student of Information Engineering in Shanghai Jiao Tong University (China), I've embarked on a journey filled with discovery, learning, and growth. <br>
 Through this platform, I aim to share the knowledge and insights I've gained, with the hope of assisting others who are navigating similar paths in the world of technology.</div>
 

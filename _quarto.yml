@@ -8,7 +8,6 @@ website:
     right:
       - about.qmd
       - projects.qmd
-      - ielts.qmd
       - icon: github
         href: https://github.com/SamithVa
       - icon: twitter
