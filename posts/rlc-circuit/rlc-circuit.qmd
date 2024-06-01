@@ -3,7 +3,7 @@ title: "RLC Circuit"
 author: "Samith Va"
 toc: true
 date: 03-29-2024
-categories: [RF microelectronics]
+categories: [RF-Microelectronics]
 ---
 
 # Parallel and Series Conversion
