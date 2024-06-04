@@ -858,7 +858,7 @@
     "href": "posts/RF/rf-mixers/rf-mixers.html#injection-pull-rf-lo",
     "title": "RF Mixers",
     "section": "Injection Pull (RF-LO)",
-    "text": "Injection Pull (RF-LO)\nThis problem occur in DCR, which high interference from RF enters into LO, and eventually degrades LO’s performance (make LO to become unstable)."
+    "text": "Injection Pull (RF-LO)\nThis problem occurs in DCR, which high interference from RF enters into LO, and eventually degrades LO’s performance (make LO to become unstable)."
   },
   {
     "objectID": "posts/RF/rf-mixers/rf-mixers.html#conversion-gain",

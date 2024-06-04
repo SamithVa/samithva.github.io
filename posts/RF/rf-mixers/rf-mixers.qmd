@@ -89,7 +89,7 @@ Passive mixers gain is smaller than 1, but with active mixers, the conversion ga
 
 ## Injection Pull (RF-LO)
 
-This problem occur in DCR, which high interference from RF enters into LO, and eventually degrades LO's performance (make LO to become unstable). 
+This problem occurs in DCR, which high interference from RF enters into LO, and eventually degrades LO's performance (make LO to become unstable). 
 
 
 
