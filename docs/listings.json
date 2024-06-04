@@ -9,6 +9,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/rf-pa/rf-pa.html",
       "/posts/rf-receiver/rf-receiver.html",
       "/posts/regression/regression.html",
       "/posts/rf-noise/rf-noise.html",
