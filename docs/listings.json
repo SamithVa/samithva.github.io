@@ -9,11 +9,12 @@
   {
     "listing": "/index.html",
     "items": [
-      "/posts/rf-pa/rf-pa.html",
-      "/posts/rf-receiver/rf-receiver.html",
+      "/posts/RF/rf-mixers/rf-mixers.html",
+      "/posts/RF/rf-pa/rf-pa.html",
+      "/posts/RF/rf-receiver/rf-receiver.html",
       "/posts/regression/regression.html",
-      "/posts/rf-noise/rf-noise.html",
-      "/posts/rlc-circuit/rlc-circuit.html",
+      "/posts/RF/rf-noise/rf-noise.html",
+      "/posts/RF/rlc-circuit/rlc-circuit.html",
       "/posts/cnn/cnn.html",
       "/posts/conda/conda.html",
       "/posts/german-grammar/german.html",
@@ -23,7 +24,7 @@
       "/posts/open-cv/open-cv.html",
       "/posts/numpy/index.html",
       "/posts/deep-learning-journey/deep-learning-journey.html",
-      "/posts/rf-nonlinearity/nonlinearity.html"
+      "/posts/RF/rf-nonlinearity/nonlinearity.html"
     ]
   }
 ]
