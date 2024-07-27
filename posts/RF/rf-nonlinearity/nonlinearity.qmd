@@ -7,24 +7,20 @@ categories: [RF-Microelectronics]
 image: "nonlinearity.png"
 ---
 
-In analog circuits, nonlinearity can be characterized by **harmonic distortion**, but in RF circuits, the characterization of nonlinear behavior involves distinct measures that are tailored to the specific requirements and challenges of RF systems. 
+In analog circuits, nonlinearity can be characterized by **harmonic distortion**, but in RF circuits, the characterization of nonlinear behavior involves distinct measures that are tailored to the specific requirements and challenges of RF systems. The effects of nonlinearity on RF can be classified into 4 types : 
 
 These measures often focus on parameters such as intermodulation distortion (IMD), third-order intercept point (IP3), and the dynamic range of the system. 
 
 #### Questions will be convered in this section 
 
 1. How to calculate power gain and voltage gain? Are they equivalent?
-2. What is absolute power gain ? What is its unit quantity?
-3. What are peak amplitude, peak-to-peak amplitude, RMS amplitude ?
-4. Is switch a non-linear system ?
-6. What is a mixer in context of communication system ? 
-7. What is a Transceiver ? How to draw its structure diagram. 
-8. What is PA ? LNA ? What are their differences ?
-9. Is mixer a LTI system ? 
-10. What is 1dB compression point $P_\text{1dB}$? How to derive its formula
-11. What is the coefficient fundamental term of a nonlinear system ? 
+2. What is absolute power gain? What is its unit quantity?
+3. What are peak amplitude, peak-to-peak amplitude, RMS amplitude?
+10. What is 1dB compression point $P_\text{1dB}$? How to derive its formula.
+11. What is the coefficient fundamental term of a nonlinear system?
+1. What is desensitization in RF? What are its effects on gain of the system?
 12. What is the difference between intermodulation and cross modulation?
-13. What is third intercept point ?
+13. What is third intercept point?
 
 ---
 
@@ -36,7 +32,7 @@ $$A_\text{P | dB} = 10\log(\frac{P_\text{out}}{P_\text{in}})$$
 $$A_\text{V | dB} = 20\log(\frac{V_\text{out}}{V_\text{in}})$$
 
 :::{.callout-note}
-$V_\text{out},V_\text{in}$ are measured in *rms* (root-mean-squared)
+$V_\text{out},V_\text{in}$ are measured in *rms*.
 :::
 
 Why does the coefficient change to 20 in voltage gain ? Are $A_P$ and $A_V$ equal?
@@ -74,7 +70,7 @@ When a signal passes through an RF circuit, non-linearities in the components ca
 
 $$y(t) = \alpha_1 x(t) + \alpha_2 x^2 (t)+ \alpha_3 x^3(t)$$
 
-If input $x(t) = A\cos(\omega t)$, The fundamental term of this nonlinear system can be defined as: 
+If input $x(t) = A\cos(\omega t)$, The fundamental term of this nonlinear system can be determined: 
 $$y(t) \approx A\cos(\omega t) (\alpha_1 + \frac{3}{4}\alpha_3 A^2) = x(t)(\alpha_1 + \frac{3}{4}\alpha_3 A^2) $$
 Where $A$ is the peak value amplitude
 
@@ -82,12 +78,12 @@ From above expression we can conclude that due to the linearity, the gain has ch
 $\alpha_1$ to $\alpha_1 + \frac{3}{4}\alpha_3 A^2$
 
 ### Gain compression 
-A small-signal gain of circuits is usually obtained when harmonic distortion is negligible. But from above expression when harmonic distortion is considered, the gain might be actually become smaller (compressive).
+A small-signal gain of circuits is usually obtained when harmonic distortion is *negligible* (Why is it negligible?, e.g $0.01^4 < 0.01$). However, from above expression when harmonic distortion is considered, the gain might be actually become smaller (compressive).
 
 What is Gain Compression?
 : Gain compression occurs when the gain of an amplifier decreases as the input signal level increases (from above formula we can see that that's when $\alpha_1$ and $\alpha_3$ have opposite sign). 
 
-How can we measure this compression quantity ?
+How can we measure this compression quantity?
 : 1-dB compression point is the amount of voltage that can make the gain decrease by 1-dB 
 $$
 P_{\text{in},1\text{dB}} =A_{\text{in},1\text{dB}} = \sqrt{0.145\frac{\alpha_1}{\alpha_3}}
@@ -96,9 +92,14 @@ $P_\text{1dB}$ is generally 220 to 225 dBm (63.2 to 35.6 m $V_{pp}$ in 50 $\Omeg
 
 ### Desensitization 
 
-Desensitization in RF systems refers to a phenomenon where the sensitivity of a receiver decreases due to interference or strong nearby signals. 
+Desensitization in RF systems refers to a phenomenon where the sensitivity of a receiver decreases due to interference or strong nearby signals. If we consider the input signal $x(t) = A_1\cos(\omega_1 t) + A_2\cos(\omega_2 t)$, where $ A_2\cos(\omega_2 t)$ is the interference. Then the fundamental term of $y(t)$ can be expressed as 
+$$y(t) = (\alpha_1 + \frac{3}{4}\alpha_3 A_1^2 +\frac{3}{2}\alpha_3 A_2^2)A_1 \cos(\omega_1 t)$$
 
-In RF design, the term **blocking signal** or **blocker** refers to interferers that desensitize a circuit, even if they do not reduce the gain to zero (but it increase the gain to nearly zero). Some RF receivers must be able to withstand blockers that are **60 to 70 dB** greater than the desired signal.
+When $A_2 >> A_1$, hence
+$$y(t) = (\alpha_1 +\frac{3}{2}\alpha_3 A_2^2)A_1 \cos(\omega_1 t)$$
+
+
+This will lead to **blocking signal** or **blocker** which refers to interferers that desensitize a circuit, even if they do not reduce the gain to zero (but as the amplitude increases, the gain might decrease to nearly zero). Some RF receivers must be able to withstand such interferences, those are **60 to 70 dB** greater than the desired signal.
 
 ### Cross Modulation 
 
@@ -117,6 +118,8 @@ Cross modulation : The signal is **mixed** with the interferer
 :::
 
 ### Third-Intercept Point
+
+![Third-Intercept Point](third-intercept.png)
 
 To measure the intermodulation we can use relative IM (intermodulation), IM and $A_\text{IP3}$
 $$\text{IM} = \frac{3}{4}\alpha_3 A_1A_2^2$$

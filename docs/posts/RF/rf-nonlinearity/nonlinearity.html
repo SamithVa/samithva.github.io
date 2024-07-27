@@ -207,23 +207,19 @@ window.Quarto = {
 
 
 
-<p>In analog circuits, nonlinearity can be characterized by <strong>harmonic distortion</strong>, but in RF circuits, the characterization of nonlinear behavior involves distinct measures that are tailored to the specific requirements and challenges of RF systems.</p>
+<p>In analog circuits, nonlinearity can be characterized by <strong>harmonic distortion</strong>, but in RF circuits, the characterization of nonlinear behavior involves distinct measures that are tailored to the specific requirements and challenges of RF systems. The effects of nonlinearity on RF can be classified into 4 types :</p>
 <p>These measures often focus on parameters such as intermodulation distortion (IMD), third-order intercept point (IP3), and the dynamic range of the system.</p>
 <section id="questions-will-be-convered-in-this-section" class="level4">
 <h4 class="anchored" data-anchor-id="questions-will-be-convered-in-this-section">Questions will be convered in this section</h4>
 <ol type="1">
 <li>How to calculate power gain and voltage gain? Are they equivalent?</li>
-<li>What is absolute power gain ? What is its unit quantity?</li>
-<li>What are peak amplitude, peak-to-peak amplitude, RMS amplitude ?</li>
-<li>Is switch a non-linear system ?</li>
-<li>What is a mixer in context of communication system ?</li>
-<li>What is a Transceiver ? How to draw its structure diagram.</li>
-<li>What is PA ? LNA ? What are their differences&nbsp;?</li>
-<li>Is mixer a LTI system ?</li>
-<li>What is 1dB compression point <span class="math inline">\(P_\text{1dB}\)</span>? How to derive its formula</li>
-<li>What is the coefficient fundamental term of a nonlinear system ?</li>
+<li>What is absolute power gain? What is its unit quantity?</li>
+<li>What are peak amplitude, peak-to-peak amplitude, RMS amplitude?</li>
+<li>What is 1dB compression point <span class="math inline">\(P_\text{1dB}\)</span>? How to derive its formula.</li>
+<li>What is the coefficient fundamental term of a nonlinear system?</li>
+<li>What is desensitization in RF? What are its effects on gain of the system?</li>
 <li>What is the difference between intermodulation and cross modulation?</li>
-<li>What is third intercept point ?</li>
+<li>What is third intercept point?</li>
 </ol>
 <hr>
 </section>
@@ -246,7 +242,7 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><span class="math inline">\(V_\text{out},V_\text{in}\)</span> are measured in <em>rms</em> (root-mean-squared)</p>
+<p><span class="math inline">\(V_\text{out},V_\text{in}\)</span> are measured in <em>rms</em>.</p>
 </div>
 </div>
 Why does the coefficient change to 20 in voltage gain ? Are <span class="math inline">\(A_P\)</span> and <span class="math inline">\(A_V\)</span> equal?
@@ -280,18 +276,18 @@ Answer
 <p>Harmonic distortion in RF (Radio Frequency) communication circuits refers to the presence of unwanted frequency components in the output signal that are integer multiples of the original frequency, known as <strong>harmonics</strong>.</p>
 <p>When a signal passes through an RF circuit, non-linearities in the components can cause the generation of harmonics. A memoryless systems whose input/output characteristic can be approximated by</p>
 <p><span class="math display">\[y(t) = \alpha_1 x(t) + \alpha_2 x^2 (t)+ \alpha_3 x^3(t)\]</span></p>
-<p>If input <span class="math inline">\(x(t) = A\cos(\omega t)\)</span>, The fundamental term of this nonlinear system can be defined as: <span class="math display">\[y(t) \approx A\cos(\omega t) (\alpha_1 + \frac{3}{4}\alpha_3 A^2) = x(t)(\alpha_1 + \frac{3}{4}\alpha_3 A^2) \]</span> Where <span class="math inline">\(A\)</span> is the peak value amplitude</p>
+<p>If input <span class="math inline">\(x(t) = A\cos(\omega t)\)</span>, The fundamental term of this nonlinear system can be determined: <span class="math display">\[y(t) \approx A\cos(\omega t) (\alpha_1 + \frac{3}{4}\alpha_3 A^2) = x(t)(\alpha_1 + \frac{3}{4}\alpha_3 A^2) \]</span> Where <span class="math inline">\(A\)</span> is the peak value amplitude</p>
 <p>From above expression we can conclude that due to the linearity, the gain has changed from <span class="math inline">\(\alpha_1\)</span> to <span class="math inline">\(\alpha_1 + \frac{3}{4}\alpha_3 A^2\)</span></p>
 </section>
 <section id="gain-compression" class="level3">
 <h3 class="anchored" data-anchor-id="gain-compression">Gain compression</h3>
-<p>A small-signal gain of circuits is usually obtained when harmonic distortion is negligible. But from above expression when harmonic distortion is considered, the gain might be actually become smaller (compressive).</p>
+<p>A small-signal gain of circuits is usually obtained when harmonic distortion is <em>negligible</em> (Why is it negligible?, e.g <span class="math inline">\(0.01^4 &lt; 0.01\)</span>). However, from above expression when harmonic distortion is considered, the gain might be actually become smaller (compressive).</p>
 <dl>
 <dt>What is Gain Compression?</dt>
 <dd>
 Gain compression occurs when the gain of an amplifier decreases as the input signal level increases (from above formula we can see that that’s when <span class="math inline">\(\alpha_1\)</span> and <span class="math inline">\(\alpha_3\)</span> have opposite sign).
 </dd>
-<dt>How can we measure this compression quantity ?</dt>
+<dt>How can we measure this compression quantity?</dt>
 <dd>
 1-dB compression point is the amount of voltage that can make the gain decrease by 1-dB <span class="math display">\[
 P_{\text{in},1\text{dB}} =A_{\text{in},1\text{dB}} = \sqrt{0.145\frac{\alpha_1}{\alpha_3}}
@@ -301,8 +297,9 @@ P_{\text{in},1\text{dB}} =A_{\text{in},1\text{dB}} = \sqrt{0.145\frac{\alpha_1}{
 </section>
 <section id="desensitization" class="level3">
 <h3 class="anchored" data-anchor-id="desensitization">Desensitization</h3>
-<p>Desensitization in RF systems refers to a phenomenon where the sensitivity of a receiver decreases due to interference or strong nearby signals.</p>
-<p>In RF design, the term <strong>blocking signal</strong> or <strong>blocker</strong> refers to interferers that desensitize a circuit, even if they do not reduce the gain to zero (but it increase the gain to nearly zero). Some RF receivers must be able to withstand blockers that are <strong>60 to 70 dB</strong> greater than the desired signal.</p>
+<p>Desensitization in RF systems refers to a phenomenon where the sensitivity of a receiver decreases due to interference or strong nearby signals. If we consider the input signal <span class="math inline">\(x(t) = A_1\cos(\omega_1 t) + A_2\cos(\omega_2 t)\)</span>, where $ A_2(_2 t)$ is the interference. Then the fundamental term of <span class="math inline">\(y(t)\)</span> can be expressed as <span class="math display">\[y(t) = (\alpha_1 + \frac{3}{4}\alpha_3 A_1^2 +\frac{3}{2}\alpha_3 A_2^2)A_1 \cos(\omega_1 t)\]</span></p>
+<p>When <span class="math inline">\(A_2 &gt;&gt; A_1\)</span>, hence <span class="math display">\[y(t) = (\alpha_1 +\frac{3}{2}\alpha_3 A_2^2)A_1 \cos(\omega_1 t)\]</span></p>
+<p>This will lead to <strong>blocking signal</strong> or <strong>blocker</strong> which refers to interferers that desensitize a circuit, even if they do not reduce the gain to zero (but as the amplitude increases, the gain might decrease to nearly zero). Some RF receivers must be able to withstand such interferences, those are <strong>60 to 70 dB</strong> greater than the desired signal.</p>
 </section>
 <section id="cross-modulation" class="level3">
 <h3 class="anchored" data-anchor-id="cross-modulation">Cross Modulation</h3>
@@ -329,6 +326,12 @@ Important
 </section>
 <section id="third-intercept-point" class="level3">
 <h3 class="anchored" data-anchor-id="third-intercept-point">Third-Intercept Point</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="third-intercept.png" class="img-fluid figure-img"></p>
+<figcaption>Third-Intercept Point</figcaption>
+</figure>
+</div>
 <p>To measure the intermodulation we can use relative IM (intermodulation), IM and <span class="math inline">\(A_\text{IP3}\)</span> <span class="math display">\[\text{IM} = \frac{3}{4}\alpha_3 A_1A_2^2\]</span></p>
 <p><span class="math display">\[\text{Relative IM} = 20\log(\frac{3\alpha_3 }{4\alpha_1}A^2) \text{ dBc}\]</span></p>
 <p><span class="math display">\[A_\text{IIP3} = \sqrt{\frac{4}{3}|\frac{\alpha_1}{\alpha_3}|}\]</span></p>
