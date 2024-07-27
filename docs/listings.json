@@ -9,6 +9,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/qwen-vl/qwen-vl.html",
       "/posts/RF/rf-mixers/rf-mixers.html",
       "/posts/RF/rf-pa/rf-pa.html",
       "/posts/RF/rf-receiver/rf-receiver.html",

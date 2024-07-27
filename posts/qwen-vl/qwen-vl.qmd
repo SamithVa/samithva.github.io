@@ -1,0 +1,49 @@
+---
+title: "QwenVL Paper Summary"
+author: "Samith Va"
+date: "2024-07-27"
+categories: [LLM, LVLM]
+format:
+  html:
+    code-fold: false
+    toc: true
+# jupyter: python3
+---
+
+Qwen-VL is a series of LVLMs which used to understand texts and images, it is developed by Ali group and it is an open-source model.   What’s make it different from Qwen-7B is that with Qwen-VL it introduces **visual receptor**, **language-aligned visual encoder** and **position-aware receptor**. 
+
+This is my summary after reading the Qwen-VL paper, all the images are taken from original paper.
+
+## Features of Qwen-VL
+
+There are 4 features of Qwen-VL, which make it superior to other LVLMs : 
+
+1. Leading performance & open source (less model parameters, only 9.6B compare to other LVLMs.)
+2. Multilingual 
+3. Multiple images input
+4. More accurate : using higher resolution image in training process (fine-grained visual understanding)
+
+## Model Architecture
+
+There 3 basic components in Qwen-VL : 
+
+- Base model : Qwen-7B
+- Visual Encoder : Vision Transformer (pretrained weights from Openclip’s ViT-bigG)
+- Position-aware Vision-Language Adaptor
+
+## Training Process
+
+The data in pre-train process consists of 1.4 billion images, 77.3% in English and 22.7 in Chinese, where in finetuning process consists of 350k instruction data. The training part consists of 3 processes (refer to @fig-training) :
+
+![Training Processes](training_process.png){#fig-training}
+
+1. Pre-training (freeze LLM, optimize visual encoder and adapter, using 224x224 resolution images)
+2. Multi-task pre-training (train whole model in 7 tasks simulteneously, increase img resolution to 448x448)
+3. Finetuning (freeze the visual encoder, train only LLM and adapter, result in Qwen-VL-Chat)
+
+![Pre-train Dataset](pretrain_data.png){#fig-pretrain-data}
+
+Below is the detail of hyper-parameters for the training processes : 
+
+![Hyper-parameters](hyper-params.png){#fig-hyperparams}
+
