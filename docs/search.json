@@ -1,5 +1,12 @@
 [
   {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "Hello there! I’m Samith, and I’m thrilled to have you here on my blog. As a passionate student of Information Engineering in Shanghai Jiao Tong University (China), I’ve embarked on a journey filled with discovery, learning, and growth.  Through this platform, I aim to share the knowledge and insights I’ve gained, with the hope of assisting others who are navigating similar paths in the world of technology."
+  },
+  {
     "objectID": "projects.html",
     "href": "projects.html",
     "title": "Projects",
@@ -7,249 +14,39 @@
     "text": "Pig Game using Javascript\n\n\n\n\n\n\nFront End\n\n\n\n\n\n\n\n\n\nApr 19, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nGuessing Game Using Javascript DOM\n\n\n\n\n\n\nFront End\n\n\n\n\n\n\n\n\n\nApr 12, 2024\n\n\nSamith Va\n\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "projects/guessing_game/guessing_game.html",
-    "href": "projects/guessing_game/guessing_game.html",
-    "title": "Guessing Game Using Javascript DOM",
+    "objectID": "projects/pig_game/pig_game.html",
+    "href": "projects/pig_game/pig_game.html",
+    "title": "Pig Game using Javascript",
     "section": "",
-    "text": "In this project, we’ll dive into the fundamentals of web development by creating a straightforward guessing number game using HTML, CSS, and JavaScript. The game begins by generating a random number between 1 and 20. As the user inputs their guess, the game provides feedback on whether the guess is too low or too high compared to the randomly generated number. The game continues until the user successfully guesses the correct number.\nKey features of the game include:"
+    "text": "“Pig” is a simple and fun dice game that involves a bit of strategy and luck, and it’s great for two players. The objective of the game is to be the first player to reach 100 points or other value set by the player.\n\n\n\nDemo of the Pig Game\n\n\nLink to Pig Game on GitHub Page"
   },
   {
-    "objectID": "projects/guessing_game/guessing_game.html#demo-of-the-game",
-    "href": "projects/guessing_game/guessing_game.html#demo-of-the-game",
-    "title": "Guessing Game Using Javascript DOM",
-    "section": "Demo of the Game",
-    "text": "Demo of the Game\n\n\n\nDemo\n\n\nLink to Guessing Game on GitHub Page"
-  },
-  {
-    "objectID": "projects/guessing_game/guessing_game.html#using-strict-mode-in-js",
-    "href": "projects/guessing_game/guessing_game.html#using-strict-mode-in-js",
-    "title": "Guessing Game Using Javascript DOM",
-    "section": "Using strict mode in JS",
-    "text": "Using strict mode in JS\nUsing strict mode can greatly benefit us, especially as new learners of JavaScript. It helps catch errors by providing more stringent rules and enabling features like console logging for any errors that occur within our code.\nTo use strict mode we simply put use strict at the beginning of JS file.\n'use strict'"
-  },
-  {
-    "objectID": "projects/guessing_game/guessing_game.html#random-a-number-in-js",
-    "href": "projects/guessing_game/guessing_game.html#random-a-number-in-js",
-    "title": "Guessing Game Using Javascript DOM",
-    "section": "Random a Number in JS",
-    "text": "Random a Number in JS\nTo random a number, we will use Math.random() which will generate a number between 0 and 1(not including 1). We then multiply it by 20, Math.random() * 20 to get a number from 0 - 20 (not including 20). Lastly we use Math.floor() to make the result an integer, and also we need to add 1, since the result only in 0-19.\nconst getRandom = () =&gt; Math.floor(Math.random() * 20) + 1;\nlet num = getRandom();"
-  },
-  {
-    "objectID": "projects/guessing_game/guessing_game.html#changing-the-message",
-    "href": "projects/guessing_game/guessing_game.html#changing-the-message",
-    "title": "Guessing Game Using Javascript DOM",
-    "section": "Changing the message",
-    "text": "Changing the message\nTo change the feedback message back to user, we can simply create a function, which will use querySelector to select a message class. Note that querySelector will only return an JS element, unlike the querySelectorAll which will return an array of JS elements.\n// display a message\nfunction displayMessage(message) {\n  document.querySelector('.message').textContent = message;\n}"
-  },
-  {
-    "objectID": "projects/guessing_game/guessing_game.html#add-an-eventlistener-to-a-button",
-    "href": "projects/guessing_game/guessing_game.html#add-an-eventlistener-to-a-button",
-    "title": "Guessing Game Using Javascript DOM",
-    "section": "Add an eventListener to a button",
-    "text": "Add an eventListener to a button\nWe simply trigger a function call in JS when the button is clicked using addEventListener.\ndocument.querySelector('.check').addEventListener('click', () =&gt; {\n  \n});\nThen we get the value of user’s guess by selecting the HTML input element, note here that this element value is string is not a number type, hence we need to further convert it to a number using Number().\n/ check button event listener\ndocument.querySelector('.check').addEventListener('click', () =&gt; {\n  let guess = Number(document.querySelector('.guess').value);\n  score = Number(document.querySelector('.score').textContent);\n});\nIf the user simply click the ‘check’ button without any number (empty string is a falsy value here), then it will feedback a message.\nif (!guess) {\n    displayMessage('⛔ No number!');\n  }\nIf the user’s guess is correct, then we will send a congratulation message and change the body’s background into green (#60b347). Furthermore, if the the curren score is higher then the highest score, it will update the highest score to current score.\nif (guess === num) {\n    displayMessage('🎉 Correct number!');\n    document.querySelector('.number').textContent = num;\n    document.body.style.backgroundColor = '#60b347';\n    if (score &gt; highScore) {\n    highScore = score;\n    document.querySelector('.highscore').textContent = highScore;\n    }\n}\nElse when the guess is incorrect it feed back the message back to user, by guiding the the number is too low or too high. And if the score is 0, then stop the game and display a “Gameover”.\nelse {\n      if (score &gt; 0) {\n        --score;\n        document.querySelector('.score').textContent = score;\n        if (guess &lt; num) {\n          displayMessage('⬆️ Too low!');\n        } else {\n          displayMessage('⬇️ Too high!');\n        }\n      }\n      // when score === 0, gameover\n      else {\n        displayMessage('🙈 Gameover!');\n      }\n    }\nFinally, we add an event listener to the play again button. The background will reset to Gray (#222), score to 20, and the message to default message ‘Start guessing…’.\n// play again button event listener\ndocument.querySelector('.again').addEventListener('click', () =&gt; {\n  score = 20;\n  document.querySelector('.score').textContent = score;\n  document.querySelector('.number').textContent = '?';\n  displayMessage('Start guessing...');\n  document.body.style.backgroundColor = '#222';\n});"
-  },
-  {
-    "objectID": "posts/RF/rf-receiver/rf-receiver.html",
-    "href": "posts/RF/rf-receiver/rf-receiver.html",
-    "title": "RF Receiver",
+    "objectID": "projects/pig_game/pig_game.html#what-is-pig-game",
+    "href": "projects/pig_game/pig_game.html#what-is-pig-game",
+    "title": "Pig Game using Javascript",
     "section": "",
-    "text": "This post will include answers to these questions:"
+    "text": "“Pig” is a simple and fun dice game that involves a bit of strategy and luck, and it’s great for two players. The objective of the game is to be the first player to reach 100 points or other value set by the player.\n\n\n\nDemo of the Pig Game\n\n\nLink to Pig Game on GitHub Page"
   },
   {
-    "objectID": "posts/RF/rf-receiver/rf-receiver.html#zero-second-if",
-    "href": "posts/RF/rf-receiver/rf-receiver.html#zero-second-if",
-    "title": "RF Receiver",
-    "section": "Zero Second IF",
-    "text": "Zero Second IF\nA design that moves IF near to zero frequency.\n\n\n\nZero Second IF"
+    "objectID": "projects/pig_game/pig_game.html#rules-of-pig-game",
+    "href": "projects/pig_game/pig_game.html#rules-of-pig-game",
+    "title": "Pig Game using Javascript",
+    "section": "Rules of Pig Game",
+    "text": "Rules of Pig Game\nTurns: Players take turns to roll the die as many times as they choose on each turn.\nScoring: Each roll is added to a turn total, but if the player rolls a 1, their turn ends and their turn total is lost.\nHolding: At any point during their turn, a player may choose to “hold”. When a player holds, the turn total (the sum of the dice rolls during that turn) is added to their overall score.\nWinning: The game continues until one of the players reaches or exceeds 100 points."
   },
   {
-    "objectID": "posts/RF/rf-receiver/rf-receiver.html#image-rejecting",
-    "href": "posts/RF/rf-receiver/rf-receiver.html#image-rejecting",
-    "title": "RF Receiver",
-    "section": "Image Rejecting",
-    "text": "Image Rejecting\n\n\n\nImage Rejection\n\n\nAfter shifted into IF, self-corruption or image problem can be a problem as well. Image is the interference, whose its frequency is symmetric with desired signal respect to frequency of the local oscillator (LO). Hence in order to avoid signal corruption, we must eliminate the image by using Image Reject Filter (IRF).\nIMRR : Image Rejection Ratio\n\nHigh IF and Low IF\n\n\n\nHigh IF and Low IF Comparison\n\n\nWhy high IF is more preferable ? Because the frequency of image is far from desired signal, hence we can easily filter out with lower Q factor.\nHigh \\(\\omega_{IF}\\) -&gt; Easy to design IRF, but what is the trade-off of high-IF?\n\n\nHigh Side Injection and Low Side Injection\nHigh side injection : mixed with higher frequency (\\(\\omega_{LO} &gt; \\omega_{in}\\)), this can also be called superdyne. Low side injection : mixed with lower frequency (\\(\\omega_{LO} &lt; \\omega_{in}\\)), this can also be called infradyne.\n\n\n\nHigh-side and Low-side Injections\n\n\n\n\nQuadrature Downconversion\n\n\n\nSelf-corruption problem\n\n\nWhy we need it ? Because in these days most modulation method is asymmetric, using quadrature down conversion technique, we can then eliminate the self-corruption problem."
+    "objectID": "projects/pig_game/pig_game.html#flowchart",
+    "href": "projects/pig_game/pig_game.html#flowchart",
+    "title": "Pig Game using Javascript",
+    "section": "Flowchart",
+    "text": "Flowchart\n\n\n\nFlowchart of Pig Game"
   },
   {
-    "objectID": "posts/RF/rf-receiver/rf-receiver.html#lo-leakage",
-    "href": "posts/RF/rf-receiver/rf-receiver.html#lo-leakage",
-    "title": "RF Receiver",
-    "section": "LO leakage",
-    "text": "LO leakage\n\n\n\nLO Leakage\n\n\nBut with modern DSP, the LO leakage can be handled easily now, hence DCR is more commonly used in modern RF devices."
-  },
-  {
-    "objectID": "posts/RF/rf-receiver/rf-receiver.html#degree-phase-shifter",
-    "href": "posts/RF/rf-receiver/rf-receiver.html#degree-phase-shifter",
-    "title": "RF Receiver",
-    "section": "90-degree Phase Shifter",
-    "text": "90-degree Phase Shifter\n\n\n\nRC-RC circuit"
-  },
-  {
-    "objectID": "posts/RF/rf-receiver/rf-receiver.html#harley-architecture",
-    "href": "posts/RF/rf-receiver/rf-receiver.html#harley-architecture",
-    "title": "RF Receiver",
-    "section": "Harley Architecture",
-    "text": "Harley Architecture\n\n\n\nHarley Architecture"
-  },
-  {
-    "objectID": "posts/RF/rf-receiver/rf-receiver.html#weaver-architecture",
-    "href": "posts/RF/rf-receiver/rf-receiver.html#weaver-architecture",
-    "title": "RF Receiver",
-    "section": "Weaver Architecture",
-    "text": "Weaver Architecture\n\n\n\nWeaver Architecture\n\n\nIt is basically a type of injection (high or low injection), but there will be more problem in nonlinearity."
-  },
-  {
-    "objectID": "posts/RF/rf-nonlinearity/nonlinearity.html",
-    "href": "posts/RF/rf-nonlinearity/nonlinearity.html",
-    "title": "Effects of Nonlinearity",
-    "section": "",
-    "text": "In analog circuits, nonlinearity can be characterized by harmonic distortion, but in RF circuits, the characterization of nonlinear behavior involves distinct measures that are tailored to the specific requirements and challenges of RF systems. The effects of nonlinearity on RF can be classified into 4 types :\nThese measures often focus on parameters such as intermodulation distortion (IMD), third-order intercept point (IP3), and the dynamic range of the system."
-  },
-  {
-    "objectID": "posts/RF/rf-nonlinearity/nonlinearity.html#answer",
-    "href": "posts/RF/rf-nonlinearity/nonlinearity.html#answer",
-    "title": "Effects of Nonlinearity",
-    "section": "Answer",
-    "text": "Answer\n\nRefer to above equations.\nRefer to above equations.\nWhat are Peak amplitude, peak-to-peak amplitude, rms value ?\nunambiguous question, switch can be linear or non-linear depends on the input of interest.\nWhat is a mixer in context of communication system ?\nTransceiver is the combination of Tx, and Rx.\n\n\n\nWhat is PA ? LNA ? What are their differences  ?\na mixer is frequency shift component. we can prove that it does not satisfy the linear property."
-  },
-  {
-    "objectID": "posts/RF/rf-mixers/rf-mixers.html",
-    "href": "posts/RF/rf-mixers/rf-mixers.html",
-    "title": "RF Mixers",
-    "section": "",
-    "text": "Mixer is a very important component in modern RF, without it we may not be able to convert from low frequency (IF) into higher frequency (RF) or vice versa, and it will not be suitable for high data rate transmission. In this post, we will explore on different types of mixers as well as their basic design concepts."
-  },
-  {
-    "objectID": "posts/RF/rf-mixers/rf-mixers.html#conversion-gain",
-    "href": "posts/RF/rf-mixers/rf-mixers.html#conversion-gain",
-    "title": "RF Mixers",
-    "section": "Conversion Gain",
-    "text": "Conversion Gain\nKnowing a mixer’s conversion gain we can know how much signal is preserved/amplified after the mixing \\[\\text{Conversion Gain} = \\frac{V_\\text{IF}}{V_\\text{RF}}\\]"
-  },
-  {
-    "objectID": "posts/RF/rf-mixers/rf-mixers.html#feedthrough",
-    "href": "posts/RF/rf-mixers/rf-mixers.html#feedthrough",
-    "title": "RF Mixers",
-    "section": "Feedthrough",
-    "text": "Feedthrough\nIn high frequency, MOSFET model contains parasitic capacitance between terminals, this eventually lead to feedthrough problem (leakage between terminals).\n\n\n\nFeedthrough"
-  },
-  {
-    "objectID": "posts/RF/rf-mixers/rf-mixers.html#switch-mixer",
-    "href": "posts/RF/rf-mixers/rf-mixers.html#switch-mixer",
-    "title": "RF Mixers",
-    "section": "Switch Mixer",
-    "text": "Switch Mixer\n\n\n\nSwitch Mixer\n\n\n\nLow efficiency (contains DC offset etc.)\nPerform well in linearity and feedthrough, Hence more commonly used in modern RF devices\n\n\nRZ and NRZ Mixers\nRZ mixer and NRZ mixer (Sampling mixer)\n\n\n\n\n\n\nNote\n\n\n\nSampling mixer : \\(1.5 dB\\)\n\n\n\nSingle and Double Balanced Mixers\nSingle Balanced Mixer\nDouble Balanced Mixer\n\n\n\nDouble Balanced Mixer\n\n\n\n\n\n\n\n\nNote\n\n\n\nVoltage conversion gain for single-balanced and double-balanced RZ mixer : \\[\\frac{2}{\\pi} \\approx -4 dB\\] ::: –&gt;\n\nSampling Mixer or NRZ Mixer\nNRZ : Non-Return-Zero\n\n\nSingle Balance Sampling Mixer\n\n\n\nSingle Balance Sampling Mixer\n\n\n\n\nDouble Balance Sampling Mixer\n\n\nAnalog Multiplier Mixer\n\nHigh gain\nHigh nonlinearity (Is this good or bad in RF? Remember IP3?)\n\n\n\nPassive and Active Mixers\nPassive mixers gain is smaller than 1, but with active mixers, the conversion gain can be greater than 1.\n\n\nLeakage Problem in Mixers\n\nInjection Pull (RF-LO)\nThis problem occurs in DCR, which high interference from RF enters into LO, and eventually degrades LO’s performance (make LO to become unstable)."
-  },
-  {
-    "objectID": "posts/RF/rf-mixers/rf-mixers.html#analog-multiplier-mixer",
-    "href": "posts/RF/rf-mixers/rf-mixers.html#analog-multiplier-mixer",
-    "title": "RF Mixers",
-    "section": "Analog Multiplier Mixer",
-    "text": "Analog Multiplier Mixer\n\nHigh gain\nHigh nonlinearity (Is this good or bad in RF? Remember IP3?)"
-  },
-  {
-    "objectID": "posts/RF/rf-mixers/rf-mixers.html#passive-and-active-mixers",
-    "href": "posts/RF/rf-mixers/rf-mixers.html#passive-and-active-mixers",
-    "title": "RF Mixers",
-    "section": "Passive and Active Mixers",
-    "text": "Passive and Active Mixers\nPassive mixers gain is smaller than 1, but with active mixers, the conversion gain can be greater than 1."
-  },
-  {
-    "objectID": "posts/RF/rf-mixers/rf-mixers.html#injection-pull-rf-lo",
-    "href": "posts/RF/rf-mixers/rf-mixers.html#injection-pull-rf-lo",
-    "title": "RF Mixers",
-    "section": "Injection Pull (RF-LO)",
-    "text": "Injection Pull (RF-LO)\nThis problem occurs in DCR, which high interference from RF enters into LO, and eventually degrades LO’s performance (make LO to become unstable)."
-  },
-  {
-    "objectID": "posts/qwen-vl/qwen-vl.html",
-    "href": "posts/qwen-vl/qwen-vl.html",
-    "title": "QwenVL Paper Summary",
-    "section": "",
-    "text": "Qwen-VL is a series of LVLMs which used to understand texts and images, it is developed by Ali group and it is an open-source model. What’s make it different from Qwen-7B is that with Qwen-VL it introduces visual receptor, language-aligned visual encoder and position-aware receptor.\nThis is my summary after reading the Qwen-VL paper, all the images are taken from original paper."
-  },
-  {
-    "objectID": "posts/qwen-vl/qwen-vl.html#features-of-qwen-vl",
-    "href": "posts/qwen-vl/qwen-vl.html#features-of-qwen-vl",
-    "title": "QwenVL Paper Summary",
-    "section": "Features of Qwen-VL",
-    "text": "Features of Qwen-VL\nThere are 4 features of Qwen-VL, which make it superior to other LVLMs :\n\nLeading performance & open source (less model parameters, only 9.6B compare to other LVLMs.)\nMultilingual\nMultiple images input\nMore accurate : using higher resolution image in training process (fine-grained visual understanding)"
-  },
-  {
-    "objectID": "posts/qwen-vl/qwen-vl.html#model-architecture",
-    "href": "posts/qwen-vl/qwen-vl.html#model-architecture",
-    "title": "QwenVL Paper Summary",
-    "section": "Model Architecture",
-    "text": "Model Architecture\nThere 3 basic components in Qwen-VL :\n\nBase model : Qwen-7B\nVisual Encoder : Vision Transformer (pretrained weights from Openclip’s ViT-bigG)\nPosition-aware Vision-Language Adaptor"
-  },
-  {
-    "objectID": "posts/qwen-vl/qwen-vl.html#training-process",
-    "href": "posts/qwen-vl/qwen-vl.html#training-process",
-    "title": "QwenVL Paper Summary",
-    "section": "Training Process",
-    "text": "Training Process\nThe data in pre-train process consists of 1.4 billion images, 77.3% in English and 22.7 in Chinese, where in finetuning process consists of 350k instruction data. The training part consists of 3 processes (refer to Figure 1) :\n\n\n\n\n\n\nFigure 1: Training Processes\n\n\n\n\nPre-training (freeze LLM, optimize visual encoder and adapter, using 224x224 resolution images)\nMulti-task pre-training (train whole model in 7 tasks simulteneously, increase img resolution to 448x448)\nFinetuning (freeze the visual encoder, train only LLM and adapter, result in Qwen-VL-Chat)\n\n\n\n\n\n\n\nFigure 2: Pre-train Dataset\n\n\n\nBelow is the detail of hyper-parameters for the training processes :\n\n\n\n\n\n\nFigure 3: Hyper-parameters"
-  },
-  {
-    "objectID": "posts/numpy/index.html",
-    "href": "posts/numpy/index.html",
-    "title": "Numpy",
-    "section": "",
-    "text": "What is numpy?\n\nNumPy is the fundamental package for scientific computing in Python. The core of Numpy is the ndarray object, operations of this array are being performed in compiled code for performance.\n\nHow Numpy differ from standard Python sequences ? Why using numpy ?\n\nThere are several different between Numpy and standard Python sequences:\n\n\n\nNumPy arrays have a fixed size at creation, unlike Python lists (which can grow dynamically)\nElements within the same Numpy array must be the same data type.\nAdvanced mathematics operations can be done easily in Numpy (with less code and good performance)\nA growing plethora of scientific and mathematical libraries\n\n\nWhy is numpy fast ?\n\nVectorization describes the absence of any explicit looping, indexing, etc., in the code - these things are taking place, of course, just “behind the scenes” in optimized, pre-compiled C code. Vectorized code has many advantages, among which are:\n\n\n\nVectorized code is more concise and easier to read (shorter code without a lot of for loops)\nFewer lines of code generally means fewer bugs"
-  },
-  {
-    "objectID": "posts/numpy/index.html#linspace",
-    "href": "posts/numpy/index.html#linspace",
-    "title": "Numpy",
-    "section": "Linspace",
-    "text": "Linspace\nnp.linspace(start, end, interval) creates an array with evenly spaced float numbers over a specified interval.\n\nimport numpy as np\na = np.linspace(10,100,10)\na\n\narray([ 10.,  20.,  30.,  40.,  50.,  60.,  70.,  80.,  90., 100.])"
-  },
-  {
-    "objectID": "posts/numpy/index.html#reshape",
-    "href": "posts/numpy/index.html#reshape",
-    "title": "Numpy",
-    "section": "Reshape",
-    "text": "Reshape\nnp.reshape() reshape a numpy array to specific given shape (n, m). In neural network when dealing with images, we usually need to flatten the image into 1 row array by using .reshape(-1).\n\nimport numpy as np\n# Create a 2D array\ny = np.array([[1, 2, 3, 4],\n              [5, 6, 7, 8],\n              [9, 10, 11, 12]])\n# Reshape the array to 1D using -1\nflattened_y = y.reshape(-1)\nflattened_y\n\narray([ 1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12])"
-  },
-  {
-    "objectID": "posts/numpy/index.html#where",
-    "href": "posts/numpy/index.html#where",
-    "title": "Numpy",
-    "section": "Where",
-    "text": "Where\nnp.where() perform conditional operations on arrays and is somewhat similar to the ternary conditional operator (condition ? value_if_true : value_if_false) found in many programming languages.\n\nimport numpy as np\na = np.arange(10)\nb = np.where(a&gt;5, a, a**2)\nb\n\narray([ 0,  1,  4,  9, 16, 25,  6,  7,  8,  9])\n\n\nFor more references visit Numpy Documentation"
-  },
-  {
-    "objectID": "posts/german-vocabulary/german_vocab.html",
-    "href": "posts/german-vocabulary/german_vocab.html",
-    "title": "German Vocabulary",
-    "section": "",
-    "text": "Weather\n\n\n\nFrühling: spring\nSommer : summer\nSonnig: sunny\n(der) Regen: rainning\nNeblig: foggy\n\nEs ist neblig / warm\n\nWarm\n\nIst es warm heute ?\nEs ist nie warm im Winter.\nEs ist neblig heute und bewölkt.\n\nBewölkt\n\nEs ist bewölkt und neblig.\n\nHerbst: the Fall\nWetter : weather\n\nWie ist das Wetter heute ?\n\nHeute : today\nwandere(ich) wandert wanderst wandern(sie)\n\nWandern sie oft Anna, Wanderst du oft Anna?\nDie Eule wandert nie in Sommer.\n\nSonnencreme : sunscreen\n\nWie viel kostet die Sonnencreme ?\n\nEs ist immer schön im Frühling\ndie Wasserflasche\n\nMeine Wasserflasche ist groß.\n\n\n\n\n\n\nliebt\n\nLiebt dein Bruder deinen Hund ?\nLiebt du deinen Hund ?\n\nhabe hast\n\nHast du einen Mann ?\nHast du einen Freundin ?\n\nFreund\n\nHast du viele Freunde ?\n\nFreundin\n\nHast du einen Freundin?\n\nOnkel\nOma\nOpa\n\n\n\n\n\n(die) Banane\n\nIch mag Bananen.\n\n(die) Birne\n(die) Bohnen, bean\n\nIch mag Bohnen.\n\n(die) Butter\n(die) Aubergine\n(das) Brot\n(die) Schokolade\n\nIch mag Schokoladen.\n\n(die) Feige\n(das) Fleisch, meat\n(die) Familie\n(der) Reis\n\nIch esse gern Reis.\n\n(die) Rosinen\n\nIch esse gern Rosinen.\n\n(das) Radio\nwaschen\nkaufen\n\n\n\n\n\n(die) Schule\n(der) Schal\n(der) Fisch"
-  },
-  {
-    "objectID": "posts/german-vocabulary/german_vocab.html#weather-and-seasons",
-    "href": "posts/german-vocabulary/german_vocab.html#weather-and-seasons",
-    "title": "German Vocabulary",
-    "section": "",
-    "text": "Weather\n\n\n\nFrühling: spring\nSommer : summer\nSonnig: sunny\n(der) Regen: rainning\nNeblig: foggy\n\nEs ist neblig / warm\n\nWarm\n\nIst es warm heute ?\nEs ist nie warm im Winter.\nEs ist neblig heute und bewölkt.\n\nBewölkt\n\nEs ist bewölkt und neblig.\n\nHerbst: the Fall\nWetter : weather\n\nWie ist das Wetter heute ?\n\nHeute : today\nwandere(ich) wandert wanderst wandern(sie)\n\nWandern sie oft Anna, Wanderst du oft Anna?\nDie Eule wandert nie in Sommer.\n\nSonnencreme : sunscreen\n\nWie viel kostet die Sonnencreme ?\n\nEs ist immer schön im Frühling\ndie Wasserflasche\n\nMeine Wasserflasche ist groß."
-  },
-  {
-    "objectID": "posts/german-vocabulary/german_vocab.html#relation",
-    "href": "posts/german-vocabulary/german_vocab.html#relation",
-    "title": "German Vocabulary",
-    "section": "",
-    "text": "liebt\n\nLiebt dein Bruder deinen Hund ?\nLiebt du deinen Hund ?\n\nhabe hast\n\nHast du einen Mann ?\nHast du einen Freundin ?\n\nFreund\n\nHast du viele Freunde ?\n\nFreundin\n\nHast du einen Freundin?\n\nOnkel\nOma\nOpa"
-  },
-  {
-    "objectID": "posts/german-vocabulary/german_vocab.html#food",
-    "href": "posts/german-vocabulary/german_vocab.html#food",
-    "title": "German Vocabulary",
-    "section": "",
-    "text": "(die) Banane\n\nIch mag Bananen.\n\n(die) Birne\n(die) Bohnen, bean\n\nIch mag Bohnen.\n\n(die) Butter\n(die) Aubergine\n(das) Brot\n(die) Schokolade\n\nIch mag Schokoladen.\n\n(die) Feige\n(das) Fleisch, meat\n(die) Familie\n(der) Reis\n\nIch esse gern Reis.\n\n(die) Rosinen\n\nIch esse gern Rosinen.\n\n(das) Radio\nwaschen\nkaufen"
-  },
-  {
-    "objectID": "posts/german-vocabulary/german_vocab.html#place",
-    "href": "posts/german-vocabulary/german_vocab.html#place",
-    "title": "German Vocabulary",
-    "section": "",
-    "text": "(die) Schule\n(der) Schal\n(der) Fisch"
+    "objectID": "projects/pig_game/pig_game.html#building-processes",
+    "href": "projects/pig_game/pig_game.html#building-processes",
+    "title": "Pig Game using Javascript",
+    "section": "Building Processes",
+    "text": "Building Processes\n\n1. Select DOM Elements\n\nUsing strict at the beginning, so that JS stopped running when there is an error.\nWe select button elements using querySelector.\nScores store both player score, which score[0] stores Player 1’s score and score[1] stores Player 2’s score.\nInitialize all the variables\n\n\"use strict\";\n\nconst player0 = document.querySelector(\".player--0\");\nconst player1 = document.querySelector(\".player--1\");\n\nconst scoreEl0 = document.getElementById(\"score--0\");\nconst scoreEl1 = document.getElementById(\"score--1\");\nconst currentScoreEl0 = document.getElementById(\"current--0\");\nconst currentScoreEl1 = document.getElementById(\"current--1\");\n\nconst btnNew = document.querySelector(\".btn--new\");\nconst btnRoll = document.querySelector(\".btn--roll\");\nconst btnHold = document.querySelector(\".btn--hold\");\n\nlet winScore = Number(document.getElementById(\"win-score\").value);\nlet currentScore = 0;\nlet currentPlayer = 0;\nlet Gameover = false;\n\nconst diceEl = document.querySelector(\".dice\");\n\nlet scores = [0, 0];\n\n\n2. New Game\nWhen ‘NEW GAME’ button is clicked, we trigger the newGame() function.\nbtnNew.addEventListener(\"click\", () =&gt; {\n  Gameover = false;\n  newGame();\n});\nIn newGame() function, We check if the currentPlayer contain player--winner class, if it does class we then remove the class to begin the game.\n// newGame\nconst newGame = function () {\n  currentScore = 0;\n  scores = [0, 0];\n  const currentPlayerEle = document.querySelector(`.player--${currentPlayer}`);\n  if (currentPlayerEle.classList.contains(\"player--winner\")) {\n    currentPlayerEle.classList.remove(\"player--winner\");\n  }\n  removeAllActive();\n  currentPlayer = Math.floor(Math.random() + 0.5);\n  document\n    .querySelector(`.player--${currentPlayer}`)\n    .classList.add(\"player--active\");\n  // hide dice\n  diceEl.classList.add(\"hidden\");\n  // reset scores to 0\n  scoreEl0.textContent = 0;\n  scoreEl1.textContent = 0;\n  currentScoreEl0.textContent = 0;\n  currentScoreEl1.textContent = 0;\n};\nTo start the game equally, we random a number 0-1, if it is 0, start with Player 1, otherwise Player 2 start the game.\ncurrentPlayer = Math.floor(Math.random() + 0.5);\nBut we first call function removeAllActive to remove active player class from all both players.\nconst removeAllActive = function () {\n  if (player0.classList.contains(\"player--active\")) {\n    player0.classList.remove(\"player--active\");\n  }\n  if (player1.classList.contains(\"player--active\")) {\n    player1.classList.remove(\"player--active\");\n  }\n};\n\n\n3. Rolling Button\nWe then an eventListener to the Rolling button. When the rolling button is clicked :\n\nDice is unhidden\nRandom number between 1 to 6\nIf random number is 1, switch the player by trigger switchPlayer() function.\n\nconst switchPlayer = function () {\n  currentScore = 0;\n  document.getElementById(`current--${currentPlayer}`).textContent =\n    currentScore;\n  currentPlayer = currentPlayer === 1 ? 0 : 1;\n  player0.classList.toggle(\"player--active\");\n  player1.classList.toggle(\"player--active\");\n};\n\nIf random number is not 1, add the score to current score.\n\n// rolling button\nbtnRoll.addEventListener(\"click\", () =&gt; {\n  // show dice\n  if (!Gameover) {\n    diceEl.classList.remove(\"hidden\");\n\n    const randDice = Math.floor(Math.random() * 6) + 1;\n    diceEl.src = `dice-${randDice}.png`;\n    // Add score to current score\n    if (randDice !== 1) {\n      currentScore += randDice;\n      document.getElementById(`current--${currentPlayer}`).textContent =\n        currentScore;\n    }\n    // Switch the player\n    else {\n      switchPlayer();\n    }\n  }\n});\n\n\n4. Hold Button\nWhen hold button is click, it will :\n\nIf the game has not ended add the current score to player overall score.\nSwitch to other player\nIf one of the player win the game, add a player--winner class to that player.\n\n// hold button\nbtnHold.addEventListener(\"click\", () =&gt; {\n  winScore = Number(document.getElementById(\"win-score\").value);\n  if (!Gameover) {\n    scores[currentPlayer] += currentScore;\n    document.getElementById(`score--${currentPlayer}`).textContent =\n      scores[currentPlayer];\n    if (scores[currentPlayer] &gt;= winScore) {\n      document\n        .querySelector(`.player--${currentPlayer}`)\n        .classList.add(\"player--winner\");\n      document\n        .querySelector(`.player--${currentPlayer}`)\n        .classList.remove(\"player--active\");\n      diceEl.classList.add(\"hidden\");\n      Gameover = true;\n    } else {\n      switchPlayer();\n    }\n  }\n});"
   },
   {
     "objectID": "posts/deep-learning-journey/deep-learning-journey.html",
@@ -280,46 +77,158 @@
     "text": "Answer\n\nFFFF.\nFive areas that DL are good at: natural language processing (NPL), Medical image, security(computer vision), factory(industrial | anomaly detection) and recommendation system(commercial).\nThe first device that was based on the principle of the artificial neuron is : The Mark I Perceptron.\nRequirements for the parallel distributed processing:\n\na set of processing unit\na state of activation\nan output function for each unit\na pattern of connectivity between units\nA propagation rule for propagating patterns of activities through the network of connectivities\nAn activation rule for combining the inputs impinging on a unit with the current state of that unit to produce a new level of activation for the unit\nA learning rule whereby patterns of connectivity are modified by experience\nAn environment within which the system must operate\n\nTwo theoretical misunderstandings that held back the field of neuron networks is:\n\nAdding one more layers (2 layer) then it will be possible to approximate any function.\nAdding more layers to make model better\n\nGPU is a kind of processor which can do the parallel computing, it is commonly used in training the model.\nBecause traditional computer does not come with a GPU, hence its computation speed is slow and inefficient.\nSamuel mean by “weight assignment” refer to setting the value of variable on how the function works/behave.\n“weight” is refer to “parameters” in deep learning.\nBecause some problems such as image recognition, we unconsciously know how our brain can recognize patterns in such images.\nUniversal approximation theorem.\nData(input) and labels(model output references).\nUsing feedback loop can be problematic, the more biased of dataset, the more biased of the model.\nNo, we can use any size, using image of size 264x264 is due to historical reason (traditional model can only trained using 264x264 size).\nClassification is for predicting the categories of dataset while Regression predict numerical value.\nValidation set is an less exposed data set which is used to find the optimal hyperparameters of various architectures of model. Test set is used to predict the unseen data and evaluate the model overall performance.\nFastAI will automatically set the validation set to 0.2 (20%).\nNo, we can’t. A counter case is training with time-series data which is too easy for model to to fill the gap, when we select random validation instances.\nOverfitting is a problem when the model perform very well on training data set but perform poorly in predicting unseen data. An example : when a model is trained to decide the image is cat or dog, model can only accurately make a classification when given an instance within train dataset. But fail when given cat or dog image outside the training set (or the cat image that is not similar to the images within training set).\nMetric is a version of loss which used for human (make it more understandable for human), it can be error percentage or accuracy.\nUsing pre-trained model, can increase training efficiency, because pretrained model (already has more capability) can already recognize basic patterns of data.\nHead of a model is the last layer of the model. Note that we need to change the head of model (one or more layers to make it suitable for specifics task of the model) while using pre-trained model.\nThe first layer of CNN, it determines diagonal, horizontal, and vertical edges as well as various gradients. 2nd layer the model detects features within the image such as circle, triangle etc.\nImage models are not only useful for photos, but also useful in other type of input. For instance, voice signal can also express in term of spectrum as photos.\nArchitecture is the pre assume functions or structure of the model.\nSegmentation is task where photos are divided and recognized into small components labels. For example, self driving car might use video data and do the segmentation recognize the pedestrian in order to adjust direction or speed.\ny_range is used for setting a range in label for specific task (when we only interested in a specific range of values).\nHyperparameters are the specification of the model that are manually set by human such as model architecture, learning rate, hidden layers number etc.\nBest way to avoid failures when using AI in an organization is to keep a test dataset separately (without intervening with training process)."
   },
   {
-    "objectID": "posts/cnn/cnn.html",
-    "href": "posts/cnn/cnn.html",
-    "title": "Convolutional Neuron Network",
+    "objectID": "posts/german-grammar/german.html",
+    "href": "posts/german-grammar/german.html",
+    "title": "German Grammar",
     "section": "",
-    "text": "Structured and unstructured data ? Which one is machine good at ?\nWhy DL just get its popularity in recent years ? Hint : ABC\nWhat field RNN is generally used in ? CNN ? (CV, voice recognition, advertising)\nWhat is the first version of neuron network ? Can 1 layer neuron network (1st version) solve XOR problem?\nWhat are commonly used structures of NN ? Full-connected, CNN, RNN\nWhy Sigmoid function is not commonly used as an activation function in NN ? Zero gradient"
+    "text": "The nominative case is one of the grammatical cases in German, used primarily for the subject of a sentence, which is the person or thing performing the action of the verb. It’s also used for predicate nouns or pronouns that refer back to the subject.\nHere are some examples of how the nominative case is used:\n\nSubject of a Sentence: The noun or pronoun that performs the action of the verb.\n\n“Der Hund bellt.” (The dog barks.)\n“Sie liest ein Buch.” (She reads a book.)\n\nPredicate Nouns or Pronouns: Nouns or pronouns that rename or describe the subject in a sentence.\n\n“Mein Bruder ist Arzt.” (My brother is a doctor.)\n“Der Himmel ist blau.” (The sky is blue.)\n\nApposition: When two nouns or noun phrases are used together to describe the same person or thing.\n\n“Meine Mutter, eine Lehrerin, kommt bald.” (My mother, a teacher, is coming soon.)\n“Der Mann, mein Nachbar, ist sehr freundlich.” (The man, my neighbor, is very friendly.)\n\n\n\n\n\nThe accusative case is one of the four grammatical cases in German. It indicates the direct object of a sentence, often answering the question “what?” or “whom?” The accusative case is used for the noun or pronoun that directly receives the action of the verb.\nHere are some examples of how the accusative case is used:\n\nDirect Objects: In sentences where the action of the verb is directly applied to something or someone.\n\n“Ich sehe den Mann.” (I see the man.)\n“Sie liest ein Buch.” (She reads a book.)\n\nMotion Toward: When indicating motion towards a specific location.\n\n“Er geht in den Park.” (He goes into the park.)\n“Sie fahren in die Stadt.” (They drive into the city.)\n\nDuration or Time Span: When specifying a duration of time.\n\n“Ich habe den ganzen Tag gearbeitet.” (I worked the whole day.)\n“Wir haben den Film gestern gesehen.” (We watched the movie yesterday.)\n\n\n\n\n\nThe dative case is one of the four grammatical cases in German (the others being nominative, accusative, and genitive). It indicates the indirect object of a sentence, often answering the question “to whom?” or “for whom?” The dative case is used for the recipient of an action or the object that is indirectly affected by the verb.\nHere are some examples of how the dative case is used:\n\nIndirect Objects: In sentences where something is given or done to someone or something else.\n\n“Ich gebe dem Mann das Buch.” (I give the book to the man.)\n\nCertain Prepositions: Some prepositions in German always take the dative case.\n\n“Ich gehe mit meinem Freund.” (I am going with my friend.)\n“Er spricht mit dem Lehrer.” (He is speaking with the teacher.)\n\nDative Objects with Verbs: Some verbs are used with dative objects, indicating who or what is indirectly affected by the action.\n\n“Ich helfe meiner Schwester.” (I am helping my sister.)\n“Sie glaubt dem Arzt.” (She believes the doctor.)\n\n\n\n\n\nThe genitive case is another grammatical case in German, indicating possession or the relationship between nouns. It often answers the question “whose?” or “of whom/what?” The genitive case is used to show ownership, association, or origin.\nHere are some examples of how the genitive case is used:\n\nPossession: Showing ownership or possession.\n\n“Das Auto meines Vaters.” (My father’s car.)\n“Die Farbe des Himmels.” (The color of the sky.)\n\nRelationships: Indicating relationships between nouns.\n\n“Die Stimme der Sängerin.” (The voice of the singer.)\n“Das Land der Träume.” (The land of dreams.)\n\nCertain Prepositions: Some prepositions in German always take the genitive case.\n\n“Wegen des Wetters.” (Because of the weather.)\n“Trotz des Regens.” (Despite the rain.)\n\n\n\n\n\n\nIn German, “ein,” “eine,” and “einen” are all forms of the indefinite article “a” or “an” in English. They are used to indicate the gender (masculine, feminine, or neuter) and case (nominative, accusative, or dative) of the noun they precede.\n\n“Ein” is used for masculine and neuter nouns in the nominative case.\n“Eine” is used for feminine nouns in the nominative case.\n“Einen” is used for masculine nouns in the accusative case.\n\n\nMasculine:\n\nNominative case: “ein” (a)\nAccusative case: “einen” (a)\n\nFeminine:\n\nNominative case: “eine” (a)\nAccusative case: “eine” (a)\n\nNeuter:\n\nNominative case: “ein” (a)\nAccusative case: “ein” (a)\n\n\nCheat sheet:\n\n\n\nIndefinite Article Cheat Sheet"
   },
   {
-    "objectID": "posts/cnn/cnn.html#convolution-layer",
-    "href": "posts/cnn/cnn.html#convolution-layer",
-    "title": "Convolutional Neuron Network",
-    "section": "Convolution layer",
-    "text": "Convolution layer\nKeywords: Spatial dimension, Depth, Filters Bank, feature maps, Pooling\n\nKernel\nKernel refers to a small matrix used for convolutional operations. Convolution is the fundamental operation in a CNN, where the kernel (also called a filter) is applied to input data, typically an image, to produce feature maps. ’’ \n\n\nStride\n“stride” refers to the number of pixels by which the convolutional kernel moves across the input data at each step during the convolution operation. In below example, illustrate a case when stride = 2.\n\\[\\text{output depth} = \\frac{width - filter + 2 \\times pad}{stride} + 1\\]\n\n\n\nConvolution of a 5x5 input (blue) with 3x3 kernel (grey) with a stride of 2 and padding of 1. The 3x3 output is in green. Source\n\n\n\n\nPadding\nPadding is a technique used to control the spatial dimensions of the output feature maps after applying convolutional operations to the input data.\nFeatures of padding in CNN:\n\nkeep the image data near to border edge\nmaintain the size of input image dimension\nchange the output size of convolution layer\n\n\n\nPooling\n\nWhat is pooling ?\n\na technique to reduce the activation spatial dimensions/Pooling helps in reducing memory consumption in deeper layers. It is also an important step to convert the spatial information into features.\n\n\nThe two most common pooling methods are : Max pooling and Average pooling.\n\n\nCode\nimport torch\nimport torch.nn.functional as F\n\n# Define input image\nimage = torch.tensor([[2, 2, 7, 3],\n                      [9, 4, 6, 1],\n                      [8, 5, 2, 4],\n                      [3, 1, 2, 6]], dtype=torch.float32)\n\n# Add batch and channel dimensions\nimage = image.unsqueeze(0).unsqueeze(0)\n\n# Apply max pooling directly using functional API\noutput = F.max_pool2d(image, kernel_size=2, stride=2)\n\n# Print output image\noutput = output.squeeze().numpy()\nprint(output)\n\n\n[[9. 7.]\n [8. 6.]]"
-  },
-  {
-    "objectID": "posts/cnn/cnn.html#activation-functions",
-    "href": "posts/cnn/cnn.html#activation-functions",
-    "title": "Convolutional Neuron Network",
-    "section": "Activation functions",
-    "text": "Activation functions\nThe activation fuction is a transformation function in NN that transform the weight and bias into a nonlinear format. With Activation function, model can learn and represent more complex patterns in data.\n\n\n\n\n\n\nDoes activation function must be a nonlinear function ? Why ?\n\n\n\n\n\nIn neural networks, activation functions are typically designed to be nonlinear. This is because if all activation functions were linear, the entire neural network would effectively become a linear model, incapable of capturing complex nonlinear relationships.\nIf all activation functions were set to linear functions, even a very deep neural network would behave like a single-layer linear model. Such a model would fail to handle many real-world nonlinear relationships, limiting the expressiveness and applicability of neural networks.\n\n\n\n\nReLU\nThe Rectified Linear Unit (ReLU) activation function is one of the most widely used activation functions in deep learning. It’s defined as:\n\\[f(x) = \\max(0, x)\\]\nIn simple terms, ReLU returns if x is positive, and 0 otherwise. This makes it a piecewise linear function.\nReLU has several advantages:\n\nSimplicity: ReLU is computationally efficient and easy to implement. It only involves a simple thresholding operation, making it faster to compute compared to more complex activation functions like sigmoid or tanh.\nSparsity: ReLU introduces sparsity in the network because it turns off neurons that have negative inputs (setting their output to zero). This sparsity can help reduce overfitting by encouraging the network to focus on important features and ignore noise.\nAddressing vanishing gradient problem: ReLU helps mitigate the vanishing gradient problem by providing a constant gradient (1) for positive inputs during backpropagation. This helps prevent the gradients from becoming too small, enabling more stable and efficient training of deep neural networks.\n\nDespite its advantages, ReLU also has some drawbacks:\n\nDead neurons: Neurons with negative inputs always output zero, leading to the problem of “dying ReLU neurons.” If a neuron’s weights are such that it always receives negative inputs, it will never activate, and its weights will not be updated during training.\nUnbounded output: ReLU does not have an upper bound, which means neurons can potentially produce very large outputs. This can lead to issues like exploding gradients, especially during training.\n\n\n\nLeaky ReLU\nLeaky ReLU is a variant of the Rectified Linear Unit (ReLU) activation function, designed to address the “dying ReLU” problem. In standard ReLU, neurons with negative inputs always output zero, which can cause them to become “dead” and stop learning. Leaky ReLU introduces a small slope (or “leak”) for negative inputs, allowing some information to flow through the neuron even when its input is negative. Mathematically, Leaky ReLU is defined as:\n\\[\nf(x) = \\begin{cases}\nx & \\text{if } x &gt; 0 \\\\\n\\alpha x & \\text{if } x \\leq 0\n\\end{cases}\n\\]\nwhere \\(\\alpha\\) is a small constant (typically a small positive value: 0.01 or 0.001) that determines the slope of the function for negative inputs."
-  },
-  {
-    "objectID": "posts/cnn/cnn.html#output-layer",
-    "href": "posts/cnn/cnn.html#output-layer",
-    "title": "Convolutional Neuron Network",
-    "section": "Output Layer",
-    "text": "Output Layer\n\nSoftmax Function\nSoftmax function is generally used in output layer, since it range is (0-1) which can be represented as probabilty values. Its expression can be written as :\n\\[\\sigma = \\frac{e^{a_k}}{\\sum_{i=1}^{n}e^{a_i}}\\]\nExample in softmax calculation :\n\n\n\nSoftmax\n\n\nReference"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "posts/german-grammar/german.html#four-grammatical-cases",
+    "href": "posts/german-grammar/german.html#four-grammatical-cases",
+    "title": "German Grammar",
     "section": "",
-    "text": "Hello there! I’m Samith, and I’m thrilled to have you here on my blog. As a passionate student of Information Engineering in Shanghai Jiao Tong University (China), I’ve embarked on a journey filled with discovery, learning, and growth.  Through this platform, I aim to share the knowledge and insights I’ve gained, with the hope of assisting others who are navigating similar paths in the world of technology."
+    "text": "The nominative case is one of the grammatical cases in German, used primarily for the subject of a sentence, which is the person or thing performing the action of the verb. It’s also used for predicate nouns or pronouns that refer back to the subject.\nHere are some examples of how the nominative case is used:\n\nSubject of a Sentence: The noun or pronoun that performs the action of the verb.\n\n“Der Hund bellt.” (The dog barks.)\n“Sie liest ein Buch.” (She reads a book.)\n\nPredicate Nouns or Pronouns: Nouns or pronouns that rename or describe the subject in a sentence.\n\n“Mein Bruder ist Arzt.” (My brother is a doctor.)\n“Der Himmel ist blau.” (The sky is blue.)\n\nApposition: When two nouns or noun phrases are used together to describe the same person or thing.\n\n“Meine Mutter, eine Lehrerin, kommt bald.” (My mother, a teacher, is coming soon.)\n“Der Mann, mein Nachbar, ist sehr freundlich.” (The man, my neighbor, is very friendly.)\n\n\n\n\n\nThe accusative case is one of the four grammatical cases in German. It indicates the direct object of a sentence, often answering the question “what?” or “whom?” The accusative case is used for the noun or pronoun that directly receives the action of the verb.\nHere are some examples of how the accusative case is used:\n\nDirect Objects: In sentences where the action of the verb is directly applied to something or someone.\n\n“Ich sehe den Mann.” (I see the man.)\n“Sie liest ein Buch.” (She reads a book.)\n\nMotion Toward: When indicating motion towards a specific location.\n\n“Er geht in den Park.” (He goes into the park.)\n“Sie fahren in die Stadt.” (They drive into the city.)\n\nDuration or Time Span: When specifying a duration of time.\n\n“Ich habe den ganzen Tag gearbeitet.” (I worked the whole day.)\n“Wir haben den Film gestern gesehen.” (We watched the movie yesterday.)\n\n\n\n\n\nThe dative case is one of the four grammatical cases in German (the others being nominative, accusative, and genitive). It indicates the indirect object of a sentence, often answering the question “to whom?” or “for whom?” The dative case is used for the recipient of an action or the object that is indirectly affected by the verb.\nHere are some examples of how the dative case is used:\n\nIndirect Objects: In sentences where something is given or done to someone or something else.\n\n“Ich gebe dem Mann das Buch.” (I give the book to the man.)\n\nCertain Prepositions: Some prepositions in German always take the dative case.\n\n“Ich gehe mit meinem Freund.” (I am going with my friend.)\n“Er spricht mit dem Lehrer.” (He is speaking with the teacher.)\n\nDative Objects with Verbs: Some verbs are used with dative objects, indicating who or what is indirectly affected by the action.\n\n“Ich helfe meiner Schwester.” (I am helping my sister.)\n“Sie glaubt dem Arzt.” (She believes the doctor.)\n\n\n\n\n\nThe genitive case is another grammatical case in German, indicating possession or the relationship between nouns. It often answers the question “whose?” or “of whom/what?” The genitive case is used to show ownership, association, or origin.\nHere are some examples of how the genitive case is used:\n\nPossession: Showing ownership or possession.\n\n“Das Auto meines Vaters.” (My father’s car.)\n“Die Farbe des Himmels.” (The color of the sky.)\n\nRelationships: Indicating relationships between nouns.\n\n“Die Stimme der Sängerin.” (The voice of the singer.)\n“Das Land der Träume.” (The land of dreams.)\n\nCertain Prepositions: Some prepositions in German always take the genitive case.\n\n“Wegen des Wetters.” (Because of the weather.)\n“Trotz des Regens.” (Despite the rain.)"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Pandas",
+    "objectID": "posts/german-grammar/german.html#indefinite-articles",
+    "href": "posts/german-grammar/german.html#indefinite-articles",
+    "title": "German Grammar",
     "section": "",
-    "text": "Pandas is a powerful and versatile open-source data analysis and manipulation library for Python. It is widely used in data science, finance, economics, and many other fields for its ability to handle structured data easily and efficiently."
+    "text": "In German, “ein,” “eine,” and “einen” are all forms of the indefinite article “a” or “an” in English. They are used to indicate the gender (masculine, feminine, or neuter) and case (nominative, accusative, or dative) of the noun they precede.\n\n“Ein” is used for masculine and neuter nouns in the nominative case.\n“Eine” is used for feminine nouns in the nominative case.\n“Einen” is used for masculine nouns in the accusative case.\n\n\nMasculine:\n\nNominative case: “ein” (a)\nAccusative case: “einen” (a)\n\nFeminine:\n\nNominative case: “eine” (a)\nAccusative case: “eine” (a)\n\nNeuter:\n\nNominative case: “ein” (a)\nAccusative case: “ein” (a)\n\n\nCheat sheet:\n\n\n\nIndefinite Article Cheat Sheet"
+  },
+  {
+    "objectID": "posts/RF/rf-pa/rf-pa.html",
+    "href": "posts/RF/rf-pa/rf-pa.html",
+    "title": "Power Amplifier",
+    "section": "",
+    "text": "Two important specification of PA :"
+  },
+  {
+    "objectID": "posts/RF/rf-pa/rf-pa.html#power-efficiency",
+    "href": "posts/RF/rf-pa/rf-pa.html#power-efficiency",
+    "title": "Power Amplifier",
+    "section": "Power Efficiency",
+    "text": "Power Efficiency\n\\[\\eta = \\frac{P_L}{P_\\text{supply}}\\]"
+  },
+  {
+    "objectID": "posts/RF/rf-pa/rf-pa.html#power-added-efficiency",
+    "href": "posts/RF/rf-pa/rf-pa.html#power-added-efficiency",
+    "title": "Power Amplifier",
+    "section": "Power-added Efficiency",
+    "text": "Power-added Efficiency\n\\[\\text{PAE} = \\frac{P_L - P_\\text{in}}{P_\\text{supply}}\\]"
+  },
+  {
+    "objectID": "posts/RF/rf-pa/rf-pa.html#type-a-pa",
+    "href": "posts/RF/rf-pa/rf-pa.html#type-a-pa",
+    "title": "Power Amplifier",
+    "section": "Type A PA",
+    "text": "Type A PA\n\n\n\nType A PA\n\n\n\nAlways on (conduction angle = 360)\nLow efficiency : 30 - 35% (maximum is 50%)\n\n\\[i_\\text{RF} = \\frac{V_\\text{DD}}{R_L}\\]"
+  },
+  {
+    "objectID": "posts/RF/rf-pa/rf-pa.html#type-b-pa",
+    "href": "posts/RF/rf-pa/rf-pa.html#type-b-pa",
+    "title": "Power Amplifier",
+    "section": "Type B PA",
+    "text": "Type B PA\n\n\n\nType B PA\n\n\n\nNot always on (usually 50% on, maximum is 78.5%, conduction angle = 180)\nEfficiency is higher than type A PA\nHigher nonlinearity (tradeoff between efficiency and linearity)\n\n\\[i_\\text{fund} = \\frac{i_\\text{RF}}{2}\\]"
+  },
+  {
+    "objectID": "posts/RF/rf-pa/rf-pa.html#type-c-pa",
+    "href": "posts/RF/rf-pa/rf-pa.html#type-c-pa",
+    "title": "Power Amplifier",
+    "section": "Type C PA",
+    "text": "Type C PA\n\n\n\nType C PA\n\n\n\\[\\eta =\\frac{1}{4}\\frac{\\theta - \\sin \\theta}{\\sin\\frac{\\theta}{2}-\\frac{\\theta}{2}\\cos\\frac{\\theta}{2}}\\]"
+  },
+  {
+    "objectID": "posts/RF/rf-nonlinearity/nonlinearity.html",
+    "href": "posts/RF/rf-nonlinearity/nonlinearity.html",
+    "title": "Effects of Nonlinearity",
+    "section": "",
+    "text": "In analog circuits, nonlinearity can be characterized by harmonic distortion, but in RF circuits, the characterization of nonlinear behavior involves distinct measures that are tailored to the specific requirements and challenges of RF systems. The effects of nonlinearity on RF can be classified into 4 types :\nThese measures often focus on parameters such as intermodulation distortion (IMD), third-order intercept point (IP3), and the dynamic range of the system."
+  },
+  {
+    "objectID": "posts/RF/rf-nonlinearity/nonlinearity.html#answer",
+    "href": "posts/RF/rf-nonlinearity/nonlinearity.html#answer",
+    "title": "Effects of Nonlinearity",
+    "section": "Answer",
+    "text": "Answer\n\nRefer to above equations.\nRefer to above equations.\nWhat are Peak amplitude, peak-to-peak amplitude, rms value ?\nunambiguous question, switch can be linear or non-linear depends on the input of interest.\nWhat is a mixer in context of communication system ?\nTransceiver is the combination of Tx, and Rx.\n\n\n\nWhat is PA ? LNA ? What are their differences  ?\na mixer is frequency shift component. we can prove that it does not satisfy the linear property."
+  },
+  {
+    "objectID": "posts/RF/rf-noise/rf-noise.html",
+    "href": "posts/RF/rf-noise/rf-noise.html",
+    "title": "RF Noise",
+    "section": "",
+    "text": "What will cover in this section : Noise Figure, Friis Equation, Thermal Noise of Resistor, MOSFET Noise."
+  },
+  {
+    "objectID": "posts/RF/rf-noise/rf-noise.html#thermal-noise-in-resistor",
+    "href": "posts/RF/rf-noise/rf-noise.html#thermal-noise-in-resistor",
+    "title": "RF Noise",
+    "section": "Thermal Noise in Resistor",
+    "text": "Thermal Noise in Resistor\nFor ideal inductor and capacitor, is there noise ?\nThermal noise the most significant noise encountered in electronic devices. We can model the thermal in two ways:\n\n\n\nThermal Noise Equilvalent Circuit\n\n\n\nThevenin \\[\\bar{V}^2_n = 4kTR_1\\]\nNorton \\[\\bar{I}^2_n = 4kT/R_1\\]\n\nWhere\n\n\\(k = 1.38 \\times 10^{-23} J/K\\) is the Boltzmann constant.\n\\(T\\) is the temperature kelvin \\((K)\\)"
+  },
+  {
+    "objectID": "posts/RF/rf-noise/rf-noise.html#thermal-noise-in-mosfet",
+    "href": "posts/RF/rf-noise/rf-noise.html#thermal-noise-in-mosfet",
+    "title": "RF Noise",
+    "section": "Thermal noise in MOSFET",
+    "text": "Thermal noise in MOSFET\n Thermal noise of MOS transistors which is operating in the saturation region is approximated by :\n\nA current source tied between the source and drain terminals. \\[\\bar{I_n}^2 = 4kT \\gamma g_m\\]\nA voltage source in series with gate \\[\\bar{V_n}^2 = 4kT \\gamma / g_m\\]\n\nWhere\n\n\\(\\gamma\\) is the excess noise coefficient\n\\(g_m\\) is the transconductance."
+  },
+  {
+    "objectID": "posts/RF/rf-noise/rf-noise.html#noise-figure",
+    "href": "posts/RF/rf-noise/rf-noise.html#noise-figure",
+    "title": "RF Noise",
+    "section": "Noise Figure",
+    "text": "Noise Figure\nIn circuit and system design, we interested in the signal-to-noise ratio (SNR). To quantify how noisy the circuit is, we can define its noise factor as\n\\[\\text{NF} = \\frac{\\text{SNR}_\\text{in}}{\\text{SNR}_\\text{out}}\\]\nor Noise figure in dB as\n\\[\\text{NF}|_\\text{dB} = 10\\log(\\frac{\\text{SNR}_\\text{in}}{\\text{SNR}_\\text{out}})\\]\nWhat is the NF for noiseless stage ?\n\n\nAnswer\n\nNF = 1 = 0 dB"
+  },
+  {
+    "objectID": "posts/RF/rf-noise/rf-noise.html#noise-figure-in-lna",
+    "href": "posts/RF/rf-noise/rf-noise.html#noise-figure-in-lna",
+    "title": "RF Noise",
+    "section": "Noise Figure in LNA",
+    "text": "Noise Figure in LNA\n\n\n\nLNA Noise Model (RF Microelectronics, Behzad Razavi, P49)\n\n\nWe can have \\[\\alpha = \\frac{Z_\\text{in}}{Z_\\text{in} + R_S}\\] \\[\\text{SNR}_\\text{in} = \\frac{V^2_\\text{in}\\alpha^2}{\\bar{V}^2_\\text{n,RS}\\alpha^2} = \\frac{V^2_\\text{in}}{\\bar{V}^2_\\text{n,RS}}\\]\n\\[\\text{SNR}_\\text{out} = \\frac{V^2_\\text{in}\\alpha^2 {A^2}_v}{\\bar{V}^2_\\text{n,RS}\\alpha^2 {A^2}_v + \\bar{V}^2_n}\\]\n\\[ NF = \\frac{\\text{SNR}_\\text{in}}{\\text{SNR}_\\text{out}} = 1 + \\frac{\\bar{V}_n ^ 2}{\\bar{V}^2_\\text{n,RS} \\alpha^2 A_v ^2}\\]"
+  },
+  {
+    "objectID": "posts/RF/rf-noise/rf-noise.html#friis-equation-for-cascaded-stages",
+    "href": "posts/RF/rf-noise/rf-noise.html#friis-equation-for-cascaded-stages",
+    "title": "RF Noise",
+    "section": "Friis Equation for Cascaded Stages",
+    "text": "Friis Equation for Cascaded Stages\nTo determine overall noise figure in a cascade of stages, we can use Friis’s equation :\n\\[NF_{\\text{total}} = {NF}_1 + \\frac{NF_2 - 1}{A^2_1} + ... + \\frac{{NF}_n - 1}{A^2_1...A^2_n}\\]\nFrom above expression we can conclude that the first stage’s NF is the most important. Why ?\n\n\nAnswer\n\nConceptually, because the noise from first stage will be amplified multiple times."
+  },
+  {
+    "objectID": "posts/RF/rf-noise/rf-noise.html#rl-and-rc-in-series-and-parallel",
+    "href": "posts/RF/rf-noise/rf-noise.html#rl-and-rc-in-series-and-parallel",
+    "title": "RF Noise",
+    "section": "RL and RC in Series and Parallel",
+    "text": "RL and RC in Series and Parallel\nRL circuit"
+  },
+  {
+    "objectID": "posts/qwen-vl/qwen-vl.html",
+    "href": "posts/qwen-vl/qwen-vl.html",
+    "title": "QwenVL Paper Summary",
+    "section": "",
+    "text": "Qwen-VL is a series of LVLMs which used to understand texts and images, it is developed by Ali group and it is an open-source model. What’s make it different from Qwen-7B is that with Qwen-VL it introduces visual receptor, language-aligned visual encoder and position-aware receptor.\nThis is my summary after reading the Qwen-VL paper, all the images are taken from original paper."
+  },
+  {
+    "objectID": "posts/qwen-vl/qwen-vl.html#features-of-qwen-vl",
+    "href": "posts/qwen-vl/qwen-vl.html#features-of-qwen-vl",
+    "title": "QwenVL Paper Summary",
+    "section": "Features of Qwen-VL",
+    "text": "Features of Qwen-VL\nThere are 4 features of Qwen-VL, which make it superior to other LVLMs :\n\nLeading performance & open source (less model parameters, only 9.6B compare to other LVLMs.)\nMultilingual\nMultiple images input\nMore accurate : using higher resolution image in training process (fine-grained visual understanding)"
+  },
+  {
+    "objectID": "posts/qwen-vl/qwen-vl.html#model-architecture",
+    "href": "posts/qwen-vl/qwen-vl.html#model-architecture",
+    "title": "QwenVL Paper Summary",
+    "section": "Model Architecture",
+    "text": "Model Architecture\nThere 3 basic components in Qwen-VL :\n\nBase model : Qwen-7B\nVisual Encoder : Vision Transformer (pretrained weights from Openclip’s ViT-bigG)\nPosition-aware Vision-Language Adaptor"
+  },
+  {
+    "objectID": "posts/qwen-vl/qwen-vl.html#training-process",
+    "href": "posts/qwen-vl/qwen-vl.html#training-process",
+    "title": "QwenVL Paper Summary",
+    "section": "Training Process",
+    "text": "Training Process\nThe data in pre-train process consists of 1.4 billion images, 77.3% in English and 22.7 in Chinese, where in finetuning process consists of 350k instruction data. The training part consists of 3 processes (refer to Figure 1) :\n\n\n\n\n\n\nFigure 1: Training Processes\n\n\n\n\nPre-training (freeze LLM, optimize visual encoder and adapter, using 224x224 resolution images)\nMulti-task pre-training (train whole model in 7 tasks simulteneously, increase img resolution to 448x448)\nFinetuning (freeze the visual encoder, train only LLM and adapter, result in Qwen-VL-Chat)\n\n\n\n\n\n\n\nFigure 2: Pre-train Dataset\n\n\n\nBelow is the detail of hyper-parameters for the training processes :\n\n\n\n\n\n\nFigure 3: Hyper-parameters"
   },
   {
     "objectID": "posts/conda/conda.html",
@@ -392,25 +301,25 @@
     "text": "Remove a virtual environment\nconda env remove &lt;env_name&gt;"
   },
   {
-    "objectID": "posts/german-grammar/german.html",
-    "href": "posts/german-grammar/german.html",
-    "title": "German Grammar",
+    "objectID": "posts/open-cv/open-cv.html",
+    "href": "posts/open-cv/open-cv.html",
+    "title": "OpenCV",
     "section": "",
-    "text": "The nominative case is one of the grammatical cases in German, used primarily for the subject of a sentence, which is the person or thing performing the action of the verb. It’s also used for predicate nouns or pronouns that refer back to the subject.\nHere are some examples of how the nominative case is used:\n\nSubject of a Sentence: The noun or pronoun that performs the action of the verb.\n\n“Der Hund bellt.” (The dog barks.)\n“Sie liest ein Buch.” (She reads a book.)\n\nPredicate Nouns or Pronouns: Nouns or pronouns that rename or describe the subject in a sentence.\n\n“Mein Bruder ist Arzt.” (My brother is a doctor.)\n“Der Himmel ist blau.” (The sky is blue.)\n\nApposition: When two nouns or noun phrases are used together to describe the same person or thing.\n\n“Meine Mutter, eine Lehrerin, kommt bald.” (My mother, a teacher, is coming soon.)\n“Der Mann, mein Nachbar, ist sehr freundlich.” (The man, my neighbor, is very friendly.)\n\n\n\n\n\nThe accusative case is one of the four grammatical cases in German. It indicates the direct object of a sentence, often answering the question “what?” or “whom?” The accusative case is used for the noun or pronoun that directly receives the action of the verb.\nHere are some examples of how the accusative case is used:\n\nDirect Objects: In sentences where the action of the verb is directly applied to something or someone.\n\n“Ich sehe den Mann.” (I see the man.)\n“Sie liest ein Buch.” (She reads a book.)\n\nMotion Toward: When indicating motion towards a specific location.\n\n“Er geht in den Park.” (He goes into the park.)\n“Sie fahren in die Stadt.” (They drive into the city.)\n\nDuration or Time Span: When specifying a duration of time.\n\n“Ich habe den ganzen Tag gearbeitet.” (I worked the whole day.)\n“Wir haben den Film gestern gesehen.” (We watched the movie yesterday.)\n\n\n\n\n\nThe dative case is one of the four grammatical cases in German (the others being nominative, accusative, and genitive). It indicates the indirect object of a sentence, often answering the question “to whom?” or “for whom?” The dative case is used for the recipient of an action or the object that is indirectly affected by the verb.\nHere are some examples of how the dative case is used:\n\nIndirect Objects: In sentences where something is given or done to someone or something else.\n\n“Ich gebe dem Mann das Buch.” (I give the book to the man.)\n\nCertain Prepositions: Some prepositions in German always take the dative case.\n\n“Ich gehe mit meinem Freund.” (I am going with my friend.)\n“Er spricht mit dem Lehrer.” (He is speaking with the teacher.)\n\nDative Objects with Verbs: Some verbs are used with dative objects, indicating who or what is indirectly affected by the action.\n\n“Ich helfe meiner Schwester.” (I am helping my sister.)\n“Sie glaubt dem Arzt.” (She believes the doctor.)\n\n\n\n\n\nThe genitive case is another grammatical case in German, indicating possession or the relationship between nouns. It often answers the question “whose?” or “of whom/what?” The genitive case is used to show ownership, association, or origin.\nHere are some examples of how the genitive case is used:\n\nPossession: Showing ownership or possession.\n\n“Das Auto meines Vaters.” (My father’s car.)\n“Die Farbe des Himmels.” (The color of the sky.)\n\nRelationships: Indicating relationships between nouns.\n\n“Die Stimme der Sängerin.” (The voice of the singer.)\n“Das Land der Träume.” (The land of dreams.)\n\nCertain Prepositions: Some prepositions in German always take the genitive case.\n\n“Wegen des Wetters.” (Because of the weather.)\n“Trotz des Regens.” (Despite the rain.)\n\n\n\n\n\n\nIn German, “ein,” “eine,” and “einen” are all forms of the indefinite article “a” or “an” in English. They are used to indicate the gender (masculine, feminine, or neuter) and case (nominative, accusative, or dative) of the noun they precede.\n\n“Ein” is used for masculine and neuter nouns in the nominative case.\n“Eine” is used for feminine nouns in the nominative case.\n“Einen” is used for masculine nouns in the accusative case.\n\n\nMasculine:\n\nNominative case: “ein” (a)\nAccusative case: “einen” (a)\n\nFeminine:\n\nNominative case: “eine” (a)\nAccusative case: “eine” (a)\n\nNeuter:\n\nNominative case: “ein” (a)\nAccusative case: “ein” (a)\n\n\nCheat sheet:\n\n\n\nIndefinite Article Cheat Sheet"
+    "text": "OpenCV is an open-source computer vision and machine learning software library. It provides a wide range of functionalities for image and video processing.\nHere’s a crash course on using OpenCV in Python."
   },
   {
-    "objectID": "posts/german-grammar/german.html#four-grammatical-cases",
-    "href": "posts/german-grammar/german.html#four-grammatical-cases",
-    "title": "German Grammar",
-    "section": "",
-    "text": "The nominative case is one of the grammatical cases in German, used primarily for the subject of a sentence, which is the person or thing performing the action of the verb. It’s also used for predicate nouns or pronouns that refer back to the subject.\nHere are some examples of how the nominative case is used:\n\nSubject of a Sentence: The noun or pronoun that performs the action of the verb.\n\n“Der Hund bellt.” (The dog barks.)\n“Sie liest ein Buch.” (She reads a book.)\n\nPredicate Nouns or Pronouns: Nouns or pronouns that rename or describe the subject in a sentence.\n\n“Mein Bruder ist Arzt.” (My brother is a doctor.)\n“Der Himmel ist blau.” (The sky is blue.)\n\nApposition: When two nouns or noun phrases are used together to describe the same person or thing.\n\n“Meine Mutter, eine Lehrerin, kommt bald.” (My mother, a teacher, is coming soon.)\n“Der Mann, mein Nachbar, ist sehr freundlich.” (The man, my neighbor, is very friendly.)\n\n\n\n\n\nThe accusative case is one of the four grammatical cases in German. It indicates the direct object of a sentence, often answering the question “what?” or “whom?” The accusative case is used for the noun or pronoun that directly receives the action of the verb.\nHere are some examples of how the accusative case is used:\n\nDirect Objects: In sentences where the action of the verb is directly applied to something or someone.\n\n“Ich sehe den Mann.” (I see the man.)\n“Sie liest ein Buch.” (She reads a book.)\n\nMotion Toward: When indicating motion towards a specific location.\n\n“Er geht in den Park.” (He goes into the park.)\n“Sie fahren in die Stadt.” (They drive into the city.)\n\nDuration or Time Span: When specifying a duration of time.\n\n“Ich habe den ganzen Tag gearbeitet.” (I worked the whole day.)\n“Wir haben den Film gestern gesehen.” (We watched the movie yesterday.)\n\n\n\n\n\nThe dative case is one of the four grammatical cases in German (the others being nominative, accusative, and genitive). It indicates the indirect object of a sentence, often answering the question “to whom?” or “for whom?” The dative case is used for the recipient of an action or the object that is indirectly affected by the verb.\nHere are some examples of how the dative case is used:\n\nIndirect Objects: In sentences where something is given or done to someone or something else.\n\n“Ich gebe dem Mann das Buch.” (I give the book to the man.)\n\nCertain Prepositions: Some prepositions in German always take the dative case.\n\n“Ich gehe mit meinem Freund.” (I am going with my friend.)\n“Er spricht mit dem Lehrer.” (He is speaking with the teacher.)\n\nDative Objects with Verbs: Some verbs are used with dative objects, indicating who or what is indirectly affected by the action.\n\n“Ich helfe meiner Schwester.” (I am helping my sister.)\n“Sie glaubt dem Arzt.” (She believes the doctor.)\n\n\n\n\n\nThe genitive case is another grammatical case in German, indicating possession or the relationship between nouns. It often answers the question “whose?” or “of whom/what?” The genitive case is used to show ownership, association, or origin.\nHere are some examples of how the genitive case is used:\n\nPossession: Showing ownership or possession.\n\n“Das Auto meines Vaters.” (My father’s car.)\n“Die Farbe des Himmels.” (The color of the sky.)\n\nRelationships: Indicating relationships between nouns.\n\n“Die Stimme der Sängerin.” (The voice of the singer.)\n“Das Land der Träume.” (The land of dreams.)\n\nCertain Prepositions: Some prepositions in German always take the genitive case.\n\n“Wegen des Wetters.” (Because of the weather.)\n“Trotz des Regens.” (Despite the rain.)"
+    "objectID": "posts/open-cv/open-cv.html#installation",
+    "href": "posts/open-cv/open-cv.html#installation",
+    "title": "OpenCV",
+    "section": "Installation:",
+    "text": "Installation:\nInstall OpenCV for Python via pip: pip install opencv-python"
   },
   {
-    "objectID": "posts/german-grammar/german.html#indefinite-articles",
-    "href": "posts/german-grammar/german.html#indefinite-articles",
-    "title": "German Grammar",
-    "section": "",
-    "text": "In German, “ein,” “eine,” and “einen” are all forms of the indefinite article “a” or “an” in English. They are used to indicate the gender (masculine, feminine, or neuter) and case (nominative, accusative, or dative) of the noun they precede.\n\n“Ein” is used for masculine and neuter nouns in the nominative case.\n“Eine” is used for feminine nouns in the nominative case.\n“Einen” is used for masculine nouns in the accusative case.\n\n\nMasculine:\n\nNominative case: “ein” (a)\nAccusative case: “einen” (a)\n\nFeminine:\n\nNominative case: “eine” (a)\nAccusative case: “eine” (a)\n\nNeuter:\n\nNominative case: “ein” (a)\nAccusative case: “ein” (a)\n\n\nCheat sheet:\n\n\n\nIndefinite Article Cheat Sheet"
+    "objectID": "posts/open-cv/open-cv.html#basic-operations",
+    "href": "posts/open-cv/open-cv.html#basic-operations",
+    "title": "OpenCV",
+    "section": "Basic Operations",
+    "text": "Basic Operations\n\n1. Reading and displaying image\nWe can read an image by using imread in cv2 library. Then show image element using imshow.\n#| label: cv-output\n#| fig-cap: Show an image using imshow() \n\nimport cv2\n# Read an image from file\nimage = cv2.imread('image.jpg')\n\n# Display the image in a window\ncv2.imshow('Image', image)\n\n# Wait for a key press and then close the window\ncv2.waitKey(0)\ncv2.destroyAllWindows()\n\n\n\nOutput\n\n\n\n\n2. Writing image\nimport cv2\n# Read an image in BGR\nimage = cv2.imread('image.jpg')\n\n# Write the image to a file\ncv2.imwrite('output_image.jpg', image)\n\n\n3. Coverting color spaces\nOpenCV provides functions to convert images between different color spaces, such as RGB, BGR, HSV, etc.\nimport cv2\n# Read an image\nimage = cv2.imread('image.jpg')\n\n# Convert BGR to grayscale\ngray_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)\n\n# Convert BGR to HSV\nhsv_image = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)\ncv2.imwrite('gray_image.jpg', gray_image)\ncv2.imwrite('hsv_image.jpg', hsv_image)\n\n\n\n\n\n\n\n\n\nGrey\n\n\n\n\n\n\n\nHSV\n\n\n\n\n\n\n\n4. Resizing and Cropping Images\nResize images to a specific width and height or by a scaling factor. Cropping involves selecting a region of interest (ROI) from the image.\nimport cv2\n# Read an image\nimage = cv2.imread('image.jpg')\n\n# Resize the image to a specific width and height\nnew_width, new_height = 200, 200\nresized_image = cv2.resize(image, (new_width, new_height))\n\n# Resize the image by a scaling factor\nscale_percent = 50  # percent of original size\nwidth = int(image.shape[1] * scale_percent / 100)\nheight = int(image.shape[0] * scale_percent / 100)\nresized_image = cv2.resize(image, (width, height))\ncv2.imwrite('resized.jpg', resized_image)\n\n# Crop a region of interest (ROI) from the image\nx, y, w, h = 100, 100, 200, 200  # Example coordinates and dimensions\ncropped_image = image[y:y+h, x:x+w]\ncv2.imwrite('cropped.jpg', cropped_image)\n\n\n\n\n\n\n\n\n\nResized\n\n\n\n\n\n\n\nCropped\n\n\n\n\n\n\n\n5. Flipping Images\nThe function flip flips the array in one of three different ways (row and column indices are 0-based): dst = cv.flip( src, flipCode ) dst: output array of the same size and type as src.\nThe function has 2 required arguments:\n\nsrc: input image\nflipCode: a flag to specify how to flip the array; 0 means flipping around the x-axis and positive value (for example, 1) means flipping around y-axis. Negative value (for example, -1) means flipping around both axes.\n\n\nimport cv2\nimport matplotlib.pyplot as plt\n\nimg_bgr = cv2.imread('image.jpg')\nimg_rgb = img_bgr[:, :, ::-1]\n\nimg_rgb_flipped_horz = cv2.flip(img_rgb, 1)\nimg_rgb_flipped_vert = cv2.flip(img_rgb, 0)\nimg_rgb_flipped_both = cv2.flip(img_rgb, -1)\n\n# Show the images\nplt.figure(figsize=(18, 5))\nplt.subplot(141) # 141 : 1 row, 4 columns, current index of subplot\nplt.imshow(img_rgb)\nplt.title(\"Original\")\nplt.subplot(142) \nplt.imshow(img_rgb_flipped_horz)\nplt.title(\"Horizontal Flip\")\nplt.subplot(143)\nplt.imshow(img_rgb_flipped_vert)\nplt.title(\"Vertical Flip\")\nplt.subplot(144)\nplt.imshow(img_rgb_flipped_both)\nplt.title(\"Both Flipped\")\nplt.show()\n\n\n\n\n\n\n\n\n\n\n6. Reading and Displaying Videos\nimport cv2\n\n# Open a video file\ncap = cv2.VideoCapture('video.mp4')\n\nwhile cap.isOpened():\n    ret, frame = cap.read()\n    if not ret:\n        break\n    cv2.imshow('Video', frame)\n    if cv2.waitKey(25) & 0xFF == ord('q'):\n        break\n\ncap.release()\ncv2.destroyAllWindows()\nFore more reference, visit OpenCV Documentation"
   },
   {
     "objectID": "posts/html/html.html",
@@ -441,137 +350,81 @@
     "text": "Security Risks and Preventions\n\nReverse Tabnabbing\nReverse tabnabbing is a security vulnerability that occurs when a website opens a link in a new tab or window (target=\"_blank\") and the newly opened page can manipulate the original page through the window.opener property.\nHere’s how it works:\n\nInitial Action: A user clicks on a link on a website that opens in a new tab or window using target=\"_blank\".\nNew Page Opens: The new page opens in a separate browsing context, typically in a new tab.\nManipulation: If the new page contains malicious code, it can access the window.opener property, which refers to the page that opened it. With this access, the malicious page can redirect the original page (the one that opened the link) to a phishing site, alter its content, or perform other malicious actions.\n\nReverse tabnabbing can be exploited by attackers to deceive users into thinking they are interacting with a legitimate website while actually being redirected to a malicious one.\nTo mitigate this security risk, web developers can use the following methods:\n\nRel=“noopener noreferrer”: Adding rel=\"noopener noreferrer\" to anchor (&lt;a&gt;) elements that open links in a new tab or window prevents the newly opened page from accessing window.opener and ensures that the HTTP referer header is not sent, enhancing both security and privacy.\nExplicit Rel=“noopener”: Alternatively, if noreferrer is not desired, using rel=\"noopener\" alone can prevent access to window.opener. However, noreferrer adds an extra layer of protection by also preventing the referer header from being sent.\n\n&lt;a href='https:www.google.com' target='_blank' rel='noopener norefered'&gt; Google.com &lt;/a&gt;"
   },
   {
-    "objectID": "posts/open-cv/open-cv.html",
-    "href": "posts/open-cv/open-cv.html",
-    "title": "OpenCV",
+    "objectID": "posts/numpy/index.html",
+    "href": "posts/numpy/index.html",
+    "title": "Numpy",
     "section": "",
-    "text": "OpenCV is an open-source computer vision and machine learning software library. It provides a wide range of functionalities for image and video processing.\nHere’s a crash course on using OpenCV in Python."
+    "text": "What is numpy?\n\nNumPy is the fundamental package for scientific computing in Python. The core of Numpy is the ndarray object, operations of this array are being performed in compiled code for performance.\n\nHow Numpy differ from standard Python sequences ? Why using numpy ?\n\nThere are several different between Numpy and standard Python sequences:\n\n\n\nNumPy arrays have a fixed size at creation, unlike Python lists (which can grow dynamically)\nElements within the same Numpy array must be the same data type.\nAdvanced mathematics operations can be done easily in Numpy (with less code and good performance)\nA growing plethora of scientific and mathematical libraries\n\n\nWhy is numpy fast ?\n\nVectorization describes the absence of any explicit looping, indexing, etc., in the code - these things are taking place, of course, just “behind the scenes” in optimized, pre-compiled C code. Vectorized code has many advantages, among which are:\n\n\n\nVectorized code is more concise and easier to read (shorter code without a lot of for loops)\nFewer lines of code generally means fewer bugs"
   },
   {
-    "objectID": "posts/open-cv/open-cv.html#installation",
-    "href": "posts/open-cv/open-cv.html#installation",
-    "title": "OpenCV",
-    "section": "Installation:",
-    "text": "Installation:\nInstall OpenCV for Python via pip: pip install opencv-python"
+    "objectID": "posts/numpy/index.html#linspace",
+    "href": "posts/numpy/index.html#linspace",
+    "title": "Numpy",
+    "section": "Linspace",
+    "text": "Linspace\nnp.linspace(start, end, interval) creates an array with evenly spaced float numbers over a specified interval.\n\nimport numpy as np\na = np.linspace(10,100,10)\na\n\narray([ 10.,  20.,  30.,  40.,  50.,  60.,  70.,  80.,  90., 100.])"
   },
   {
-    "objectID": "posts/open-cv/open-cv.html#basic-operations",
-    "href": "posts/open-cv/open-cv.html#basic-operations",
-    "title": "OpenCV",
-    "section": "Basic Operations",
-    "text": "Basic Operations\n\n1. Reading and displaying image\nWe can read an image by using imread in cv2 library. Then show image element using imshow.\n#| label: cv-output\n#| fig-cap: Show an image using imshow() \n\nimport cv2\n# Read an image from file\nimage = cv2.imread('image.jpg')\n\n# Display the image in a window\ncv2.imshow('Image', image)\n\n# Wait for a key press and then close the window\ncv2.waitKey(0)\ncv2.destroyAllWindows()\n\n\n\nOutput\n\n\n\n\n2. Writing image\nimport cv2\n# Read an image in BGR\nimage = cv2.imread('image.jpg')\n\n# Write the image to a file\ncv2.imwrite('output_image.jpg', image)\n\n\n3. Coverting color spaces\nOpenCV provides functions to convert images between different color spaces, such as RGB, BGR, HSV, etc.\nimport cv2\n# Read an image\nimage = cv2.imread('image.jpg')\n\n# Convert BGR to grayscale\ngray_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)\n\n# Convert BGR to HSV\nhsv_image = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)\ncv2.imwrite('gray_image.jpg', gray_image)\ncv2.imwrite('hsv_image.jpg', hsv_image)\n\n\n\n\n\n\n\n\n\nGrey\n\n\n\n\n\n\n\nHSV\n\n\n\n\n\n\n\n4. Resizing and Cropping Images\nResize images to a specific width and height or by a scaling factor. Cropping involves selecting a region of interest (ROI) from the image.\nimport cv2\n# Read an image\nimage = cv2.imread('image.jpg')\n\n# Resize the image to a specific width and height\nnew_width, new_height = 200, 200\nresized_image = cv2.resize(image, (new_width, new_height))\n\n# Resize the image by a scaling factor\nscale_percent = 50  # percent of original size\nwidth = int(image.shape[1] * scale_percent / 100)\nheight = int(image.shape[0] * scale_percent / 100)\nresized_image = cv2.resize(image, (width, height))\ncv2.imwrite('resized.jpg', resized_image)\n\n# Crop a region of interest (ROI) from the image\nx, y, w, h = 100, 100, 200, 200  # Example coordinates and dimensions\ncropped_image = image[y:y+h, x:x+w]\ncv2.imwrite('cropped.jpg', cropped_image)\n\n\n\n\n\n\n\n\n\nResized\n\n\n\n\n\n\n\nCropped\n\n\n\n\n\n\n\n5. Flipping Images\nThe function flip flips the array in one of three different ways (row and column indices are 0-based): dst = cv.flip( src, flipCode ) dst: output array of the same size and type as src.\nThe function has 2 required arguments:\n\nsrc: input image\nflipCode: a flag to specify how to flip the array; 0 means flipping around the x-axis and positive value (for example, 1) means flipping around y-axis. Negative value (for example, -1) means flipping around both axes.\n\n\nimport cv2\nimport matplotlib.pyplot as plt\n\nimg_bgr = cv2.imread('image.jpg')\nimg_rgb = img_bgr[:, :, ::-1]\n\nimg_rgb_flipped_horz = cv2.flip(img_rgb, 1)\nimg_rgb_flipped_vert = cv2.flip(img_rgb, 0)\nimg_rgb_flipped_both = cv2.flip(img_rgb, -1)\n\n# Show the images\nplt.figure(figsize=(18, 5))\nplt.subplot(141) # 141 : 1 row, 4 columns, current index of subplot\nplt.imshow(img_rgb)\nplt.title(\"Original\")\nplt.subplot(142) \nplt.imshow(img_rgb_flipped_horz)\nplt.title(\"Horizontal Flip\")\nplt.subplot(143)\nplt.imshow(img_rgb_flipped_vert)\nplt.title(\"Vertical Flip\")\nplt.subplot(144)\nplt.imshow(img_rgb_flipped_both)\nplt.title(\"Both Flipped\")\nplt.show()\n\n\n\n\n\n\n\n\n\n\n6. Reading and Displaying Videos\nimport cv2\n\n# Open a video file\ncap = cv2.VideoCapture('video.mp4')\n\nwhile cap.isOpened():\n    ret, frame = cap.read()\n    if not ret:\n        break\n    cv2.imshow('Video', frame)\n    if cv2.waitKey(25) & 0xFF == ord('q'):\n        break\n\ncap.release()\ncv2.destroyAllWindows()\nFore more reference, visit OpenCV Documentation"
+    "objectID": "posts/numpy/index.html#reshape",
+    "href": "posts/numpy/index.html#reshape",
+    "title": "Numpy",
+    "section": "Reshape",
+    "text": "Reshape\nnp.reshape() reshape a numpy array to specific given shape (n, m). In neural network when dealing with images, we usually need to flatten the image into 1 row array by using .reshape(-1).\n\nimport numpy as np\n# Create a 2D array\ny = np.array([[1, 2, 3, 4],\n              [5, 6, 7, 8],\n              [9, 10, 11, 12]])\n# Reshape the array to 1D using -1\nflattened_y = y.reshape(-1)\nflattened_y\n\narray([ 1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12])"
   },
   {
-    "objectID": "posts/regression/regression.html",
-    "href": "posts/regression/regression.html",
-    "title": "Regression and Classification",
+    "objectID": "posts/numpy/index.html#where",
+    "href": "posts/numpy/index.html#where",
+    "title": "Numpy",
+    "section": "Where",
+    "text": "Where\nnp.where() perform conditional operations on arrays and is somewhat similar to the ternary conditional operator (condition ? value_if_true : value_if_false) found in many programming languages.\n\nimport numpy as np\na = np.arange(10)\nb = np.where(a&gt;5, a, a**2)\nb\n\narray([ 0,  1,  4,  9, 16, 25,  6,  7,  8,  9])\n\n\nFor more references visit Numpy Documentation"
+  },
+  {
+    "objectID": "posts/RF/rf-receiver/rf-receiver.html",
+    "href": "posts/RF/rf-receiver/rf-receiver.html",
+    "title": "RF Receiver",
     "section": "",
-    "text": "Linear regression is a statistical method used to model the relationship between a dependent variable and one or more independent variables. It assumes that there is a linear relationship between the independent variables (predictors) and the dependent variable (outcome).\n\n\nWith linear regression model, we generally use Square-Error as the loss function.\n\\[L(f) = \\frac{1}{2}\\sum_{i=1}^{n}(f(x^{(i)}) - y^{(i)})^2\\]\nWhere the superscipt \\(i\\) denotes \\(i^{\\text{th}}\\) data in the dataset\n\n\n\nLearning rate (lr) is the rate that weight is updated in order to reduce the loss. If lr is too large, the model might not able to find optima weight with smallest loss. On the other hand if lr is too small, the model weight will be updated very slow, which lead in needing more iterations to find the optima weight.\n\nHow to choose the optimal lr ?\n\nWe can change lr with number of iterations. Suppose that we are at \\(t\\) iteration and learning rate \\(\\alpha\\) :\n\n\n\\[ \\alpha_t = \\frac{\\alpha}{\\sqrt{t + 1}}\\]\n\nWhat is the best learning rate ?"
+    "text": "This post will include answers to these questions:"
   },
   {
-    "objectID": "posts/regression/regression.html#loss-function",
-    "href": "posts/regression/regression.html#loss-function",
-    "title": "Regression and Classification",
-    "section": "",
-    "text": "With linear regression model, we generally use Square-Error as the loss function.\n\\[L(f) = \\frac{1}{2}\\sum_{i=1}^{n}(f(x^{(i)}) - y^{(i)})^2\\]\nWhere the superscipt \\(i\\) denotes \\(i^{\\text{th}}\\) data in the dataset"
+    "objectID": "posts/RF/rf-receiver/rf-receiver.html#zero-second-if",
+    "href": "posts/RF/rf-receiver/rf-receiver.html#zero-second-if",
+    "title": "RF Receiver",
+    "section": "Zero Second IF",
+    "text": "Zero Second IF\nA design that moves IF near to zero frequency.\n\n\n\nZero Second IF"
   },
   {
-    "objectID": "posts/regression/regression.html#learning-rate",
-    "href": "posts/regression/regression.html#learning-rate",
-    "title": "Regression and Classification",
-    "section": "",
-    "text": "Learning rate (lr) is the rate that weight is updated in order to reduce the loss. If lr is too large, the model might not able to find optima weight with smallest loss. On the other hand if lr is too small, the model weight will be updated very slow, which lead in needing more iterations to find the optima weight.\n\nHow to choose the optimal lr ?\n\nWe can change lr with number of iterations. Suppose that we are at \\(t\\) iteration and learning rate \\(\\alpha\\) :\n\n\n\\[ \\alpha_t = \\frac{\\alpha}{\\sqrt{t + 1}}\\]\n\nWhat is the best learning rate ?"
+    "objectID": "posts/RF/rf-receiver/rf-receiver.html#image-rejecting",
+    "href": "posts/RF/rf-receiver/rf-receiver.html#image-rejecting",
+    "title": "RF Receiver",
+    "section": "Image Rejecting",
+    "text": "Image Rejecting\n\n\n\nImage Rejection\n\n\nAfter shifted into IF, self-corruption or image problem can be a problem as well. Image is the interference, whose its frequency is symmetric with desired signal respect to frequency of the local oscillator (LO). Hence in order to avoid signal corruption, we must eliminate the image by using Image Reject Filter (IRF).\nIMRR : Image Rejection Ratio\n\nHigh IF and Low IF\n\n\n\nHigh IF and Low IF Comparison\n\n\nWhy high IF is more preferable ? Because the frequency of image is far from desired signal, hence we can easily filter out with lower Q factor.\nHigh \\(\\omega_{IF}\\) -&gt; Easy to design IRF, but what is the trade-off of high-IF?\n\n\nHigh Side Injection and Low Side Injection\nHigh side injection : mixed with higher frequency (\\(\\omega_{LO} &gt; \\omega_{in}\\)), this can also be called superdyne. Low side injection : mixed with lower frequency (\\(\\omega_{LO} &lt; \\omega_{in}\\)), this can also be called infradyne.\n\n\n\nHigh-side and Low-side Injections\n\n\n\n\nQuadrature Downconversion\n\n\n\nSelf-corruption problem\n\n\nWhy we need it ? Because in these days most modulation method is asymmetric, using quadrature down conversion technique, we can then eliminate the self-corruption problem."
   },
   {
-    "objectID": "posts/RF/rf-noise/rf-noise.html",
-    "href": "posts/RF/rf-noise/rf-noise.html",
-    "title": "RF Noise",
-    "section": "",
-    "text": "What will cover in this section : Noise Figure, Friis Equation, Thermal Noise of Resistor, MOSFET Noise."
+    "objectID": "posts/RF/rf-receiver/rf-receiver.html#lo-leakage",
+    "href": "posts/RF/rf-receiver/rf-receiver.html#lo-leakage",
+    "title": "RF Receiver",
+    "section": "LO leakage",
+    "text": "LO leakage\n\n\n\nLO Leakage\n\n\nBut with modern DSP, the LO leakage can be handled easily now, hence DCR is more commonly used in modern RF devices."
   },
   {
-    "objectID": "posts/RF/rf-noise/rf-noise.html#thermal-noise-in-resistor",
-    "href": "posts/RF/rf-noise/rf-noise.html#thermal-noise-in-resistor",
-    "title": "RF Noise",
-    "section": "Thermal Noise in Resistor",
-    "text": "Thermal Noise in Resistor\nFor ideal inductor and capacitor, is there noise ?\nThermal noise the most significant noise encountered in electronic devices. We can model the thermal in two ways:\n\n\n\nThermal Noise Equilvalent Circuit\n\n\n\nThevenin \\[\\bar{V}^2_n = 4kTR_1\\]\nNorton \\[\\bar{I}^2_n = 4kT/R_1\\]\n\nWhere\n\n\\(k = 1.38 \\times 10^{-23} J/K\\) is the Boltzmann constant.\n\\(T\\) is the temperature kelvin \\((K)\\)"
+    "objectID": "posts/RF/rf-receiver/rf-receiver.html#degree-phase-shifter",
+    "href": "posts/RF/rf-receiver/rf-receiver.html#degree-phase-shifter",
+    "title": "RF Receiver",
+    "section": "90-degree Phase Shifter",
+    "text": "90-degree Phase Shifter\n\n\n\nRC-RC circuit"
   },
   {
-    "objectID": "posts/RF/rf-noise/rf-noise.html#thermal-noise-in-mosfet",
-    "href": "posts/RF/rf-noise/rf-noise.html#thermal-noise-in-mosfet",
-    "title": "RF Noise",
-    "section": "Thermal noise in MOSFET",
-    "text": "Thermal noise in MOSFET\n Thermal noise of MOS transistors which is operating in the saturation region is approximated by :\n\nA current source tied between the source and drain terminals. \\[\\bar{I_n}^2 = 4kT \\gamma g_m\\]\nA voltage source in series with gate \\[\\bar{V_n}^2 = 4kT \\gamma / g_m\\]\n\nWhere\n\n\\(\\gamma\\) is the excess noise coefficient\n\\(g_m\\) is the transconductance."
+    "objectID": "posts/RF/rf-receiver/rf-receiver.html#harley-architecture",
+    "href": "posts/RF/rf-receiver/rf-receiver.html#harley-architecture",
+    "title": "RF Receiver",
+    "section": "Harley Architecture",
+    "text": "Harley Architecture\n\n\n\nHarley Architecture"
   },
   {
-    "objectID": "posts/RF/rf-noise/rf-noise.html#noise-figure",
-    "href": "posts/RF/rf-noise/rf-noise.html#noise-figure",
-    "title": "RF Noise",
-    "section": "Noise Figure",
-    "text": "Noise Figure\nIn circuit and system design, we interested in the signal-to-noise ratio (SNR). To quantify how noisy the circuit is, we can define its noise factor as\n\\[\\text{NF} = \\frac{\\text{SNR}_\\text{in}}{\\text{SNR}_\\text{out}}\\]\nor Noise figure in dB as\n\\[\\text{NF}|_\\text{dB} = 10\\log(\\frac{\\text{SNR}_\\text{in}}{\\text{SNR}_\\text{out}})\\]\nWhat is the NF for noiseless stage ?\n\n\nAnswer\n\nNF = 1 = 0 dB"
-  },
-  {
-    "objectID": "posts/RF/rf-noise/rf-noise.html#noise-figure-in-lna",
-    "href": "posts/RF/rf-noise/rf-noise.html#noise-figure-in-lna",
-    "title": "RF Noise",
-    "section": "Noise Figure in LNA",
-    "text": "Noise Figure in LNA\n\n\n\nLNA Noise Model (RF Microelectronics, Behzad Razavi, P49)\n\n\nWe can have \\[\\alpha = \\frac{Z_\\text{in}}{Z_\\text{in} + R_S}\\] \\[\\text{SNR}_\\text{in} = \\frac{V^2_\\text{in}\\alpha^2}{\\bar{V}^2_\\text{n,RS}\\alpha^2} = \\frac{V^2_\\text{in}}{\\bar{V}^2_\\text{n,RS}}\\]\n\\[\\text{SNR}_\\text{out} = \\frac{V^2_\\text{in}\\alpha^2 {A^2}_v}{\\bar{V}^2_\\text{n,RS}\\alpha^2 {A^2}_v + \\bar{V}^2_n}\\]\n\\[ NF = \\frac{\\text{SNR}_\\text{in}}{\\text{SNR}_\\text{out}} = 1 + \\frac{\\bar{V}_n ^ 2}{\\bar{V}^2_\\text{n,RS} \\alpha^2 A_v ^2}\\]"
-  },
-  {
-    "objectID": "posts/RF/rf-noise/rf-noise.html#friis-equation-for-cascaded-stages",
-    "href": "posts/RF/rf-noise/rf-noise.html#friis-equation-for-cascaded-stages",
-    "title": "RF Noise",
-    "section": "Friis Equation for Cascaded Stages",
-    "text": "Friis Equation for Cascaded Stages\nTo determine overall noise figure in a cascade of stages, we can use Friis’s equation :\n\\[NF_{\\text{total}} = {NF}_1 + \\frac{NF_2 - 1}{A^2_1} + ... + \\frac{{NF}_n - 1}{A^2_1...A^2_n}\\]\nFrom above expression we can conclude that the first stage’s NF is the most important. Why ?\n\n\nAnswer\n\nConceptually, because the noise from first stage will be amplified multiple times."
-  },
-  {
-    "objectID": "posts/RF/rf-noise/rf-noise.html#rl-and-rc-in-series-and-parallel",
-    "href": "posts/RF/rf-noise/rf-noise.html#rl-and-rc-in-series-and-parallel",
-    "title": "RF Noise",
-    "section": "RL and RC in Series and Parallel",
-    "text": "RL and RC in Series and Parallel\nRL circuit"
-  },
-  {
-    "objectID": "posts/RF/rf-pa/rf-pa.html",
-    "href": "posts/RF/rf-pa/rf-pa.html",
-    "title": "Power Amplifier",
-    "section": "",
-    "text": "Two important specification of PA :"
-  },
-  {
-    "objectID": "posts/RF/rf-pa/rf-pa.html#power-efficiency",
-    "href": "posts/RF/rf-pa/rf-pa.html#power-efficiency",
-    "title": "Power Amplifier",
-    "section": "Power Efficiency",
-    "text": "Power Efficiency\n\\[\\eta = \\frac{P_L}{P_\\text{supply}}\\]"
-  },
-  {
-    "objectID": "posts/RF/rf-pa/rf-pa.html#power-added-efficiency",
-    "href": "posts/RF/rf-pa/rf-pa.html#power-added-efficiency",
-    "title": "Power Amplifier",
-    "section": "Power-added Efficiency",
-    "text": "Power-added Efficiency\n\\[\\text{PAE} = \\frac{P_L - P_\\text{in}}{P_\\text{supply}}\\]"
-  },
-  {
-    "objectID": "posts/RF/rf-pa/rf-pa.html#type-a-pa",
-    "href": "posts/RF/rf-pa/rf-pa.html#type-a-pa",
-    "title": "Power Amplifier",
-    "section": "Type A PA",
-    "text": "Type A PA\n\n\n\nType A PA\n\n\n\nAlways on (conduction angle = 360)\nLow efficiency : 30 - 35% (maximum is 50%)\n\n\\[i_\\text{RF} = \\frac{V_\\text{DD}}{R_L}\\]"
-  },
-  {
-    "objectID": "posts/RF/rf-pa/rf-pa.html#type-b-pa",
-    "href": "posts/RF/rf-pa/rf-pa.html#type-b-pa",
-    "title": "Power Amplifier",
-    "section": "Type B PA",
-    "text": "Type B PA\n\n\n\nType B PA\n\n\n\nNot always on (usually 50% on, maximum is 78.5%, conduction angle = 180)\nEfficiency is higher than type A PA\nHigher nonlinearity (tradeoff between efficiency and linearity)\n\n\\[i_\\text{fund} = \\frac{i_\\text{RF}}{2}\\]"
-  },
-  {
-    "objectID": "posts/RF/rf-pa/rf-pa.html#type-c-pa",
-    "href": "posts/RF/rf-pa/rf-pa.html#type-c-pa",
-    "title": "Power Amplifier",
-    "section": "Type C PA",
-    "text": "Type C PA\n\n\n\nType C PA\n\n\n\\[\\eta =\\frac{1}{4}\\frac{\\theta - \\sin \\theta}{\\sin\\frac{\\theta}{2}-\\frac{\\theta}{2}\\cos\\frac{\\theta}{2}}\\]"
+    "objectID": "posts/RF/rf-receiver/rf-receiver.html#weaver-architecture",
+    "href": "posts/RF/rf-receiver/rf-receiver.html#weaver-architecture",
+    "title": "RF Receiver",
+    "section": "Weaver Architecture",
+    "text": "Weaver Architecture\n\n\n\nWeaver Architecture\n\n\nIt is basically a type of injection (high or low injection), but there will be more problem in nonlinearity."
   },
   {
     "objectID": "posts/RF/rlc-circuit/rlc-circuit.html#resistance-and-reactance",
@@ -609,39 +462,186 @@
     "text": "Loss of impedance matching circuit\nno source RLC circuit : noise figure = loss"
   },
   {
-    "objectID": "projects/pig_game/pig_game.html",
-    "href": "projects/pig_game/pig_game.html",
-    "title": "Pig Game using Javascript",
+    "objectID": "posts/RF/rf-mixers/rf-mixers.html",
+    "href": "posts/RF/rf-mixers/rf-mixers.html",
+    "title": "RF Mixers",
     "section": "",
-    "text": "“Pig” is a simple and fun dice game that involves a bit of strategy and luck, and it’s great for two players. The objective of the game is to be the first player to reach 100 points or other value set by the player.\n\n\n\nDemo of the Pig Game\n\n\nLink to Pig Game on GitHub Page"
+    "text": "Mixer is a very important component in modern RF, without it we may not be able to convert from low frequency (IF) into higher frequency (RF) or vice versa, and it will not be suitable for high data rate transmission. In this post, we will explore on different types of mixers as well as their basic design concepts."
   },
   {
-    "objectID": "projects/pig_game/pig_game.html#what-is-pig-game",
-    "href": "projects/pig_game/pig_game.html#what-is-pig-game",
-    "title": "Pig Game using Javascript",
+    "objectID": "posts/RF/rf-mixers/rf-mixers.html#conversion-gain",
+    "href": "posts/RF/rf-mixers/rf-mixers.html#conversion-gain",
+    "title": "RF Mixers",
+    "section": "Conversion Gain",
+    "text": "Conversion Gain\nKnowing a mixer’s conversion gain we can know how much signal is preserved/amplified after the mixing \\[\\text{Conversion Gain} = \\frac{V_\\text{IF}}{V_\\text{RF}}\\]"
+  },
+  {
+    "objectID": "posts/RF/rf-mixers/rf-mixers.html#feedthrough",
+    "href": "posts/RF/rf-mixers/rf-mixers.html#feedthrough",
+    "title": "RF Mixers",
+    "section": "Feedthrough",
+    "text": "Feedthrough\nIn high frequency, MOSFET model contains parasitic capacitance between terminals, this eventually lead to feedthrough problem (leakage between terminals).\n\n\n\nFeedthrough"
+  },
+  {
+    "objectID": "posts/RF/rf-mixers/rf-mixers.html#switch-mixer",
+    "href": "posts/RF/rf-mixers/rf-mixers.html#switch-mixer",
+    "title": "RF Mixers",
+    "section": "Switch Mixer",
+    "text": "Switch Mixer\n\n\n\nSwitch Mixer\n\n\n\nLow efficiency (contains DC offset etc.)\nPerform well in linearity and feedthrough, Hence more commonly used in modern RF devices\n\n\nRZ and NRZ Mixers\nRZ mixer and NRZ mixer (Sampling mixer)\n\n\n\n\n\n\nNote\n\n\n\nSampling mixer : \\(1.5 dB\\)\n\n\n\nSingle and Double Balanced Mixers\nSingle Balanced Mixer\nDouble Balanced Mixer\n\n\n\nDouble Balanced Mixer\n\n\n\n\n\n\n\n\nNote\n\n\n\nVoltage conversion gain for single-balanced and double-balanced RZ mixer : \\[\\frac{2}{\\pi} \\approx -4 dB\\] ::: –&gt;\n\nSampling Mixer or NRZ Mixer\nNRZ : Non-Return-Zero\n\n\nSingle Balance Sampling Mixer\n\n\n\nSingle Balance Sampling Mixer\n\n\n\n\nDouble Balance Sampling Mixer\n\n\nAnalog Multiplier Mixer\n\nHigh gain\nHigh nonlinearity (Is this good or bad in RF? Remember IP3?)\n\n\n\nPassive and Active Mixers\nPassive mixers gain is smaller than 1, but with active mixers, the conversion gain can be greater than 1.\n\n\nLeakage Problem in Mixers\n\nInjection Pull (RF-LO)\nThis problem occurs in DCR, which high interference from RF enters into LO, and eventually degrades LO’s performance (make LO to become unstable)."
+  },
+  {
+    "objectID": "posts/RF/rf-mixers/rf-mixers.html#analog-multiplier-mixer",
+    "href": "posts/RF/rf-mixers/rf-mixers.html#analog-multiplier-mixer",
+    "title": "RF Mixers",
+    "section": "Analog Multiplier Mixer",
+    "text": "Analog Multiplier Mixer\n\nHigh gain\nHigh nonlinearity (Is this good or bad in RF? Remember IP3?)"
+  },
+  {
+    "objectID": "posts/RF/rf-mixers/rf-mixers.html#passive-and-active-mixers",
+    "href": "posts/RF/rf-mixers/rf-mixers.html#passive-and-active-mixers",
+    "title": "RF Mixers",
+    "section": "Passive and Active Mixers",
+    "text": "Passive and Active Mixers\nPassive mixers gain is smaller than 1, but with active mixers, the conversion gain can be greater than 1."
+  },
+  {
+    "objectID": "posts/RF/rf-mixers/rf-mixers.html#injection-pull-rf-lo",
+    "href": "posts/RF/rf-mixers/rf-mixers.html#injection-pull-rf-lo",
+    "title": "RF Mixers",
+    "section": "Injection Pull (RF-LO)",
+    "text": "Injection Pull (RF-LO)\nThis problem occurs in DCR, which high interference from RF enters into LO, and eventually degrades LO’s performance (make LO to become unstable)."
+  },
+  {
+    "objectID": "posts/cnn/cnn.html",
+    "href": "posts/cnn/cnn.html",
+    "title": "Convolutional Neuron Network",
     "section": "",
-    "text": "“Pig” is a simple and fun dice game that involves a bit of strategy and luck, and it’s great for two players. The objective of the game is to be the first player to reach 100 points or other value set by the player.\n\n\n\nDemo of the Pig Game\n\n\nLink to Pig Game on GitHub Page"
+    "text": "Structured and unstructured data ? Which one is machine good at ?\nWhy DL just get its popularity in recent years ? Hint : ABC\nWhat field RNN is generally used in ? CNN ? (CV, voice recognition, advertising)\nWhat is the first version of neuron network ? Can 1 layer neuron network (1st version) solve XOR problem?\nWhat are commonly used structures of NN ? Full-connected, CNN, RNN\nWhy Sigmoid function is not commonly used as an activation function in NN ? Zero gradient"
   },
   {
-    "objectID": "projects/pig_game/pig_game.html#rules-of-pig-game",
-    "href": "projects/pig_game/pig_game.html#rules-of-pig-game",
-    "title": "Pig Game using Javascript",
-    "section": "Rules of Pig Game",
-    "text": "Rules of Pig Game\nTurns: Players take turns to roll the die as many times as they choose on each turn.\nScoring: Each roll is added to a turn total, but if the player rolls a 1, their turn ends and their turn total is lost.\nHolding: At any point during their turn, a player may choose to “hold”. When a player holds, the turn total (the sum of the dice rolls during that turn) is added to their overall score.\nWinning: The game continues until one of the players reaches or exceeds 100 points."
+    "objectID": "posts/cnn/cnn.html#convolution-layer",
+    "href": "posts/cnn/cnn.html#convolution-layer",
+    "title": "Convolutional Neuron Network",
+    "section": "Convolution layer",
+    "text": "Convolution layer\nKeywords: Spatial dimension, Depth, Filters Bank, feature maps, Pooling\n\nKernel\nKernel refers to a small matrix used for convolutional operations. Convolution is the fundamental operation in a CNN, where the kernel (also called a filter) is applied to input data, typically an image, to produce feature maps. ’’ \n\n\nStride\n“stride” refers to the number of pixels by which the convolutional kernel moves across the input data at each step during the convolution operation. In below example, illustrate a case when stride = 2.\n\\[\\text{output depth} = \\frac{width - filter + 2 \\times pad}{stride} + 1\\]\n\n\n\nConvolution of a 5x5 input (blue) with 3x3 kernel (grey) with a stride of 2 and padding of 1. The 3x3 output is in green. Source\n\n\n\n\nPadding\nPadding is a technique used to control the spatial dimensions of the output feature maps after applying convolutional operations to the input data.\nFeatures of padding in CNN:\n\nkeep the image data near to border edge\nmaintain the size of input image dimension\nchange the output size of convolution layer\n\n\n\nPooling\n\nWhat is pooling ?\n\na technique to reduce the activation spatial dimensions/Pooling helps in reducing memory consumption in deeper layers. It is also an important step to convert the spatial information into features.\n\n\nThe two most common pooling methods are : Max pooling and Average pooling.\n\n\nCode\nimport torch\nimport torch.nn.functional as F\n\n# Define input image\nimage = torch.tensor([[2, 2, 7, 3],\n                      [9, 4, 6, 1],\n                      [8, 5, 2, 4],\n                      [3, 1, 2, 6]], dtype=torch.float32)\n\n# Add batch and channel dimensions\nimage = image.unsqueeze(0).unsqueeze(0)\n\n# Apply max pooling directly using functional API\noutput = F.max_pool2d(image, kernel_size=2, stride=2)\n\n# Print output image\noutput = output.squeeze().numpy()\nprint(output)\n\n\n[[9. 7.]\n [8. 6.]]"
   },
   {
-    "objectID": "projects/pig_game/pig_game.html#flowchart",
-    "href": "projects/pig_game/pig_game.html#flowchart",
-    "title": "Pig Game using Javascript",
-    "section": "Flowchart",
-    "text": "Flowchart\n\n\n\nFlowchart of Pig Game"
+    "objectID": "posts/cnn/cnn.html#activation-functions",
+    "href": "posts/cnn/cnn.html#activation-functions",
+    "title": "Convolutional Neuron Network",
+    "section": "Activation functions",
+    "text": "Activation functions\nThe activation fuction is a transformation function in NN that transform the weight and bias into a nonlinear format. With Activation function, model can learn and represent more complex patterns in data.\n\n\n\n\n\n\nDoes activation function must be a nonlinear function ? Why ?\n\n\n\n\n\nIn neural networks, activation functions are typically designed to be nonlinear. This is because if all activation functions were linear, the entire neural network would effectively become a linear model, incapable of capturing complex nonlinear relationships.\nIf all activation functions were set to linear functions, even a very deep neural network would behave like a single-layer linear model. Such a model would fail to handle many real-world nonlinear relationships, limiting the expressiveness and applicability of neural networks.\n\n\n\n\nReLU\nThe Rectified Linear Unit (ReLU) activation function is one of the most widely used activation functions in deep learning. It’s defined as:\n\\[f(x) = \\max(0, x)\\]\nIn simple terms, ReLU returns if x is positive, and 0 otherwise. This makes it a piecewise linear function.\nReLU has several advantages:\n\nSimplicity: ReLU is computationally efficient and easy to implement. It only involves a simple thresholding operation, making it faster to compute compared to more complex activation functions like sigmoid or tanh.\nSparsity: ReLU introduces sparsity in the network because it turns off neurons that have negative inputs (setting their output to zero). This sparsity can help reduce overfitting by encouraging the network to focus on important features and ignore noise.\nAddressing vanishing gradient problem: ReLU helps mitigate the vanishing gradient problem by providing a constant gradient (1) for positive inputs during backpropagation. This helps prevent the gradients from becoming too small, enabling more stable and efficient training of deep neural networks.\n\nDespite its advantages, ReLU also has some drawbacks:\n\nDead neurons: Neurons with negative inputs always output zero, leading to the problem of “dying ReLU neurons.” If a neuron’s weights are such that it always receives negative inputs, it will never activate, and its weights will not be updated during training.\nUnbounded output: ReLU does not have an upper bound, which means neurons can potentially produce very large outputs. This can lead to issues like exploding gradients, especially during training.\n\n\n\nLeaky ReLU\nLeaky ReLU is a variant of the Rectified Linear Unit (ReLU) activation function, designed to address the “dying ReLU” problem. In standard ReLU, neurons with negative inputs always output zero, which can cause them to become “dead” and stop learning. Leaky ReLU introduces a small slope (or “leak”) for negative inputs, allowing some information to flow through the neuron even when its input is negative. Mathematically, Leaky ReLU is defined as:\n\\[\nf(x) = \\begin{cases}\nx & \\text{if } x &gt; 0 \\\\\n\\alpha x & \\text{if } x \\leq 0\n\\end{cases}\n\\]\nwhere \\(\\alpha\\) is a small constant (typically a small positive value: 0.01 or 0.001) that determines the slope of the function for negative inputs."
   },
   {
-    "objectID": "projects/pig_game/pig_game.html#building-processes",
-    "href": "projects/pig_game/pig_game.html#building-processes",
-    "title": "Pig Game using Javascript",
-    "section": "Building Processes",
-    "text": "Building Processes\n\n1. Select DOM Elements\n\nUsing strict at the beginning, so that JS stopped running when there is an error.\nWe select button elements using querySelector.\nScores store both player score, which score[0] stores Player 1’s score and score[1] stores Player 2’s score.\nInitialize all the variables\n\n\"use strict\";\n\nconst player0 = document.querySelector(\".player--0\");\nconst player1 = document.querySelector(\".player--1\");\n\nconst scoreEl0 = document.getElementById(\"score--0\");\nconst scoreEl1 = document.getElementById(\"score--1\");\nconst currentScoreEl0 = document.getElementById(\"current--0\");\nconst currentScoreEl1 = document.getElementById(\"current--1\");\n\nconst btnNew = document.querySelector(\".btn--new\");\nconst btnRoll = document.querySelector(\".btn--roll\");\nconst btnHold = document.querySelector(\".btn--hold\");\n\nlet winScore = Number(document.getElementById(\"win-score\").value);\nlet currentScore = 0;\nlet currentPlayer = 0;\nlet Gameover = false;\n\nconst diceEl = document.querySelector(\".dice\");\n\nlet scores = [0, 0];\n\n\n2. New Game\nWhen ‘NEW GAME’ button is clicked, we trigger the newGame() function.\nbtnNew.addEventListener(\"click\", () =&gt; {\n  Gameover = false;\n  newGame();\n});\nIn newGame() function, We check if the currentPlayer contain player--winner class, if it does class we then remove the class to begin the game.\n// newGame\nconst newGame = function () {\n  currentScore = 0;\n  scores = [0, 0];\n  const currentPlayerEle = document.querySelector(`.player--${currentPlayer}`);\n  if (currentPlayerEle.classList.contains(\"player--winner\")) {\n    currentPlayerEle.classList.remove(\"player--winner\");\n  }\n  removeAllActive();\n  currentPlayer = Math.floor(Math.random() + 0.5);\n  document\n    .querySelector(`.player--${currentPlayer}`)\n    .classList.add(\"player--active\");\n  // hide dice\n  diceEl.classList.add(\"hidden\");\n  // reset scores to 0\n  scoreEl0.textContent = 0;\n  scoreEl1.textContent = 0;\n  currentScoreEl0.textContent = 0;\n  currentScoreEl1.textContent = 0;\n};\nTo start the game equally, we random a number 0-1, if it is 0, start with Player 1, otherwise Player 2 start the game.\ncurrentPlayer = Math.floor(Math.random() + 0.5);\nBut we first call function removeAllActive to remove active player class from all both players.\nconst removeAllActive = function () {\n  if (player0.classList.contains(\"player--active\")) {\n    player0.classList.remove(\"player--active\");\n  }\n  if (player1.classList.contains(\"player--active\")) {\n    player1.classList.remove(\"player--active\");\n  }\n};\n\n\n3. Rolling Button\nWe then an eventListener to the Rolling button. When the rolling button is clicked :\n\nDice is unhidden\nRandom number between 1 to 6\nIf random number is 1, switch the player by trigger switchPlayer() function.\n\nconst switchPlayer = function () {\n  currentScore = 0;\n  document.getElementById(`current--${currentPlayer}`).textContent =\n    currentScore;\n  currentPlayer = currentPlayer === 1 ? 0 : 1;\n  player0.classList.toggle(\"player--active\");\n  player1.classList.toggle(\"player--active\");\n};\n\nIf random number is not 1, add the score to current score.\n\n// rolling button\nbtnRoll.addEventListener(\"click\", () =&gt; {\n  // show dice\n  if (!Gameover) {\n    diceEl.classList.remove(\"hidden\");\n\n    const randDice = Math.floor(Math.random() * 6) + 1;\n    diceEl.src = `dice-${randDice}.png`;\n    // Add score to current score\n    if (randDice !== 1) {\n      currentScore += randDice;\n      document.getElementById(`current--${currentPlayer}`).textContent =\n        currentScore;\n    }\n    // Switch the player\n    else {\n      switchPlayer();\n    }\n  }\n});\n\n\n4. Hold Button\nWhen hold button is click, it will :\n\nIf the game has not ended add the current score to player overall score.\nSwitch to other player\nIf one of the player win the game, add a player--winner class to that player.\n\n// hold button\nbtnHold.addEventListener(\"click\", () =&gt; {\n  winScore = Number(document.getElementById(\"win-score\").value);\n  if (!Gameover) {\n    scores[currentPlayer] += currentScore;\n    document.getElementById(`score--${currentPlayer}`).textContent =\n      scores[currentPlayer];\n    if (scores[currentPlayer] &gt;= winScore) {\n      document\n        .querySelector(`.player--${currentPlayer}`)\n        .classList.add(\"player--winner\");\n      document\n        .querySelector(`.player--${currentPlayer}`)\n        .classList.remove(\"player--active\");\n      diceEl.classList.add(\"hidden\");\n      Gameover = true;\n    } else {\n      switchPlayer();\n    }\n  }\n});"
+    "objectID": "posts/cnn/cnn.html#output-layer",
+    "href": "posts/cnn/cnn.html#output-layer",
+    "title": "Convolutional Neuron Network",
+    "section": "Output Layer",
+    "text": "Output Layer\n\nSoftmax Function\nSoftmax function is generally used in output layer, since it range is (0-1) which can be represented as probabilty values. Its expression can be written as :\n\\[\\sigma = \\frac{e^{a_k}}{\\sum_{i=1}^{n}e^{a_i}}\\]\nExample in softmax calculation :\n\n\n\nSoftmax\n\n\nReference"
+  },
+  {
+    "objectID": "posts/regression/regression.html",
+    "href": "posts/regression/regression.html",
+    "title": "Regression and Classification",
+    "section": "",
+    "text": "Linear regression is a statistical method used to model the relationship between a dependent variable and one or more independent variables. It assumes that there is a linear relationship between the independent variables (predictors) and the dependent variable (outcome).\n\n\nWith linear regression model, we generally use Square-Error as the loss function.\n\\[L(f) = \\frac{1}{2}\\sum_{i=1}^{n}(f(x^{(i)}) - y^{(i)})^2\\]\nWhere the superscipt \\(i\\) denotes \\(i^{\\text{th}}\\) data in the dataset\n\n\n\nLearning rate (lr) is the rate that weight is updated in order to reduce the loss. If lr is too large, the model might not able to find optima weight with smallest loss. On the other hand if lr is too small, the model weight will be updated very slow, which lead in needing more iterations to find the optima weight.\n\nHow to choose the optimal lr ?\n\nWe can change lr with number of iterations. Suppose that we are at \\(t\\) iteration and learning rate \\(\\alpha\\) :\n\n\n\\[ \\alpha_t = \\frac{\\alpha}{\\sqrt{t + 1}}\\]\n\nWhat is the best learning rate ?"
+  },
+  {
+    "objectID": "posts/regression/regression.html#loss-function",
+    "href": "posts/regression/regression.html#loss-function",
+    "title": "Regression and Classification",
+    "section": "",
+    "text": "With linear regression model, we generally use Square-Error as the loss function.\n\\[L(f) = \\frac{1}{2}\\sum_{i=1}^{n}(f(x^{(i)}) - y^{(i)})^2\\]\nWhere the superscipt \\(i\\) denotes \\(i^{\\text{th}}\\) data in the dataset"
+  },
+  {
+    "objectID": "posts/regression/regression.html#learning-rate",
+    "href": "posts/regression/regression.html#learning-rate",
+    "title": "Regression and Classification",
+    "section": "",
+    "text": "Learning rate (lr) is the rate that weight is updated in order to reduce the loss. If lr is too large, the model might not able to find optima weight with smallest loss. On the other hand if lr is too small, the model weight will be updated very slow, which lead in needing more iterations to find the optima weight.\n\nHow to choose the optimal lr ?\n\nWe can change lr with number of iterations. Suppose that we are at \\(t\\) iteration and learning rate \\(\\alpha\\) :\n\n\n\\[ \\alpha_t = \\frac{\\alpha}{\\sqrt{t + 1}}\\]\n\nWhat is the best learning rate ?"
+  },
+  {
+    "objectID": "posts/german-vocabulary/german_vocab.html",
+    "href": "posts/german-vocabulary/german_vocab.html",
+    "title": "German Vocabulary",
+    "section": "",
+    "text": "Weather\n\n\n\nFrühling: spring\nSommer : summer\nSonnig: sunny\n(der) Regen: rainning\nNeblig: foggy\n\nEs ist neblig / warm\n\nWarm\n\nIst es warm heute ?\nEs ist nie warm im Winter.\nEs ist neblig heute und bewölkt.\n\nBewölkt\n\nEs ist bewölkt und neblig.\n\nHerbst: the Fall\nWetter : weather\n\nWie ist das Wetter heute ?\n\nHeute : today\nwandere(ich) wandert wanderst wandern(sie)\n\nWandern sie oft Anna, Wanderst du oft Anna?\nDie Eule wandert nie in Sommer.\n\nSonnencreme : sunscreen\n\nWie viel kostet die Sonnencreme ?\n\nEs ist immer schön im Frühling\ndie Wasserflasche\n\nMeine Wasserflasche ist groß.\n\n\n\n\n\n\nliebt\n\nLiebt dein Bruder deinen Hund ?\nLiebt du deinen Hund ?\n\nhabe hast\n\nHast du einen Mann ?\nHast du einen Freundin ?\n\nFreund\n\nHast du viele Freunde ?\n\nFreundin\n\nHast du einen Freundin?\n\nOnkel\nOma\nOpa\n\n\n\n\n\n(die) Banane\n\nIch mag Bananen.\n\n(die) Birne\n(die) Bohnen, bean\n\nIch mag Bohnen.\n\n(die) Butter\n(die) Aubergine\n(das) Brot\n(die) Schokolade\n\nIch mag Schokoladen.\n\n(die) Feige\n(das) Fleisch, meat\n(die) Familie\n(der) Reis\n\nIch esse gern Reis.\n\n(die) Rosinen\n\nIch esse gern Rosinen.\n\n(das) Radio\nwaschen\nkaufen\n\n\n\n\n\n(die) Schule\n(der) Schal\n(der) Fisch"
+  },
+  {
+    "objectID": "posts/german-vocabulary/german_vocab.html#weather-and-seasons",
+    "href": "posts/german-vocabulary/german_vocab.html#weather-and-seasons",
+    "title": "German Vocabulary",
+    "section": "",
+    "text": "Weather\n\n\n\nFrühling: spring\nSommer : summer\nSonnig: sunny\n(der) Regen: rainning\nNeblig: foggy\n\nEs ist neblig / warm\n\nWarm\n\nIst es warm heute ?\nEs ist nie warm im Winter.\nEs ist neblig heute und bewölkt.\n\nBewölkt\n\nEs ist bewölkt und neblig.\n\nHerbst: the Fall\nWetter : weather\n\nWie ist das Wetter heute ?\n\nHeute : today\nwandere(ich) wandert wanderst wandern(sie)\n\nWandern sie oft Anna, Wanderst du oft Anna?\nDie Eule wandert nie in Sommer.\n\nSonnencreme : sunscreen\n\nWie viel kostet die Sonnencreme ?\n\nEs ist immer schön im Frühling\ndie Wasserflasche\n\nMeine Wasserflasche ist groß."
+  },
+  {
+    "objectID": "posts/german-vocabulary/german_vocab.html#relation",
+    "href": "posts/german-vocabulary/german_vocab.html#relation",
+    "title": "German Vocabulary",
+    "section": "",
+    "text": "liebt\n\nLiebt dein Bruder deinen Hund ?\nLiebt du deinen Hund ?\n\nhabe hast\n\nHast du einen Mann ?\nHast du einen Freundin ?\n\nFreund\n\nHast du viele Freunde ?\n\nFreundin\n\nHast du einen Freundin?\n\nOnkel\nOma\nOpa"
+  },
+  {
+    "objectID": "posts/german-vocabulary/german_vocab.html#food",
+    "href": "posts/german-vocabulary/german_vocab.html#food",
+    "title": "German Vocabulary",
+    "section": "",
+    "text": "(die) Banane\n\nIch mag Bananen.\n\n(die) Birne\n(die) Bohnen, bean\n\nIch mag Bohnen.\n\n(die) Butter\n(die) Aubergine\n(das) Brot\n(die) Schokolade\n\nIch mag Schokoladen.\n\n(die) Feige\n(das) Fleisch, meat\n(die) Familie\n(der) Reis\n\nIch esse gern Reis.\n\n(die) Rosinen\n\nIch esse gern Rosinen.\n\n(das) Radio\nwaschen\nkaufen"
+  },
+  {
+    "objectID": "posts/german-vocabulary/german_vocab.html#place",
+    "href": "posts/german-vocabulary/german_vocab.html#place",
+    "title": "German Vocabulary",
+    "section": "",
+    "text": "(die) Schule\n(der) Schal\n(der) Fisch"
+  },
+  {
+    "objectID": "projects/guessing_game/guessing_game.html",
+    "href": "projects/guessing_game/guessing_game.html",
+    "title": "Guessing Game Using Javascript DOM",
+    "section": "",
+    "text": "In this project, we’ll dive into the fundamentals of web development by creating a straightforward guessing number game using HTML, CSS, and JavaScript. The game begins by generating a random number between 1 and 20. As the user inputs their guess, the game provides feedback on whether the guess is too low or too high compared to the randomly generated number. The game continues until the user successfully guesses the correct number.\nKey features of the game include:"
+  },
+  {
+    "objectID": "projects/guessing_game/guessing_game.html#demo-of-the-game",
+    "href": "projects/guessing_game/guessing_game.html#demo-of-the-game",
+    "title": "Guessing Game Using Javascript DOM",
+    "section": "Demo of the Game",
+    "text": "Demo of the Game\n\n\n\nDemo\n\n\nLink to Guessing Game on GitHub Page"
+  },
+  {
+    "objectID": "projects/guessing_game/guessing_game.html#using-strict-mode-in-js",
+    "href": "projects/guessing_game/guessing_game.html#using-strict-mode-in-js",
+    "title": "Guessing Game Using Javascript DOM",
+    "section": "Using strict mode in JS",
+    "text": "Using strict mode in JS\nUsing strict mode can greatly benefit us, especially as new learners of JavaScript. It helps catch errors by providing more stringent rules and enabling features like console logging for any errors that occur within our code.\nTo use strict mode we simply put use strict at the beginning of JS file.\n'use strict'"
+  },
+  {
+    "objectID": "projects/guessing_game/guessing_game.html#random-a-number-in-js",
+    "href": "projects/guessing_game/guessing_game.html#random-a-number-in-js",
+    "title": "Guessing Game Using Javascript DOM",
+    "section": "Random a Number in JS",
+    "text": "Random a Number in JS\nTo random a number, we will use Math.random() which will generate a number between 0 and 1(not including 1). We then multiply it by 20, Math.random() * 20 to get a number from 0 - 20 (not including 20). Lastly we use Math.floor() to make the result an integer, and also we need to add 1, since the result only in 0-19.\nconst getRandom = () =&gt; Math.floor(Math.random() * 20) + 1;\nlet num = getRandom();"
+  },
+  {
+    "objectID": "projects/guessing_game/guessing_game.html#changing-the-message",
+    "href": "projects/guessing_game/guessing_game.html#changing-the-message",
+    "title": "Guessing Game Using Javascript DOM",
+    "section": "Changing the message",
+    "text": "Changing the message\nTo change the feedback message back to user, we can simply create a function, which will use querySelector to select a message class. Note that querySelector will only return an JS element, unlike the querySelectorAll which will return an array of JS elements.\n// display a message\nfunction displayMessage(message) {\n  document.querySelector('.message').textContent = message;\n}"
+  },
+  {
+    "objectID": "projects/guessing_game/guessing_game.html#add-an-eventlistener-to-a-button",
+    "href": "projects/guessing_game/guessing_game.html#add-an-eventlistener-to-a-button",
+    "title": "Guessing Game Using Javascript DOM",
+    "section": "Add an eventListener to a button",
+    "text": "Add an eventListener to a button\nWe simply trigger a function call in JS when the button is clicked using addEventListener.\ndocument.querySelector('.check').addEventListener('click', () =&gt; {\n  \n});\nThen we get the value of user’s guess by selecting the HTML input element, note here that this element value is string is not a number type, hence we need to further convert it to a number using Number().\n/ check button event listener\ndocument.querySelector('.check').addEventListener('click', () =&gt; {\n  let guess = Number(document.querySelector('.guess').value);\n  score = Number(document.querySelector('.score').textContent);\n});\nIf the user simply click the ‘check’ button without any number (empty string is a falsy value here), then it will feedback a message.\nif (!guess) {\n    displayMessage('⛔ No number!');\n  }\nIf the user’s guess is correct, then we will send a congratulation message and change the body’s background into green (#60b347). Furthermore, if the the curren score is higher then the highest score, it will update the highest score to current score.\nif (guess === num) {\n    displayMessage('🎉 Correct number!');\n    document.querySelector('.number').textContent = num;\n    document.body.style.backgroundColor = '#60b347';\n    if (score &gt; highScore) {\n    highScore = score;\n    document.querySelector('.highscore').textContent = highScore;\n    }\n}\nElse when the guess is incorrect it feed back the message back to user, by guiding the the number is too low or too high. And if the score is 0, then stop the game and display a “Gameover”.\nelse {\n      if (score &gt; 0) {\n        --score;\n        document.querySelector('.score').textContent = score;\n        if (guess &lt; num) {\n          displayMessage('⬆️ Too low!');\n        } else {\n          displayMessage('⬇️ Too high!');\n        }\n      }\n      // when score === 0, gameover\n      else {\n        displayMessage('🙈 Gameover!');\n      }\n    }\nFinally, we add an event listener to the play again button. The background will reset to Gray (#222), score to 20, and the message to default message ‘Start guessing…’.\n// play again button event listener\ndocument.querySelector('.again').addEventListener('click', () =&gt; {\n  score = 20;\n  document.querySelector('.score').textContent = score;\n  document.querySelector('.number').textContent = '?';\n  displayMessage('Start guessing...');\n  document.body.style.backgroundColor = '#222';\n});"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Pandas",
+    "section": "",
+    "text": "Pandas is a powerful and versatile open-source data analysis and manipulation library for Python. It is widely used in data science, finance, economics, and many other fields for its ability to handle structured data easily and efficiently."
   },
   {
     "objectID": "index.html#series",
@@ -670,19 +670,5 @@
     "title": "Pandas",
     "section": "iloc",
     "text": "iloc\n\nIndex-based: use iloc to select rows and columns by their integer position (like using indices in a list).\nSyntax: df.iloc[row_index, column_index]\nExample:\n\nimport pandas as pd\n\n# Select the first row (Sok's data)\nsok_data = df.iloc[0]\nprint(sok_data)"
-  },
-  {
-    "objectID": "index.html#sort_values",
-    "href": "index.html#sort_values",
-    "title": "Pandas",
-    "section": "sort_values",
-    "text": "sort_values\nsort_values() is a method used to sort a DataFrame or a Series by its values. This method can organize data in ascending or descending order based on one or more columns.\n\nSyntax : df.sort_values(by, axis=0, ascending=True, inplace=False)\n\nby: The column(s) to sort by. It can be a single column label or a list of column labels.\naxis: 0 to sort rows (default), 1 to sort columns.\nascending: True for ascending order (default), False for descending order.\ninplace: If True, perform the operation in place and return None. If False, return a new DataFrame.\n\n\n# Sort by Age in ascending order\nsorted_df = df.sort_values(by='Age')\nprint(sorted_df)"
-  },
-  {
-    "objectID": "index.html#features",
-    "href": "index.html#features",
-    "title": "Pandas",
-    "section": "Features",
-    "text": "Features\n\n.index : Returns the index (row labels) of the DataFrame or Series.\n.columns : Returns all columns of the DataFrame or Series.\n.describe() : Provides summary statistics of the DataFrame’s numerical columns, such as count, mean, standard deviation, min, and percentiles.\n.set_index() : Sets the DataFrame index (row labels) using one or more existing columns. This can be useful for looking up rows by a key.\n.isin() : Filters the DataFrame by checking if elements in the DataFrame are contained in the given list. It returns a DataFrame of booleans indicating the presence of each element.\n.info() : Provides a concise summary of the DataFrame, including the data types of each column, non-null values, and memory usage."
   }
 ]
