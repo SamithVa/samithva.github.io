@@ -6,10 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Samith Va">
-<meta name="dcterms.date" content="2024-08-01">
 
-<title>Pandas – Happy Learning</title>
+<title>Blog Posts – Happy Learning</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,40 +20,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -66,6 +30,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-listing/list.min.js"></script>
+<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -104,7 +70,65 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
+<script>
 
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -112,7 +136,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
@@ -153,159 +177,613 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-page-left">
+      <h1 class="title">Blog Posts</h1>
+                      </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta column-page-left">
+
+      
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#data-structures" id="toc-data-structures" class="nav-link active" data-scroll-target="#data-structures">Data Structures:</a>
-  <ul class="collapse">
-  <li><a href="#series" id="toc-series" class="nav-link" data-scroll-target="#series">Series</a></li>
-  <li><a href="#dataframe" id="toc-dataframe" class="nav-link" data-scroll-target="#dataframe">DataFrame</a></li>
-  </ul></li>
-  <li><a href="#selecting-data" id="toc-selecting-data" class="nav-link" data-scroll-target="#selecting-data">Selecting Data</a>
-  <ul class="collapse">
-  <li><a href="#loc" id="toc-loc" class="nav-link" data-scroll-target="#loc">loc</a></li>
-  <li><a href="#iloc" id="toc-iloc" class="nav-link" data-scroll-target="#iloc">iloc</a></li>
-  </ul></li>
-  <li><a href="#some-common-data-manipulations" id="toc-some-common-data-manipulations" class="nav-link" data-scroll-target="#some-common-data-manipulations">Some Common Data Manipulations</a></li>
-  </ul>
-</nav>
-    </div>
+        
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(17)</span></div><div class="category" data-category="LLM">LLM <span class="quarto-category-count">(1)</span></div><div class="category" data-category="LVLM">LVLM <span class="quarto-category-count">(1)</span></div><div class="category" data-category="RF-Microelectronics">RF-Microelectronics <span class="quarto-category-count">(6)</span></div><div class="category" data-category="anaconda">anaconda <span class="quarto-category-count">(1)</span></div><div class="category" data-category="deep learning">deep learning <span class="quarto-category-count">(3)</span></div><div class="category" data-category="german">german <span class="quarto-category-count">(2)</span></div><div class="category" data-category="machine learning">machine learning <span class="quarto-category-count">(1)</span></div><div class="category" data-category="numpy">numpy <span class="quarto-category-count">(1)</span></div><div class="category" data-category="pandas">pandas <span class="quarto-category-count">(1)</span></div><div class="category" data-category="pip">pip <span class="quarto-category-count">(1)</span></div><div class="category" data-category="web development">web development <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Pandas</h1>
-  <div class="quarto-categories">
-    <div class="quarto-category">pandas</div>
-  </div>
-  </div>
+<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
 
 
 
-<div class="quarto-title-meta">
-
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Samith Va </p>
-          </div>
-  </div>
-    
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">August 1, 2024</p>
-    </div>
-  </div>
-  
-    
-  </div>
-  
 
 
-</header>
 
 
-<p>Pandas is a powerful and versatile open-source data analysis and manipulation library for Python. It is widely used in data science, finance, economics, and many other fields for its ability to handle structured data easily and efficiently.</p>
-<section id="data-structures" class="level1">
-<h1>Data Structures:</h1>
-<p>Two common data structures in Pandas are <code>Series</code> and <code>DataFrame</code>.</p>
-<section id="series" class="level2">
-<h2 class="anchored" data-anchor-id="series">Series</h2>
-<p>A one-dimensional labeled array capable of holding any data type (integer, string, float, etc.). It is similar to a column in a table.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Creating a Series</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> [<span class="dv">10</span>, <span class="dv">20</span>, <span class="dv">30</span>, <span class="dv">40</span>]</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> pd.Series(data)</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(s)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="dataframe" class="level2">
-<h2 class="anchored" data-anchor-id="dataframe">DataFrame</h2>
-<p>A two-dimensional labeled data structure with columns of potentially different types. It is similar to a table in a database or an Excel spreadsheet.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Creating a DataFrame</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> {<span class="st">'Name'</span>: [<span class="st">'Sok'</span>, <span class="st">'Som'</span>, <span class="st">'Soy'</span>],</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>        <span class="st">'Age'</span>: [<span class="dv">25</span>, <span class="dv">30</span>, <span class="dv">35</span>],</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>        <span class="st">'City'</span>: [<span class="st">'Phnom Penh'</span>, <span class="st">'Kampong Cham'</span>, <span class="st">'Kompot'</span>]}</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.DataFrame(data)</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-</section>
-<section id="selecting-data" class="level1">
-<h1>Selecting Data</h1>
-<p>In pandas, <code>loc</code> and <code>iloc</code> are two ways to select data from a DataFrame, but they do so in different ways. But there are some key differences:</p>
-<ul>
-<li>Selection Method:
-<ul>
-<li><code>loc</code>: Uses labels (like row names or column names).</li>
-<li><code>iloc</code>: Uses integer positions (like 0 for the first row or column).</li>
-</ul></li>
-<li>Usage:
-<ul>
-<li><code>loc</code> is great when you have named indices and want to access data based on those names.</li>
-<li><code>iloc</code> is handy when you want to access data based on the numerical position, regardless of the labels.</li>
-</ul></li>
-</ul>
-<section id="loc" class="level2">
-<h2 class="anchored" data-anchor-id="loc">loc</h2>
-<ul>
-<li>Label-based: use <code>loc</code> to select rows and columns by their labels.</li>
-<li>Syntax: <code>df.loc[row_label, column_label]</code></li>
-<li>Example:</li>
-</ul>
-<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Select the row where the label is 1 (Som's data)</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>som_data <span class="op">=</span> df.loc[<span class="dv">1</span>]</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(som_data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="iloc" class="level2">
-<h2 class="anchored" data-anchor-id="iloc">iloc</h2>
-<ul>
-<li>Index-based: use <code>iloc</code> to select rows and columns by their integer position (like using indices in a list).</li>
-<li>Syntax: <code>df.iloc[row_index, column_index]</code></li>
-<li>Example:</li>
-</ul>
-<div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Select the first row (Sok's data)</span></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>sok_data <span class="op">=</span> df.iloc[<span class="dv">0</span>]</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(sok_data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-</section>
-<section id="some-common-data-manipulations" class="level1">
-<h1>Some Common Data Manipulations</h1>
-<ul>
-<li><code>.sort_values(by, axis=0, ascending=True, inplace=False)</code> is a method used to sort a DataFrame or a Series by its values. This method can organize data in <em>ascending</em> or <em>descending</em> order based on one or more columns.
-<ul>
-<li><code>by</code>: The column(s) to sort by. It can be a single column label or a list of column labels.</li>
-<li><code>axis</code>: 0 to sort rows (default), 1 to sort columns.</li>
-<li><code>ascending</code>: True for ascending order (default), False for descending order.</li>
-<li><code>inplace</code>: If True, perform the operation in place and return None. If False, return a new DataFrame.</li>
-</ul></li>
-</ul>
-<div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Sort by Age in ascending order</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>sorted_df <span class="op">=</span> df.sort_values(by<span class="op">=</span><span class="st">'Age'</span>)</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(sorted_df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<ul>
-<li><p><code>.index</code> : Returns the index (row labels) of the DataFrame or Series.</p></li>
-<li><p><code>.columns</code> : Returns all columns of the DataFrame or Series.</p></li>
-<li><p><code>.describe()</code> : Provides summary statistics of the DataFrame’s numerical columns, such as count, mean, standard deviation, min, and percentiles.</p></li>
-<li><p><code>.set_index()</code> : Sets the DataFrame index (row labels) using one or more existing columns. This can be useful for looking up rows by a key.</p></li>
-<li><p><code>.isin()</code> : Filters the DataFrame by checking if elements in the DataFrame are contained in the given list. It returns a DataFrame of booleans indicating the presence of each element.</p></li>
-<li><p><code>.info()</code>&nbsp;: Provides a concise summary of the DataFrame, including the data types of each column, non-null values, and memory usage.</p></li>
-</ul>
 
 
-</section>
-
-</main> <!-- /main -->
+<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
+<div class="list quarto-listing-default">
+<div class="quarto-post image-right" data-index="0" data-categories="pandas" data-listing-date-sort="1722441600000" data-listing-file-modified-sort="1722526528375" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="526">
+<div class="thumbnail">
+<p><a href="./posts/pandas/pandas.html" class="no-external"></a></p><a href="./posts/pandas/pandas.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="./posts/pandas/pandas.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/pandas/pandas.html" class="no-external">Pandas</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/pandas/pandas.html" class="no-external"></a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('pandas'); return false;">
+pandas
+</div>
+</div>
+<div class="listing-description">
+<a href="./posts/pandas/pandas.html" class="no-external">Pandas is a powerful and versatile open-source data analysis and manipulation library for Python. It is widely used in data science, finance, economics, and many other…</a>
+</div>
+</div>
+<div class="metadata">
+<a href="./posts/pandas/pandas.html" class="no-external">
+<div class="listing-date">
+Aug 1, 2024
+</div>
+<div class="listing-author">
+Samith Va
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="1" data-categories="LLM,LVLM" data-listing-date-sort="1722009600000" data-listing-file-modified-sort="1722518036529" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="226">
+<div class="thumbnail">
+<p><a href="./posts/qwen-vl/qwen-vl.html" class="no-external"></a></p><a href="./posts/qwen-vl/qwen-vl.html" class="no-external">
+<p class="card-img-top"><img src="posts/qwen-vl/training_process.png"  class="thumbnail-image card-img"/></p>
+</a><p><a href="./posts/qwen-vl/qwen-vl.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/qwen-vl/qwen-vl.html" class="no-external">QwenVL Paper Summary</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/qwen-vl/qwen-vl.html" class="no-external"></a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('LLM'); return false;">
+LLM
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('LVLM'); return false;">
+LVLM
+</div>
+</div>
+<div class="listing-description">
+<a href="./posts/qwen-vl/qwen-vl.html" class="no-external">Qwen-VL is a series of LVLMs which used to understand texts and images, it is developed by Ali group and it is an open-source model. What’s make it different from Qwen-7B is…<strong></strong><strong></strong><strong></strong></a>
+</div>
+</div>
+<div class="metadata">
+<a href="./posts/qwen-vl/qwen-vl.html" class="no-external">
+<div class="listing-date">
+Jul 27, 2024
+</div>
+<div class="listing-author">
+Samith Va
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="2" data-categories="RF-Microelectronics" data-listing-date-sort="1717430400000" data-listing-file-modified-sort="1722518036517" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="330">
+<div class="thumbnail">
+<p><a href="./posts/RF/rf-pa/rf-pa.html" class="no-external"></a></p><a href="./posts/RF/rf-pa/rf-pa.html" class="no-external">
+<p class="card-img-top"><img src="posts/RF/rf-pa/lna_pa.png"  class="thumbnail-image card-img"/></p>
+</a><p><a href="./posts/RF/rf-pa/rf-pa.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/RF/rf-pa/rf-pa.html" class="no-external">Power Amplifier</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/RF/rf-pa/rf-pa.html" class="no-external"></a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('RF-Microelectronics'); return false;">
+RF-Microelectronics
+</div>
+</div>
+<div class="listing-description">
+<a href="./posts/RF/rf-pa/rf-pa.html" class="no-external">Two important specification of PA :</a>
+</div>
+</div>
+<div class="metadata">
+<a href="./posts/RF/rf-pa/rf-pa.html" class="no-external">
+<div class="listing-date">
+Jun 4, 2024
+</div>
+<div class="listing-author">
+Samith Va
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="3" data-categories="RF-Microelectronics" data-listing-date-sort="1717430400000" data-listing-file-modified-sort="1722518036513" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="415">
+<div class="thumbnail">
+<p><a href="./posts/RF/rf-mixers/rf-mixers.html" class="no-external"></a></p><a href="./posts/RF/rf-mixers/rf-mixers.html" class="no-external">
+<p class="card-img-top"><img src="posts/RF/rf-mixers/feedthrough.png"  class="thumbnail-image card-img"/></p>
+</a><p><a href="./posts/RF/rf-mixers/rf-mixers.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/RF/rf-mixers/rf-mixers.html" class="no-external">RF Mixers</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/RF/rf-mixers/rf-mixers.html" class="no-external"></a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('RF-Microelectronics'); return false;">
+RF-Microelectronics
+</div>
+</div>
+<div class="listing-description">
+<a href="./posts/RF/rf-mixers/rf-mixers.html" class="no-external">Mixer is a very important component in modern RF, without it we may not be able to convert from low frequency (IF) into higher frequency (RF) or vice versa, and it will not…</a>
+</div>
+</div>
+<div class="metadata">
+<a href="./posts/RF/rf-mixers/rf-mixers.html" class="no-external">
+<div class="listing-date">
+Jun 4, 2024
+</div>
+<div class="listing-author">
+Samith Va
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="4" data-categories="RF-Microelectronics" data-listing-date-sort="1717257600000" data-listing-file-modified-sort="1722518036519" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="529">
+<div class="thumbnail">
+<p><a href="./posts/RF/rf-receiver/rf-receiver.html" class="no-external"></a></p><a href="./posts/RF/rf-receiver/rf-receiver.html" class="no-external">
+<p class="card-img-top"><img src="posts/RF/rf-receiver/high_q_factor.png"  class="thumbnail-image card-img"/></p>
+</a><p><a href="./posts/RF/rf-receiver/rf-receiver.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/RF/rf-receiver/rf-receiver.html" class="no-external">RF Receiver</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/RF/rf-receiver/rf-receiver.html" class="no-external"></a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('RF-Microelectronics'); return false;">
+RF-Microelectronics
+</div>
+</div>
+<div class="listing-description">
+<a href="./posts/RF/rf-receiver/rf-receiver.html" class="no-external">This post will include answers to these questions:</a>
+</div>
+</div>
+<div class="metadata">
+<a href="./posts/RF/rf-receiver/rf-receiver.html" class="no-external">
+<div class="listing-date">
+Jun 2, 2024
+</div>
+<div class="listing-author">
+Samith Va
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="5" data-categories="RF-Microelectronics" data-listing-date-sort="1711641600000" data-listing-file-modified-sort="1722518036515" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="289">
+<div class="thumbnail">
+<p><a href="./posts/RF/rf-noise/rf-noise.html" class="no-external"></a></p><a href="./posts/RF/rf-noise/rf-noise.html" class="no-external">
+<p class="card-img-top"><img src="posts/RF/rf-noise/thermal_noise.png"  class="thumbnail-image card-img"/></p>
+</a><p><a href="./posts/RF/rf-noise/rf-noise.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/RF/rf-noise/rf-noise.html" class="no-external">RF Noise</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/RF/rf-noise/rf-noise.html" class="no-external"></a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('RF-Microelectronics'); return false;">
+RF-Microelectronics
+</div>
+</div>
+<div class="listing-description">
+<a href="./posts/RF/rf-noise/rf-noise.html" class="no-external">What will cover in this section : Noise Figure, Friis Equation, Thermal Noise of Resistor, MOSFET Noise.</a>
+</div>
+</div>
+<div class="metadata">
+<a href="./posts/RF/rf-noise/rf-noise.html" class="no-external">
+<div class="listing-date">
+Mar 29, 2024
+</div>
+<div class="listing-author">
+Samith Va
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="6" data-categories="RF-Microelectronics" data-listing-date-sort="1711641600000" data-listing-file-modified-sort="1722518036520" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="253">
+<div class="thumbnail">
+<p><a href="./posts/RF/rlc-circuit/rlc-circuit.html" class="no-external"></a></p><a href="./posts/RF/rlc-circuit/rlc-circuit.html" class="no-external">
+<p class="card-img-top"><img src="posts/RF/rlc-circuit/q-factor.png"  class="thumbnail-image card-img"/></p>
+</a><p><a href="./posts/RF/rlc-circuit/rlc-circuit.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/RF/rlc-circuit/rlc-circuit.html" class="no-external">RLC Circuit</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/RF/rlc-circuit/rlc-circuit.html" class="no-external"></a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('RF-Microelectronics'); return false;">
+RF-Microelectronics
+</div>
+</div>
+<div class="listing-description">
+<a href="./posts/RF/rlc-circuit/rlc-circuit.html" class="no-external">Resistance is a property of a material or component in a circuit that opposes the flow of electric current. It’s essentially the friction or obstruction that electrons…<strong></strong></a>
+</div>
+</div>
+<div class="metadata">
+<a href="./posts/RF/rlc-circuit/rlc-circuit.html" class="no-external">
+<div class="listing-date">
+Mar 29, 2024
+</div>
+<div class="listing-author">
+Samith Va
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="7" data-categories="machine learning" data-listing-date-sort="1711641600000" data-listing-file-modified-sort="1722518036531" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="169">
+<div class="thumbnail">
+<p><a href="./posts/regression/regression.html" class="no-external"></a></p><a href="./posts/regression/regression.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="./posts/regression/regression.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/regression/regression.html" class="no-external">Regression and Classification</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/regression/regression.html" class="no-external"></a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('machine learning'); return false;">
+machine learning
+</div>
+</div>
+<div class="listing-description">
+<a href="./posts/regression/regression.html" class="no-external">Linear regression is a statistical method used to model the relationship between a dependent variable and one or more independent variables. It assumes that there is a <strong>linear…</strong></a>
+</div>
+</div>
+<div class="metadata">
+<a href="./posts/regression/regression.html" class="no-external">
+<div class="listing-date">
+Mar 29, 2024
+</div>
+<div class="listing-author">
+Samith Va
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="8" data-categories="anaconda,pip" data-listing-date-sort="1711555200000" data-listing-file-modified-sort="1722518036522" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="326">
+<div class="thumbnail">
+<p><a href="./posts/conda/conda.html" class="no-external"></a></p><a href="./posts/conda/conda.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="./posts/conda/conda.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/conda/conda.html" class="no-external">Anaconda or Pip</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/conda/conda.html" class="no-external"></a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('anaconda'); return false;">
+anaconda
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('pip'); return false;">
+pip
+</div>
+</div>
+<div class="listing-description">
+<a href="./posts/conda/conda.html" class="no-external">Conda is a versatile package and environment management system for Python and other programming languages. It simplifies the process of installing, updating, and managing…</a>
+</div>
+</div>
+<div class="metadata">
+<a href="./posts/conda/conda.html" class="no-external">
+<div class="listing-date">
+Mar 28, 2024
+</div>
+<div class="listing-author">
+Samith Va
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="9" data-categories="web development" data-listing-date-sort="1711555200000" data-listing-file-modified-sort="1722518036523" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="923">
+<div class="thumbnail">
+<p><a href="./posts/html/html.html" class="no-external"></a></p><a href="./posts/html/html.html" class="no-external">
+<p class="card-img-top"><img src="posts/html/modern_html.png"  class="thumbnail-image card-img"/></p>
+</a><p><a href="./posts/html/html.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/html/html.html" class="no-external">HTML5</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/html/html.html" class="no-external"></a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('web development'); return false;">
+web development
+</div>
+</div>
+<div class="listing-description">
+<a href="./posts/html/html.html" class="no-external">HTML5 is the latest version of the Hypertext Markup Language (HTML), which is the standard language used to create and design web pages and applications. It is a significant…</a>
+</div>
+</div>
+<div class="metadata">
+<a href="./posts/html/html.html" class="no-external">
+<div class="listing-date">
+Mar 28, 2024
+</div>
+<div class="listing-author">
+Samith Va
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="10" data-categories="german" data-listing-date-sort="1711555200000" data-listing-file-modified-sort="1722518036522" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="873">
+<div class="thumbnail">
+<p><a href="./posts/german-grammar/german.html" class="no-external"></a></p><a href="./posts/german-grammar/german.html" class="no-external">
+<p class="card-img-top"><img src="posts/german-grammar/indefinite_articles.png"  class="thumbnail-image card-img"/></p>
+</a><p><a href="./posts/german-grammar/german.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/german-grammar/german.html" class="no-external">German Grammar</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/german-grammar/german.html" class="no-external"></a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('german'); return false;">
+german
+</div>
+</div>
+<div class="listing-description">
+<a href="./posts/german-grammar/german.html" class="no-external">The nominative case is one of the grammatical cases in German, used primarily for the subject of a sentence, which is the person or thing performing the action of the verb.…</a>
+</div>
+</div>
+<div class="metadata">
+<a href="./posts/german-grammar/german.html" class="no-external">
+<div class="listing-date">
+Mar 28, 2024
+</div>
+<div class="listing-author">
+Samith Va
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="11" data-categories="deep learning" data-listing-date-sort="1711555200000" data-listing-file-modified-sort="1722518036521" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="920">
+<div class="thumbnail">
+<p><a href="./posts/cnn/cnn.html" class="no-external"></a></p><a href="./posts/cnn/cnn.html" class="no-external">
+<p class="card-img-top"><img src="posts/cnn/kernel.png" alt="Kernel"  class="thumbnail-image card-img"/></p>
+</a><p><a href="./posts/cnn/cnn.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/cnn/cnn.html" class="no-external">Convolutional Neuron Network</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/cnn/cnn.html" class="no-external"></a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('deep learning'); return false;">
+deep learning
+</div>
+</div>
+<div class="listing-description">
+<a href="./posts/cnn/cnn.html" class="no-external">Keywords: Spatial dimension, Depth, Filters Bank, feature maps, Pooling</a>
+</div>
+</div>
+<div class="metadata">
+<a href="./posts/cnn/cnn.html" class="no-external">
+<div class="listing-date">
+Mar 28, 2024
+</div>
+<div class="listing-author">
+Samith Va
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="12" data-categories="german" data-listing-date-sort="1711296000000" data-listing-file-modified-sort="1722518036522" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="214">
+<div class="thumbnail">
+<p><a href="./posts/german-vocabulary/german_vocab.html" class="no-external"></a></p><a href="./posts/german-vocabulary/german_vocab.html" class="no-external">
+<p class="card-img-top"><img src="posts/german-vocabulary/weather.png"  class="thumbnail-image card-img"/></p>
+</a><p><a href="./posts/german-vocabulary/german_vocab.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/german-vocabulary/german_vocab.html" class="no-external">German Vocabulary</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/german-vocabulary/german_vocab.html" class="no-external"></a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('german'); return false;">
+german
+</div>
+</div>
+<div class="listing-description">
+<a href="./posts/german-vocabulary/german_vocab.html" class="no-external">(die) Banane</a>
+</div>
+</div>
+<div class="metadata">
+<a href="./posts/german-vocabulary/german_vocab.html" class="no-external">
+<div class="listing-date">
+Mar 25, 2024
+</div>
+<div class="listing-author">
+Samith Va
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="13" data-categories="deep learning" data-listing-date-sort="1711123200000" data-listing-file-modified-sort="1722518036527" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="448">
+<div class="thumbnail">
+<p><a href="./posts/open-cv/open-cv.html" class="no-external"></a></p><a href="./posts/open-cv/open-cv.html" class="no-external">
+<p class="card-img-top"><img src="posts/open-cv/image.jpg"  class="thumbnail-image card-img"/></p>
+</a><p><a href="./posts/open-cv/open-cv.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/open-cv/open-cv.html" class="no-external">OpenCV</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/open-cv/open-cv.html" class="no-external"></a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('deep learning'); return false;">
+deep learning
+</div>
+</div>
+<div class="listing-description">
+<a href="./posts/open-cv/open-cv.html" class="no-external">OpenCV is an open-source computer vision and machine learning software library. It provides a wide range of functionalities for image and video processing.</a>
+</div>
+</div>
+<div class="metadata">
+<a href="./posts/open-cv/open-cv.html" class="no-external">
+<div class="listing-date">
+Mar 23, 2024
+</div>
+<div class="listing-author">
+Samith Va
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="14" data-categories="numpy" data-listing-date-sort="1711036800000" data-listing-file-modified-sort="1722518036526" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="324">
+<div class="thumbnail">
+<p><a href="./posts/numpy/index.html" class="no-external"></a></p><a href="./posts/numpy/index.html" class="no-external">
+<p><img loading="lazy" src="./posts/numpy/numpylogo.svg" class="thumbnail-image"></p>
+</a><p><a href="./posts/numpy/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/numpy/index.html" class="no-external">Numpy</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/numpy/index.html" class="no-external"></a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('numpy'); return false;">
+numpy
+</div>
+</div>
+<div class="listing-description">
+<a href="./posts/numpy/index.html" class="no-external">NumPy is the fundamental package for scientific computing in Python</a>
+</div>
+</div>
+<div class="metadata">
+<a href="./posts/numpy/index.html" class="no-external">
+<div class="listing-date">
+Mar 22, 2024
+</div>
+<div class="listing-author">
+Samith Va
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="15" data-categories="RF-Microelectronics" data-listing-date-sort="1710950400000" data-listing-file-modified-sort="1722518036516" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="958">
+<div class="thumbnail">
+<p><a href="./posts/RF/rf-nonlinearity/nonlinearity.html" class="no-external"></a></p><a href="./posts/RF/rf-nonlinearity/nonlinearity.html" class="no-external">
+<p><img loading="lazy" src="./posts/RF/rf-nonlinearity/nonlinearity.png" class="thumbnail-image"></p>
+</a><p><a href="./posts/RF/rf-nonlinearity/nonlinearity.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/RF/rf-nonlinearity/nonlinearity.html" class="no-external">Effects of Nonlinearity</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/RF/rf-nonlinearity/nonlinearity.html" class="no-external"></a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('RF-Microelectronics'); return false;">
+RF-Microelectronics
+</div>
+</div>
+<div class="listing-description">
+<a href="./posts/RF/rf-nonlinearity/nonlinearity.html" class="no-external">In analog circuits, nonlinearity can be characterized by <strong>harmonic distortion</strong>, but in RF circuits, the characterization of nonlinear behavior involves distinct measures that…</a>
+</div>
+</div>
+<div class="metadata">
+<a href="./posts/RF/rf-nonlinearity/nonlinearity.html" class="no-external">
+<div class="listing-date">
+Mar 21, 2024
+</div>
+<div class="listing-author">
+Samith Va
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="16" data-categories="deep learning" data-listing-date-sort="1710950400000" data-listing-file-modified-sort="1722518036522" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1459">
+<div class="thumbnail">
+<p><a href="./posts/deep-learning-journey/deep-learning-journey.html" class="no-external"></a></p><a href="./posts/deep-learning-journey/deep-learning-journey.html" class="no-external">
+<p><img loading="lazy" src="./posts/deep-learning-journey/image.jpg" class="thumbnail-image"></p>
+</a><p><a href="./posts/deep-learning-journey/deep-learning-journey.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/deep-learning-journey/deep-learning-journey.html" class="no-external">Deep Learning Journey</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/deep-learning-journey/deep-learning-journey.html" class="no-external"></a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('deep learning'); return false;">
+deep learning
+</div>
+</div>
+<div class="listing-description">
+<a href="./posts/deep-learning-journey/deep-learning-journey.html" class="no-external">Keywords used in this context: architecture, overfit, fine-tunning, validation set, test set, weights, parameters, CNN</a>
+</div>
+</div>
+<div class="metadata">
+<a href="./posts/deep-learning-journey/deep-learning-journey.html" class="no-external">
+<div class="listing-date">
+Mar 21, 2024
+</div>
+<div class="listing-author">
+Samith Va
+</div>
+</a>
+</div>
+</div>
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

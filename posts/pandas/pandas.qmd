@@ -1,0 +1,110 @@
+---
+title: "Pandas"
+author: "Samith Va"
+date: "2024-08-01"
+categories: [pandas]
+format:
+  html:
+    toc: true 
+    code-fold: true
+# jupyter: python3
+---
+
+Pandas is a powerful and versatile open-source data analysis and manipulation library for Python. It is widely used in data science, finance, economics, and many other fields for its ability to handle structured data easily and efficiently.
+
+# Data Structures:
+
+Two common data structures in Pandas are `Series` and `DataFrame`. 
+
+## Series
+
+A one-dimensional labeled array capable of holding any data type (integer, string, float, etc.). It is similar to a column in a table.
+
+```python
+import pandas as pd
+
+# Creating a Series
+data = [10, 20, 30, 40]
+s = pd.Series(data)
+
+print(s)
+```
+
+## DataFrame
+
+A two-dimensional labeled data structure with columns of potentially different types. It is similar to a table in a database or an Excel spreadsheet.
+
+```python
+# Creating a DataFrame
+data = {'Name': ['Sok', 'Som', 'Soy'],
+        'Age': [25, 30, 35],
+        'City': ['Phnom Penh', 'Kampong Cham', 'Kompot']}
+df = pd.DataFrame(data)
+
+print(df)
+```
+
+# Selecting Data
+
+In pandas, `loc` and `iloc` are two ways to select data from a DataFrame, but they do so in different ways. But there are some key differences:
+
+- Selection Method:
+  - `loc`: Uses labels (like row names or column names).
+  - `iloc`: Uses integer positions (like 0 for the first row or column).
+- Usage:
+  - `loc` is great when you have named indices and want to access data based on those names.
+  - `iloc` is handy when you want to access data based on the numerical position, regardless of the labels.
+
+## loc
+
+- Label-based: use `loc` to select rows and columns by their labels.
+- Syntax: `df.loc[row_label, column_label]`
+- Example:
+
+```python
+# Select the row where the label is 1 (Som's data)
+som_data = df.loc[1]
+print(som_data)
+```
+
+## iloc 
+
+- Index-based: use `iloc` to select rows and columns by their integer position (like using indices in a list).
+- Syntax: `df.iloc[row_index, column_index]`
+- Example:
+
+```python
+import pandas as pd
+
+# Select the first row (Sok's data)
+sok_data = df.iloc[0]
+print(sok_data)
+```
+
+# Some Common Data Manipulations
+
+
+
+- `.sort_values(by, axis=0, ascending=True, inplace=False)` is a method used to sort a DataFrame or a Series by its values. This method can organize  data in *ascending* or *descending* order based on one or more columns.
+  - `by`: The column(s) to sort by. It can be a single column label or a list of column labels.
+  - `axis`: 0 to sort rows (default), 1 to sort columns.
+  - `ascending`: True for ascending order (default), False for descending order.
+  - `inplace`: If True, perform the operation in place and return None. If False, return a new DataFrame.
+
+```python
+# Sort by Age in ascending order
+sorted_df = df.sort_values(by='Age')
+print(sorted_df)
+```
+
+- `.index` : Returns the index (row labels) of the DataFrame or Series.
+
+- `.columns` : Returns all columns of the DataFrame or Series.
+
+- `.describe()` : Provides summary statistics of the DataFrame’s numerical columns, such as count, mean, standard deviation, min, and percentiles.
+
+- `.set_index()` : Sets the DataFrame index (row labels) using one or more existing columns. This can be useful for looking up rows by a key.
+
+- `.isin()` : Filters the DataFrame by checking if elements in the DataFrame are contained in the given list. It returns a DataFrame of booleans indicating the presence of each element.
+
+- `.info()` : Provides a concise summary of the DataFrame, including the data types of each column, non-null values, and memory usage.

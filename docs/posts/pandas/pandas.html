@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Samith Va">
+<meta name="dcterms.date" content="2024-08-01">
 
-<title>pandas – Happy Learning</title>
+<title>Pandas – Happy Learning</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +21,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -73,7 +109,7 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-fixed fullcontent">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
@@ -117,10 +153,59 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Pandas</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">pandas</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Samith Va </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">August 1, 2024</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#data-structures" id="toc-data-structures" class="nav-link active" data-scroll-target="#data-structures">Data Structures:</a>
+  <ul class="collapse">
+  <li><a href="#series" id="toc-series" class="nav-link" data-scroll-target="#series">Series</a></li>
+  <li><a href="#dataframe" id="toc-dataframe" class="nav-link" data-scroll-target="#dataframe">DataFrame</a></li>
+  </ul></li>
+  <li><a href="#selecting-data" id="toc-selecting-data" class="nav-link" data-scroll-target="#selecting-data">Selecting Data</a>
+  <ul class="collapse">
+  <li><a href="#loc" id="toc-loc" class="nav-link" data-scroll-target="#loc">loc</a></li>
+  <li><a href="#iloc" id="toc-iloc" class="nav-link" data-scroll-target="#iloc">iloc</a></li>
+  </ul></li>
+  <li><a href="#some-common-data-manipulations" id="toc-some-common-data-manipulations" class="nav-link" data-scroll-target="#some-common-data-manipulations">Some Common Data Manipulations</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
 
@@ -128,7 +213,98 @@ ul.task-list li input[type="checkbox"] {
 
 
 
+<p>Pandas is a powerful and versatile open-source data analysis and manipulation library for Python. It is widely used in data science, finance, economics, and many other fields for its ability to handle structured data easily and efficiently.</p>
+<section id="data-structures" class="level1">
+<h1>Data Structures:</h1>
+<p>Two common data structures in Pandas are <code>Series</code> and <code>DataFrame</code>.</p>
+<section id="series" class="level2">
+<h2 class="anchored" data-anchor-id="series">Series</h2>
+<p>A one-dimensional labeled array capable of holding any data type (integer, string, float, etc.). It is similar to a column in a table.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Creating a Series</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> [<span class="dv">10</span>, <span class="dv">20</span>, <span class="dv">30</span>, <span class="dv">40</span>]</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> pd.Series(data)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(s)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="dataframe" class="level2">
+<h2 class="anchored" data-anchor-id="dataframe">DataFrame</h2>
+<p>A two-dimensional labeled data structure with columns of potentially different types. It is similar to a table in a database or an Excel spreadsheet.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Creating a DataFrame</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> {<span class="st">'Name'</span>: [<span class="st">'Sok'</span>, <span class="st">'Som'</span>, <span class="st">'Soy'</span>],</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>        <span class="st">'Age'</span>: [<span class="dv">25</span>, <span class="dv">30</span>, <span class="dv">35</span>],</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>        <span class="st">'City'</span>: [<span class="st">'Phnom Penh'</span>, <span class="st">'Kampong Cham'</span>, <span class="st">'Kompot'</span>]}</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.DataFrame(data)</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+<section id="selecting-data" class="level1">
+<h1>Selecting Data</h1>
+<p>In pandas, <code>loc</code> and <code>iloc</code> are two ways to select data from a DataFrame, but they do so in different ways. But there are some key differences:</p>
+<ul>
+<li>Selection Method:
+<ul>
+<li><code>loc</code>: Uses labels (like row names or column names).</li>
+<li><code>iloc</code>: Uses integer positions (like 0 for the first row or column).</li>
+</ul></li>
+<li>Usage:
+<ul>
+<li><code>loc</code> is great when you have named indices and want to access data based on those names.</li>
+<li><code>iloc</code> is handy when you want to access data based on the numerical position, regardless of the labels.</li>
+</ul></li>
+</ul>
+<section id="loc" class="level2">
+<h2 class="anchored" data-anchor-id="loc">loc</h2>
+<ul>
+<li>Label-based: use <code>loc</code> to select rows and columns by their labels.</li>
+<li>Syntax: <code>df.loc[row_label, column_label]</code></li>
+<li>Example:</li>
+</ul>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Select the row where the label is 1 (Som's data)</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>som_data <span class="op">=</span> df.loc[<span class="dv">1</span>]</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(som_data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="iloc" class="level2">
+<h2 class="anchored" data-anchor-id="iloc">iloc</h2>
+<ul>
+<li>Index-based: use <code>iloc</code> to select rows and columns by their integer position (like using indices in a list).</li>
+<li>Syntax: <code>df.iloc[row_index, column_index]</code></li>
+<li>Example:</li>
+</ul>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Select the first row (Sok's data)</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>sok_data <span class="op">=</span> df.iloc[<span class="dv">0</span>]</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(sok_data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+<section id="some-common-data-manipulations" class="level1">
+<h1>Some Common Data Manipulations</h1>
+<ul>
+<li><code>.sort_values(by, axis=0, ascending=True, inplace=False)</code> is a method used to sort a DataFrame or a Series by its values. This method can organize data in <em>ascending</em> or <em>descending</em> order based on one or more columns.
+<ul>
+<li><code>by</code>: The column(s) to sort by. It can be a single column label or a list of column labels.</li>
+<li><code>axis</code>: 0 to sort rows (default), 1 to sort columns.</li>
+<li><code>ascending</code>: True for ascending order (default), False for descending order.</li>
+<li><code>inplace</code>: If True, perform the operation in place and return None. If False, return a new DataFrame.</li>
+</ul></li>
+</ul>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Sort by Age in ascending order</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>sorted_df <span class="op">=</span> df.sort_values(by<span class="op">=</span><span class="st">'Age'</span>)</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(sorted_df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li><p><code>.index</code> : Returns the index (row labels) of the DataFrame or Series.</p></li>
+<li><p><code>.columns</code> : Returns all columns of the DataFrame or Series.</p></li>
+<li><p><code>.describe()</code> : Provides summary statistics of the DataFrame’s numerical columns, such as count, mean, standard deviation, min, and percentiles.</p></li>
+<li><p><code>.set_index()</code> : Sets the DataFrame index (row labels) using one or more existing columns. This can be useful for looking up rows by a key.</p></li>
+<li><p><code>.isin()</code> : Filters the DataFrame by checking if elements in the DataFrame are contained in the given list. It returns a DataFrame of booleans indicating the presence of each element.</p></li>
+<li><p><code>.info()</code>&nbsp;: Provides a concise summary of the DataFrame, including the data types of each column, non-null values, and memory usage.</p></li>
+</ul>
 
+
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

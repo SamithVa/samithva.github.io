@@ -639,9 +639,9 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Pandas",
+    "title": "Blog Posts",
     "section": "",
-    "text": "Pandas is a powerful and versatile open-source data analysis and manipulation library for Python. It is widely used in data science, finance, economics, and many other fields for its ability to handle structured data easily and efficiently."
+    "text": "Pandas\n\n\n\n\n\n\npandas\n\n\n\n\n\n\n\n\n\nAug 1, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nQwenVL Paper Summary\n\n\n\n\n\n\nLLM\n\n\nLVLM\n\n\n\n\n\n\n\n\n\nJul 27, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nPower Amplifier\n\n\n\n\n\n\nRF-Microelectronics\n\n\n\n\n\n\n\n\n\nJun 4, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nRF Mixers\n\n\n\n\n\n\nRF-Microelectronics\n\n\n\n\n\n\n\n\n\nJun 4, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nRF Receiver\n\n\n\n\n\n\nRF-Microelectronics\n\n\n\n\n\n\n\n\n\nJun 2, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nRF Noise\n\n\n\n\n\n\nRF-Microelectronics\n\n\n\n\n\n\n\n\n\nMar 29, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nRLC Circuit\n\n\n\n\n\n\nRF-Microelectronics\n\n\n\n\n\n\n\n\n\nMar 29, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nRegression and Classification\n\n\n\n\n\n\nmachine learning\n\n\n\n\n\n\n\n\n\nMar 29, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nAnaconda or Pip\n\n\n\n\n\n\nanaconda\n\n\npip\n\n\n\n\n\n\n\n\n\nMar 28, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nHTML5\n\n\n\n\n\n\nweb development\n\n\n\n\n\n\n\n\n\nMar 28, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nGerman Grammar\n\n\n\n\n\n\ngerman\n\n\n\n\n\n\n\n\n\nMar 28, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nConvolutional Neuron Network\n\n\n\n\n\n\ndeep learning\n\n\n\n\n\n\n\n\n\nMar 28, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nGerman Vocabulary\n\n\n\n\n\n\ngerman\n\n\n\n\n\n\n\n\n\nMar 25, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nOpenCV\n\n\n\n\n\n\ndeep learning\n\n\n\n\n\n\n\n\n\nMar 23, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nNumpy\n\n\n\n\n\n\nnumpy\n\n\n\nNumPy is the fundamental package for scientific computing in Python\n\n\n\n\n\nMar 22, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nEffects of Nonlinearity\n\n\n\n\n\n\nRF-Microelectronics\n\n\n\n\n\n\n\n\n\nMar 21, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nDeep Learning Journey\n\n\n\n\n\n\ndeep learning\n\n\n\n\n\n\n\n\n\nMar 21, 2024\n\n\nSamith Va\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "index.html#series",
@@ -667,6 +667,41 @@
   {
     "objectID": "index.html#iloc",
     "href": "index.html#iloc",
+    "title": "Pandas",
+    "section": "iloc",
+    "text": "iloc\n\nIndex-based: use iloc to select rows and columns by their integer position (like using indices in a list).\nSyntax: df.iloc[row_index, column_index]\nExample:\n\nimport pandas as pd\n\n# Select the first row (Sok's data)\nsok_data = df.iloc[0]\nprint(sok_data)"
+  },
+  {
+    "objectID": "posts/pandas/pandas.html",
+    "href": "posts/pandas/pandas.html",
+    "title": "Pandas",
+    "section": "",
+    "text": "Pandas is a powerful and versatile open-source data analysis and manipulation library for Python. It is widely used in data science, finance, economics, and many other fields for its ability to handle structured data easily and efficiently."
+  },
+  {
+    "objectID": "posts/pandas/pandas.html#series",
+    "href": "posts/pandas/pandas.html#series",
+    "title": "Pandas",
+    "section": "Series",
+    "text": "Series\nA one-dimensional labeled array capable of holding any data type (integer, string, float, etc.). It is similar to a column in a table.\nimport pandas as pd\n\n# Creating a Series\ndata = [10, 20, 30, 40]\ns = pd.Series(data)\n\nprint(s)"
+  },
+  {
+    "objectID": "posts/pandas/pandas.html#dataframe",
+    "href": "posts/pandas/pandas.html#dataframe",
+    "title": "Pandas",
+    "section": "DataFrame",
+    "text": "DataFrame\nA two-dimensional labeled data structure with columns of potentially different types. It is similar to a table in a database or an Excel spreadsheet.\n# Creating a DataFrame\ndata = {'Name': ['Sok', 'Som', 'Soy'],\n        'Age': [25, 30, 35],\n        'City': ['Phnom Penh', 'Kampong Cham', 'Kompot']}\ndf = pd.DataFrame(data)\n\nprint(df)"
+  },
+  {
+    "objectID": "posts/pandas/pandas.html#loc",
+    "href": "posts/pandas/pandas.html#loc",
+    "title": "Pandas",
+    "section": "loc",
+    "text": "loc\n\nLabel-based: use loc to select rows and columns by their labels.\nSyntax: df.loc[row_label, column_label]\nExample:\n\n# Select the row where the label is 1 (Som's data)\nsom_data = df.loc[1]\nprint(som_data)"
+  },
+  {
+    "objectID": "posts/pandas/pandas.html#iloc",
+    "href": "posts/pandas/pandas.html#iloc",
     "title": "Pandas",
     "section": "iloc",
     "text": "iloc\n\nIndex-based: use iloc to select rows and columns by their integer position (like using indices in a list).\nSyntax: df.iloc[row_index, column_index]\nExample:\n\nimport pandas as pd\n\n# Select the first row (Sok's data)\nsok_data = df.iloc[0]\nprint(sok_data)"
