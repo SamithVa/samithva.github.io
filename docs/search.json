@@ -317,9 +317,9 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Blog Posts",
+    "title": "Pandas",
     "section": "",
-    "text": "QwenVL Paper Summary\n\n\n\n\n\n\nLLM\n\n\nLVLM\n\n\n\n\n\n\n\n\n\nJul 27, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nRF Mixers\n\n\n\n\n\n\nRF-Microelectronics\n\n\n\n\n\n\n\n\n\nJun 4, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nPower Amplifier\n\n\n\n\n\n\nRF-Microelectronics\n\n\n\n\n\n\n\n\n\nJun 4, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nRF Receiver\n\n\n\n\n\n\nRF-Microelectronics\n\n\n\n\n\n\n\n\n\nJun 2, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nRegression and Classification\n\n\n\n\n\n\nmachine learning\n\n\n\n\n\n\n\n\n\nMar 29, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nRF Noise\n\n\n\n\n\n\nRF-Microelectronics\n\n\n\n\n\n\n\n\n\nMar 29, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nRLC Circuit\n\n\n\n\n\n\nRF-Microelectronics\n\n\n\n\n\n\n\n\n\nMar 29, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nConvolutional Neuron Network\n\n\n\n\n\n\ndeep learning\n\n\n\n\n\n\n\n\n\nMar 28, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nAnaconda or Pip\n\n\n\n\n\n\nanaconda\n\n\npip\n\n\n\n\n\n\n\n\n\nMar 28, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nGerman Grammar\n\n\n\n\n\n\ngerman\n\n\n\n\n\n\n\n\n\nMar 28, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nHTML5\n\n\n\n\n\n\nweb development\n\n\n\n\n\n\n\n\n\nMar 28, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nGerman Vocabulary\n\n\n\n\n\n\ngerman\n\n\n\n\n\n\n\n\n\nMar 25, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nOpenCV\n\n\n\n\n\n\ndeep learning\n\n\n\n\n\n\n\n\n\nMar 23, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nNumpy\n\n\n\n\n\n\nnumpy\n\n\n\nNumPy is the fundamental package for scientific computing in Python\n\n\n\n\n\nMar 22, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nDeep Learning Journey\n\n\n\n\n\n\ndeep learning\n\n\n\n\n\n\n\n\n\nMar 21, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nEffects of Nonlinearity\n\n\n\n\n\n\nRF-Microelectronics\n\n\n\n\n\n\n\n\n\nMar 21, 2024\n\n\nSamith Va\n\n\n\n\n\n\nNo matching items"
+    "text": "Pandas is a powerful and versatile open-source data analysis and manipulation library for Python. It is widely used in data science, finance, economics, and many other fields for its ability to handle structured data easily and efficiently."
   },
   {
     "objectID": "posts/conda/conda.html",
@@ -642,5 +642,47 @@
     "title": "Pig Game using Javascript",
     "section": "Building Processes",
     "text": "Building Processes\n\n1. Select DOM Elements\n\nUsing strict at the beginning, so that JS stopped running when there is an error.\nWe select button elements using querySelector.\nScores store both player score, which score[0] stores Player 1’s score and score[1] stores Player 2’s score.\nInitialize all the variables\n\n\"use strict\";\n\nconst player0 = document.querySelector(\".player--0\");\nconst player1 = document.querySelector(\".player--1\");\n\nconst scoreEl0 = document.getElementById(\"score--0\");\nconst scoreEl1 = document.getElementById(\"score--1\");\nconst currentScoreEl0 = document.getElementById(\"current--0\");\nconst currentScoreEl1 = document.getElementById(\"current--1\");\n\nconst btnNew = document.querySelector(\".btn--new\");\nconst btnRoll = document.querySelector(\".btn--roll\");\nconst btnHold = document.querySelector(\".btn--hold\");\n\nlet winScore = Number(document.getElementById(\"win-score\").value);\nlet currentScore = 0;\nlet currentPlayer = 0;\nlet Gameover = false;\n\nconst diceEl = document.querySelector(\".dice\");\n\nlet scores = [0, 0];\n\n\n2. New Game\nWhen ‘NEW GAME’ button is clicked, we trigger the newGame() function.\nbtnNew.addEventListener(\"click\", () =&gt; {\n  Gameover = false;\n  newGame();\n});\nIn newGame() function, We check if the currentPlayer contain player--winner class, if it does class we then remove the class to begin the game.\n// newGame\nconst newGame = function () {\n  currentScore = 0;\n  scores = [0, 0];\n  const currentPlayerEle = document.querySelector(`.player--${currentPlayer}`);\n  if (currentPlayerEle.classList.contains(\"player--winner\")) {\n    currentPlayerEle.classList.remove(\"player--winner\");\n  }\n  removeAllActive();\n  currentPlayer = Math.floor(Math.random() + 0.5);\n  document\n    .querySelector(`.player--${currentPlayer}`)\n    .classList.add(\"player--active\");\n  // hide dice\n  diceEl.classList.add(\"hidden\");\n  // reset scores to 0\n  scoreEl0.textContent = 0;\n  scoreEl1.textContent = 0;\n  currentScoreEl0.textContent = 0;\n  currentScoreEl1.textContent = 0;\n};\nTo start the game equally, we random a number 0-1, if it is 0, start with Player 1, otherwise Player 2 start the game.\ncurrentPlayer = Math.floor(Math.random() + 0.5);\nBut we first call function removeAllActive to remove active player class from all both players.\nconst removeAllActive = function () {\n  if (player0.classList.contains(\"player--active\")) {\n    player0.classList.remove(\"player--active\");\n  }\n  if (player1.classList.contains(\"player--active\")) {\n    player1.classList.remove(\"player--active\");\n  }\n};\n\n\n3. Rolling Button\nWe then an eventListener to the Rolling button. When the rolling button is clicked :\n\nDice is unhidden\nRandom number between 1 to 6\nIf random number is 1, switch the player by trigger switchPlayer() function.\n\nconst switchPlayer = function () {\n  currentScore = 0;\n  document.getElementById(`current--${currentPlayer}`).textContent =\n    currentScore;\n  currentPlayer = currentPlayer === 1 ? 0 : 1;\n  player0.classList.toggle(\"player--active\");\n  player1.classList.toggle(\"player--active\");\n};\n\nIf random number is not 1, add the score to current score.\n\n// rolling button\nbtnRoll.addEventListener(\"click\", () =&gt; {\n  // show dice\n  if (!Gameover) {\n    diceEl.classList.remove(\"hidden\");\n\n    const randDice = Math.floor(Math.random() * 6) + 1;\n    diceEl.src = `dice-${randDice}.png`;\n    // Add score to current score\n    if (randDice !== 1) {\n      currentScore += randDice;\n      document.getElementById(`current--${currentPlayer}`).textContent =\n        currentScore;\n    }\n    // Switch the player\n    else {\n      switchPlayer();\n    }\n  }\n});\n\n\n4. Hold Button\nWhen hold button is click, it will :\n\nIf the game has not ended add the current score to player overall score.\nSwitch to other player\nIf one of the player win the game, add a player--winner class to that player.\n\n// hold button\nbtnHold.addEventListener(\"click\", () =&gt; {\n  winScore = Number(document.getElementById(\"win-score\").value);\n  if (!Gameover) {\n    scores[currentPlayer] += currentScore;\n    document.getElementById(`score--${currentPlayer}`).textContent =\n      scores[currentPlayer];\n    if (scores[currentPlayer] &gt;= winScore) {\n      document\n        .querySelector(`.player--${currentPlayer}`)\n        .classList.add(\"player--winner\");\n      document\n        .querySelector(`.player--${currentPlayer}`)\n        .classList.remove(\"player--active\");\n      diceEl.classList.add(\"hidden\");\n      Gameover = true;\n    } else {\n      switchPlayer();\n    }\n  }\n});"
+  },
+  {
+    "objectID": "index.html#series",
+    "href": "index.html#series",
+    "title": "Pandas",
+    "section": "Series",
+    "text": "Series\nA one-dimensional labeled array capable of holding any data type (integer, string, float, etc.). It is similar to a column in a table.\nimport pandas as pd\n\n# Creating a Series\ndata = [10, 20, 30, 40]\ns = pd.Series(data)\n\nprint(s)"
+  },
+  {
+    "objectID": "index.html#dataframe",
+    "href": "index.html#dataframe",
+    "title": "Pandas",
+    "section": "DataFrame",
+    "text": "DataFrame\nA two-dimensional labeled data structure with columns of potentially different types. It is similar to a table in a database or an Excel spreadsheet.\n# Creating a DataFrame\ndata = {'Name': ['Sok', 'Som', 'Soy'],\n        'Age': [25, 30, 35],\n        'City': ['Phnom Penh', 'Kampong Cham', 'Kompot']}\ndf = pd.DataFrame(data)\n\nprint(df)"
+  },
+  {
+    "objectID": "index.html#loc",
+    "href": "index.html#loc",
+    "title": "Pandas",
+    "section": "loc",
+    "text": "loc\n\nLabel-based: use loc to select rows and columns by their labels.\nSyntax: df.loc[row_label, column_label]\nExample:\n\n# Select the row where the label is 1 (Som's data)\nsom_data = df.loc[1]\nprint(som_data)"
+  },
+  {
+    "objectID": "index.html#iloc",
+    "href": "index.html#iloc",
+    "title": "Pandas",
+    "section": "iloc",
+    "text": "iloc\n\nIndex-based: use iloc to select rows and columns by their integer position (like using indices in a list).\nSyntax: df.iloc[row_index, column_index]\nExample:\n\nimport pandas as pd\n\n# Select the first row (Sok's data)\nsok_data = df.iloc[0]\nprint(sok_data)"
+  },
+  {
+    "objectID": "index.html#sort_values",
+    "href": "index.html#sort_values",
+    "title": "Pandas",
+    "section": "sort_values",
+    "text": "sort_values\nsort_values() is a method used to sort a DataFrame or a Series by its values. This method can organize data in ascending or descending order based on one or more columns.\n\nSyntax : df.sort_values(by, axis=0, ascending=True, inplace=False)\n\nby: The column(s) to sort by. It can be a single column label or a list of column labels.\naxis: 0 to sort rows (default), 1 to sort columns.\nascending: True for ascending order (default), False for descending order.\ninplace: If True, perform the operation in place and return None. If False, return a new DataFrame.\n\n\n# Sort by Age in ascending order\nsorted_df = df.sort_values(by='Age')\nprint(sorted_df)"
+  },
+  {
+    "objectID": "index.html#features",
+    "href": "index.html#features",
+    "title": "Pandas",
+    "section": "Features",
+    "text": "Features\n\n.index : Returns the index (row labels) of the DataFrame or Series.\n.columns : Returns all columns of the DataFrame or Series.\n.describe() : Provides summary statistics of the DataFrame’s numerical columns, such as count, mean, standard deviation, min, and percentiles.\n.set_index() : Sets the DataFrame index (row labels) using one or more existing columns. This can be useful for looking up rows by a key.\n.isin() : Filters the DataFrame by checking if elements in the DataFrame are contained in the given list. It returns a DataFrame of booleans indicating the presence of each element.\n.info() : Provides a concise summary of the DataFrame, including the data types of each column, non-null values, and memory usage."
   }
 ]
