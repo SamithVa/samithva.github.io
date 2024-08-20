@@ -3,7 +3,7 @@ project:
   output-dir: docs
 
 website:
-  title: "Happy Learning"
+  title: "Simple Learning Journey"
   navbar:
     right:
       - about.qmd
@@ -19,8 +19,8 @@ website:
 format:
   html:
     theme:
-      light: flatly
-      dark: darkly
+      light: cosmo
+      dark: solar
     css: styles.css
 
 

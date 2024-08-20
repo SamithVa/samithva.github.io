@@ -83,8 +83,6 @@ print(sok_data)
 
 # Some Common Data Manipulations
 
-
-
 - `.sort_values(by, axis=0, ascending=True, inplace=False)` is a method used to sort a DataFrame or a Series by its values. This method can organize  data in *ascending* or *descending* order based on one or more columns.
   - `by`: The column(s) to sort by. It can be a single column label or a list of column labels.
   - `axis`: 0 to sort rows (default), 1 to sort columns.

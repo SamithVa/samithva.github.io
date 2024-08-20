@@ -9,6 +9,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/seeclick/seeclick.html",
       "/posts/pandas/pandas.html",
       "/posts/qwen-vl/qwen-vl.html",
       "/posts/RF/rf-pa/rf-pa.html",
