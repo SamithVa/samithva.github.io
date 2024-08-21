@@ -9,6 +9,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/quantization_llm/quantization_llm.html",
       "/posts/seeclick/seeclick.html",
       "/posts/pandas/pandas.html",
       "/posts/qwen-vl/qwen-vl.html",

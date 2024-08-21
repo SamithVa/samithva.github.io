@@ -49,6 +49,41 @@
     "text": "Building Processes\n\n1. Select DOM Elements\n\nUsing strict at the beginning, so that JS stopped running when there is an error.\nWe select button elements using querySelector.\nScores store both player score, which score[0] stores Player 1’s score and score[1] stores Player 2’s score.\nInitialize all the variables\n\n\"use strict\";\n\nconst player0 = document.querySelector(\".player--0\");\nconst player1 = document.querySelector(\".player--1\");\n\nconst scoreEl0 = document.getElementById(\"score--0\");\nconst scoreEl1 = document.getElementById(\"score--1\");\nconst currentScoreEl0 = document.getElementById(\"current--0\");\nconst currentScoreEl1 = document.getElementById(\"current--1\");\n\nconst btnNew = document.querySelector(\".btn--new\");\nconst btnRoll = document.querySelector(\".btn--roll\");\nconst btnHold = document.querySelector(\".btn--hold\");\n\nlet winScore = Number(document.getElementById(\"win-score\").value);\nlet currentScore = 0;\nlet currentPlayer = 0;\nlet Gameover = false;\n\nconst diceEl = document.querySelector(\".dice\");\n\nlet scores = [0, 0];\n\n\n2. New Game\nWhen ‘NEW GAME’ button is clicked, we trigger the newGame() function.\nbtnNew.addEventListener(\"click\", () =&gt; {\n  Gameover = false;\n  newGame();\n});\nIn newGame() function, We check if the currentPlayer contain player--winner class, if it does class we then remove the class to begin the game.\n// newGame\nconst newGame = function () {\n  currentScore = 0;\n  scores = [0, 0];\n  const currentPlayerEle = document.querySelector(`.player--${currentPlayer}`);\n  if (currentPlayerEle.classList.contains(\"player--winner\")) {\n    currentPlayerEle.classList.remove(\"player--winner\");\n  }\n  removeAllActive();\n  currentPlayer = Math.floor(Math.random() + 0.5);\n  document\n    .querySelector(`.player--${currentPlayer}`)\n    .classList.add(\"player--active\");\n  // hide dice\n  diceEl.classList.add(\"hidden\");\n  // reset scores to 0\n  scoreEl0.textContent = 0;\n  scoreEl1.textContent = 0;\n  currentScoreEl0.textContent = 0;\n  currentScoreEl1.textContent = 0;\n};\nTo start the game equally, we random a number 0-1, if it is 0, start with Player 1, otherwise Player 2 start the game.\ncurrentPlayer = Math.floor(Math.random() + 0.5);\nBut we first call function removeAllActive to remove active player class from all both players.\nconst removeAllActive = function () {\n  if (player0.classList.contains(\"player--active\")) {\n    player0.classList.remove(\"player--active\");\n  }\n  if (player1.classList.contains(\"player--active\")) {\n    player1.classList.remove(\"player--active\");\n  }\n};\n\n\n3. Rolling Button\nWe then an eventListener to the Rolling button. When the rolling button is clicked :\n\nDice is unhidden\nRandom number between 1 to 6\nIf random number is 1, switch the player by trigger switchPlayer() function.\n\nconst switchPlayer = function () {\n  currentScore = 0;\n  document.getElementById(`current--${currentPlayer}`).textContent =\n    currentScore;\n  currentPlayer = currentPlayer === 1 ? 0 : 1;\n  player0.classList.toggle(\"player--active\");\n  player1.classList.toggle(\"player--active\");\n};\n\nIf random number is not 1, add the score to current score.\n\n// rolling button\nbtnRoll.addEventListener(\"click\", () =&gt; {\n  // show dice\n  if (!Gameover) {\n    diceEl.classList.remove(\"hidden\");\n\n    const randDice = Math.floor(Math.random() * 6) + 1;\n    diceEl.src = `dice-${randDice}.png`;\n    // Add score to current score\n    if (randDice !== 1) {\n      currentScore += randDice;\n      document.getElementById(`current--${currentPlayer}`).textContent =\n        currentScore;\n    }\n    // Switch the player\n    else {\n      switchPlayer();\n    }\n  }\n});\n\n\n4. Hold Button\nWhen hold button is click, it will :\n\nIf the game has not ended add the current score to player overall score.\nSwitch to other player\nIf one of the player win the game, add a player--winner class to that player.\n\n// hold button\nbtnHold.addEventListener(\"click\", () =&gt; {\n  winScore = Number(document.getElementById(\"win-score\").value);\n  if (!Gameover) {\n    scores[currentPlayer] += currentScore;\n    document.getElementById(`score--${currentPlayer}`).textContent =\n      scores[currentPlayer];\n    if (scores[currentPlayer] &gt;= winScore) {\n      document\n        .querySelector(`.player--${currentPlayer}`)\n        .classList.add(\"player--winner\");\n      document\n        .querySelector(`.player--${currentPlayer}`)\n        .classList.remove(\"player--active\");\n      diceEl.classList.add(\"hidden\");\n      Gameover = true;\n    } else {\n      switchPlayer();\n    }\n  }\n});"
   },
   {
+    "objectID": "posts/pandas/pandas.html",
+    "href": "posts/pandas/pandas.html",
+    "title": "Pandas",
+    "section": "",
+    "text": "Pandas is a powerful and versatile open-source data analysis and manipulation library for Python. It is widely used in data science, finance, economics, and many other fields for its ability to handle structured data easily and efficiently."
+  },
+  {
+    "objectID": "posts/pandas/pandas.html#series",
+    "href": "posts/pandas/pandas.html#series",
+    "title": "Pandas",
+    "section": "Series",
+    "text": "Series\nA one-dimensional labeled array capable of holding any data type (integer, string, float, etc.). It is similar to a column in a table.\nimport pandas as pd\n\n# Creating a Series\ndata = [10, 20, 30, 40]\ns = pd.Series(data)\n\nprint(s)"
+  },
+  {
+    "objectID": "posts/pandas/pandas.html#dataframe",
+    "href": "posts/pandas/pandas.html#dataframe",
+    "title": "Pandas",
+    "section": "DataFrame",
+    "text": "DataFrame\nA two-dimensional labeled data structure with columns of potentially different types. It is similar to a table in a database or an Excel spreadsheet.\n# Creating a DataFrame\ndata = {'Name': ['Sok', 'Som', 'Soy'],\n        'Age': [25, 30, 35],\n        'City': ['Phnom Penh', 'Kampong Cham', 'Kompot']}\ndf = pd.DataFrame(data)\n\nprint(df)"
+  },
+  {
+    "objectID": "posts/pandas/pandas.html#loc",
+    "href": "posts/pandas/pandas.html#loc",
+    "title": "Pandas",
+    "section": "loc",
+    "text": "loc\n\nLabel-based: use loc to select rows and columns by their labels.\nSyntax: df.loc[row_label, column_label]\nExample:\n\n# Select the row where the label is 1 (Som's data)\nsom_data = df.loc[1]\nprint(som_data)"
+  },
+  {
+    "objectID": "posts/pandas/pandas.html#iloc",
+    "href": "posts/pandas/pandas.html#iloc",
+    "title": "Pandas",
+    "section": "iloc",
+    "text": "iloc\n\nIndex-based: use iloc to select rows and columns by their integer position (like using indices in a list).\nSyntax: df.iloc[row_index, column_index]\nExample:\n\nimport pandas as pd\n\n# Select the first row (Sok's data)\nsok_data = df.iloc[0]\nprint(sok_data)"
+  },
+  {
     "objectID": "posts/deep-learning-journey/deep-learning-journey.html",
     "href": "posts/deep-learning-journey/deep-learning-journey.html",
     "title": "Deep Learning Journey",
@@ -299,6 +334,27 @@
     "title": "Anaconda or Pip",
     "section": "Remove a virtual environment",
     "text": "Remove a virtual environment\nconda env remove &lt;env_name&gt;"
+  },
+  {
+    "objectID": "posts/seeclick/seeclick.html",
+    "href": "posts/seeclick/seeclick.html",
+    "title": "SeeClick",
+    "section": "",
+    "text": "SeeClick is a visual based GUI agent which is built on top of Qwen-VL-Chat. Using this agent, you can interact with the eletronics device in more efficient way, in other word it is a smarter agent (compare with Siri, Alexa, Google Assistant)."
+  },
+  {
+    "objectID": "posts/seeclick/seeclick.html#footnotes",
+    "href": "posts/seeclick/seeclick.html#footnotes",
+    "title": "SeeClick",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\ntrain with 1 millions dataset, contained 30 different task↩︎\nRICO, Widget Captioning↩︎"
+  },
+  {
+    "objectID": "posts/quantization_llm/quantization_llm.html",
+    "href": "posts/quantization_llm/quantization_llm.html",
+    "title": "Quantization LVLM",
+    "section": "",
+    "text": "Out of memory error (OOM) is the common problem in fine-tuning LLMs. To tackle with this problem, we use can use q-LoRA to fine tune the model. However, some of the LLMs are not suitable for q-LoRA, only the quantized version (Int4, Int8) is suitable. Another problem is that some of the opensoure LLMs do not provide quantized version.\nWith Auto-GPTQ we can quantize the LLMs with less resource, since it uses both GPU VRAM, and CPU RAM. This is archievable with consumer devices.\nIn this post, we will show how to use Auto-GPTQ to quantize an LVLM (Qwen-VL-Guidance).\nFirst, we need to import all below libraries.\nimport argparse\nimport json\nfrom typing import Dict\nimport logging\n\nimport torch\nimport os \nimport transformers\nfrom transformers import AutoTokenizer, AutoModelForCausalLM\nfrom transformers.trainer_pt_utils import LabelSmoother\nfrom auto_gptq import AutoGPTQForCausalLM, BaseQuantizeConfig\nargs = {\n    'model_path': 'models/qwen_vl_guidance', # Qwen-VL-Guidance Path \n    'data_path': 'SeeClick/data/mind2web_train_sft.json', # Calibration data path\n    'max_len': 2048, # Max sequence length of the model\n    'bits': 4, # 4 or 8 for Int4 or Int8\n    'group_size': 128, \n    'out_path': '/quantization/qwen-gui-int4' # Output path for quantized model\n}\ngroup_size is the size in layers in a group being quantized, if group_size is too large, it will cause large quantization error.\n\n\n\n\n\n\nNote\n\n\n\ndata_path is used for calibration process. It should be large enough, otherwise it will worsen the performance of quantized version model.\n\n\nquantize_config = BaseQuantizeConfig(\n        bits=args.bits,\n        group_size=args.group_size,\n        damp_percent=0.01,\n        desc_act=False,  # set to False can significantly speed up inference but the perplexity may slightly bad\n        static_groups=False,\n        sym=True,\n        true_sequential=True, \n        model_name_or_path=None,\n        model_file_base_name=\"model\"\n    )\ndamp_percent is set to 1% to avoid quantization error. It is usually set from 1% to 10%. Higher damp percent will increase the smoothing quantization, and lead to more quantization error.\n# set up logger\nlogging.basicConfig(\n        format=\"%(asctime)s %(levelname)s [%(name)s] %(message)s\", level=logging.INFO, datefmt=\"%Y-%m-%d %H:%M:%S\"\n    )\n\nlogging.info(\"loading tokenizer\")\ntokenizer = AutoTokenizer.from_pretrained(args.model_path, trust_remote_code=True) # load the tokenizer\ntokenizer.pad_token_id = tokenizer.eod_id # set pad_token_id to eod \nlogging.info(\"loading data\")\ndata = preprocess(json.load(open(args.data_path)), tokenizer, args.max_len)\n\nlogging.info(\"loading model\")\nWhy do we need to set padding token tokenizer.pad_token_id to end of document (EOD) token tokenizer.eod_id?\nmodel = AutoGPTQForCausalLM.from_pretrained(args.model_path, \n                                            quantize_config,\n                                            low_cpu_mem_usage=True, \n                                            trust_remote_code=True,\n                                            torch_dtype=torch.float32 \n                                            )\nlogging.info(\"model loaded successfully\")\n\nmodel.quantize(data, cache_examples_on_gpu=False) # set cache_examples_on_gpu to False to avoid OOM error\n\n\nmodel.save_quantized(args.output_path, use_safetensors=True) # save quantized model\ntokenizer.save_pretrained(args.output_path) # save tokenizer for quantized\ntorch_dtype should be set to torch.float32 for CPU running, since torch.float16 is not supported in CPU.\nIn summary above, with limited resource we can quantize LLMs into quantized version, and then use q-LoRA to fine tune the model. This quantized model is comparable with the original model, but only required a lot less VRAM on GPUs."
   },
   {
     "objectID": "posts/open-cv/open-cv.html",
@@ -641,83 +697,6 @@
     "href": "index.html",
     "title": "Blog Posts",
     "section": "",
-    "text": "SeeClick\n\n\n\n\n\n\nLVLMs\n\n\n\n\n\n\n\n\n\nAug 20, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nPandas\n\n\n\n\n\n\npandas\n\n\n\n\n\n\n\n\n\nAug 1, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nQwenVL Paper Summary\n\n\n\n\n\n\nLLMs\n\n\nLVLMs\n\n\n\n\n\n\n\n\n\nJul 27, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nPower Amplifier\n\n\n\n\n\n\nRF-Microelectronics\n\n\n\n\n\n\n\n\n\nJun 4, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nRF Mixers\n\n\n\n\n\n\nRF-Microelectronics\n\n\n\n\n\n\n\n\n\nJun 4, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nRF Receiver\n\n\n\n\n\n\nRF-Microelectronics\n\n\n\n\n\n\n\n\n\nJun 2, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nRF Noise\n\n\n\n\n\n\nRF-Microelectronics\n\n\n\n\n\n\n\n\n\nMar 29, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nRLC Circuit\n\n\n\n\n\n\nRF-Microelectronics\n\n\n\n\n\n\n\n\n\nMar 29, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nRegression and Classification\n\n\n\n\n\n\nmachine learning\n\n\n\n\n\n\n\n\n\nMar 29, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nAnaconda or Pip\n\n\n\n\n\n\nanaconda\n\n\npip\n\n\n\n\n\n\n\n\n\nMar 28, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nHTML5\n\n\n\n\n\n\nweb development\n\n\n\n\n\n\n\n\n\nMar 28, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nGerman Grammar\n\n\n\n\n\n\ngerman\n\n\n\n\n\n\n\n\n\nMar 28, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nConvolutional Neuron Network\n\n\n\n\n\n\ndeep learning\n\n\n\n\n\n\n\n\n\nMar 28, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nGerman Vocabulary\n\n\n\n\n\n\ngerman\n\n\n\n\n\n\n\n\n\nMar 25, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nOpenCV\n\n\n\n\n\n\ndeep learning\n\n\n\n\n\n\n\n\n\nMar 23, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nNumpy\n\n\n\n\n\n\nnumpy\n\n\n\nNumPy is the fundamental package for scientific computing in Python\n\n\n\n\n\nMar 22, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nEffects of Nonlinearity\n\n\n\n\n\n\nRF-Microelectronics\n\n\n\n\n\n\n\n\n\nMar 21, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nDeep Learning Journey\n\n\n\n\n\n\ndeep learning\n\n\n\n\n\n\n\n\n\nMar 21, 2024\n\n\nSamith Va\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "index.html#series",
-    "href": "index.html#series",
-    "title": "Pandas",
-    "section": "Series",
-    "text": "Series\nA one-dimensional labeled array capable of holding any data type (integer, string, float, etc.). It is similar to a column in a table.\nimport pandas as pd\n\n# Creating a Series\ndata = [10, 20, 30, 40]\ns = pd.Series(data)\n\nprint(s)"
-  },
-  {
-    "objectID": "index.html#dataframe",
-    "href": "index.html#dataframe",
-    "title": "Pandas",
-    "section": "DataFrame",
-    "text": "DataFrame\nA two-dimensional labeled data structure with columns of potentially different types. It is similar to a table in a database or an Excel spreadsheet.\n# Creating a DataFrame\ndata = {'Name': ['Sok', 'Som', 'Soy'],\n        'Age': [25, 30, 35],\n        'City': ['Phnom Penh', 'Kampong Cham', 'Kompot']}\ndf = pd.DataFrame(data)\n\nprint(df)"
-  },
-  {
-    "objectID": "index.html#loc",
-    "href": "index.html#loc",
-    "title": "Pandas",
-    "section": "loc",
-    "text": "loc\n\nLabel-based: use loc to select rows and columns by their labels.\nSyntax: df.loc[row_label, column_label]\nExample:\n\n# Select the row where the label is 1 (Som's data)\nsom_data = df.loc[1]\nprint(som_data)"
-  },
-  {
-    "objectID": "index.html#iloc",
-    "href": "index.html#iloc",
-    "title": "Pandas",
-    "section": "iloc",
-    "text": "iloc\n\nIndex-based: use iloc to select rows and columns by their integer position (like using indices in a list).\nSyntax: df.iloc[row_index, column_index]\nExample:\n\nimport pandas as pd\n\n# Select the first row (Sok's data)\nsok_data = df.iloc[0]\nprint(sok_data)"
-  },
-  {
-    "objectID": "posts/pandas/pandas.html",
-    "href": "posts/pandas/pandas.html",
-    "title": "Pandas",
-    "section": "",
-    "text": "Pandas is a powerful and versatile open-source data analysis and manipulation library for Python. It is widely used in data science, finance, economics, and many other fields for its ability to handle structured data easily and efficiently."
-  },
-  {
-    "objectID": "posts/pandas/pandas.html#series",
-    "href": "posts/pandas/pandas.html#series",
-    "title": "Pandas",
-    "section": "Series",
-    "text": "Series\nA one-dimensional labeled array capable of holding any data type (integer, string, float, etc.). It is similar to a column in a table.\nimport pandas as pd\n\n# Creating a Series\ndata = [10, 20, 30, 40]\ns = pd.Series(data)\n\nprint(s)"
-  },
-  {
-    "objectID": "posts/pandas/pandas.html#dataframe",
-    "href": "posts/pandas/pandas.html#dataframe",
-    "title": "Pandas",
-    "section": "DataFrame",
-    "text": "DataFrame\nA two-dimensional labeled data structure with columns of potentially different types. It is similar to a table in a database or an Excel spreadsheet.\n# Creating a DataFrame\ndata = {'Name': ['Sok', 'Som', 'Soy'],\n        'Age': [25, 30, 35],\n        'City': ['Phnom Penh', 'Kampong Cham', 'Kompot']}\ndf = pd.DataFrame(data)\n\nprint(df)"
-  },
-  {
-    "objectID": "posts/pandas/pandas.html#loc",
-    "href": "posts/pandas/pandas.html#loc",
-    "title": "Pandas",
-    "section": "loc",
-    "text": "loc\n\nLabel-based: use loc to select rows and columns by their labels.\nSyntax: df.loc[row_label, column_label]\nExample:\n\n# Select the row where the label is 1 (Som's data)\nsom_data = df.loc[1]\nprint(som_data)"
-  },
-  {
-    "objectID": "posts/pandas/pandas.html#iloc",
-    "href": "posts/pandas/pandas.html#iloc",
-    "title": "Pandas",
-    "section": "iloc",
-    "text": "iloc\n\nIndex-based: use iloc to select rows and columns by their integer position (like using indices in a list).\nSyntax: df.iloc[row_index, column_index]\nExample:\n\nimport pandas as pd\n\n# Select the first row (Sok's data)\nsok_data = df.iloc[0]\nprint(sok_data)"
-  },
-  {
-    "objectID": "posts/seeclick/seeclick.html",
-    "href": "posts/seeclick/seeclick.html",
-    "title": "SeeClick",
-    "section": "",
-    "text": "SeeClick is a visual based GUI agent which is built on top of Qwen-VL-Chat. Using this agent, you can interact with the eletronics device in more efficient way, in other word it is a smarter agent (compare with Siri, Alexa, Google Assistant)."
-  },
-  {
-    "objectID": "posts/seeclick/seeclick.html#footnotes",
-    "href": "posts/seeclick/seeclick.html#footnotes",
-    "title": "SeeClick",
-    "section": "Footnotes",
-    "text": "Footnotes\n\n\ntrain with 1 millions dataset, contained 30 different task↩︎\nRICO, Widget Captioning↩︎"
+    "text": "Quantization LVLM\n\n\n\n\n\n\nLVLMs\n\n\nQuantization\n\n\n\n\n\n\n\n\n\nAug 21, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nSeeClick\n\n\n\n\n\n\nLVLMs\n\n\n\n\n\n\n\n\n\nAug 20, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nPandas\n\n\n\n\n\n\npandas\n\n\n\n\n\n\n\n\n\nAug 1, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nQwenVL Paper Summary\n\n\n\n\n\n\nLLMs\n\n\nLVLMs\n\n\n\n\n\n\n\n\n\nJul 27, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nPower Amplifier\n\n\n\n\n\n\nRF-Microelectronics\n\n\n\n\n\n\n\n\n\nJun 4, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nRF Mixers\n\n\n\n\n\n\nRF-Microelectronics\n\n\n\n\n\n\n\n\n\nJun 4, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nRF Receiver\n\n\n\n\n\n\nRF-Microelectronics\n\n\n\n\n\n\n\n\n\nJun 2, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nRF Noise\n\n\n\n\n\n\nRF-Microelectronics\n\n\n\n\n\n\n\n\n\nMar 29, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nRLC Circuit\n\n\n\n\n\n\nRF-Microelectronics\n\n\n\n\n\n\n\n\n\nMar 29, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nRegression and Classification\n\n\n\n\n\n\nmachine learning\n\n\n\n\n\n\n\n\n\nMar 29, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nAnaconda or Pip\n\n\n\n\n\n\nanaconda\n\n\npip\n\n\n\n\n\n\n\n\n\nMar 28, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nHTML5\n\n\n\n\n\n\nweb development\n\n\n\n\n\n\n\n\n\nMar 28, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nGerman Grammar\n\n\n\n\n\n\ngerman\n\n\n\n\n\n\n\n\n\nMar 28, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nConvolutional Neuron Network\n\n\n\n\n\n\ndeep learning\n\n\n\n\n\n\n\n\n\nMar 28, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nGerman Vocabulary\n\n\n\n\n\n\ngerman\n\n\n\n\n\n\n\n\n\nMar 25, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nOpenCV\n\n\n\n\n\n\ndeep learning\n\n\n\n\n\n\n\n\n\nMar 23, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nNumpy\n\n\n\n\n\n\nnumpy\n\n\n\nNumPy is the fundamental package for scientific computing in Python\n\n\n\n\n\nMar 22, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nEffects of Nonlinearity\n\n\n\n\n\n\nRF-Microelectronics\n\n\n\n\n\n\n\n\n\nMar 21, 2024\n\n\nSamith Va\n\n\n\n\n\n\n\n\n\n\n\n\nDeep Learning Journey\n\n\n\n\n\n\ndeep learning\n\n\n\n\n\n\n\n\n\nMar 21, 2024\n\n\nSamith Va\n\n\n\n\n\n\nNo matching items"
   }
 ]

@@ -229,7 +229,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<p>Due to limited resources, I only able to train the GUI-Grouding stage with only one small dataset <a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> on 4 RX4090 GPUs with 24GB RAM each. Using q-LORA for the fine-tuning stage, it takes about 3 hours. Below is the training configuration :</p>
+<p>Due to limited resources, I only able to train the GUI-Grouding stage with only one small dataset <a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> on 4 RX4090 GPUs with 24GB RAM each. Using q-LORA for the fine-tuning stage, it takes about 2.5 hours. Below is the training configuration :</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">torchrun</span> <span class="va">$DISTRIBUTED_ARGS</span> qwen_finetune.py <span class="dt">\</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="at">--model_name_or_path</span> <span class="va">$MODEL</span> <span class="dt">\</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">--data_path</span> <span class="va">$DATA</span> <span class="dt">\</span></span>
