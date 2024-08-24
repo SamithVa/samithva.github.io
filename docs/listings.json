@@ -9,6 +9,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/how_to_become_motivated/motivation.html",
       "/posts/quantization_llm/quantization_llm.html",
       "/posts/seeclick/seeclick.html",
       "/posts/pandas/pandas.html",
