@@ -17,8 +17,8 @@ website:
         href: projects.qmd
       - icon: github
         href: https://github.com/SamithVa
-      - icon: twitter
-        href: https://twitter.com
+      # - icon: twitter
+      #   href: https://twitter.com
   page-footer: |
     This page is made using [Quarto](https://quarto.org)
 
