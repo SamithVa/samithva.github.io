@@ -1,6 +1,6 @@
 ---
 title: "Samith Va"
-image: profile.png
+image: profile-picture.png
 about:
   template: trestles
   image-width: 15rem
