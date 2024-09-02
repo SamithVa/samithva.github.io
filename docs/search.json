@@ -2,9 +2,9 @@
   {
     "objectID": "about.html",
     "href": "about.html",
-    "title": "About",
+    "title": "Samith Va",
     "section": "",
-    "text": "Hello there! I’m Samith, and I’m thrilled to have you here on my blog. As a passionate student of Information Engineering in Shanghai Jiao Tong University (China), I’ve embarked on a journey filled with discovery, learning, and growth.  Through this platform, I aim to share the knowledge and insights I’ve gained, with the hope of assisting others who are navigating similar paths in the world of technology."
+    "text": "Hello there! I’m Samith (万山), and I’m thrilled to have you here on my blog. As a passionate student in NLP, I’ve embarked on a journey filled with discovery, learning, and growth. Through this platform, I aim to share the knowledge and insights I’ve gained, with the hope of assisting others who are navigating similar paths in the world of technology."
   },
   {
     "objectID": "projects.html",
@@ -754,5 +754,19 @@
     "title": "How to Set Right Goal and Stay Motivated",
     "section": "Avoiding Temptation?",
     "text": "Avoiding Temptation?\nRather than focusing solely on achieving the end goal, try to immerse yourself in the process of reaching it. Think of yourself as someone who is experimenting and discovering the right methods rather than just a person trying to achieve a specific result. Cultivate curiosity and enjoyment in the journey itself."
+  },
+  {
+    "objectID": "about.html#education",
+    "href": "about.html#education",
+    "title": "Samith Va",
+    "section": "Education",
+    "text": "Education\nShanghai Jiao Tong University | Shanghai, China\nBachelor in Information Engineer | Sep 2020 - Jun 2025\nTianjin University | Tianjin, China\nChinese Language Intensive Program | Sep 2019 - Jun 2020"
+  },
+  {
+    "objectID": "about.html#experience",
+    "href": "about.html#experience",
+    "title": "Samith Va",
+    "section": "Experience",
+    "text": "Experience\nIEEE CISOSE, Shanghai, China\nVolunteer as a technical supporter | Jul 2024\nKhoding Hero (Funded by USAID), Svay Rieng, Cambodia\nVolunteer as a coding instructor | Aug - Sep 2022"
   }
 ]
