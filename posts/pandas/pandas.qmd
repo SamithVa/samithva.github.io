@@ -2,7 +2,7 @@
 title: "Pandas"
 author: "Samith Va"
 date: "2024-08-01"
-categories: [pandas]
+category: pandas
 format:
   html:
     toc: true 

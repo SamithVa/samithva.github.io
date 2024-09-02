@@ -3,7 +3,7 @@ title: "Effects of Nonlinearity"
 author: "Samith Va"
 date: "2024-03-21"
 toc: true
-categories: [RF-Microelectronics]
+category: RF microelectronic
 image: "nonlinearity.png"
 ---
 

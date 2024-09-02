@@ -3,7 +3,7 @@ title: "RF Noise"
 author: "Samith Va"
 toc: true
 date: 03-29-2024
-categories: [RF-Microelectronics]
+category: RF microelectronic
 ---
 
 What will cover in this section : Noise Figure, Friis Equation, Thermal Noise of Resistor, MOSFET Noise.

@@ -2,7 +2,7 @@
 title: Quantization LLM
 author: Samith Va
 date: 2024-08-21
-categories: [LVLMs, Quantization]
+categories: [llm, quantization]
 format:
     html:
         toc: true 

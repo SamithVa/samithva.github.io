@@ -3,7 +3,7 @@ title: "RF Receiver"
 author: "Samith Va"
 date: "2024-06-02"
 toc: true
-categories: [RF-Microelectronics]
+category: RF microelectronic
 ---
 
 This post will include answers to these questions:

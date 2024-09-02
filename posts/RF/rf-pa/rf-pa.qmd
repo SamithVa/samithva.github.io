@@ -3,7 +3,7 @@ title: "Power Amplifier"
 author: "Samith Va"
 date: "2024-06-04"
 toc: true
-categories: [RF-Microelectronics]
+category: RF microelectronic
 ---
 
 Two important specification of PA : 

@@ -2,7 +2,7 @@
 title: "OpenCV"
 author: "Samith Va"
 date: "2024-03-23"
-categories: [deep learning]
+category: deep learning
 format:
   html:
     code-fold: false

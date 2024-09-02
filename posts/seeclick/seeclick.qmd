@@ -2,7 +2,7 @@
 title: "SeeClick"
 author: "Samith Va"
 date: "2024-08-20"
-categories: [LVLMs]
+category: lvlm
 format:
     html:
         toc: true 

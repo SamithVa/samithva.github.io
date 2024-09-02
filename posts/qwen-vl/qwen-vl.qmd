@@ -2,7 +2,7 @@
 title: "QwenVL Paper Summary"
 author: "Samith Va"
 date: "2024-07-27"
-categories: [LLMs, LVLMs]
+categories: [llm, lvlm]
 format:
   html:
     code-fold: false

@@ -2,6 +2,7 @@
 title: How to Set Right Goal and Stay Motivated 
 author: Samith Va
 date: "2024-08-24"
+category: self-help
 toc: true
 ---
 

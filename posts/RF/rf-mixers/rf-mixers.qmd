@@ -3,7 +3,7 @@ title: "RF Mixers"
 author: "Samith Va"
 date: "2024-06-04"
 toc: true
-categories: [RF-Microelectronics]
+category: RF microelectronic
 ---
 
 Mixer is a very important component in modern RF, without it we may not be able to convert from low frequency (IF) into higher frequency (RF) or vice versa, and it will not be suitable for high data rate transmission. In this post, we will explore on different types of mixers as well as their basic design concepts. 

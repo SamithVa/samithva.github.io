@@ -4,7 +4,7 @@
     "href": "about.html",
     "title": "Samith Va",
     "section": "",
-    "text": "Hello there! I’m Samith (万山), and I’m thrilled to have you here on my blog. As a passionate student in NLP, I’ve embarked on a journey filled with discovery, learning, and growth. Through this platform, I aim to share the knowledge and insights I’ve gained, with the hope of assisting others who are navigating similar paths in the world of technology."
+    "text": "Hello there! I’m Samith (万山), and I feel honored to have you here on my blog. I’m just a simple person with a passion for NLP, trying to learn and grow along the way.\nThrough this platform, I aim to share what little I’ve picked up, in the hopes that it might be helpful to others who are on a similar journey in the world of technology."
   },
   {
     "objectID": "projects.html",
@@ -768,5 +768,54 @@
     "title": "Samith Va",
     "section": "Experience",
     "text": "Experience\nIEEE CISOSE, Shanghai, China\nVolunteer as a technical supporter | Jul 2024\nKhoding Hero (Funded by USAID), Svay Rieng, Cambodia\nVolunteer as a coding instructor | Aug - Sep 2022"
+  },
+  {
+    "objectID": "about-en.html",
+    "href": "about-en.html",
+    "title": "Samith Va",
+    "section": "",
+    "text": "Hello there! I’m Samith, and I’m glad to have you here on my blog. I’m just a simple person with a passion for NLP, trying to learn and grow along the way.\nThrough this platform, I aim to share what little I’ve picked up, in the hopes that it might be helpful to others who are on a similar journey in the world of technology."
+  },
+  {
+    "objectID": "about-en.html#education",
+    "href": "about-en.html#education",
+    "title": "Samith Va",
+    "section": "Education",
+    "text": "Education\nShanghai Jiao Tong University | Shanghai, China\nBachelor in Information Engineer | Sep 2020 - Jun 2025\nTianjin University | Tianjin, China\nChinese Language Intensive Program | Sep 2019 - Jun 2020"
+  },
+  {
+    "objectID": "about-en.html#experience",
+    "href": "about-en.html#experience",
+    "title": "Samith Va",
+    "section": "Experience",
+    "text": "Experience\nIEEE CISOSE, Shanghai, China\nVolunteer as a technical supporter | Jul 2024\nKhoding Hero (Funded by USAID), Svay Rieng, Cambodia\nVolunteer as a coding instructor | Aug - Sep 2022"
+  },
+  {
+    "objectID": "about-cn.html",
+    "href": "about-cn.html",
+    "title": "Samith Va",
+    "section": "",
+    "text": "你好！我是万山，非常开心您能访问我的博客。我只是一个对NLP充满热情的普通人，在不断学习和成长的过程中，通过这个平台，我希望分享我所学到的一点点知识，希望能对那些在技术世界中有着相似旅程的人有所帮助。"
+  },
+  {
+    "objectID": "about-cn.html#education",
+    "href": "about-cn.html#education",
+    "title": "Samith Va",
+    "section": "Education",
+    "text": "Education\nShanghai Jiao Tong University | Shanghai, China\nBachelor in Information Engineer | Sep 2020 - Jun 2025\nTianjin University | Tianjin, China\nChinese Language Intensive Program | Sep 2019 - Jun 2020"
+  },
+  {
+    "objectID": "about-cn.html#experience",
+    "href": "about-cn.html#experience",
+    "title": "Samith Va",
+    "section": "Experience",
+    "text": "Experience\nIEEE CISOSE | 中国, 上海\n技术支持志愿者 | 2024年 7月\nKhoding Hero (由美国国际开发署资助) | 柬埔寨, 柴楨省\n编程导师志愿者 | 2022年 8月 - 9月"
+  },
+  {
+    "objectID": "about-cn.html#教育背景",
+    "href": "about-cn.html#教育背景",
+    "title": "Samith Va",
+    "section": "教育背景",
+    "text": "教育背景\n上海交通大学 | 中国，上海\n信息工程学士 | 2020年 9月 - 2025年 6月\n天津大学 | 中国，天津\n汉语课程（预科） | 2019年 9月 - 2020年 6月"
   }
 ]

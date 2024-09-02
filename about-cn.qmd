@@ -1,0 +1,43 @@
+---
+title: "Samith Va"
+image: profile.png
+about:
+  template: trestles
+  image-width: 15rem
+  image-shape: round
+  links:
+    # - icon: twitter
+    #   text: Twitter
+    #   href: https://twitter.com
+    - icon: envelope
+      text: Email
+      href: mailto:vasamith@163.com
+    - icon: github
+      text: Github
+      href: https://github.com/SamithVa
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/samith-va-116353179/
+    
+
+---
+
+你好！我是万山，非常开心您能访问我的博客。我只是一个对NLP充满热情的普通人，在不断学习和成长的过程中，通过这个平台，我希望分享我所学到的一点点知识，希望能对那些在技术世界中有着相似旅程的人有所帮助。
+
+## 教育背景 
+
+**上海交通大学** |  中国，上海  
+信息工程学士 | 2020年 9月 - 2025年 6月
+
+**天津大学** |  中国，天津  
+汉语课程（预科） | 2019年 9月 - 2020年 6月
+
+## Experience
+
+IEEE CISOSE |  中国, 上海  
+技术支持志愿者 | 2024年 7月
+
+Khoding Hero (由美国国际开发署资助) |  柬埔寨, 柴楨省  
+编程导师志愿者 | 2022年 8月 - 9月
+
+

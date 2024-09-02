@@ -3,11 +3,18 @@ project:
   output-dir: docs
 
 website:
-  title: "Simple Learning Journey"
+  title: "A Simple Journey"
   navbar:
     right:
-      - about.qmd
-      - projects.qmd
+      - text: "About"
+        menu: 
+          - text: "English"
+            href: about-en.qmd
+          - text: "Chinese"
+            href: about-cn.qmd
+        
+      - text: Projects 
+        href: projects.qmd
       - icon: github
         href: https://github.com/SamithVa
       - icon: twitter
