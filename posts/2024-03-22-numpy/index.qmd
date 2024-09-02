@@ -1,0 +1,71 @@
+---
+title: "Numpy"
+description: "NumPy is the fundamental package for scientific computing in Python"
+author: "Samith Va"
+date: "2024-03-22"
+categories: [numpy]
+image: 'numpylogo.svg'
+format:
+  html:
+    code-fold: false
+jupyter: python3
+---
+
+# Introduction
+
+What is numpy?
+: NumPy is the fundamental package for scientific computing in Python. The core of Numpy is the `ndarray` object, operations of this array are being performed in compiled code for performance. 
+
+How Numpy differ from standard Python sequences  ? Why using numpy ? 
+: There are several different between Numpy and standard Python sequences: 
+
+* NumPy arrays have a fixed size at creation, unlike Python lists (which can grow dynamically)
+* Elements within the same Numpy array must be the same data type.
+* Advanced mathematics operations can be done easily in Numpy (with less code and good performance)
+* A growing plethora of scientific and mathematical libraries
+
+Why is numpy fast ? 
+: Vectorization describes the absence of any explicit looping, indexing, etc., in the code - these things are taking place,
+of course, just “behind the scenes” in optimized, pre-compiled C code. Vectorized code has many advantages, among
+which are:
+
+* Vectorized code is more concise and easier to read (shorter code without a lot of for loops)
+* Fewer lines of code generally means fewer bugs
+
+
+# Commonly used Numpy Functions
+
+## Linspace
+
+`np.linspace(start, end, interval)` creates an array with evenly spaced float numbers over a specified interval.
+```{python}
+import numpy as np
+a = np.linspace(10,100,10)
+a
+```
+
+## Reshape
+`np.reshape()` reshape a numpy array to specific given shape `(n, m)`. In neural network when dealing with images, we usually need to flatten the image into 1 row array by using `.reshape(-1)`.
+```{python}
+import numpy as np
+# Create a 2D array
+y = np.array([[1, 2, 3, 4],
+              [5, 6, 7, 8],
+              [9, 10, 11, 12]])
+# Reshape the array to 1D using -1
+flattened_y = y.reshape(-1)
+flattened_y
+```
+
+
+## Where
+`np.where()` perform conditional operations on arrays and is somewhat similar to the ternary conditional operator `(condition ? value_if_true : value_if_false)` found in many programming languages.
+```{python}
+import numpy as np
+a = np.arange(10)
+b = np.where(a>5, a, a**2)
+b
+```
+
+
+For more references visit [Numpy Documentation](https://numpy.org/doc/)

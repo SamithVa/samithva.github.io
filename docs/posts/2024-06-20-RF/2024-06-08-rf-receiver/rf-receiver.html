@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Samith Va">
+<meta name="dcterms.date" content="2024-06-08">
 
-<title>Projects – A Simple Journey</title>
+<title>RF Receiver – A Simple Journey</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,26 +25,24 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<script src="../../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -70,35 +70,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -130,7 +101,7 @@ window.Quarto = {
 };
 </script>
 
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../../../styles.css">
 </head>
 
 <body class="nav-fixed">
@@ -140,7 +111,7 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../../index.html">
     <span class="navbar-title">A Simple Journey</span>
     </a>
   </div>
@@ -156,17 +127,17 @@ window.Quarto = {
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-about">    
         <li>
-    <a class="dropdown-item" href="./about-en.html">
+    <a class="dropdown-item" href="../../../about-en.html">
  <span class="dropdown-text">English</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./about-cn.html">
+    <a class="dropdown-item" href="../../../about-cn.html">
  <span class="dropdown-text">Chinese</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link active" href="./projects.html" aria-current="page"> 
+    <a class="nav-link" href="../../../projects.html"> 
 <span class="menu-text">Projects</span></a>
   </li>  
   <li class="nav-item compact">
@@ -190,110 +161,212 @@ window.Quarto = {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title">Projects</h1>
-                      </div>
+    <div class="quarto-title column-body">
+      <h1 class="title">RF Receiver</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">rf-microelectronic</div>
+              </div>
+                  </div>
   </div>
     
   
-  <div class="quarto-title-meta column-page-left">
+  <div class="quarto-title-meta">
 
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Samith Va </p>
+            </div>
+    </div>
       
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">June 8, 2024</p>
+      </div>
+    </div>
     
       
     </div>
     
   
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(2)</span></div><div class="category" data-category="front-end">front-end <span class="quarto-category-count">(2)</span></div></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#direct-filtering" id="toc-direct-filtering" class="nav-link active" data-scroll-target="#direct-filtering">Direct Filtering</a></li>
+  <li><a href="#superheterodyne" id="toc-superheterodyne" class="nav-link" data-scroll-target="#superheterodyne">Superheterodyne</a>
+  <ul class="collapse">
+  <li><a href="#zero-second-if" id="toc-zero-second-if" class="nav-link" data-scroll-target="#zero-second-if">Zero Second IF</a></li>
+  <li><a href="#image-rejecting" id="toc-image-rejecting" class="nav-link" data-scroll-target="#image-rejecting">Image Rejecting</a>
+  <ul class="collapse">
+  <li><a href="#high-if-and-low-if" id="toc-high-if-and-low-if" class="nav-link" data-scroll-target="#high-if-and-low-if">High IF and Low IF</a></li>
+  <li><a href="#high-side-injection-and-low-side-injection" id="toc-high-side-injection-and-low-side-injection" class="nav-link" data-scroll-target="#high-side-injection-and-low-side-injection">High Side Injection and Low Side Injection</a></li>
+  <li><a href="#quadrature-downconversion" id="toc-quadrature-downconversion" class="nav-link" data-scroll-target="#quadrature-downconversion">Quadrature Downconversion</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#direct-conversion-receiver" id="toc-direct-conversion-receiver" class="nav-link" data-scroll-target="#direct-conversion-receiver">Direct Conversion Receiver</a>
+  <ul class="collapse">
+  <li><a href="#lo-leakage" id="toc-lo-leakage" class="nav-link" data-scroll-target="#lo-leakage">LO leakage</a></li>
+  </ul></li>
+  <li><a href="#image-reject-receiver" id="toc-image-reject-receiver" class="nav-link" data-scroll-target="#image-reject-receiver">Image-Reject Receiver</a>
+  <ul class="collapse">
+  <li><a href="#degree-phase-shifter" id="toc-degree-phase-shifter" class="nav-link" data-scroll-target="#degree-phase-shifter">90-degree Phase Shifter</a></li>
+  <li><a href="#harley-architecture" id="toc-harley-architecture" class="nav-link" data-scroll-target="#harley-architecture">Harley Architecture</a></li>
+  <li><a href="#weaver-architecture" id="toc-weaver-architecture" class="nav-link" data-scroll-target="#weaver-architecture">Weaver Architecture</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
 
+<p>This post will include answers to these questions:</p>
+<ol type="1">
+<li>What is the problem of direct filtering?</li>
+<li>What is the premise of heterodyne design? What is the image problem in heterodyne architecture?<br>
+</li>
+<li>What is the trade-off between image-rejection and channel-selection? Which one is more preferable high-IF or low-IF?</li>
+<li>What is the <em>mixing spurs</em> problem?</li>
+<li>What is the <em>self-image</em> or <em>self-corruption</em> problem?</li>
+<li>What are “symmetrically-modulated” and “asymmetrically-modulated” signals?</li>
+<li>Why do we need <em>quadrature down conversion</em>?</li>
+<li>What is sliding-IF receivers ? How many oscillators in the modern heterodyne? How to achieve frequency division, what electronic component we should use?(Hint : it starts with ‘C’)</li>
+<li>Why direct conversion is superior to heterodyne? (Hint : 3 aspects, Image, LPF and Spurs)</li>
+<li>What is the problem of LO leakage in direct conversion? Does it happen in heterodyne as well?</li>
+</ol>
+<section id="direct-filtering" class="level1">
+<h1>Direct Filtering</h1>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="high_q_factor.png" class="img-fluid figure-img"></p>
+<figcaption>High Q-Factor Problem in Direct Filtering</figcaption>
+</figure>
+</div>
+<p>Can we design a circuit directly filter out the noise in Receiver side ? What is its limitation ?</p>
+<p>In short answer, we can’t build such filter due to large value of Q (quality factor) which is impossible to make with conventional passive devices.</p>
+</section>
+<section id="superheterodyne" class="level1">
+<h1>Superheterodyne</h1>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="superheterodyne.png" class="img-fluid figure-img"></p>
+<figcaption>Superheterodyne Basic Idea</figcaption>
+</figure>
+</div>
+<p>How it work ? First shift the high frequency signal (RF frequency) into intermediate frequency (IF frequency) using a mixer. Then using LPF to filter out undesired interferences and keep only those within the band we want.</p>
+<p>Why does it have smaller Q ? <span class="math inline">\(Q = \frac{\omega_0}{2\Delta \omega}\)</span> , obviously <span class="math inline">\(\omega_0\)</span> is smaller after we shifted it from RF to IF.</p>
+<section id="zero-second-if" class="level2">
+<h2 class="anchored" data-anchor-id="zero-second-if">Zero Second IF</h2>
+<p>A design that moves IF near to zero frequency.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="zero_second_if.png" class="img-fluid figure-img"></p>
+<figcaption>Zero Second IF</figcaption>
+</figure>
+</div>
+</section>
+<section id="image-rejecting" class="level2">
+<h2 class="anchored" data-anchor-id="image-rejecting">Image Rejecting</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="image_rejection.png" class="img-fluid figure-img"></p>
+<figcaption>Image Rejection</figcaption>
+</figure>
+</div>
+<p>After shifted into IF, <strong>self-corruption</strong> or <strong>image problem</strong> can be a problem as well. Image is the interference, whose its frequency is symmetric with desired signal respect to frequency of the local oscillator (LO). Hence in order to avoid signal corruption, we must eliminate the image by using Image Reject Filter (IRF).</p>
+<p>IMRR : Image Rejection Ratio</p>
+<section id="high-if-and-low-if" class="level3">
+<h3 class="anchored" data-anchor-id="high-if-and-low-if">High IF and Low IF</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="high_if_low_if.png" class="img-fluid figure-img"></p>
+<figcaption>High IF and Low IF Comparison</figcaption>
+</figure>
+</div>
+<p>Why high IF is more preferable ? Because the frequency of image is far from desired signal, hence we can easily filter out with lower Q factor.</p>
+<p>High <span class="math inline">\(\omega_{IF}\)</span> -&gt; Easy to design IRF, but what is the trade-off of high-IF?</p>
+</section>
+<section id="high-side-injection-and-low-side-injection" class="level3">
+<h3 class="anchored" data-anchor-id="high-side-injection-and-low-side-injection">High Side Injection and Low Side Injection</h3>
+<p>High side injection : mixed with higher frequency (<span class="math inline">\(\omega_{LO} &gt; \omega_{in}\)</span>), this can also be called <strong>superdyne</strong>. Low side injection : mixed with lower frequency (<span class="math inline">\(\omega_{LO} &lt; \omega_{in}\)</span>), this can also be called <strong>infradyne</strong>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="high_low_side_injection.png" class="img-fluid figure-img"></p>
+<figcaption>High-side and Low-side Injections</figcaption>
+</figure>
+</div>
+</section>
+<section id="quadrature-downconversion" class="level3">
+<h3 class="anchored" data-anchor-id="quadrature-downconversion">Quadrature Downconversion</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="self-corruption.png" class="img-fluid figure-img"></p>
+<figcaption>Self-corruption problem</figcaption>
+</figure>
+</div>
+<p>Why we need it ? Because in these days most modulation method is asymmetric, using quadrature down conversion technique, we can then eliminate the self-corruption problem.</p>
+</section>
+</section>
+</section>
+<section id="direct-conversion-receiver" class="level1">
+<h1>Direct Conversion Receiver</h1>
+<p>Direct Conversion Receiver(DCR) eliminates the image problem. But new problem comes thereafter, LO leakage.</p>
+<section id="lo-leakage" class="level2">
+<h2 class="anchored" data-anchor-id="lo-leakage">LO leakage</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="lo_leakage.png" class="img-fluid figure-img"></p>
+<figcaption>LO Leakage</figcaption>
+</figure>
+</div>
+<p>But with modern DSP, the LO leakage can be handled easily now, hence DCR is more commonly used in modern RF devices.</p>
+</section>
+</section>
+<section id="image-reject-receiver" class="level1">
+<h1>Image-Reject Receiver</h1>
+<p>What are the differences between Harley and Weaver Architecture ?</p>
+<section id="degree-phase-shifter" class="level2">
+<h2 class="anchored" data-anchor-id="degree-phase-shifter">90-degree Phase Shifter</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="rc_cr_circuit.png" class="img-fluid figure-img"></p>
+<figcaption>RC-RC circuit</figcaption>
+</figure>
+</div>
+</section>
+<section id="harley-architecture" class="level2">
+<h2 class="anchored" data-anchor-id="harley-architecture">Harley Architecture</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="harley_architecture.png" class="img-fluid figure-img"></p>
+<figcaption>Harley Architecture</figcaption>
+</figure>
+</div>
+</section>
+<section id="weaver-architecture" class="level2">
+<h2 class="anchored" data-anchor-id="weaver-architecture">Weaver Architecture</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="weaver_architecture.png" class="img-fluid figure-img"></p>
+<figcaption>Weaver Architecture</figcaption>
+</figure>
+</div>
+<p>It is basically a type of injection (high or low injection), but there will be more problem in nonlinearity.</p>
 
 
+</section>
+</section>
 
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="front-end" data-listing-date-sort="1713456000000" data-listing-file-modified-sort="1725250328139" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="775">
-<div class="thumbnail">
-<p><a href="./projects/2024-04-19-pig_game/index.html" class="no-external"></a></p><a href="./projects/2024-04-19-pig_game/index.html" class="no-external">
-<p><img loading="lazy" src="./projects/2024-04-19-pig_game/demo.png" class="thumbnail-image"></p>
-</a><p><a href="./projects/2024-04-19-pig_game/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./projects/2024-04-19-pig_game/index.html" class="no-external">Pig Game using Javascript</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./projects/2024-04-19-pig_game/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('front-end'); return false;">
-front-end
-</div>
-</div>
-<div class="listing-description">
-<a href="./projects/2024-04-19-pig_game/index.html" class="no-external">“Pig” is a simple and fun dice game that involves a bit of strategy and luck, and it’s great for two players. The objective of the game is to be the first player to reach…</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./projects/2024-04-19-pig_game/index.html" class="no-external">
-<div class="listing-date">
-Apr 19, 2024
-</div>
-<div class="listing-author">
-Samith Va
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="front-end" data-listing-date-sort="1712851200000" data-listing-file-modified-sort="1725250292007" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="713">
-<div class="thumbnail">
-<p><a href="./projects/2024-04-12-guessing_game/index.html" class="no-external"></a></p><a href="./projects/2024-04-12-guessing_game/index.html" class="no-external">
-<p><img loading="lazy" src="./projects/2024-04-12-guessing_game/demo.png" class="thumbnail-image"></p>
-</a><p><a href="./projects/2024-04-12-guessing_game/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./projects/2024-04-12-guessing_game/index.html" class="no-external">Guessing Game Using Javascript DOM</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./projects/2024-04-12-guessing_game/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('front-end'); return false;">
-front-end
-</div>
-</div>
-<div class="listing-description">
-<a href="./projects/2024-04-12-guessing_game/index.html" class="no-external">In this project, we’ll dive into the fundamentals of web development by creating a straightforward guessing number game using HTML, CSS, and JavaScript. The game begins by…</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./projects/2024-04-12-guessing_game/index.html" class="no-external">
-<div class="listing-date">
-Apr 12, 2024
-</div>
-<div class="listing-author">
-Samith Va
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

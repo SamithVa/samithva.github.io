@@ -1,0 +1,87 @@
+---
+title: "Anaconda or Pip"
+author: "Samith Va"
+date: "2024-03-29"
+toc: true
+categories: [anaconda, pip]
+---
+
+# Introduction to Conda
+
+Conda is a versatile package and environment management system for Python and other programming languages. It simplifies the process of installing, updating, and managing packages by providing a command-line interface. 
+
+## Key features in Conda:
+
+1. Package Management: Conda facilitates the installation, removal, and updating of packages from its repository and other sources like PyPI and CRAN.
+
+1. Environment Management: It allows users to create isolated environments with specific versions of Python and packages, ensuring dependency management and avoiding conflicts between projects.
+
+1. Cross-Platform Support: Conda works on Windows, macOS, and Linux, making it accessible to developers across different operating systems.
+
+1. Integration with Anaconda Distribution: While often associated with Anaconda, Conda can be used independently and is bundled with Anaconda for enhanced functionality.
+
+1. Multi-Language Support: Conda can manage packages from various languages, not just Python, making it useful for projects with diverse requirements.
+
+1. Versioning and Dependency Resolution: Conda handles package versions and automatically resolves dependencies, ensuring smooth installation and compatibility.
+
+## What is the difference between conda and pip ?
+
+- `pip` is the default package manager for Python, *focusing solely on Python packages* from PyPI.
+
+- `conda` is a more versatile package manager that handles packages from *various languages* and manages non-Python dependencies effectively.
+
+# Common methods in Conda
+
+## Create virtual environment
+
+```bash
+conda create -n <env_name>
+```
+
+## Activate virtual environment
+
+```bash
+conda activate <env_name>
+```
+
+## Deactivate virtual environment
+
+To deactivate from a virtual environment: 
+
+```bash
+conda deactivate
+```
+
+## Install packages in virtual environment
+
+After activated into a specific conda environment, we can then install package within that environment.
+
+```bash
+conda install numpy pandas matplotlib
+```
+
+## Install package from a specific channel 
+
+Sometimes packages may not be available in the default channels, or we may want to install a specific version of a package from a different source. In such cases, we can specify a channel from which to install the package.
+
+```bash
+conda install -c fastai fastai
+
+# or shortcut with ":"
+conda install fastai:fastai
+```
+
+Above example illustrates on installing `fastai` package from `fastai` channel. 
+
+## List all existed environments
+
+```bash
+conda env list
+```
+
+## Remove a virtual environment
+
+```bash
+conda env remove <env_name>
+```
+

@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Samith Va">
+<meta name="dcterms.date" content="2024-04-29">
 
-<title>Projects – A Simple Journey</title>
+<title>RF Noise – A Simple Journey</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,26 +25,24 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<script src="../../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -70,35 +70,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -130,7 +101,7 @@ window.Quarto = {
 };
 </script>
 
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../../../styles.css">
 </head>
 
 <body class="nav-fixed">
@@ -140,7 +111,7 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../../index.html">
     <span class="navbar-title">A Simple Journey</span>
     </a>
   </div>
@@ -156,17 +127,17 @@ window.Quarto = {
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-about">    
         <li>
-    <a class="dropdown-item" href="./about-en.html">
+    <a class="dropdown-item" href="../../../about-en.html">
  <span class="dropdown-text">English</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./about-cn.html">
+    <a class="dropdown-item" href="../../../about-cn.html">
  <span class="dropdown-text">Chinese</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link active" href="./projects.html" aria-current="page"> 
+    <a class="nav-link" href="../../../projects.html"> 
 <span class="menu-text">Projects</span></a>
   </li>  
   <li class="nav-item compact">
@@ -190,110 +161,139 @@ window.Quarto = {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title">Projects</h1>
-                      </div>
+    <div class="quarto-title column-body">
+      <h1 class="title">RF Noise</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">rf-microelectronic</div>
+              </div>
+                  </div>
   </div>
     
   
-  <div class="quarto-title-meta column-page-left">
+  <div class="quarto-title-meta">
 
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Samith Va </p>
+            </div>
+    </div>
       
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">April 29, 2024</p>
+      </div>
+    </div>
     
       
     </div>
     
   
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(2)</span></div><div class="category" data-category="front-end">front-end <span class="quarto-category-count">(2)</span></div></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#thermal-noise-in-resistor" id="toc-thermal-noise-in-resistor" class="nav-link active" data-scroll-target="#thermal-noise-in-resistor">Thermal Noise in Resistor</a></li>
+  <li><a href="#thermal-noise-in-mosfet" id="toc-thermal-noise-in-mosfet" class="nav-link" data-scroll-target="#thermal-noise-in-mosfet">Thermal noise in MOSFET</a></li>
+  <li><a href="#noise-figure" id="toc-noise-figure" class="nav-link" data-scroll-target="#noise-figure">Noise Figure</a></li>
+  <li><a href="#noise-figure-in-lna" id="toc-noise-figure-in-lna" class="nav-link" data-scroll-target="#noise-figure-in-lna">Noise Figure in LNA</a></li>
+  <li><a href="#friis-equation-for-cascaded-stages" id="toc-friis-equation-for-cascaded-stages" class="nav-link" data-scroll-target="#friis-equation-for-cascaded-stages">Friis Equation for Cascaded Stages</a></li>
+  <li><a href="#rl-and-rc-in-series-and-parallel" id="toc-rl-and-rc-in-series-and-parallel" class="nav-link" data-scroll-target="#rl-and-rc-in-series-and-parallel">RL and RC in Series and Parallel</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
 
+<p>What will cover in this section : Noise Figure, Friis Equation, Thermal Noise of Resistor, MOSFET Noise.</p>
+<section id="thermal-noise-in-resistor" class="level2">
+<h2 class="anchored" data-anchor-id="thermal-noise-in-resistor">Thermal Noise in Resistor</h2>
+<p>For ideal inductor and capacitor, is there noise ?</p>
+<p>Thermal noise the most significant noise encountered in electronic devices. We can model the thermal in two ways:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="thermal_noise.png" class="img-fluid figure-img"></p>
+<figcaption>Thermal Noise Equilvalent Circuit</figcaption>
+</figure>
+</div>
+<ol type="1">
+<li>Thevenin <span class="math display">\[\bar{V}^2_n = 4kTR_1\]</span></li>
+<li>Norton <span class="math display">\[\bar{I}^2_n = 4kT/R_1\]</span></li>
+</ol>
+<p>Where</p>
+<ul>
+<li><span class="math inline">\(k = 1.38 \times 10^{-23} J/K\)</span> is the Boltzmann constant.</li>
+<li><span class="math inline">\(T\)</span> is the temperature kelvin <span class="math inline">\((K)\)</span></li>
+</ul>
+</section>
+<section id="thermal-noise-in-mosfet" class="level2">
+<h2 class="anchored" data-anchor-id="thermal-noise-in-mosfet">Thermal noise in MOSFET</h2>
+<p><img src="mosfet_thermal_noise.png" class="img-fluid" alt="Thermal noise in MOSFET"> Thermal noise of MOS transistors which is operating in the <strong>saturation region</strong> is approximated by :</p>
+<ol type="1">
+<li><p>A <strong>current source</strong> tied between the source and drain terminals. <span class="math display">\[\bar{I_n}^2 = 4kT \gamma g_m\]</span></p></li>
+<li><p>A <strong>voltage source</strong> in series with gate <span class="math display">\[\bar{V_n}^2 = 4kT \gamma / g_m\]</span></p></li>
+</ol>
+<p>Where</p>
+<ul>
+<li><span class="math inline">\(\gamma\)</span> is the excess noise coefficient</li>
+<li><span class="math inline">\(g_m\)</span> is the transconductance.</li>
+</ul>
+</section>
+<section id="noise-figure" class="level2">
+<h2 class="anchored" data-anchor-id="noise-figure">Noise Figure</h2>
+<p>In circuit and system design, we interested in the signal-to-noise ratio (SNR). To quantify how noisy the circuit is, we can define its noise factor as</p>
+<p><span class="math display">\[\text{NF} = \frac{\text{SNR}_\text{in}}{\text{SNR}_\text{out}}\]</span></p>
+<p>or Noise figure in dB as</p>
+<p><span class="math display">\[\text{NF}|_\text{dB} = 10\log(\frac{\text{SNR}_\text{in}}{\text{SNR}_\text{out}})\]</span></p>
+What is the NF for noiseless stage ?
+<details>
+<summary>
+Answer
+</summary>
+NF = 1 = 0 dB
+</details>
+</section>
+<section id="noise-figure-in-lna" class="level2">
+<h2 class="anchored" data-anchor-id="noise-figure-in-lna">Noise Figure in LNA</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="noise-model.png" class="img-fluid figure-img"></p>
+<figcaption>LNA Noise Model (RF Microelectronics, Behzad Razavi, P49)</figcaption>
+</figure>
+</div>
+<p>We can have <span class="math display">\[\alpha = \frac{Z_\text{in}}{Z_\text{in} + R_S}\]</span> <span class="math display">\[\text{SNR}_\text{in} = \frac{V^2_\text{in}\alpha^2}{\bar{V}^2_\text{n,RS}\alpha^2} = \frac{V^2_\text{in}}{\bar{V}^2_\text{n,RS}}\]</span></p>
+<p><span class="math display">\[\text{SNR}_\text{out} = \frac{V^2_\text{in}\alpha^2 {A^2}_v}{\bar{V}^2_\text{n,RS}\alpha^2 {A^2}_v + \bar{V}^2_n}\]</span></p>
+<p><span class="math display">\[ NF = \frac{\text{SNR}_\text{in}}{\text{SNR}_\text{out}} = 1 + \frac{\bar{V}_n ^ 2}{\bar{V}^2_\text{n,RS} \alpha^2 A_v ^2}\]</span></p>
+</section>
+<section id="friis-equation-for-cascaded-stages" class="level2">
+<h2 class="anchored" data-anchor-id="friis-equation-for-cascaded-stages">Friis Equation for Cascaded Stages</h2>
+<p>To determine overall noise figure in a cascade of stages, we can use Friis’s equation :</p>
+<p><span class="math display">\[NF_{\text{total}} = {NF}_1 + \frac{NF_2 - 1}{A^2_1} + ... + \frac{{NF}_n - 1}{A^2_1...A^2_n}\]</span></p>
+<p>From above expression we can conclude that the first stage’s NF is the most important. Why ?</p>
+<details>
+<summary>
+Answer
+</summary>
+Conceptually, because the noise from first stage will be amplified multiple times.
+</details>
+</section>
+<section id="rl-and-rc-in-series-and-parallel" class="level2">
+<h2 class="anchored" data-anchor-id="rl-and-rc-in-series-and-parallel">RL and RC in Series and Parallel</h2>
+<p>RL circuit</p>
 
 
+</section>
 
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="front-end" data-listing-date-sort="1713456000000" data-listing-file-modified-sort="1725250328139" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="775">
-<div class="thumbnail">
-<p><a href="./projects/2024-04-19-pig_game/index.html" class="no-external"></a></p><a href="./projects/2024-04-19-pig_game/index.html" class="no-external">
-<p><img loading="lazy" src="./projects/2024-04-19-pig_game/demo.png" class="thumbnail-image"></p>
-</a><p><a href="./projects/2024-04-19-pig_game/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./projects/2024-04-19-pig_game/index.html" class="no-external">Pig Game using Javascript</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./projects/2024-04-19-pig_game/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('front-end'); return false;">
-front-end
-</div>
-</div>
-<div class="listing-description">
-<a href="./projects/2024-04-19-pig_game/index.html" class="no-external">“Pig” is a simple and fun dice game that involves a bit of strategy and luck, and it’s great for two players. The objective of the game is to be the first player to reach…</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./projects/2024-04-19-pig_game/index.html" class="no-external">
-<div class="listing-date">
-Apr 19, 2024
-</div>
-<div class="listing-author">
-Samith Va
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="front-end" data-listing-date-sort="1712851200000" data-listing-file-modified-sort="1725250292007" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="713">
-<div class="thumbnail">
-<p><a href="./projects/2024-04-12-guessing_game/index.html" class="no-external"></a></p><a href="./projects/2024-04-12-guessing_game/index.html" class="no-external">
-<p><img loading="lazy" src="./projects/2024-04-12-guessing_game/demo.png" class="thumbnail-image"></p>
-</a><p><a href="./projects/2024-04-12-guessing_game/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./projects/2024-04-12-guessing_game/index.html" class="no-external">Guessing Game Using Javascript DOM</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./projects/2024-04-12-guessing_game/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('front-end'); return false;">
-front-end
-</div>
-</div>
-<div class="listing-description">
-<a href="./projects/2024-04-12-guessing_game/index.html" class="no-external">In this project, we’ll dive into the fundamentals of web development by creating a straightforward guessing number game using HTML, CSS, and JavaScript. The game begins by…</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./projects/2024-04-12-guessing_game/index.html" class="no-external">
-<div class="listing-date">
-Apr 12, 2024
-</div>
-<div class="listing-author">
-Samith Va
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

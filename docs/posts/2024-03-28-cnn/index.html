@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Samith Va">
+<meta name="dcterms.date" content="2024-03-28">
 
-<title>Projects – A Simple Journey</title>
+<title>Convolutional Neuron Network – A Simple Journey</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,29 +22,61 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -70,35 +104,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -130,7 +135,7 @@ window.Quarto = {
 };
 </script>
 
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
 <body class="nav-fixed">
@@ -140,7 +145,7 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">A Simple Journey</span>
     </a>
   </div>
@@ -156,17 +161,17 @@ window.Quarto = {
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-about">    
         <li>
-    <a class="dropdown-item" href="./about-en.html">
+    <a class="dropdown-item" href="../../about-en.html">
  <span class="dropdown-text">English</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./about-cn.html">
+    <a class="dropdown-item" href="../../about-cn.html">
  <span class="dropdown-text">Chinese</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link active" href="./projects.html" aria-current="page"> 
+    <a class="nav-link" href="../../projects.html"> 
 <span class="menu-text">Projects</span></a>
   </li>  
   <li class="nav-item compact">
@@ -190,110 +195,218 @@ window.Quarto = {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title">Projects</h1>
-                      </div>
+    <div class="quarto-title column-body">
+      <h1 class="title">Convolutional Neuron Network</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">deep learning</div>
+              </div>
+                  </div>
   </div>
     
   
-  <div class="quarto-title-meta column-page-left">
+  <div class="quarto-title-meta">
 
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Samith Va </p>
+            </div>
+    </div>
       
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">March 28, 2024</p>
+      </div>
+    </div>
     
       
     </div>
     
   
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(2)</span></div><div class="category" data-category="front-end">front-end <span class="quarto-category-count">(2)</span></div></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#cnn" id="toc-cnn" class="nav-link active" data-scroll-target="#cnn">CNN</a>
+  <ul class="collapse">
+  <li><a href="#convolution-layer" id="toc-convolution-layer" class="nav-link" data-scroll-target="#convolution-layer">Convolution layer</a>
+  <ul class="collapse">
+  <li><a href="#kernel" id="toc-kernel" class="nav-link" data-scroll-target="#kernel">Kernel</a></li>
+  <li><a href="#stride" id="toc-stride" class="nav-link" data-scroll-target="#stride">Stride</a></li>
+  <li><a href="#padding" id="toc-padding" class="nav-link" data-scroll-target="#padding">Padding</a></li>
+  <li><a href="#pooling" id="toc-pooling" class="nav-link" data-scroll-target="#pooling">Pooling</a></li>
+  </ul></li>
+  <li><a href="#activation-functions" id="toc-activation-functions" class="nav-link" data-scroll-target="#activation-functions">Activation functions</a>
+  <ul class="collapse">
+  <li><a href="#relu" id="toc-relu" class="nav-link" data-scroll-target="#relu">ReLU</a></li>
+  <li><a href="#leaky-relu" id="toc-leaky-relu" class="nav-link" data-scroll-target="#leaky-relu">Leaky ReLU</a></li>
+  </ul></li>
+  <li><a href="#output-layer" id="toc-output-layer" class="nav-link" data-scroll-target="#output-layer">Output Layer</a>
+  <ul class="collapse">
+  <li><a href="#softmax-function" id="toc-softmax-function" class="nav-link" data-scroll-target="#softmax-function">Softmax Function</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
 
+<ol type="1">
+<li>Structured and unstructured data ? Which one is machine good at ?</li>
+<li>Why DL just get its popularity in recent years ? Hint : ABC</li>
+<li>What field <strong>RNN</strong> is generally used in ? <strong>CNN</strong> ? (CV, voice recognition, advertising)</li>
+<li>What is the first version of neuron network ? Can 1 layer neuron network (1st version) solve XOR problem?</li>
+<li>What are commonly used structures of NN ? Full-connected, CNN, RNN</li>
+<li>Why Sigmoid function is not commonly used as an activation function in NN ? Zero gradient</li>
+</ol>
+<section id="cnn" class="level1">
+<h1>CNN</h1>
+<section id="convolution-layer" class="level2">
+<h2 class="anchored" data-anchor-id="convolution-layer">Convolution layer</h2>
+<p>Keywords: Spatial dimension, Depth, Filters Bank, feature maps, Pooling</p>
+<section id="kernel" class="level3">
+<h3 class="anchored" data-anchor-id="kernel">Kernel</h3>
+<p><strong>Kernel</strong> refers to a small matrix used for convolutional operations. Convolution is the fundamental operation in a CNN, where the kernel (also called a filter) is applied to input data, typically an image, to produce feature maps. ’’ <img src="kernel.png" class="img-fluid" style="width:80.0%" alt="Kernel"></p>
+</section>
+<section id="stride" class="level3">
+<h3 class="anchored" data-anchor-id="stride">Stride</h3>
+<p>“stride” refers to the number of pixels by which the convolutional kernel moves across the input data at each step during the convolution operation. In below example, illustrate a case when stride = 2.</p>
+<p><span class="math display">\[\text{output depth} = \frac{width - filter + 2 \times pad}{stride} + 1\]</span></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="kernel.gif" class="img-fluid figure-img"></p>
+<figcaption>Convolution of a 5x5 input (blue) with 3x3 kernel (grey) with a stride of 2 and padding of 1. The 3x3 output is in green. <a href="https://github.com/vdumoulin/conv_arithmetic">Source</a></figcaption>
+</figure>
+</div>
+</section>
+<section id="padding" class="level3">
+<h3 class="anchored" data-anchor-id="padding">Padding</h3>
+<p>Padding is a technique used to control the spatial dimensions of the output feature maps after applying convolutional operations to the input data.</p>
+<p>Features of padding in CNN:</p>
+<ol type="1">
+<li>keep the image data near to border edge</li>
+<li>maintain the size of input image dimension</li>
+<li>change the output size of convolution layer</li>
+</ol>
+</section>
+<section id="pooling" class="level3">
+<h3 class="anchored" data-anchor-id="pooling">Pooling</h3>
+<dl>
+<dt>What is pooling ?</dt>
+<dd>
+a technique to reduce the activation spatial dimensions/Pooling helps in reducing memory consumption in deeper layers. It is also an important step to convert the spatial information into features.
+</dd>
+</dl>
+<p>The two most common pooling methods are : <strong>Max pooling</strong> and <strong>Average pooling</strong>.</p>
+<div id="546aea26" class="cell" data-execution_count="1">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> torch</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> torch.nn.functional <span class="im">as</span> F</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Define input image</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>image <span class="op">=</span> torch.tensor([[<span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">7</span>, <span class="dv">3</span>],</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>                      [<span class="dv">9</span>, <span class="dv">4</span>, <span class="dv">6</span>, <span class="dv">1</span>],</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>                      [<span class="dv">8</span>, <span class="dv">5</span>, <span class="dv">2</span>, <span class="dv">4</span>],</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>                      [<span class="dv">3</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">6</span>]], dtype<span class="op">=</span>torch.float32)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Add batch and channel dimensions</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>image <span class="op">=</span> image.unsqueeze(<span class="dv">0</span>).unsqueeze(<span class="dv">0</span>)</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Apply max pooling directly using functional API</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>output <span class="op">=</span> F.max_pool2d(image, kernel_size<span class="op">=</span><span class="dv">2</span>, stride<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Print output image</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>output <span class="op">=</span> output.squeeze().numpy()</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(output)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>[[9. 7.]
+ [8. 6.]]</code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="activation-functions" class="level2">
+<h2 class="anchored" data-anchor-id="activation-functions">Activation functions</h2>
+<p>The activation fuction is a transformation function in NN that transform the weight and bias into a nonlinear format. With Activation function, model can learn and represent more complex patterns in data.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Does activation function must be a nonlinear function ? Why ?
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>In neural networks, activation functions are typically designed to be <strong>nonlinear</strong>. This is because if all activation functions were linear, the entire neural network would effectively become a linear model, incapable of capturing complex nonlinear relationships.</p>
+<p>If all activation functions were set to linear functions, even a very deep neural network would behave like a <strong>single-layer linear model</strong>. Such a model would fail to handle many real-world nonlinear relationships, limiting the expressiveness and applicability of neural networks.</p>
+</div>
+</div>
+</div>
+<section id="relu" class="level3">
+<h3 class="anchored" data-anchor-id="relu">ReLU</h3>
+<p>The Rectified Linear Unit (ReLU) activation function is one of the <strong>most widely used</strong> activation functions in deep learning. It’s defined as:</p>
+<p><span class="math display">\[f(x) = \max(0, x)\]</span></p>
+<p>In simple terms, ReLU returns if x is positive, and 0 otherwise. This makes it a piecewise linear function.</p>
+<p>ReLU has several advantages:</p>
+<ul>
+<li><p><strong>Simplicity</strong>: ReLU is computationally efficient and easy to implement. It only involves a simple thresholding operation, making it faster to compute compared to more complex activation functions like sigmoid or tanh.</p></li>
+<li><p><strong>Sparsity</strong>: ReLU introduces sparsity in the network because it turns off neurons that have negative inputs (setting their output to zero). This sparsity can help reduce overfitting by encouraging the network to focus on important features and ignore noise.</p></li>
+<li><p><strong>Addressing vanishing gradient problem</strong>: ReLU helps mitigate the vanishing gradient problem by providing a constant gradient (1) for positive inputs during backpropagation. This helps prevent the gradients from becoming too small, enabling more stable and efficient training of deep neural networks.</p></li>
+</ul>
+<p>Despite its advantages, ReLU also has some drawbacks:</p>
+<ul>
+<li><p><strong>Dead neurons</strong>: Neurons with negative inputs always output zero, leading to the problem of “dying ReLU neurons.” If a neuron’s weights are such that it always receives negative inputs, it will never activate, and its weights will not be updated during training.</p></li>
+<li><p><strong>Unbounded output</strong>: ReLU does not have an upper bound, which means neurons can potentially produce very large outputs. This can lead to issues like exploding gradients, especially during training.</p></li>
+</ul>
+</section>
+<section id="leaky-relu" class="level3">
+<h3 class="anchored" data-anchor-id="leaky-relu">Leaky ReLU</h3>
+<p>Leaky ReLU is a variant of the Rectified Linear Unit (ReLU) activation function, designed to address the <strong>“dying ReLU”</strong> problem. In standard ReLU, neurons with negative inputs always output zero, which can cause them to become <strong>“dead”</strong> and stop learning. Leaky ReLU introduces a small slope (or “leak”) for negative inputs, allowing some information to flow through the neuron even when its input is negative. Mathematically, Leaky ReLU is defined as:</p>
+<p><span class="math display">\[
+f(x) = \begin{cases}
+x &amp; \text{if } x &gt; 0 \\
+\alpha x &amp; \text{if } x \leq 0
+\end{cases}
+\]</span></p>
+<p>where <span class="math inline">\(\alpha\)</span> is a small constant (typically a small positive value: 0.01 or 0.001) that determines the slope of the function for negative inputs.</p>
+</section>
+</section>
+<section id="output-layer" class="level2">
+<h2 class="anchored" data-anchor-id="output-layer">Output Layer</h2>
+<section id="softmax-function" class="level3">
+<h3 class="anchored" data-anchor-id="softmax-function">Softmax Function</h3>
+<p>Softmax function is generally used in output layer, since it range is (0-1) which can be represented as probabilty values. Its expression can be written as :</p>
+<p><span class="math display">\[\sigma = \frac{e^{a_k}}{\sum_{i=1}^{n}e^{a_i}}\]</span></p>
+<p>Example in softmax calculation :</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="softmax.png" class="img-fluid figure-img" style="width:60.0%"></p>
+<figcaption>Softmax</figcaption>
+</figure>
+</div>
+<p><a href="https://blog.csdn.net/csdn_xmj/article/details/114578241">Reference</a></p>
 
 
+</section>
+</section>
+</section>
 
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="front-end" data-listing-date-sort="1713456000000" data-listing-file-modified-sort="1725250328139" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="775">
-<div class="thumbnail">
-<p><a href="./projects/2024-04-19-pig_game/index.html" class="no-external"></a></p><a href="./projects/2024-04-19-pig_game/index.html" class="no-external">
-<p><img loading="lazy" src="./projects/2024-04-19-pig_game/demo.png" class="thumbnail-image"></p>
-</a><p><a href="./projects/2024-04-19-pig_game/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./projects/2024-04-19-pig_game/index.html" class="no-external">Pig Game using Javascript</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./projects/2024-04-19-pig_game/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('front-end'); return false;">
-front-end
-</div>
-</div>
-<div class="listing-description">
-<a href="./projects/2024-04-19-pig_game/index.html" class="no-external">“Pig” is a simple and fun dice game that involves a bit of strategy and luck, and it’s great for two players. The objective of the game is to be the first player to reach…</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./projects/2024-04-19-pig_game/index.html" class="no-external">
-<div class="listing-date">
-Apr 19, 2024
-</div>
-<div class="listing-author">
-Samith Va
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="front-end" data-listing-date-sort="1712851200000" data-listing-file-modified-sort="1725250292007" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="713">
-<div class="thumbnail">
-<p><a href="./projects/2024-04-12-guessing_game/index.html" class="no-external"></a></p><a href="./projects/2024-04-12-guessing_game/index.html" class="no-external">
-<p><img loading="lazy" src="./projects/2024-04-12-guessing_game/demo.png" class="thumbnail-image"></p>
-</a><p><a href="./projects/2024-04-12-guessing_game/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./projects/2024-04-12-guessing_game/index.html" class="no-external">Guessing Game Using Javascript DOM</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./projects/2024-04-12-guessing_game/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('front-end'); return false;">
-front-end
-</div>
-</div>
-<div class="listing-description">
-<a href="./projects/2024-04-12-guessing_game/index.html" class="no-external">In this project, we’ll dive into the fundamentals of web development by creating a straightforward guessing number game using HTML, CSS, and JavaScript. The game begins by…</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./projects/2024-04-12-guessing_game/index.html" class="no-external">
-<div class="listing-date">
-Apr 12, 2024
-</div>
-<div class="listing-author">
-Samith Va
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

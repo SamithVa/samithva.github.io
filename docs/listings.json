@@ -2,33 +2,33 @@
   {
     "listing": "/index.html",
     "items": [
-      "/posts/how_to_become_motivated/motivation.html",
-      "/posts/quantization_llm/quantization_llm.html",
-      "/posts/seeclick/seeclick.html",
-      "/posts/pandas/pandas.html",
-      "/posts/qwen-vl/qwen-vl.html",
-      "/posts/RF/rf-pa/rf-pa.html",
-      "/posts/RF/rf-mixers/rf-mixers.html",
-      "/posts/RF/rf-receiver/rf-receiver.html",
-      "/posts/RF/rf-noise/rf-noise.html",
-      "/posts/RF/rlc-circuit/rlc-circuit.html",
-      "/posts/regression/regression.html",
-      "/posts/conda/conda.html",
-      "/posts/html/html.html",
-      "/posts/german-grammar/german.html",
-      "/posts/cnn/cnn.html",
-      "/posts/german-vocabulary/german_vocab.html",
-      "/posts/open-cv/open-cv.html",
-      "/posts/numpy/index.html",
-      "/posts/RF/rf-nonlinearity/nonlinearity.html",
-      "/posts/deep-learning-journey/deep-learning-journey.html"
+      "/posts/2024-08-24-how-to-become-motivated/motivation.html",
+      "/posts/2024-08-21-quantization_llm/index.html",
+      "/posts/2024-08-20-seeclick/seeclick.html",
+      "/posts/2024-08-01-pandas/index.html",
+      "/posts/2024-07-27-qwen-vl/index.html",
+      "/posts/2024-06-20-RF/2024-06-10-rlc-circuit/rlc-circuit.html",
+      "/posts/2024-06-20-RF/2024-06-08-rf-receiver/rf-receiver.html",
+      "/posts/2024-06-20-RF/2024-06-07-rf-pa/rf-pa.html",
+      "/posts/2024-06-20-RF/2024-06-05-rf-nonlinearity/nonlinearity.html",
+      "/posts/2024-06-20-RF/2024-06-04-rf-mixers/rf-mixers.html",
+      "/posts/2024-06-20-RF/2024-04-29-rf-noise/rf-noise.html",
+      "/posts/2024-03-30-html/index.html",
+      "/posts/2024-03-29-conda/index.html",
+      "/posts/2024-03-29-regression/regression.html",
+      "/posts/2024-03-28-cnn/index.html",
+      "/posts/2024-03-27-german-grammar/index.html",
+      "/posts/2024-03-25-german-vocabulary/index.html",
+      "/posts/2024-03-23-open-cv/index.html",
+      "/posts/2024-03-22-numpy/index.html",
+      "/posts/2024-03-21-deep-learning-journey/index.html"
     ]
   },
   {
     "listing": "/projects.html",
     "items": [
-      "/projects/pig_game/pig_game.html",
-      "/projects/guessing_game/guessing_game.html"
+      "/projects/2024-04-19-pig_game/index.html",
+      "/projects/2024-04-12-guessing_game/index.html"
     ]
   }
 ]

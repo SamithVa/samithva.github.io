@@ -1,0 +1,209 @@
+---
+title: "Pig Game using Javascript"
+date: 2024-04-19
+author: 'Samith Va'
+toc: true
+image: demo.png
+categories: [front-end]
+
+---
+
+## What is Pig Game ? 
+
+"Pig" is a simple and fun dice game that involves a bit of strategy and luck, and it's great for two players. The objective of the game is to be the first player to reach 100 points or other value set by the player.
+
+![Demo of the Pig Game](demo.png)
+
+[Link to Pig Game on GitHub Page](https://samithva.github.io/PigGame/) 
+
+## Rules of Pig Game
+
+Turns: Players take turns to roll the die as many times as they choose on each turn.
+
+Scoring: Each roll is added to a turn total, but if the player rolls a 1, their turn ends and their turn total is lost.
+
+Holding: At any point during their turn, a player may choose to "hold". When a player holds, the turn total (the sum of the dice rolls during that turn) is added to their overall score.
+
+Winning: The game continues until one of the players reaches or exceeds 100 points.
+
+## Flowchart
+
+![Flowchart of Pig Game](pig-game-flowchart.png)
+
+## Building Processes
+
+### 1. Select DOM Elements 
+
+- Using `strict` at the beginning, so that JS stopped running when there is an error.
+- We select button elements using `querySelector`. 
+- Scores store both player score, which score[0] stores Player 1's score and score[1] stores Player 2's score.
+- Initialize all the variables
+
+```javascript
+"use strict";
+
+const player0 = document.querySelector(".player--0");
+const player1 = document.querySelector(".player--1");
+
+const scoreEl0 = document.getElementById("score--0");
+const scoreEl1 = document.getElementById("score--1");
+const currentScoreEl0 = document.getElementById("current--0");
+const currentScoreEl1 = document.getElementById("current--1");
+
+const btnNew = document.querySelector(".btn--new");
+const btnRoll = document.querySelector(".btn--roll");
+const btnHold = document.querySelector(".btn--hold");
+
+let winScore = Number(document.getElementById("win-score").value);
+let currentScore = 0;
+let currentPlayer = 0;
+let Gameover = false;
+
+const diceEl = document.querySelector(".dice");
+
+let scores = [0, 0];
+```
+
+
+### 2. New Game
+
+When 'NEW GAME' button is clicked, we trigger the `newGame()` function.
+
+```javascript
+btnNew.addEventListener("click", () => {
+  Gameover = false;
+  newGame();
+});
+```
+
+In `newGame()` function, We check if the currentPlayer contain `player--winner` class, if it does class we then remove the class to begin the game.
+
+```javascript
+// newGame
+const newGame = function () {
+  currentScore = 0;
+  scores = [0, 0];
+  const currentPlayerEle = document.querySelector(`.player--${currentPlayer}`);
+  if (currentPlayerEle.classList.contains("player--winner")) {
+    currentPlayerEle.classList.remove("player--winner");
+  }
+  removeAllActive();
+  currentPlayer = Math.floor(Math.random() + 0.5);
+  document
+    .querySelector(`.player--${currentPlayer}`)
+    .classList.add("player--active");
+  // hide dice
+  diceEl.classList.add("hidden");
+  // reset scores to 0
+  scoreEl0.textContent = 0;
+  scoreEl1.textContent = 0;
+  currentScoreEl0.textContent = 0;
+  currentScoreEl1.textContent = 0;
+};
+```
+
+To start the game equally, we random a number 0-1, if it is 0, start with Player 1, otherwise Player 2 start the game. 
+
+```javascript
+currentPlayer = Math.floor(Math.random() + 0.5);
+```
+
+But we first call function `removeAllActive` to remove active player class from all both players.
+
+```javascript
+const removeAllActive = function () {
+  if (player0.classList.contains("player--active")) {
+    player0.classList.remove("player--active");
+  }
+  if (player1.classList.contains("player--active")) {
+    player1.classList.remove("player--active");
+  }
+};
+```
+
+
+
+
+### 3. Rolling Button
+
+We then an eventListener to the Rolling button. When the rolling button is clicked :
+
+- Dice is unhidden
+- Random number between 1 to 6
+- If random number is 1, switch the player by trigger `switchPlayer()` function.
+
+```javascript
+const switchPlayer = function () {
+  currentScore = 0;
+  document.getElementById(`current--${currentPlayer}`).textContent =
+    currentScore;
+  currentPlayer = currentPlayer === 1 ? 0 : 1;
+  player0.classList.toggle("player--active");
+  player1.classList.toggle("player--active");
+};
+```
+
+- If random number is not 1, add the score to current score.
+
+```js
+// rolling button
+btnRoll.addEventListener("click", () => {
+  // show dice
+  if (!Gameover) {
+    diceEl.classList.remove("hidden");
+
+    const randDice = Math.floor(Math.random() * 6) + 1;
+    diceEl.src = `dice-${randDice}.png`;
+    // Add score to current score
+    if (randDice !== 1) {
+      currentScore += randDice;
+      document.getElementById(`current--${currentPlayer}`).textContent =
+        currentScore;
+    }
+    // Switch the player
+    else {
+      switchPlayer();
+    }
+  }
+});
+```
+
+### 4. Hold Button 
+
+When hold button is click, it will :
+
+- If the game has not ended add the current score to player overall score.
+- Switch to other player
+- If one of the player win the game, add a `player--winner` class to that player.
+
+```javascript
+// hold button
+btnHold.addEventListener("click", () => {
+  winScore = Number(document.getElementById("win-score").value);
+  if (!Gameover) {
+    scores[currentPlayer] += currentScore;
+    document.getElementById(`score--${currentPlayer}`).textContent =
+      scores[currentPlayer];
+    if (scores[currentPlayer] >= winScore) {
+      document
+        .querySelector(`.player--${currentPlayer}`)
+        .classList.add("player--winner");
+      document
+        .querySelector(`.player--${currentPlayer}`)
+        .classList.remove("player--active");
+      diceEl.classList.add("hidden");
+      Gameover = true;
+    } else {
+      switchPlayer();
+    }
+  }
+});
+```
+
+
+
+
+
+
+
+

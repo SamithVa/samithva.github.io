@@ -1,0 +1,113 @@
+---
+title: "German Grammar"
+author: "Samith Va"
+date: "2024-03-27"
+toc: true
+categories: [german]
+---
+
+# Grammar 
+
+## Four Grammatical cases
+
+### Nominative
+
+The nominative case is one of the grammatical cases in German, used primarily for the subject of a sentence, which is the person or thing performing the action of the verb. It's also used for predicate nouns or pronouns that refer back to the subject.
+
+Here are some examples of how the nominative case is used:
+
+1. **Subject of a Sentence**: The noun or pronoun that performs the action of the verb.
+    
+    - "Der Hund bellt." (The dog barks.)
+    - "Sie liest ein Buch." (She reads a book.)
+2. **Predicate Nouns or Pronouns**: Nouns or pronouns that rename or describe the subject in a sentence.
+    
+    - "Mein Bruder ist Arzt." (My brother is a doctor.)
+    - "Der Himmel ist blau." (The sky is blue.)
+3. **Apposition**: When two nouns or noun phrases are used together to describe the same person or thing.
+    
+    - "Meine Mutter, eine Lehrerin, kommt bald." (My mother, a teacher, is coming soon.)
+    - "Der Mann, mein Nachbar, ist sehr freundlich." (The man, my neighbor, is very friendly.)
+
+### Accusative
+
+The accusative case is one of the four grammatical cases in German. It indicates the direct object of a sentence, often answering the question "what?" or "whom?" The accusative case is used for the noun or pronoun that directly receives the action of the verb.
+
+Here are some examples of how the accusative case is used:
+
+1. **Direct Objects**: In sentences where the action of the verb is directly applied to something or someone.
+    
+    - "Ich sehe den Mann." (I see the man.)
+    - "Sie liest ein Buch." (She reads a book.)
+2. **Motion Toward**: When indicating motion towards a specific location.
+    
+    - "Er geht in den Park." (He goes into the park.)
+    - "Sie fahren in die Stadt." (They drive into the city.)
+3. **Duration or Time Span**: When specifying a duration of time.
+    
+    - "Ich habe den ganzen Tag gearbeitet." (I worked the whole day.)
+    - "Wir haben den Film gestern gesehen." (We watched the movie yesterday.)
+
+### Dative
+
+The dative case is one of the four grammatical cases in German (the others being nominative, accusative, and genitive). It indicates the indirect object of a sentence, often answering the question "to whom?" or "for whom?" The dative case is used for the recipient of an action or the object that is indirectly affected by the verb.
+
+Here are some examples of how the dative case is used:
+
+1. **Indirect Objects**: In sentences where something is given or done to someone or something else.
+    
+    - "Ich gebe dem Mann das Buch." (I give the book to the man.)
+2. **Certain Prepositions**: Some prepositions in German always take the dative case.
+    
+    - "Ich gehe mit meinem Freund." (I am going with my friend.)
+    - "Er spricht mit dem Lehrer." (He is speaking with the teacher.)
+3. **Dative Objects with Verbs**: Some verbs are used with dative objects, indicating who or what is indirectly affected by the action.
+    
+    - "Ich helfe meiner Schwester." (I am helping my sister.)
+    - "Sie glaubt dem Arzt." (She believes the doctor.)
+
+### Genitive
+
+The genitive case is another grammatical case in German, indicating possession or the relationship between nouns. It often answers the question "whose?" or "of whom/what?" The genitive case is used to show ownership, association, or origin.
+
+Here are some examples of how the genitive case is used:
+
+1. **Possession**: Showing ownership or possession.
+    
+    - "Das Auto meines Vaters." (My father's car.)
+    - "Die Farbe des Himmels." (The color of the sky.)
+2. **Relationships**: Indicating relationships between nouns.
+    
+    - "Die Stimme der Sängerin." (The voice of the singer.)
+    - "Das Land der Träume." (The land of dreams.)
+3. **Certain Prepositions**: Some prepositions in German always take the genitive case.
+    
+    - "Wegen des Wetters." (Because of the weather.)
+    - "Trotz des Regens." (Despite the rain.)
+
+## Indefinite Articles
+
+In German, "ein," "eine," and "einen" are all forms of the indefinite article "a" or "an" in English. They are used to indicate the gender (masculine, feminine, or neuter) and case (nominative, accusative, or dative) of the noun they precede.
+
+- "Ein" is used for masculine and neuter nouns in the nominative case.
+- "Eine" is used for feminine nouns in the nominative case.
+- "Einen" is used for masculine nouns in the accusative case.
+
+1. **Masculine:**
+    
+    - Nominative case: "ein" (a)
+    - Accusative case: "einen" (a)
+2. **Feminine:**
+    
+    - Nominative case: "eine" (a)
+    - Accusative case: "eine" (a)
+3. **Neuter:**
+    
+    - Nominative case: "ein" (a)
+    - Accusative case: "ein" (a)
+
+Cheat sheet:
+
+![Indefinite Article Cheat Sheet](indefinite_articles.png)
+
+
