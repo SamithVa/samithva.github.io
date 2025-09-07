@@ -1,6 +1,6 @@
 ---
 title: "Samith Va"
-image: profile-picture.png
+image: avatar.jpeg
 about:
   template: trestles
   image-width: 15rem
@@ -15,17 +15,19 @@ about:
     - icon: github
       text: Github
       href: https://github.com/SamithVa
-    - icon: linkedin
-      text: LinkedIn
-      href: https://www.linkedin.com/in/samith-va-116353179/
+    # - icon: linkedin
+    #   text: LinkedIn
+    #   href: https://www.linkedin.com/in/samith-va-116353179/
     
 
 ---
 
-Hello there! I'm Samith, and I'm glad to have you here on my blog. I’m just a simple person with a passion for NLP, trying to learn and grow along the way.  
-Through this platform, I aim to share what little I’ve picked up, in the hopes that it might be helpful to others who are on a similar journey in the world of technology.
+Hello there! I'm Samith, and I'm glad to have you here on my blog. I’m just a simple person with a passion for AI, trying to learn and grow along the way. Through this platform, I aim to share what little I’ve picked up, in the hopes that it might be helpful to others who are on a similar journey in the world of technology.
 
 ## Education 
+
+**Tsinghua University** | Shenzhen, China  
+Master in Artificial Intelligence | Sep 2025 - Now  
 
 **Shanghai Jiao Tong University** | Shanghai, China  
 Bachelor in Information Engineer | Sep 2020 - Jun 2025
