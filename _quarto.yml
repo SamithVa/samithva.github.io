@@ -29,5 +29,15 @@ format:
       dark: solar
     css: styles.css
 
+# Include subdirectories in the posts folder
+posts:
+  - dir: posts/deep-learning
+  - dir: posts/german
+  - dir: posts/rf-microelectronic
+  - dir: posts/llm
+  - dir: posts/tools
+  - dir: posts/web-development
+  - dir: posts/others
+
 
 
