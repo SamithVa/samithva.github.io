@@ -1,5 +1,12 @@
 [
   {
+    "listing": "/projects.html",
+    "items": [
+      "/projects/2024-04-19-pig_game/index.html",
+      "/projects/2024-04-12-guessing_game/index.html"
+    ]
+  },
+  {
     "listing": "/index.html",
     "items": [
       "/posts/2024-08-24-how-to-become-motivated/motivation.html",
@@ -22,13 +29,6 @@
       "/posts/2024-03-23-open-cv/index.html",
       "/posts/2024-03-22-numpy/index.html",
       "/posts/2024-03-21-deep-learning-journey/index.html"
-    ]
-  },
-  {
-    "listing": "/projects.html",
-    "items": [
-      "/projects/2024-04-19-pig_game/index.html",
-      "/projects/2024-04-12-guessing_game/index.html"
     ]
   }
 ]
