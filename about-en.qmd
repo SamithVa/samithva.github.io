@@ -22,7 +22,7 @@ about:
 
 ---
 
-Hello there! I'm Samith, and I'm glad to have you here on my blog. I’m just a simple person with a passion for AI, trying to learn and grow along the way. Through this platform, I aim to share what little I’ve picked up, in the hopes that it might be helpful to others who are on a similar journey in the world of technology.
+Welcome to my blog! I'm Samith, a graduate student specializing in Artificial Intelligence. I'm passionate about exploring the latest developments in AI and technology, and I use this platform to document my learning journey and share insights that might benefit others in the field.
 
 ## Education 
 
