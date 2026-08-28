@@ -43,15 +43,9 @@ The platform consists of five main subsystems:
 
 The prototype demonstrated four connected capabilities: rough-terrain travel, surface navigation, submerged navigation, and water-to-land transition. A ballast tank is filled through valves and emptied with a pump to control diving and surfacing. The retractable track mechanism switches the vehicle between efficient water propulsion and tracked locomotion.
 
-{{< image-grid >}}
-![Tracked travel over grass.](operation-land.jpg)
+![Four operating environments: tracked travel over grass, surface navigation, submerged tank testing, and travel through a muddy shoreline.](operation.png)
 
-![Propeller-driven travel on the water surface.](operation-water.jpg)
-
-![Submerged operation during tank testing.](operation-submerged.jpg)
-
-![Tracked travel through a muddy shoreline.](operation-mud.jpg)
-{{< /image-grid >}}
+*Operating modes, clockwise from top left: land travel, surface navigation, shoreline travel, and submerged testing.*
 
 ## Prototype Development
 
