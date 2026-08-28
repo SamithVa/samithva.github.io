@@ -1,0 +1,12 @@
+{{- $kind := .Get "type" | default "figure" -}}
+{{- $label := .Get "label" | default "Project media" -}}
+{{- $caption := .Get "caption" -}}
+<figure class="media-placeholder media-placeholder--{{ $kind }}">
+  <div class="media-placeholder__canvas" role="img" aria-label="Placeholder for {{ $label }}">
+    <span class="media-placeholder__kind">{{ title $kind }} placeholder</span>
+    <strong>{{ $label }}</strong>
+  </div>
+  {{- with $caption }}
+  <figcaption>{{ . }}</figcaption>
+  {{- end }}
+</figure>

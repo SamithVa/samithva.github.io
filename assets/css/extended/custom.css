@@ -189,6 +189,44 @@ button:focus-visible {
   box-shadow: none;
 }
 
+.media-placeholder {
+  margin: 1.5rem 0;
+}
+
+.media-placeholder__canvas {
+  display: grid;
+  place-content: center;
+  gap: 0.45rem;
+  width: 100%;
+  min-height: 220px;
+  padding: 2rem;
+  aspect-ratio: 4 / 3;
+  border: 1px dashed var(--secondary);
+  border-radius: var(--radius);
+  background: var(--code-bg);
+  color: var(--primary);
+  text-align: center;
+}
+
+.media-placeholder--video .media-placeholder__canvas {
+  min-height: 0;
+  aspect-ratio: 16 / 9;
+}
+
+.media-placeholder__kind {
+  color: var(--secondary);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.media-placeholder figcaption {
+  margin-top: 0.5rem;
+  color: var(--secondary);
+  font-size: 0.875rem;
+  text-align: center;
+}
+
 .home-entry h3 {
   font-family: var(--display-font);
   font-size: 1.45rem;
