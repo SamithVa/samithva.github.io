@@ -68,6 +68,7 @@ The design progressed through multiple hardware iterations. The initial prototyp
 
 <figure class="project-video">
   <video controls preload="metadata" playsinline poster="demo-poster.jpg">
+    <source src="demo.webm" type="video/webm">
     <source src="demo.mp4" type="video/mp4">
     Your browser does not support embedded video.
   </video>
