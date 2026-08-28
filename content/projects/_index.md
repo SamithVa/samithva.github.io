@@ -1,6 +1,6 @@
 ---
 title: "Projects"
-description: "Small software projects built while learning web development."
+description: "Projects in robotics, AI, and software."
 url: "/projects/"
 aliases: ["/projects.html"]
 ---
