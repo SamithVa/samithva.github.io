@@ -227,6 +227,25 @@ button:focus-visible {
   text-align: center;
 }
 
+.project-video {
+  margin: 1.5rem 0;
+}
+
+.project-video video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: var(--radius);
+  background: #000;
+}
+
+.project-video figcaption {
+  margin-top: 0.5rem;
+  color: var(--secondary);
+  font-size: 0.875rem;
+  text-align: center;
+}
+
 .home-entry h3 {
   font-family: var(--display-font);
   font-size: 1.45rem;
