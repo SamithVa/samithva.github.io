@@ -1,0 +1,139 @@
+---
+title: Convolutional Neuron Network
+date: '2024-03-28'
+author: Samith Va
+categories:
+- deep learning
+url: "/posts/deep-learning/2024-03-28-cnn/"
+showToc: true
+draft: false
+---
+
+1. Structured and unstructured data ? Which one is machine good at ? 
+2. Why DL just get its popularity in recent years ? Hint : ABC
+3. What field **RNN** is generally used in ? **CNN** ?  (CV, voice recognition, advertising)
+1. What is the first version of neuron network ? Can 1 layer neuron network (1st version) solve XOR problem?
+2. What are commonly used structures of NN ? Full-connected, CNN, RNN
+3. Why Sigmoid function is not commonly used as an activation function in NN ? Zero gradient 
+
+# CNN 
+
+## Convolution layer
+
+Keywords: Spatial dimension, Depth, Filters Bank, feature maps, Pooling
+
+### Kernel 
+
+**Kernel** refers to a small matrix used for convolutional operations. Convolution is the fundamental operation in a CNN, where the kernel (also called a filter) is applied to input data, typically an image, to produce feature maps.
+''
+![Kernel](kernel.png)
+
+### Stride
+
+"stride" refers to the number of pixels by which the convolutional kernel moves across the input data at each step during the convolution operation. In below example, illustrate a case when stride = 2.
+
+$$\text{output depth} = \frac{width - filter + 2 \times pad}{stride} + 1$$
+
+![Convolution of a 5x5 input with a 3x3 kernel, stride of 2, and padding of 1.](kernel.gif)
+
+[Animation source](https://github.com/vdumoulin/conv_arithmetic)
+
+### Padding
+
+Padding is a technique used to control the spatial dimensions of the output feature maps after applying convolutional operations to the input data.
+
+Features of padding in CNN:
+
+1. keep the image data near to border edge
+1. maintain the size of input image dimension 
+1. change the output size of convolution layer
+
+### Pooling
+
+What is pooling ?
+: a technique to reduce the activation spatial dimensions/Pooling helps in reducing memory consumption in deeper layers. It is also an important step to convert the spatial information into features. 
+
+The two most common pooling methods are : **Max pooling** and **Average pooling**.
+
+```python
+import torch
+import torch.nn.functional as F
+
+# Define input image
+image = torch.tensor([[2, 2, 7, 3],
+                      [9, 4, 6, 1],
+                      [8, 5, 2, 4],
+                      [3, 1, 2, 6]], dtype=torch.float32)
+
+# Add batch and channel dimensions
+image = image.unsqueeze(0).unsqueeze(0)
+
+# Apply max pooling directly using functional API
+output = F.max_pool2d(image, kernel_size=2, stride=2)
+
+# Print output image
+output = output.squeeze().numpy()
+print(output)
+```
+
+## Activation functions
+
+The activation fuction is a transformation function in NN that transform the weight and bias into a nonlinear format. With Activation function, model can learn and represent more complex patterns in data. 
+
+<details class="notice">
+<summary>Must an activation function be nonlinear?</summary>
+
+In neural networks, activation functions are typically designed to be **nonlinear**. This is because if all activation functions were linear, the entire neural network would effectively become a linear model, incapable of capturing complex nonlinear relationships.
+
+If all activation functions were set to linear functions, even a very deep neural network would behave like a **single-layer linear model**. Such a model would fail to handle many real-world nonlinear relationships, limiting the expressiveness and applicability of neural networks.
+</details>
+
+### ReLU
+
+The Rectified Linear Unit (ReLU) activation function is one of the **most widely used** activation functions in deep learning. It's defined as:
+
+$$f(x) = \max(0, x)$$
+
+In simple terms, ReLU returns if 
+x is positive, and 0 otherwise. This makes it a piecewise linear function.
+
+ReLU has several advantages:
+
+- **Simplicity**: ReLU is computationally efficient and easy to implement. It only involves a simple thresholding operation, making it faster to compute compared to more complex activation functions like sigmoid or tanh.
+
+- **Sparsity**: ReLU introduces sparsity in the network because it turns off neurons that have negative inputs (setting their output to zero). This sparsity can help reduce overfitting by encouraging the network to focus on important features and ignore noise.
+
+- **Addressing vanishing gradient problem**: ReLU helps mitigate the vanishing gradient problem by providing a constant gradient (1) for positive inputs during backpropagation. This helps prevent the gradients from becoming too small, enabling more stable and efficient training of deep neural networks.
+
+Despite its advantages, ReLU also has some drawbacks:
+
+- **Dead neurons**: Neurons with negative inputs always output zero, leading to the problem of "dying ReLU neurons." If a neuron's weights are such that it always receives negative inputs, it will never activate, and its weights will not be updated during training.
+
+- **Unbounded output**: ReLU does not have an upper bound, which means neurons can potentially produce very large outputs. This can lead to issues like exploding gradients, especially during training.
+
+### Leaky ReLU
+
+Leaky ReLU is a variant of the Rectified Linear Unit (ReLU) activation function, designed to address the **"dying ReLU"** problem. In standard ReLU, neurons with negative inputs always output zero, which can cause them to become **"dead"** and stop learning. Leaky ReLU introduces a small slope (or "leak") for negative inputs, allowing some information to flow through the neuron even when its input is negative. Mathematically, Leaky ReLU is defined as:
+
+$$
+f(x) = \begin{cases}
+x & \text{if } x > 0 \\
+\alpha x & \text{if } x \leq 0
+\end{cases}
+$$
+
+where $\alpha$ is a small constant (typically a small positive value: 0.01 or 0.001) that determines the slope of the function for negative inputs.
+
+## Output Layer
+
+### Softmax Function
+
+Softmax function is generally used in output layer, since it range is (0-1) which can be represented as probabilty values. Its expression can be written as :
+
+$$\sigma = \frac{e^{a_k}}{\sum_{i=1}^{n}e^{a_i}}$$
+
+Example in softmax calculation : 
+
+![Softmax](softmax.png)
+
+[Reference](https://blog.csdn.net/csdn_xmj/article/details/114578241)

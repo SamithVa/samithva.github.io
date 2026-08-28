@@ -1,0 +1,6 @@
+{{- $kind := .Get "kind" | default "note" -}}
+{{- $title := .Get "title" | default (strings.FirstUpper $kind) -}}
+<aside class="notice notice--{{ $kind }}" role="note">
+  <p class="notice__title">{{ $title }}</p>
+  <div class="notice__content">{{ .Inner | markdownify }}</div>
+</aside>

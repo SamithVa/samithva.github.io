@@ -1,0 +1,46 @@
+{{- define "main" }}
+<section class="home-profile" aria-labelledby="profile-title">
+  {{- with site.Params.profileMode }}
+  <div class="home-profile__portrait">
+    {{- $portrait := resources.Get .imageUrl }}
+    {{- if $portrait }}
+      {{- $portrait = $portrait.Fill "336x336 Center" }}
+      <img src="{{ $portrait.RelPermalink }}" width="168" height="168" alt="{{ .imageTitle }}">
+    {{- end }}
+  </div>
+  <p class="home-profile__eyebrow">A Simple Journey</p>
+  <h1 id="profile-title">{{ .title }}</h1>
+  <p class="home-profile__subtitle">{{ .subtitle }}</p>
+  <p class="home-profile__topics" aria-label="Topics">AI <span aria-hidden="true">/</span> RF <span aria-hidden="true">/</span> Systems</p>
+  {{- partial "social_icons.html" (dict "align" "center") }}
+  <div class="home-profile__actions">
+    {{- range .buttons }}
+    <a class="button" href="{{ .url }}"><span class="button-inner">{{ .name }}</span></a>
+    {{- end }}
+  </div>
+  {{- end }}
+</section>
+
+<section class="recent-writing" aria-labelledby="recent-writing-title">
+  <div class="section-heading">
+    <div>
+      <p class="section-heading__eyebrow">From the notebook</p>
+      <h2 id="recent-writing-title">Recent writing</h2>
+    </div>
+    <a href="{{ "/posts/" | relURL }}">View all posts <span aria-hidden="true">&rarr;</span></a>
+  </div>
+
+  {{- $posts := where site.RegularPages "Section" "posts" }}
+  {{- range first 5 $posts.ByDate.Reverse }}
+  <article class="post-entry home-entry">
+    {{- partial "cover.html" (dict "cxt" . "IsSingle" false "isHidden" false) }}
+    <header class="entry-header">
+      <h3 class="entry-hint-parent">{{ .Title }}</h3>
+    </header>
+    <div class="entry-content"><p>{{ .Summary | plainify | htmlUnescape }}{{ if .Truncated }}...{{ end }}</p></div>
+    <footer class="entry-footer">{{ partial "post_meta.html" . }}</footer>
+    <a class="entry-link" aria-label="Read {{ .Title | plainify }}" href="{{ .RelPermalink }}"></a>
+  </article>
+  {{- end }}
+</section>
+{{- end }}

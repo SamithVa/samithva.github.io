@@ -1,0 +1,118 @@
+baseURL: "https://samithva.github.io/"
+locale: "en-US"
+title: "Samith Va"
+theme: ["PaperMod"]
+copyright: "Copyright 2026 Samith Va"
+
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+pagination:
+  pagerSize: 10
+
+taxonomies:
+  category: categories
+  tag: tags
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+params:
+  env: production
+  title: "Samith Va"
+  description: "Technical notes on artificial intelligence, RF microelectronics, tools, and learning."
+  keywords: [AI, deep learning, RF microelectronics, programming, technical notes]
+  author: "Samith Va"
+  images: ["profile_pic.jpeg"]
+  mainSections: ["posts"]
+  DateFormat: "January 2, 2006"
+  defaultTheme: auto
+  disableThemeToggle: false
+  disableSpecial1stPost: true
+  disableScrollToTop: false
+  ShowReadingTime: true
+  ShowShareButtons: false
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowWordCount: true
+  ShowRssButtonInSectionTermList: true
+  UseHugoToc: true
+  showToc: true
+  tocOpen: false
+
+  profileMode:
+    enabled: true
+    title: "Samith Va"
+    subtitle: "Graduate student in Artificial Intelligence. Notes on AI, RF microelectronics, tools, and learning."
+    imageUrl: "profile_pic.jpeg"
+    imageWidth: 168
+    imageHeight: 168
+    imageTitle: "Portrait of Samith Va"
+    buttons:
+      - name: "Posts"
+        url: "/posts/"
+      - name: "Projects"
+        url: "/projects/"
+
+  socialIcons:
+    - name: "email"
+      url: "mailto:vasamith@163.com"
+    - name: "github"
+      url: "https://github.com/SamithVa"
+
+  cover:
+    hidden: false
+    hiddenInList: false
+    hiddenInSingle: false
+
+  assets:
+    favicon: "/profile_pic.jpeg"
+    favicon16x16: "/profile_pic.jpeg"
+    favicon32x32: "/profile_pic.jpeg"
+    apple_touch_icon: "/profile_pic.jpeg"
+    safari_pinned_tab: "/profile_pic.jpeg"
+
+  footer:
+    text: "A Simple Journey"
+
+menu:
+  main:
+    - identifier: posts
+      name: Posts
+      url: /posts/
+      weight: 10
+    - identifier: projects
+      name: Projects
+      url: /projects/
+      weight: 20
+    - identifier: about
+      name: About
+      url: /about-en.html
+      weight: 30
+    - identifier: chinese
+      name: "中文"
+      url: /about-cn.html
+      weight: 40
+    - identifier: search
+      name: Search
+      url: /search/
+      weight: 50
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    noClasses: false
+    guessSyntax: true
+    lineNos: false

@@ -1,71 +1,78 @@
-# Samith's Personal Blog
+# Samith Va
 
-Welcome to my personal blog built with [Quarto](https://quarto.org/)! This site serves as a platform for sharing my journey in technology, with posts covering topics like AI, deep learning, RF microelectronics, and more.
+Personal technical blog built with [Hugo](https://gohugo.io/) and the
+[PaperMod](https://github.com/adityatelange/hugo-PaperMod) theme. The site is
+published at <https://samithva.github.io/>.
 
-## 📚 About This Blog
+## Local development
 
-This blog is a collection of my learning experiences, technical insights, and personal reflections. As a graduate student specializing in Artificial Intelligence, I document my exploration of various technologies and concepts.
+Requirements:
 
-## 📖 Content Categories
+- Hugo Extended 0.164.0 or newer
+- Git with submodule support
 
-The blog is organized into several categories:
+Clone the repository and initialize the PaperMod theme:
 
-- **Deep Learning**: Neural networks, CNNs, and related concepts
-- **German**: Language learning resources
-- **RF Microelectronics**: Radio frequency circuits and systems
-- **LLM**: Large language models and related technologies
-- **Tools**: Tutorials on Python libraries like NumPy, Pandas, and Conda
-- **Web Development**: HTML and web technologies
-- **Others**: Miscellaneous topics including motivation and GUI agents
+```bash
+git clone --recurse-submodules https://github.com/SamithVa/samithva.github.io.git
+cd samithva.github.io
+hugo server -D
+```
 
-## 🛠️ Technical Details
+Open <http://localhost:1313/>. Build the production site with:
 
-This site is built using:
-- **Quarto**: A powerful publishing system for scientific and technical content
-- **GitHub Pages**: For hosting the static site
-- **Markdown/QMD**: For writing content
-- **HTML/CSS**: For styling and presentation
+```bash
+hugo --gc --minify
+```
 
-## 🚀 Getting Started
+Generated output is written to `public/` and is not committed.
 
-To run this blog locally:
+## Content
 
-1. Clone this repository:
-   ```bash
-   git clone https://github.com/SamithVa/samithva.github.io.git
-   ```
+Posts live in `content/posts/` as leaf bundles. Keep each post's Markdown and
+images in the same directory:
 
-2. Install Quarto following the [official installation guide](https://quarto.org/docs/get-started/)
+```text
+content/posts/topic/post-name/
+|-- index.md
+|-- cover.png
+`-- figure.png
+```
 
-3. Render the site:
-   ```bash
-   quarto render
-   ```
+Create a draft with:
 
-4. Preview the site:
-   ```bash
-   quarto preview
-   ```
+```bash
+hugo new content posts/topic/post-name/index.md
+```
 
-## 📝 Adding New Content
+Use standard fenced code blocks for source examples. The site also supports the
+`notice` and `image-grid` shortcodes:
 
-To create a new blog post:
+```markdown
+{{</* notice note title="Optional title" */>}}
+Important content.
+{{</* /notice */>}}
 
-1. Create a new directory in the appropriate category folder under `posts/`
-2. Name the directory with the date and topic (e.g., `2024-01-15-new-topic`)
-3. Create an `.qmd` file with your content
-4. Include proper metadata (title, date, categories, etc.)
-5. Render the site with `quarto render`
+{{</* image-grid */>}}
+![First image](first.png)
+![Second image](second.png)
+{{</* /image-grid */>}}
+```
 
-## 🤝 Contributing
+Mermaid diagrams use a normal `mermaid` fenced code block.
 
-While this is primarily a personal blog, I welcome suggestions and corrections. Feel free to open an issue if you find any errors or have suggestions for improvement.
+## Theme updates
 
-## 📬 Contact
+PaperMod is tracked from `SamithVa/hugo-PaperMod` as a Git submodule:
 
-- **Email**: vasamith@163.com
-- **GitHub**: [SamithVa](https://github.com/SamithVa)
+```bash
+git submodule update --remote --merge themes/PaperMod
+```
 
-## 📄 License
+Review and commit the resulting submodule pointer after testing the site.
 
-Content is copyright © Samith Va. All rights reserved.
+## Deployment
+
+Pushes to `main` run `.github/workflows/hugo.yml`. The workflow builds Hugo,
+uploads the generated site, and deploys it to GitHub Pages. In the repository's
+Pages settings, set the publishing source to **GitHub Actions**.

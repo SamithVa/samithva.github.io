@@ -1,0 +1,92 @@
+---
+title: German Vocabulary
+date: '2024-03-25'
+author: Samith Va
+categories:
+- german
+url: "/posts/german/2024-03-25-german-vocabulary/"
+showToc: true
+draft: false
+---
+
+# Vocabulary
+
+## Weather and Seasons
+
+![Weather](weather.png)
+
+* Frühling: spring
+* Sommer : summer
+* Sonnig: sunny
+* (der) Regen: rainning
+* Neblig: foggy
+	- Es ist neblig / warm
+* Warm
+	- Ist es warm heute ?
+	- Es ist nie warm im Winter.
+	- Es ist neblig heute und bewölkt.
+* Bewölkt
+	- Es ist bewölkt und neblig.
+* Herbst: the Fall 
+* Wetter : weather
+	- Wie ist das Wetter heute ?
+* Heute : today
+* wandere(ich) wandert wanderst wandern(sie) 
+	- Wandern sie oft Anna, Wanderst du oft Anna?
+	- Die Eule wandert nie in Sommer. 
+* Sonnencreme : sunscreen  
+	- Wie viel kostet die Sonnencreme ?
+* Es ist immer schön im Frühling
+* die Wasserflasche 
+	- Meine Wasserflasche ist groß.
+
+## Relation 
+
+- liebt
+	- Liebt dein Bruder deinen Hund ?
+	- Liebt du deinen Hund ?
+- habe hast
+	- Hast du einen Mann ? 
+	- Hast du einen Freundin ?
+- Freund
+	- Hast du viele Freunde ?
+- Freundin
+	- Hast du einen Freundin?
+- Onkel
+- Oma 
+- Opa 
+
+## Food
+
+- (die) Banane  
+	- Ich mag Bananen.
+- (die) Birne
+- (die) Bohnen, bean 
+	- Ich mag Bohnen.
+- (die) Butter
+- (die) Aubergine 
+- (das) Brot
+- (die) Schokolade 
+	- Ich mag Schokoladen. 
+- (die) Feige
+- (das) Fleisch, meat
+- (die) Familie 
+- (der) Reis
+	- Ich esse gern Reis.
+- (die) Rosinen 
+	- Ich esse gern Rosinen. 
+- (das) Radio
+
+
+
+
+
+
+- waschen 
+- kaufen
+
+## Place
+
+- (die) Schule
+- (der) Schal 
+- (der) Fisch
