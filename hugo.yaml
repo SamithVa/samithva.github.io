@@ -54,6 +54,10 @@ params:
     enabled: true
     title: "Samith Va"
     subtitle: "Graduate student in Artificial Intelligence."
+    imageUrl: "profile_pic.jpeg"
+    imageWidth: 168
+    imageHeight: 168
+    imageTitle: "Portrait of Samith Va"
 
   label:
     text: "Samith's logs"
@@ -70,11 +74,11 @@ params:
     hiddenInSingle: false
 
   assets:
-    favicon: "/profile_pic.jpeg"
-    favicon16x16: "/profile_pic.jpeg"
-    favicon32x32: "/profile_pic.jpeg"
-    apple_touch_icon: "/profile_pic.jpeg"
-    safari_pinned_tab: "/profile_pic.jpeg"
+    favicon: "/programmer-favicon.svg"
+    favicon16x16: "/programmer-favicon.svg"
+    favicon32x32: "/programmer-favicon.svg"
+    apple_touch_icon: "/programmer-favicon.svg"
+    safari_pinned_tab: "/programmer-favicon.svg"
 
   footer:
     text: "A Simple Journey"
