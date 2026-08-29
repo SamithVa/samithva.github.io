@@ -25,6 +25,30 @@ This project deploys an agentic vision-language-action (VLA) system on a physica
 
 {{< media-placeholder type="figure" label="Physical robot experiments" caption="Add representative grasping trials, task sequences, or quantitative results." >}}
 
-## Demo
+## Demonstrations
 
-{{< media-placeholder type="video" label="Robot-arm deployment video" caption="Add the final physical-robot demonstration video here." >}}
+### Cup arrangement
+
+The agentic VLA system identifies and manipulates cups arranged on the work surface.
+
+<figure class="project-video">
+  <video controls preload="metadata" playsinline poster="cups-poster.jpg">
+    <source src="cups.webm" type="video/webm">
+    <source src="cups.mp4" type="video/mp4">
+    Your browser does not support embedded video.
+  </video>
+  <figcaption>Physical robot-arm demonstration with a cup arrangement task.</figcaption>
+</figure>
+
+### Opening a drawer
+
+The robot approaches a drawer and executes the opening action with VLA-based control.
+
+<figure class="project-video">
+  <video controls preload="metadata" playsinline poster="open-drawer-poster.jpg">
+    <source src="open-drawer.webm" type="video/webm">
+    <source src="open-drawer.mp4" type="video/mp4">
+    Your browser does not support embedded video.
+  </video>
+  <figcaption>Physical robot-arm demonstration of opening a drawer.</figcaption>
+</figure>
