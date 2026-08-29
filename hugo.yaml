@@ -53,7 +53,7 @@ params:
   profileMode:
     enabled: true
     title: "Samith Va"
-    subtitle: "Graduate student in Artificial Intelligence. Notes on AI, RF microelectronics, tools, and learning."
+    subtitle: "Graduate student in Artificial Intelligence."
     imageUrl: "profile_pic.jpeg"
     imageWidth: 168
     imageHeight: 168
