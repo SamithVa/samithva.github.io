@@ -58,11 +58,6 @@ params:
     imageWidth: 168
     imageHeight: 168
     imageTitle: "Portrait of Samith Va"
-    buttons:
-      - name: "Posts"
-        url: "/posts/"
-      - name: "Projects"
-        url: "/projects/"
 
   socialIcons:
     - name: "email"
