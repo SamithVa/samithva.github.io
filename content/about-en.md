@@ -14,9 +14,6 @@ Master in Artificial Intelligence | Sep 2025 - Now
 **Shanghai Jiao Tong University** | Shanghai, China<br>
 Bachelor in Information Engineer | Sep 2021 - Jun 2025
 
-**Tianjin University** | Tianjin, China<br>
-Chinese Language Intensive Program | Sep 2019 - Jun 2020
-
 ## Experience
 
 **IEEE CISOSE** | Shanghai, China<br>
