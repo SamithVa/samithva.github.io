@@ -91,6 +91,20 @@ button:focus-visible {
   box-shadow: 8px 8px 0 color-mix(in srgb, var(--accent) 16%, transparent);
 }
 
+.home-profile__emoji {
+  display: grid;
+  width: 168px;
+  height: 168px;
+  place-items: center;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--entry);
+  box-shadow: 8px 8px 0 color-mix(in srgb, var(--accent) 16%, transparent);
+  font-family: system-ui, sans-serif;
+  font-size: 5.4rem;
+  line-height: 1;
+}
+
 .home-profile__title {
   position: absolute;
   width: 1px;
@@ -359,6 +373,12 @@ summary {
   .home-profile__portrait img {
     width: 144px;
     height: 144px;
+  }
+
+  .home-profile__emoji {
+    width: 144px;
+    height: 144px;
+    font-size: 4.6rem;
   }
 
   .home-profile h1 {

@@ -54,10 +54,9 @@ params:
     enabled: true
     title: "Samith Va"
     subtitle: "Graduate student in Artificial Intelligence."
-    imageUrl: "profile_pic.jpeg"
-    imageWidth: 168
-    imageHeight: 168
-    imageTitle: "Portrait of Samith Va"
+
+  label:
+    text: "Samith's logs"
 
   socialIcons:
     - name: "email"
