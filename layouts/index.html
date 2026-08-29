@@ -9,7 +9,7 @@
     {{- end }}
   </div>
   <p class="home-profile__eyebrow">A Simple Journey</p>
-  <h1 id="profile-title">{{ .title }}</h1>
+  <h1 id="profile-title" class="home-profile__title">{{ .title }}</h1>
   <p class="home-profile__subtitle">{{ .subtitle }}</p>
   <p class="home-profile__topics" aria-label="Topics">AI <span aria-hidden="true">/</span> RF <span aria-hidden="true">/</span> Systems</p>
   {{- partial "social_icons.html" (dict "align" "center") }}
