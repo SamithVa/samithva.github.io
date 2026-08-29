@@ -12,7 +12,7 @@ Welcome to my blog! I'm Samith, a graduate student specializing in Artificial In
 Master in Artificial Intelligence | Sep 2025 - Now
 
 **Shanghai Jiao Tong University** | Shanghai, China<br>
-Bachelor in Information Engineer | Sep 2020 - Jun 2025
+Bachelor in Information Engineer | Sep 2021 - Jun 2025
 
 **Tianjin University** | Tianjin, China<br>
 Chinese Language Intensive Program | Sep 2019 - Jun 2020
