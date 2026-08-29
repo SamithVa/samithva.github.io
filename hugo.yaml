@@ -96,11 +96,11 @@ menu:
       url: /projects/
       weight: 20
     - identifier: about
-      name: About
+      name: About Me
       url: /about-en.html
       weight: 30
     - identifier: chinese
-      name: "中文"
+      name: "关于我"
       url: /about-cn.html
       weight: 40
     - identifier: search
