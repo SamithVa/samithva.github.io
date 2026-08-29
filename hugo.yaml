@@ -96,18 +96,13 @@ menu:
       url: /projects/
       weight: 20
     - identifier: about
-      name: About Me
+      name: About
       url: /about-en.html
       weight: 30
     - identifier: chinese
       name: "关于我"
       url: /about-cn.html
       weight: 40
-    - identifier: search
-      name: Search
-      url: /search/
-      weight: 50
-
 markup:
   goldmark:
     renderer:
