@@ -21,17 +21,17 @@
   {{- end }}
 </section>
 
-<section class="recent-writing" aria-labelledby="recent-writing-title">
+<section class="recent-projects" aria-labelledby="recent-projects-title">
   <div class="section-heading">
     <div>
-      <p class="section-heading__eyebrow">From the notebook</p>
-      <h2 id="recent-writing-title">Recent writing</h2>
+      <p class="section-heading__eyebrow">From the project log</p>
+      <h2 id="recent-projects-title">Recent projects</h2>
     </div>
-    <a href="{{ "/posts/" | relURL }}">View all posts <span aria-hidden="true">&rarr;</span></a>
+    <a href="{{ "/projects/" | relURL }}">View all projects <span aria-hidden="true">&rarr;</span></a>
   </div>
 
-  {{- $posts := where site.RegularPages "Section" "posts" }}
-  {{- range first 5 $posts.ByDate.Reverse }}
+  {{- $projects := where site.RegularPages "Section" "projects" }}
+  {{- range first 5 $projects.ByDate.Reverse }}
   <article class="post-entry home-entry">
     {{- partial "cover.html" (dict "cxt" . "IsSingle" false "isHidden" false) }}
     <header class="entry-header">
@@ -39,7 +39,7 @@
     </header>
     <div class="entry-content"><p>{{ .Summary | plainify | htmlUnescape }}{{ if .Truncated }}...{{ end }}</p></div>
     <footer class="entry-footer">{{ partial "post_meta.html" . }}</footer>
-    <a class="entry-link" aria-label="Read {{ .Title | plainify }}" href="{{ .RelPermalink }}"></a>
+    <a class="entry-link" aria-label="View {{ .Title | plainify }}" href="{{ .RelPermalink }}"></a>
   </article>
   {{- end }}
 </section>

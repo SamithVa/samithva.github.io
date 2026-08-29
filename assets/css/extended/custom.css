@@ -152,7 +152,7 @@ button:focus-visible {
   transform: translateY(-2px);
 }
 
-.recent-writing {
+.recent-projects {
   padding: 30px 0 48px;
   border-top: 1px solid var(--border);
 }
