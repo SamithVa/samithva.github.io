@@ -21,6 +21,8 @@ This project deploys an agentic vision-language-action (VLA) system on a physica
 
 The accompanying paper, **EMERGE-Policy: A Robot Mind Emerges Beyond a Single Policy**, frames robot intelligence as a coordinated system rather than one monolithic policy. A Main Agent keeps compact task state and decomposes instructions into subgoals, while isolated Perception, Verification, Monitor, and Memory Sub Agents return only structured evidence. A unified Skill interface lets the agent compose Operational, Imagination, and Evaluation capabilities across VLA, world-model, analytical, and verification backends.
 
+[Read the paper on arXiv](https://arxiv.org/abs/2608.29896).
+
 ![EMERGE-Policy architecture showing the Main Agent, Sub-Agent Suite, unified Skill Library, persistent task state, recovery stack, and real-robot execution.](paper_figure.png)
 
 *EMERGE-Policy coordinates planning, prediction, execution, verification, memory, and localized recovery in a closed loop.*
