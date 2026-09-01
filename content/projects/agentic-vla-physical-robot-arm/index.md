@@ -7,6 +7,10 @@ tags: [VLA, PiPER, inverse-kinematics, robot-arm]
 summary: "An agentic vision-language-action system deployed on a physical PiPER robotic arm for object approach and grasp execution."
 showToc: true
 draft: false
+cover:
+  image: paper_figure.png
+  alt: "EMERGE-Policy architecture for agentic robot manipulation"
+  relative: true
 ---
 
 ## Overview
