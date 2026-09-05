@@ -12,7 +12,7 @@ I received my B.Eng. in Information Engineering from Shanghai Jiao Tong Universi
 
 My research focuses on **embodied AI and generalist agents**, particularly vision-language-action (VLA) models, world models, and agentic learning. I am interested in how agents perceive multimodal environments, reason and explore, acquire reusable skills, and improve through interaction.
 
-During my undergraduate studies, I worked on **GUI agents**: multimodal agents that understand and interact with graphical user interfaces. That work now informs my research on agents that reason, learn, and act in the physical world, extending my interests from digital environments to embodied interaction.
+During my undergraduate studies, I worked on **GUI agents**: multimodal agents that understand and interact with graphical user interfaces, including the coauthored [GUI-Xplore project](/projects/gui-xplore/). That work now informs my research on agents that reason, learn, and act in the physical world, extending my interests from digital environments to embodied interaction.
 
 I am also interested in LLM/VLM post-training, exploration, and reinforcement learning as ways to build more capable and adaptive agents.
 
