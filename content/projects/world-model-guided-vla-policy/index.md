@@ -6,7 +6,7 @@ categories: [embodied-ai, world-models]
 tags: [VLA, world-model, LIBERO, policy-learning]
 summary: "A VLA policy that uses world-model predictions as foresight when generating action chunks for LIBERO tasks."
 showToc: true
-draft: false
+draft: true
 ---
 
 ## Overview

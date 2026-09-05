@@ -6,7 +6,7 @@ categories: [embodied-ai, robotics]
 tags: [Isaac-Lab, PiPER, Vision-Pro, teleoperation, data-collection]
 summary: "A PiPER-Vision Pro teleoperation and Isaac Lab pipeline for collecting high-quality robot demonstrations."
 showToc: true
-draft: false
+draft: true
 ---
 
 ## Overview
