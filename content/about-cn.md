@@ -6,7 +6,7 @@ showToc: false
 
 你好，我是万山，目前是清华大学人工智能专业的硕士二年级学生，也是 [SICSIGLAB](https://thusigsiclab.github.io/thu.github.io/index.html) 的成员，师从 [Li Xiu 教授](https://scholar.google.com/citations?user=Xrh1OIUAAAAJ&hl=en)。
 
-我于 2025 年获得上海交通大学信息工程专业工学学士学位。本科期间，我在上海交通大学图像通信研究所开展研究，并与 [Zhang Chong Yang 教授](https://scholar.google.com/citations?user=qYvo1p0AAAAJ&hl=en) 合作。这个网站记录我的研究项目、技术笔记和学习历程。
+我于 2025 年获得上海交通大学信息工程专业工学学士学位。本科期间，我在 [Chongyang Zhang 教授](https://scholar.google.com/citations?user=qYvo1p0AAAAJ&hl=en) 的指导下开展研究，并曾在上海交通大学图像通信研究所实习。这个网站记录我的研究项目、技术笔记和学习历程。
 
 ## 研究兴趣
 
