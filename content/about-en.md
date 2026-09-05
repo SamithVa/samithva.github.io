@@ -4,7 +4,7 @@ url: "/about-en.html"
 showToc: false
 ---
 
-I'm Samith, a second-year master's student in Artificial Intelligence at Tsinghua University. I am a member of [SICSIGLAB](https://thusigsiclab.github.io/thu.github.io/index.html), advised by Prof. [Li Xiu](https://scholar.google.com/citations?user=Xrh1OIUAAAAJ&hl=en).
+I'm Samith, a second-year master's student in Artificial Intelligence at Tsinghua University. I am a member of [SICSIGLAB](https://thusigsiclab.github.io/thu.github.io/index.html), advised by Prof. [Xiu Li](https://scholar.google.com/citations?user=Xrh1OIUAAAAJ&hl=en).
 
 I received my B.Eng. in Information Engineering from Shanghai Jiao Tong University (SJTU) in 2025. During my undergraduate studies, I was supervised by Prof. [Chongyang Zhang](https://scholar.google.com/citations?user=qYvo1p0AAAAJ&hl=en) and interned at the SJTU Image Communication Institute. This website is where I share my research projects, technical notes, and learning journey.
 
